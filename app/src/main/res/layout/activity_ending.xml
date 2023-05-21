@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="form"
+            type="edu.aku.hassannaqvi.wellnessscale.models.Form" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg_effect"
+        android:orientation="vertical">
+
+
+        <!-- CUSTOM TOOLBAR -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitle="@string/iStatus"
+            app:theme="@style/ActionBarTheme"
+            app:title="@string/app_name"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/fldGrpEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+<!--            <androidx.cardview.widget.CardView
+                style="@style/cardView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/bScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Risk of Diabetes: "
+                    android:backgroundTint="@color/colorAccentOverlay"
+                    />
+            </LinearLayout>
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>-->
+                <!-- iStatus  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCViStatus"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/iStatus" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/iStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/iStatusa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{form.iStatus.equals(`1`)}"
+                                android:onClick="@{()->form.setiStatus(`1`)}"
+                                android:text="@string/iStatus01"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/iStatusb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{form.iStatus.equals(`2`)}"
+                                android:onClick="@{()->form.setiStatus(`2`)}"
+                                android:text="@string/iStatus02"/>
+
+                            <RadioButton
+                                android:id="@+id/iStatusc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{form.iStatus.equals(`3`)}"
+                                android:onClick="@{()->form.setiStatus(`3`)}"
+                                android:text="@string/iStatus03"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/iStatusd"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{form.iStatus.equals(`4`)}"
+                                android:onClick="@{()->form.setiStatus(`4`)}"
+                                android:text="@string/iStatus04"/>
+
+                            <RadioButton
+                                android:id="@+id/iStatuse"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{form.iStatus.equals(`5`)}"
+                                android:onClick="@{()->form.setiStatus(`5`)}"
+                                android:text="@string/iStatus05"/>
+
+                            <RadioButton
+                                android:id="@+id/iStatusf"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{form.iStatus.equals(`6`)}"
+                                android:onClick="@{()->form.setiStatus(`6`)}"
+                                android:text="@string/iStatus06"/>
+
+<!--                            <RadioButton-->
+<!--                                android:id="@+id/iStatusg"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:text="@string/iStatus07"-->
+<!--                                android:checked="@{form.iStatus.equals(`7`)}"-->
+<!--                                android:onClick="@{()->form.setiStatus(`7`)}"/>-->
+
+                            <RadioButton
+                                android:id="@+id/iStatus96"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{form.iStatus.equals(`96`)}"
+                                android:onClick="@{()->form.setiStatus(`96`)}"
+                                android:text="@string/iStatus96"/>
+
+                            <EditText
+                                android:id="@+id/iStatus96x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:hint="@string/iStatus96"
+                                android:tag="iStatus96"
+                                android:text='@{iStatus96.checked ? iStatus96x.getText().toString() : ""}'
+                                android:visibility='@{iStatus96.checked? View.VISIBLE : View.GONE}' />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!--EndButton LinearLayout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="100dp"
+                    android:orientation="horizontal"
+                    android:padding="24dp">
+
+
+                    <!--
+                             <enum name="src_over" value="3" />
+                                <enum name="src_in" value="5" />
+                                <enum name="src_atop" value="9" />
+                                <enum name="multiply" value="14" />
+                                <enum name="screen" value="15" />
+                                <enum name="add" value="16" />
+                    -->
+                    <Button
+                        android:id="@+id/btn_Continue"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/capsule"
+                        android:backgroundTint="@color/colorAccentOverlay"
+                        android:backgroundTintMode="src_atop"
+                        android:onClick="btnEnd"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+                <!--EndButton LinearLayout-->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="atitle">سیکشن A: مریض کی ڈیموگرافکس</string>
+    <string name="a101">ایچ ڈبلیو جو نالو</string>
+    <string name="a102">خاندانی نمبر</string>
+    <string name="a103">مریض جو نالو</string>
+    <string name="a104">عمر</string>
+    <string name="a105">جنس</string>
+    <string name="a10501">مرد</string>
+    <string name="a10502">هڪ عورت</string>
+    <string name="a106">نسل</string>
+    <string name="a10601">اردو</string>
+    <string name="a10602">سنڌي</string>
+    <string name="a10603">پنجابي</string>
+    <string name="a10604">بلوچي</string>
+    <string name="a10605">پشتو</string>
+    <string name="a10606">ڪشميري</string>
+    <string name="a10696">ٻيا (مهرباني ڪري وضاحت ڪريو)</string>
+    <string name="a107">پتو</string>
+    <string name="a108">تعلیم جي سطح</string>
+    <string name="consent">ڇا لکيل رضامندي تي دستخط ٿيل آهي؟</string>
+    <string name="a10801">ڪابه رسمي تعليم</string>
+    <string name="a10802">پرائمري تعليم</string>
+    <string name="a10803">ثانوي تعليم</string>
+    <string name="a10804">اعليٰ ثانوي</string>
+    <string name="a10805">گريجوئيشن يا مٿي</string>
+    <string name="a109">ملازم</string>
+    <string name="a10901">ها</string>
+    <string name="a10902">نه</string>
+    <string name="btitle">ریپڈ سیکشن</string>
+    <string name="b101">کمر جو طواف</string>
+    <string name="b102">ذیابیطس جي مثبت خانداني تاريخ</string>
+    <string name="bscore">اسڪورنگ جا معيار:</string>
+    <string name="btitle1">40-50 سالن جي وچ ۾ 1 نشان لڳايو ويو جڏهن ته 50 سالن کان مٿي وارن کي 3 پوائنٽس نشان لڳايو ويو.</string>
+    <string name="btitle2">ڪٽ آف پوائنٽ کان وڌيڪ يا برابر کمر جو فريم (عورتن لاءِ 80 سينٽي ۽ مردن لاءِ 90 سينٽي ميٽر) 2 پوائنٽن جي طور تي اسڪور ڪيو ويو.</string>
+    <string name="btitle3">ذیابیطس جي هڪ مثبت خانداني تاريخ 1 پوائنٽ جي طور تي گول ڪيو ويو.</string>
+    <string name="btitle4">نوٽ: هڪ مضمون جنهن جو نمبر 4 کان وڌيڪ يا برابر هجي ان کي ذیابيطس جي خطري ۾ سمجهيو ويندو آهي.</string>
+    <string name="ctitle">روز انجائنا سیکشن</string>
+    <string name="c101">ڇا توهان ڪڏهن پنهنجي سينه ۾ درد يا تڪليف آهي؟</string>
+    <string name="c10101">ها</string>
+    <string name="c10102">نه</string>
+    <string name="c102">توهان کي هي درد يا تڪليف ڪڿي ملي ٿي (مهرباني ڪري مناسب هنڌن تي X کي نشان لڳايو.</string>
+    <string name="c10201">1 سينه جي ساڄي پاسي</string>
+    <string name="c10202">2 سينه جي ساڄي پاسي</string>
+    <string name="c10203">3 سينه جي ساڄي پاسي</string>
+    <string name="c10204">4 سينه جو مرڪز</string>
+    <string name="c10205">5 سينه جو مرڪز</string>
+    <string name="c10206">6 سينه جو مرڪز</string>
+    <string name="c10207">7 سينه جي کاٻي پاسي</string>
+    <string name="c10208">8 سينه جي کاٻي پاسي</string>
+    <string name="c10209">9 سينه جي کاٻي پاسي</string>
+    <string name="c103">اهو درد پيدا ڪري ٿو جڏهن توهان سطح تي عام رفتار تي هلندا آهيو.</string>
+    <string name="c10301">ها</string>
+    <string name="c10302">نه</string>
+    <string name="c103097">قابل نه</string>
+    <string name="c104">اهو درد پيدا ڪري ٿو جڏهن توهان مٿي چڙهندا آهيو يا جلدي ڪريو.</string>
+    <string name="c10401">ها</string>
+    <string name="c10402">نه</string>
+    <string name="c10497">قابل نه</string>
+    <string name="c105">توهان ڇا ڪندا آهيو جڏهن توهان پنهنجي سينه ۾ درد يا تڪليف محسوس ڪندا آهيو جڏهن هلڻ دوران؟</string>
+    <string name="c10501">روڪ</string>
+    <string name="c10502">آهستي ڪريو</string>
+    <string name="c10503">ساڳي رفتار تي جاري رکو</string>
+    <string name="c10597">لاڳو نٿو ٿئي</string>
+    <string name="c106">ڇا توهان جي سينه درد يا تڪليف دور ٿي ويندي آهي جيڪڏهن توهان اڃا بيٺو آهيو؟</string>
+    <string name="c10601">ها</string>
+    <string name="c10602">نه</string>
+    <string name="c107">وڃڻ ۾ ڪيترو وقت لڳندو آهي؟</string>
+    <string name="c10701">10 منٽ يا گهٽ</string>
+    <string name="c10702">10 منٽ کان وڌيڪ</string>
+    <string name="d101">ڇا توهان کي ڪڏهن ڪنهن ڊاڪٽر ٻڌايو آهي ته توهان کي فالج ٿيو آهي؟</string>
+    <string name="d10101">ها</string>
+    <string name="d10102">نه</string>
+    <string name="d10198">اڻڄاتل</string>
+
+    <string name="d102">ڇا توهان کي ڪڏهن ڪنهن ڊاڪٽر ٻڌايو آهي ته توهان کي TIA، منسٽروڪ يا عارضي اسڪيمڪ حملو ٿيو آهي؟</string>
+    <string name="d10201">ها</string>
+    <string name="d10202">نه</string>
+    <string name="d10298">اڻڄاتل</string>
+
+    <string name="d103">ڇا توهان ڪڏهن پنهنجي جسم جي هڪ پاسي تي اوچتو، بي درد ڪمزوري ڪئي آهي؟</string>
+    <string name="d10301">ها</string>
+    <string name="d10302">نه</string>
+    <string name="d10398">اڻڄاتل</string>
+
+    <string name="d104">ڇا توهان ڪڏهن محسوس ڪيو آهي ته توهان جي جسم جي هڪ پاسي تي اوچتو بي حسي يا مئل آهي؟</string>
+    <string name="d10401">ها</string>
+    <string name="d10402">نه</string>
+    <string name="d10498">اڻڄاتل</string>
+
+    <string name="d105">ڇا توهان ڪڏهن هڪ يا ٻنهي اکين ۾ اوچتو اوچتو بي دردي واري نظر کي نقصان پهچايو آهي؟</string>
+    <string name="d10501">ها</string>
+    <string name="d10502">نه</string>
+    <string name="d10598">اڻڄاتل</string>
+
+    <string name="d106">ڇا توهان ڪڏهن اوچتو پنهنجي نظر جو اڌ وڃائي ڇڏيو آهي؟</string>
+    <string name="d10601">ها</string>
+    <string name="d10602">نه</string>
+    <string name="d10698">اڻڄاتل</string>
+
+    <string name="d107">ڇا توهان ڪڏهن اوچتو اهو سمجهڻ جي صلاحيت وڃائي ڇڏيو آهي ته ماڻهو ڇا چئي رهيا آهن؟</string>
+    <string name="d10701">ها</string>
+    <string name="d10702">نه</string>
+    <string name="d10798">اڻڄاتل</string>
+
+    <string name="d108">ڇا توهان ڪڏهن اوچتو پنهنجو پاڻ کي زباني يا لکڻ ۾ ظاهر ڪرڻ جي صلاحيت وڃائي ڇڏيو آهي؟</string>
+    <string name="d10801">ها</string>
+    <string name="d10802">نه</string>
+    <string name="d10898">اڻڄاتل</string>
+
+    <string name="e101">گذريل 7 ڏينهن دوران، توهان ڪيترا ڏينهن زوردار جسماني سرگرميون ڪيون جيئن ته ڳري لفنگ، کوٽائي، ايروبڪس، يا تيز سائيڪل هلائڻ؟</string>
+    <string name="e10101">ڏينهن في هفتي</string>
+    <string name="e10199">ڪابه سخت جسماني سرگرميون.</string>
+
+    <string name="e102">انهن ڏينهن مان هڪ ڏينهن تي توهان اڪثر زوردار جسماني سرگرمي ڪرڻ ۾ ڪيترو وقت گذاريو؟</string>
+    <string name="e10201">ڪلاڪ</string>
+    <string name="e10202">منٽ</string>
+    <string name="e10298">خبر ناهي / پڪ ناهي.</string>
+    <string name="e102x">في ڏينهن خرچ وقت</string>
+
+    <string name="e103">گذريل 7 ڏينهن دوران، توهان ڪيترا ڏينهن اعتدال پسند جسماني سرگرمي ڪئي، جهڙوڪ هلڪو وزن کڻڻ، سائيڪل هلائڻ، باقاعده رفتار سان، يا ڊبل ٽينس؟ گھمڻ شامل نه ڪريو.</string>
+    <string name="e10301">ڏينهن في هفتي</string>
+    <string name="e10399">ڪابه سخت جسماني سرگرميون.</string>
+
+    <string name="e104">گذريل 7 ڏينهن دوران، توهان ڪيترا ڏينهن ريليڪسن جسماني سرگرمي ڪرڻ ۾ وقت گذاريو، جهڙوڪ ادراڪ سيمنٽيشن، مسجد ۾ قواعد سيوڻ، آڻڻ ڪرڻ، يا ايکسوٽڪ ڏانس؟ گھمڻ شامل نه ڪريو.</string>
+    <string name="e10401">ڏينهن في هفتي</string>
+    <string name="e10499">ڪابه سخت جسماني سرگرميون.</string>
+
+    <string name="e105">گذريل 7 ڏينهن دوران، توهان ڪيترا ڏينهن غير سخت جسماني سرگرميون کڻيو، جهڙوڪ پيڪنڊ، گائڑن، ٽوئسٽ ڪرڪٽ، چارسي، يا فٽ بال؟ گھمڻ شامل نه ڪريو.</string>
+    <string name="e10501">ڏينهن في هفتي</string>
+    <string name="e10599">ڪابه سخت جسماني سرگرميون.</string>
+
+    <string name="e106">گذريل 7 ڏينهن دوران، توهان ڪيترا ڏينهن وڏو ڏينهن جي سرگرميون ڪيون جيئن ته وقت گذاريو، جهڙوڪ فٽ بال، ٽينس ڪرڪٽ، سرف واڳس، يا گائڑن؟</string>
+    <string name="e10601">ڏينهن في هفتي</string>
+    <string name="e10699">ڪابه سخت جسماني سرگرميون.</string>
+
+    <string name="e107">گذريل 7 ڏينهن دوران، توهان ڪيترا ڏينهن چڪس جسماني سرگرمي ڪئي، جهڙوڪ وڏو ريسرج، ريليڪسيشن، موسيقي جون سنڌي، يوگا، يا ڪڌههن ٻولن جي تحقيق؟ گھمڻ شامل نه ڪريو.</string>
+    <string name="e10701">ڏينهن في هفتي</string>
+    <string name="e10799">ڪابه سخت جسماني سرگرميون.</string>
+
+    <string name="htitle">ورلڈ ہیلتھ آرگنائزیشن - فائیو ویل بیئنگ انڈیکس سیکشن (WHO-5)</string>
+    <string name="h1title">مھرباني ڪري پنجن بيانن مان ھر ھڪ کي گول ڪريو جيڪي بھترين بيان ڪن ٿا ته توھان گذريل ٻن هفتن کان ڪيئن محسوس ڪري رھيا آھيو. ياد رهي ته اعليٰ نمبرن جو مطلب بهتر صحت آهي.</string>
+    <string name="h101">مھرباني ڪري انھن پنجن بيانن مان ھر ھڪ کي ظاھر ڪريو جيڪي چڱيءَ طرح بيان ڪن ٿيون ته توھان گذريل ٻن هفتن کان ڪيئن محسوس ڪري رھيا آھيو.</string>
+    <string name="h10199">بغير دير جي</string>
+    <string name="h10101">ڪجھ ڀيرا</string>
+    <string name="h10102">اڌ کان به گهٽ وقت</string>
+    <string name="h10103">اڌ کان وڌيڪ وقت</string>
+    <string name="h10104">اڪثر اوقات</string>
+    <string name="h10105">سمورو وقت</string>
+    <string name="h102">مان خوش آهيان ۽ سٺي روح ۾</string>
+    <string name="h10299">بغير دير جي</string>
+    <string name="h10201">ڪجھ ڀيرا</string>
+    <string name="h10202">اڌ کان به گهٽ وقت</string>
+    <string name="h10203">اڌ کان وڌيڪ وقت</string>
+    <string name="h10204">اڪثر اوقات</string>
+    <string name="h10205">سمورو وقت</string>
+    <string name="h103">مون کي آرام ۽ آرام محسوس ڪيو آهي.</string>
+    <string name="h10399">بغير دير جي</string>
+    <string name="h10301">ڪجھ ڀيرا</string>
+    <string name="h10302">اڌ کان به گهٽ وقت</string>
+    <string name="h10303">اڌ کان وڌيڪ وقت</string>
+    <string name="h10304">اڪثر اوقات</string>
+    <string name="h10305">سمورو وقت</string>
+    <string name="h104">مون کي سرگرم ۽ سرگرم محسوس.</string>
+    <string name="h10499">بغير دير جي</string>
+    <string name="h10401">ڪجھ ڀيرا</string>
+    <string name="h10402">اڌ کان به گهٽ وقت</string>
+    <string name="h10403">اڌ کان وڌيڪ وقت</string>
+    <string name="h10404">اڪثر اوقات</string>
+    <string name="h10405">سمورو وقت</string>
+    <string name="h105">مان اُٿي بيٺس ۽ تازگي محسوس ڪيم</string>
+    <string name="h10599">بغير دير جي</string>
+    <string name="h10501">ڪجھ ڀيرا</string>
+    <string name="h10502">اڌ کان به گهٽ وقت</string>
+    <string name="h10503">اڌ کان وڌيڪ وقت</string>
+    <string name="h10504">اڪثر اوقات</string>
+    <string name="h10505">سمورو وقت</string>
+    <string name="h106">منهنجي روزاني زندگي شين سان ڀريل آهي جيڪي مون کي دلچسپي وٺن ٿا.</string>
+    <string name="h10699">بغير دير جي</string>
+    <string name="h10601">ڪجھ ڀيرا</string>
+    <string name="h10602">اڌ کان به گهٽ وقت</string>
+    <string name="h10603">اڌ کان وڌيڪ وقت</string>
+    <string name="h10604">اڪثر اوقات</string>
+    <string name="h10605">سمورو وقت</string>
+
+</resources>

@@ -1,0 +1,486 @@
+<resources>
+    <string name="app_name">WellnessScale</string>
+
+    <string name="btnDownload" translatable="false">Download Data</string>
+    <string name="btnUpload">Upload Data</string>
+    <string name="promptemail">Email</string>
+    <string name="promptpassword">Password</string>
+    <string name="actionsignin">Login</string>
+    <string name="actionsigninshort">Sign in</string>
+    <string name="splashText"> </string>
+    <string name="checkpendingforms">CHECK PENDING FORMS</string>
+    <string name="startinterview" translatable="false">START INTERVIEW</string>
+    <string name="openHouseholdForm" translatable="false">OPEN HOUSEHOLD FORM</string>
+    <string name="addChild" translatable="false">ADD A CHILD</string>
+    <string name="openbloodform" translatable="false">UPDATE BLOOD INFORMANTION</string>
+    <string name="openstoolform" translatable="false">UPDATE STOOL INFORMANTION</string>
+    <string name="recordssummary">Records Summary</string>
+    <string name="mainmenu">Main Menu</string>
+    <string name="onlyfortesting">ONLY FOR TESTING</string>
+    <string name="database">Database</string>
+    <string name="district" translatable="false">DISTRICT</string>
+    <string name="uc" translatable="false">UC</string>
+    <string name="btnSave" translatable="false">Save</string>
+    <string name="btnEnd" translatable="false">Cancel</string>
+    <string name="signin" translatable="false">SIGN IN</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="newPassword" translatable="false">New Password</string>
+    <string name="confirmPassword" translatable="false">Confirm Password</string>
+    <string name="btnResetPassword">Reset Password</string>
+    <string name="country">Language (Click to change)</string>
+    <string name="pakistan" translatable="false">Pakistan</string>
+    <string name="tajikistan" translatable="false">Tajikistan</string>
+    <string name="btnLogin" translatable="false">Login</string>
+    <string name="btnReset" translatable="false">Reset</string>
+    <string name="btnDownloadData" translatable="false">Download Data</string>
+    <string name="csMAexist" translatable="false">might be already exist</string>
+
+    <string name="netwrok" translatable="false">Network connection not available!</string>
+    <string name="invalidpass" translatable="false">Invalid Password</string>
+    <string name="unameRequired" translatable="false">Username is required.</string>
+    <string name="incorrcetPass" translatable="false">Incorrect Password</string>
+    <string name="downData" translatable="false">Download Data</string>
+    <string name="permission" translatable="false">Permissions Required</string>
+    <string name="warning" translatable="false">Warning</string>
+    <string name="newApp" translatable="false">New App downloaded!!</string>
+    <string name="appVer" translatable="false">App New Version</string>
+    <string name="btnSync">Download Data</string>
+    <string name="downloaded" translatable="false">Downloaded</string>
+    <string name="appDownload" translatable="false">appDownload</string>
+    <string name="newVer" translatable="false">New Version</string>
+    <string name="downloading" translatable="false">Downloading</string>
+    <string name="available" translatable="false">Available</string>
+    <string name="downError" translatable="false">Cant download.. Internet connectivity issue!</string>
+    <string name="backbtn" translatable="false">Press Back again to Exit</string>
+    <string name="noNetwork" translatable="false">No network connection available!</string>
+    <string name="appAvailable" translatable="false">APP is available!</string>
+    <string name="oldAppMsg" translatable="false">App Ver." + " is now available. Your are currently using older Ver."</string>
+    <string name="installNewApp" translatable="false">Install new version to use this app</string>
+    <string name="install" translatable="false">Install</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="complete" translatable="false">complete</string>
+    <string name="updatingError" translatable="false">Error in updating db!!</string>
+    <string name="updateDbError1" translatable="false">"Sorry. You can't go further."</string>
+    <string name="updateDbError2" translatable="false">"Please contact IT Team (Failed to update DB)"</string>
+    <string name="bckbtn" translatable="false">You Cant go back</string>
+    <string name="processing" translatable="false">Processing</string>
+    <string name="confirmation" translatable="false">Confirmation!</string>
+    <string name="confirm">Confirm?</string>
+    <string name="cntbtn" translatable="false">Are you sure, you want to continue - interview</string>
+    <string name="failedUpdateDb" translatable="false">SORRY! Failed to update DB</string>
+    <string name="invalidDate" translatable="false">Invalid date!</string>
+    <string name="ageCalc" translatable="false">"Both Month and Year don't be zero!!"</string>
+    <string name="actiondatabase" translatable="false">Database Manager</string>
+    <string name="actiondatasync" translatable="false">Sync Data</string>
+    <string name="dkn"> Don’t Know </string>
+    <string name="none"> No one </string>
+    <string name="never"> Never</string>
+    <string name="na"> Applicable /Not Available</string>
+    <string name="nap"> Not Applicable </string>
+    <string name="errorinvalidpassword">This password is too short</string>
+    <string name="errorfieldrequired">This field is required</string>
+    <string name="errorincorrectpassword">This password is incorrect</string>
+    <string name="nav">Not Available </string>
+    <string name="ref"> Refused </string>
+    <string name="other"> Other </string>
+    <string name="specify"> Please explain </string>
+    <string name="year"> Year </string>
+    <string name="month"> Month </string>
+    <string name="weeks"> Week(s) </string>
+    <string name="days"> Day(s) </string>
+    <string name="hours"> Hour(s) </string>
+    <string name="minutes"> Minute(s) </string>
+    <string name="kg"> Kilograms </string>
+    <string name="km"> Kilometers </string>
+    <string name="cm"> cm </string>
+    <string name="in"> Inch </string>
+    <string name="rupees"> Rupees </string>
+    <string name="num"> Number </string>
+    <string name="name"> Name </string>
+
+    <!--Error Messages-->
+    <string name="upd_db_form" translatable="false"> updateDB(Form):\t </string>
+    <string name="upd_db_error" translatable="false"> Updating Database… ERROR! </string>
+    <string name="db_excp_error" translatable="false"> Database Exception... ERROR! </string>
+    <string name="upd_db" translatable="false"> Updating Database...\t </string>
+    <string name="fail_db_upd" translatable="false"> Failed to Update Database! </string>
+    <string name="backPress" translatable="false"> Back Press Not Allowed </string>
+    <string name="invalid_response" translatable="false"> Invalid Response </string>
+    <string name="agecal" translatable="false">ageCal:\t</string>
+    <string name="title_child_dialog" translatable="false">Child Count</string>
+    <string name="message_child_dialog_proceeed" translatable="false">You have entered only %1$s of %2$s Children in the household. \nAre you sure you want to continue now?</string>
+    <string name="message_child_dialog_addmore" translatable="false">You have already entered %1$s Children. \nAre you sure you want to add more Child?</string>
+    <string name="network_conn_error" translatable="false"> Network connection not available ! </string>
+    <string name="no_mother_selected_child_list" translatable="false"> No Mother has been selected. Please select a mother before opening Child List </string>
+    <string name="onitemselected" translatable="false"> onItemSelected(Samples):\t </string>
+    <string name="upd_samples" translatable="false"> updateDB(Samples):\t </string>
+    <string name="upd_anthro" translatable="false"> updateDB(Anthro):\t </string>
+    <string name="folder_not_created" translatable="false"> Folder Not Created </string>
+    <string name="invalid_password" translatable="false"> Invalid Password </string>
+    <string name="username_required" translatable="false"> Username is required. </string>
+    <string name="username_password_same" translatable="false"> Username and Password cannot be same. </string>
+    <string name="incorrect_username_or_password" translatable="false">Incorrect Username or Password</string>
+    <string name="open_hh_form" translatable="false"> Open Household Form </string>
+    <string name="hh_not_found" translatable="false">Household not Found</string>
+    <string name="hh_exists_form" translatable="false"> JSONException(Form): \t </string>
+    <string name="child_info_missing" translatable="false">Please fill child sections before entering this information</string>
+    <string name="open_new_form" translatable="false">OPEN NEW FORM</string>
+    <string name="options" translatable="false">Options</string>
+    <string name="householdidentificationmainheading">Household Identification: </string>
+
+    <string name="hh01">Date of interview:</string>
+    <string name="hh02">Time of interview: </string>
+    <string name="hh03">Interviews Code</string>
+    <string name="hh03a">Interviewer’s name</string>
+    <string name="hh04">Supervisors Code</string>
+    <string name="hh04a">Supervisor’s name</string>
+    <string name="hh05">Enumeration Block Number:</string>
+    <string name="hh06">Province                        </string>
+    <string name="hh07">District: </string>
+    <string name="hh08">Tehsil/Taluka:</string>
+    <string name="hh09">City/Village:</string>
+    <string name="hh10">Locality, Street Address with landmarks</string>
+    <string name="hh12">Household number: </string>
+
+    <string name="hh15">Is respondent Head of Household?</string>
+    <string name="hh16">Name and contact number of the head of Household: </string>
+    <string name="hh15a">Yes</string>
+    <string name="hh16a">Head of Households</string>
+    <string name="hh15b">No</string>
+    <string name="hh16b">Head of Households Contact No </string>
+    <string name="hh19">How many members are living in this household? (NUMBER OF PERSONS) (If 95 or more, record ‘95’) Note for enumorators: Persons who live in this dwelling/ compound and usually share a meal together </string>
+    <string name="hh19info"> (NUMBER OF PERSONS) (If 95 or more, record ‘95’) Note for enumerators: Persons who live in this dwelling/ compound and usually share a meal together </string>
+    <string name="hh20"> Does this HH have children 06-23 months years of age? (i.e., children who have reached their first birthday, but not their second birthday)</string>
+    <string name="hh201">Yes</string>
+    <string name="hh202">No</string>
+    <string name="hh20a">If Yes, Numbers of childrens 06-23 months:</string>
+    <!--   <string name="iStatus">Result of Household Questionnaire Discuss any result not completed with supervisor. interview</string>
+    <string name="iStatusa">Completed</string>
+    <string name="iStatusb">No HH member at home or no competent respondent at home at time of visit  </string>
+    <string name="iStatusc">Entire household absent for extended period of time</string>
+    <string name="iStatusd">Refused</string>
+    <string name="iStatuse">Dwelling vacant or address not a dwelling </string>
+    <string name="iStatusf">Dwelling not found</string>
+    <string name="iStatusg">No child of 06-23 months in this household</string>-->
+
+    <string name="iStatus"> Result of Household Questionnaire interview </string>
+    <string name="iStatusi"> Discuss any result not completed with team leader </string>
+    <string name="iStatus01"> Completed </string>
+    <string name="iStatus02"> No HH member at home or no competent respondent at home at time of visit </string>
+    <string name="iStatus03"> Entire household absent for extended period of time </string>
+    <string name="iStatus04"> Refused </string>
+    <string name="iStatus05"> Dwelling vacant or address not a dwelling </string>
+    <string name="iStatus06"> Dwelling not found </string>
+    <string name="iStatus07"> No child of 06-23 months in this household </string>
+    <string name="iStatus96"> Other (Specify) </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="patientdemographicssection_mainheading">Patient Demographics Section
+: Patient Demographics Section
+</string>
+    <string name="rapidsection_mainheading">RAPID Section
+: RAPID Section
+</string>
+    <string name="roseanginasection_mainheading">Rose Angina Section
+: Rose Angina Section
+</string>
+    <string name="verifyingstrokefreestatussectionqvsf_mainheading">Verifying Stroke Free Status Section (QVSF)
+: Verifying Stroke Free Status Section (QVSF)
+</string>
+    <string name="internationalphysicalactivitysectionipaq_mainheading">International Physical Activity Section (IPAQ)
+: International Physical Activity Section (IPAQ)
+</string>
+    <string name="theworldhealthorganizationfivewellbeingindexsectionwho5_mainheading">The World Health Organization - Five Well-Being Index Section (WHO-5)
+: The World Health Organization  Five WellBeing Index Section (WHO5)
+</string>
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="check_pending_forms">CHECK PENDING FORMS</string>
+    <string name="records_summary">Records Summary</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="only_for_testing">ONLY FOR TESTING</string>
+
+    <string name="no"> No </string>
+
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+
+    <string name="contactnum">Contact Number </string>
+    <string name="checkHHpresent"> The name of head of the household corresponds to the line listing data.</string>
+    <string name="newHHheadname"> Name of new head of the household </string>
+    <string name="atitle">Section A: Patient Demographics</string>
+
+    <string name="hh18t">Asalum-o-Alaikum, my name is %1$s. \n\nWe are from National Ministry of Health Services, Regulation and Coordination, Government of Pakistan. We are conducting a survey about the situation of the children health in Pakistan. \n\nI would like to talk to you about (child’s name)’s vaccination history. This interview will take about 30 minutes. All the information we obtain will remain strictly confidential and anonymous. \n\nIf you wish not to answer a question or wish to stop the interview, please let me know.</string>
+
+    <string name="a101">LHW name</string>
+
+    <string name="a102">Khandaan number</string>
+
+
+    <string name="a103">Patient Name</string>
+
+    <string name="a104">Age</string>
+
+    <string name="a105">Gender</string>
+
+    <string name="a10501">Male</string>
+
+    <string name="a10502">Female</string>
+
+    <string name="a106">Ethnicity</string>
+
+    <string name="a10601">Urdu</string>
+
+    <string name="a10602">Sindhi</string>
+
+    <string name="a10603">Punjabi</string>
+
+    <string name="a10604">Baluchi</string>
+
+    <string name="a10605">Pashtu</string>
+
+    <string name="a10606">Kashmiri</string>
+
+    <string name="a10696">Other (Please Specify)</string>
+
+    <string name="a107">Address</string>
+
+    <string name="a108">Education status</string>
+    <string name="consent">Has the written consent been signed?</string>
+
+    <string name="a10801">No formal education</string>
+
+    <string name="a10802">Primary education</string>
+
+    <string name="a10803">Secondary education</string>
+
+    <string name="a10804">Higher secondary</string>
+
+    <string name="a10805">Graduation or Higher</string>
+
+    <string name="a109">Employed</string>
+
+    <string name="a10901">Yes</string>
+
+    <string name="a10902">No</string>
+
+    <string name="btitle">RAPID Section</string>
+    <string name="b101">Waist Circumference</string>
+    <string name="b102">Positive family history of diabetes</string>
+    <string name="bscore">Scoring Criteria:</string>
+    <string name="btitle1">Ages between 40–50 years were marked 1 whereas, ages greater than 50 years were marked 3 points. </string>
+    <string name="btitle2">Waist circumference greater than, or equal to the cutoff point (80 cm for females and 90 cm for males) was marked as 2 points</string>
+    <string name="btitle3">Positive family history of diabetes was marked as 1 point. </string>
+    <string name="btitle4">Note: Subjects with a score greater than or equal to 4 are considered at risk of diabetes. </string>
+    <string name="ctitle">Rose Angina Section</string>
+    <string name="c101">Do you ever have any pain or discomfort in your chest?</string>
+    <string name="c10101">Yes</string>
+    <string name="c10102">No</string>
+    <string name="c102">Where do you get this pain or discomfort (Please mark X on the appropriate places</string>
+    <string name="c10201">1 Right side of Chest</string>
+    <string name="c10202">2 Right side of Chest</string>
+    <string name="c10203">3 Right side of Chest</string>
+    <string name="c10204">4 Centre of Chest</string>
+    <string name="c10205">5 Centre of Chest</string>
+    <string name="c10206">6 Centre of Chest</string>
+    <string name="c10207">7 Left side of Chest</string>
+    <string name="c10208">8 Left side of Chest</string>
+    <string name="c10209">9 Left side of Chest</string>
+    <string name="c103">When you walk at an ordinary pace on the level does this produce the pain</string>
+    <string name="c10301">Yes</string>
+    <string name="c10302">No</string>
+    <string name="c103097">Unable</string>
+    <string name="c104">When you walk uphill or hurry does this produce the pain</string>
+    <string name="c10401">Yes</string>
+    <string name="c10402">No</string>
+    <string name="c10497">Unable</string>
+    <string name="c105">When you get any pain or discomfort in your chest on walking, what do you do?</string>
+    <string name="c10501">Stop</string>
+    <string name="c10502">Slow down</string>
+    <string name="c10503">Continue at same pace</string>
+    <string name="c10597">Not applicable</string>
+    <string name="c106">Does the pain or discomfort in your chest go away if you stand still?</string>
+    <string name="c10601">Yes</string>
+    <string name="c10602">No</string>
+    <string name="c107">How long does it take to go away?</string>
+    <string name="c10701">10 minutes or less</string>
+    <string name="c10702">More than 10 Minutes</string>
+    <string name="dtitle">Verifying Stroke Free Status Section (QVSF)</string>
+    <string name="d101">Were you ever told by a physician that you had a stroke?</string>
+    <string name="d10101">Yes</string>
+    <string name="d10102">No</string>
+    <string name="d10198">Unknown</string>
+    <string name="d102">Were you ever told by a physician that you had a TIA, ministroke or transient ischemic attack?</string>
+    <string name="d10201">Yes</string>
+    <string name="d10202">No</string>
+    <string name="d10298">Unknown</string>
+    <string name="d103">Have you ever had sudden painless weakness on one side of your body?</string>
+    <string name="d10301">Yes</string>
+    <string name="d10302">No</string>
+    <string name="d10398">Unknown</string>
+    <string name="d104">Have you ever had sudden numbness or a dead feeling on one side of your body?</string>
+    <string name="d10401">Yes</string>
+    <string name="d10402">No</string>
+    <string name="d10498">Unknown</string>
+    <string name="d105">Have you ever had sudden painless loss of vision in one or both eyes?</string>
+    <string name="d10501">Yes</string>
+    <string name="d10502">No</string>
+    <string name="d10598">Unknown</string>
+    <string name="d106">Have you ever suddenly lost one half of your vision?</string>
+    <string name="d10601">Yes</string>
+    <string name="d10602">No</string>
+    <string name="d10698">Unknown</string>
+    <string name="d107">Have you ever suddenly lost the ability to understand what people are saying?</string>
+    <string name="d10701">Yes</string>
+    <string name="d10702">No</string>
+    <string name="d10798">Unknown</string>
+    <string name="d108">Have you ever suddenly lost the ability to express yourself verbally or in writing?</string>
+    <string name="d10801">Yes</string>
+    <string name="d10802">No</string>
+    <string name="d10898">Unknown</string>
+    <string name="dscore">Scoring Criteria:</string>
+    <string name="dstitle">QVSFS scores range from 0 (no questions positive) to 8 (all 8 questions positive). Subjects were considered QVSFS negative (stroke/TIA free) if their sum score was 0. If any of the 8 items were positive (sum score 1 to 8), the QVSFS was considered positive (not stroke/TIA free.) Any question that was answered “unknown” was scored as a negative response. The alternative approach, scoring all “unknown” responses as positive, would have changed the QVSFS outcome in 6 subjects.</string>
+    <string name="etitle">International Physical Activity Section (IPAQ)</string>
+    <string name="e101">During the last 7 days, on how many days did you do vigorous physical activities like heavy lifting, digging, aerobics, or fast bicycling?</string>
+    <string name="e10101">Days per week</string>
+    <string name="e10199">No vigorous physical activities</string>
+    <string name="e102">How much time did you usually spend doing vigorous physical activities on one of those days?</string>
+    <string name="e10201">Hours</string>
+    <string name="e10202">Minutes</string>
+    <string name="e10298">Don’t Know/Not Sure</string>
+    <string name="e102x">Time spent per day</string>
+    <string name="e103">During the last 7 days, on how many days did you do moderate physical activities like carrying light loads, bicycling at a regular pace, or doubles tennis? Do not include walking.</string>
+    <string name="e10301">Days per week</string>
+    <string name="e10399">No vigorous physical activities</string>
+    <string name="e104">How much time did you usually spend doing moderate physical activities on one of those days?</string>
+    <string name="e10401">Hours</string>
+    <string name="e10402">Minutes</string>
+    <string name="e10498">Don’t Know/Not Sure</string>
+    <string name="e104x">Time spent per day</string>
+    <string name="e105">During the last 7 days, on how many days did you walk for at least 10 minutes at a time?</string>
+    <string name="e10501">Days per week</string>
+    <string name="e10599">No vigorous physical activities</string>
+    <string name="e106">How much time did you usually spend walking on one of those days?</string>
+    <string name="e10601">Hours</string>
+    <string name="e10602">Minutes</string>
+    <string name="e10698">Don’t Know/Not Sure</string>
+    <string name="e106x">Time spent per day</string>
+    <string name="e107">During the last 7 days, how much time did you spend sitting on a week day?</string>
+    <string name="e10701">Hours</string>
+    <string name="e10702">Minutes</string>
+    <string name="e10798">Don’t Know/Not Sure</string>
+    <string name="e107x">Time spent per day</string>
+    <string name="htitle">Five Well-Being Index Section (WHO-5)</string>
+    <string name="h1title">Please put a circle on each of the five statements which is closest to how you have been feeling over the last two weeks. Notice that higher numbers mean better wellbeing.</string>
+    <string name="h101">Please indicate for each of the five statements which is closest to how you have been feeling over the past two weeks.</string>
+    <string name="h10199">At no time</string>
+    <string name="h10101">Some of the time</string>
+    <string name="h10102">Less than half of the time</string>
+    <string name="h10103">More than half of the time</string>
+    <string name="h10104">Most of the time</string>
+    <string name="h10105">All of the time</string>
+    <string name="h102">I have felt cheerful and in good spirits</string>
+    <string name="h10299">At no time</string>
+    <string name="h10201">Some of the time</string>
+    <string name="h10202">Less than half of the time</string>
+    <string name="h10203">More than half of the time</string>
+    <string name="h10204">Most of the time</string>
+    <string name="h10205">All of the time</string>
+    <string name="h103">I have felt calm and relaxed</string>
+    <string name="h10399">At no time</string>
+    <string name="h10301">Some of the time</string>
+    <string name="h10302">Less than half of the time</string>
+    <string name="h10303">More than half of the time</string>
+    <string name="h10304">Most of the time</string>
+    <string name="h10305">All of the time</string>
+    <string name="h104">I have felt active and vigorous</string>
+    <string name="h10499">At no time</string>
+    <string name="h10401">Some of the time</string>
+    <string name="h10402">Less than half of the time</string>
+    <string name="h10403">More than half of the time</string>
+    <string name="h10404">Most of the time</string>
+    <string name="h10405">All of the time</string>
+    <string name="h105">I woke up feeling fresh and rested</string>
+    <string name="h10599">At no time</string>
+    <string name="h10501">Some of the time</string>
+    <string name="h10502">Less than half of the time</string>
+    <string name="h10503">More than half of the time</string>
+    <string name="h10504">Most of the time</string>
+    <string name="h10505">All of the time</string>
+    <string name="h106">My daily life has been filled with things that interest me</string>
+    <string name="h10699">At no time</string>
+    <string name="h10601">Some of the time</string>
+    <string name="h10602">Less than half of the time</string>
+    <string name="h10603">More than half of the time</string>
+    <string name="h10604">Most of the time</string>
+    <string name="h10605">All of the time</string>
+    <string name="hscore">Scoring Criteria:</string>
+    <string name="hstitle1">Interpretation: Is it recommended to administer the Major Depression (ICD-10) Inventory (Annex 2) if the raw score is below 13 or if the patient has answered 0 or 1 to any of the 5 items. A score below 13 indicates poor wellbeing and is an indication for testing for depression using ICD-10</string>
+    <string name="hstitle2">The World Health Organization- Five Well-Being Index (WHO-5) is a short self-reported measure of current mental well-being. The measure was first introduced in its present form in 1998 by the WHO Regional Office in Europe as part of the DEPCARE project on well-being measures in primary health care. The WHO-5 consists of five statements, which respondents’ rate according to the scale below (in relation to the past two weeks). All the time = 5, Most of the time = 4, More than half of the time = 3, Less than half of the time = 2, Some of the time = 1, At no time = 0. The total raw score, ranging from 0 to 25, is multiplied by 4 to give the final score, with 0 representing the worst imaginable well-being and 100 representing the best imaginable well-being. The WHO-5 is free of charge and does not require permission to use.</string>
+
+
+    <string name='Q_a101'>Q. A01</string>
+    <string name='Q_a102'>Q. A02</string>
+    <string name='Q_a103'>Q. A03</string>
+    <string name='Q_a104'>Q. A04</string>
+    <string name='Q_a105'>Q. A05</string>
+    <string name='Q_a106'>Q. A06</string>
+    <string name='Q_a107'>Q. A07</string>
+    <string name='Q_a108'>Q. A08</string>
+    <string name='Q_a109'>Q. A09</string>
+    <string name='Q_atitle'>atitle</string>
+    <string name='Q_b101'>b101</string>
+    <string name='Q_b102'>b102</string>
+    <string name='Q_bscore'>bscore</string>
+    <string name='Q_btitle'>btitle</string>
+    <string name='Q_btitle4'>btitle4</string>
+    <string name='Q_c101'>c101</string>
+    <string name='Q_c102'>c102</string>
+    <string name='Q_c103'>c103</string>
+    <string name='Q_c104'>c104</string>
+    <string name='Q_c105'>c105</string>
+    <string name='Q_c106'>c106</string>
+    <string name='Q_c107'>c107</string>
+    <string name='Q_ctitle'>ctitle</string>
+    <string name='Q_d101'>d101</string>
+    <string name='Q_d102'>d102</string>
+    <string name='Q_d103'>d103</string>
+    <string name='Q_d104'>d104</string>
+    <string name='Q_d105'>d105</string>
+    <string name='Q_d106'>d106</string>
+    <string name='Q_d107'>d107</string>
+    <string name='Q_d108'>d108</string>
+    <string name='Q_dscore'>dscore</string>
+    <string name='Q_dtitle'>dtitle</string>
+    <string name='Q_e101'>e101</string>
+    <string name='Q_e102'>e102</string>
+    <string name='Q_e1021'>e1021</string>
+    <string name='Q_e103'>e103</string>
+    <string name='Q_e104'>e104</string>
+    <string name='Q_e1041'>e1041</string>
+    <string name='Q_e105'>e105</string>
+    <string name='Q_e106'>e106</string>
+    <string name='Q_e107'>e107</string>
+    <string name='Q_e1071'>e1071</string>
+    <string name='Q_etitle'>etitle</string>
+    <string name='Q_h101'>h101</string>
+    <string name='Q_h102'>h102</string>
+    <string name='Q_h103'>h103</string>
+    <string name='Q_h104'>h104</string>
+    <string name='Q_h105'>h105</string>
+    <string name='Q_h106'>h106</string>
+    <string name='Q_h1title'>h1title</string>
+    <string name='Q_hscore'>hscore</string>
+    <string name='Q_hstitle2'>hstitle2</string>
+    <string name='Q_htitle'>htitle</string>
+    <string name="consentheading">Consent</string>
+    <string name="open_lhw_form">OPEN LHW REGISTRATION FORM</string>
+
+</resources>

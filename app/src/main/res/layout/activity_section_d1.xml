@@ -1,0 +1,522 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.wellnessscale.ui.sections.SectionD1Activity" />
+
+        <variable
+            name="familymembers"
+            type="edu.aku.hassannaqvi.wellnessscale.models.FamilyMembers" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg_effect"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitle="@string/dtitle"
+            app:theme="@style/ActionBarTheme"
+            app:title="@string/app_name" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/GrpName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- d101  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd101"
+                    style="@style/cardView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" ><LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_d101"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d101" />
+
+                    </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/d101"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"><RadioButton
+                            android:id="@+id/d10101"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d101.equals(`1`)}"
+                            android:onClick="@{()->familymembers.setD101(`1`)}"
+                            android:text="@string/d10101"
+                            /> <RadioButton
+                            android:id="@+id/d10102"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d101.equals(`2`)}"
+                            android:onClick="@{()->familymembers.setD101(`2`)}"
+                            android:text="@string/d10102"
+                            /> <RadioButton
+                            android:id="@+id/d10198"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d101.equals(`98`)}"
+                            android:onClick="@{()->familymembers.setD101(`98`)}"
+                            android:text="@string/d10198"
+                            /> </RadioGroup> </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- d102  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd102"
+                    style="@style/cardView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" ><LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_d102"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d102" />
+
+                    </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/d102"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"><RadioButton
+                            android:id="@+id/d10201"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d102.equals(`1`)}"
+                            android:onClick="@{()->familymembers.setD102(`1`)}"
+                            android:text="@string/d10201"
+                            /> <RadioButton
+                            android:id="@+id/d10202"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d102.equals(`2`)}"
+                            android:onClick="@{()->familymembers.setD102(`2`)}"
+                            android:text="@string/d10202"
+                            /> <RadioButton
+                            android:id="@+id/d10298"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d102.equals(`98`)}"
+                            android:onClick="@{()->familymembers.setD102(`98`)}"
+                            android:text="@string/d10298"
+                            /> </RadioGroup> </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- d103  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd103"
+                    style="@style/cardView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" ><LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_d103"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d103" />
+
+                    </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/d103"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"><RadioButton
+                            android:id="@+id/d10301"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d103.equals(`1`)}"
+                            android:onClick="@{()->familymembers.setD103(`1`)}"
+                            android:text="@string/d10301"
+                            /> <RadioButton
+                            android:id="@+id/d10302"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d103.equals(`2`)}"
+                            android:onClick="@{()->familymembers.setD103(`2`)}"
+                            android:text="@string/d10302"
+                            /> <RadioButton
+                            android:id="@+id/d10398"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d103.equals(`98`)}"
+                            android:onClick="@{()->familymembers.setD103(`98`)}"
+                            android:text="@string/d10398"
+                            /> </RadioGroup> </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- d104  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd104"
+                    style="@style/cardView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" ><LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_d104"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d104" />
+
+                    </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/d104"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"><RadioButton
+                            android:id="@+id/d10401"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d104.equals(`1`)}"
+                            android:onClick="@{()->familymembers.setD104(`1`)}"
+                            android:text="@string/d10401"
+                            /> <RadioButton
+                            android:id="@+id/d10402"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d104.equals(`2`)}"
+                            android:onClick="@{()->familymembers.setD104(`2`)}"
+                            android:text="@string/d10402"
+                            /> <RadioButton
+                            android:id="@+id/d10498"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d104.equals(`98`)}"
+                            android:onClick="@{()->familymembers.setD104(`98`)}"
+                            android:text="@string/d10498"
+                            /> </RadioGroup> </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- d105  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd105"
+                    style="@style/cardView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" ><LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_d105"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d105" />
+
+                    </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/d105"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"><RadioButton
+                            android:id="@+id/d10501"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d105.equals(`1`)}"
+                            android:onClick="@{()->familymembers.setD105(`1`)}"
+                            android:text="@string/d10501"
+                            /> <RadioButton
+                            android:id="@+id/d10502"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d105.equals(`2`)}"
+                            android:onClick="@{()->familymembers.setD105(`2`)}"
+                            android:text="@string/d10502"
+                            /> <RadioButton
+                            android:id="@+id/d10598"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d105.equals(`98`)}"
+                            android:onClick="@{()->familymembers.setD105(`98`)}"
+                            android:text="@string/d10598"
+                            /> </RadioGroup> </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- d106  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd106"
+                    style="@style/cardView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" ><LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_d106"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d106" />
+
+                    </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/d106"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"><RadioButton
+                            android:id="@+id/d10601"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d106.equals(`1`)}"
+                            android:onClick="@{()->familymembers.setD106(`1`)}"
+                            android:text="@string/d10601"
+                            /> <RadioButton
+                            android:id="@+id/d10602"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d106.equals(`2`)}"
+                            android:onClick="@{()->familymembers.setD106(`2`)}"
+                            android:text="@string/d10602"
+                            /> <RadioButton
+                            android:id="@+id/d10698"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d106.equals(`98`)}"
+                            android:onClick="@{()->familymembers.setD106(`98`)}"
+                            android:text="@string/d10698"
+                            /> </RadioGroup> </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- d107  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd107"
+                    style="@style/cardView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" ><LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_d107"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d107" />
+
+                    </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/d107"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"><RadioButton
+                            android:id="@+id/d10701"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d107.equals(`1`)}"
+                            android:onClick="@{()->familymembers.setD107(`1`)}"
+                            android:text="@string/d10701"
+                            /> <RadioButton
+                            android:id="@+id/d10702"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d107.equals(`2`)}"
+                            android:onClick="@{()->familymembers.setD107(`2`)}"
+                            android:text="@string/d10702"
+                            /> <RadioButton
+                            android:id="@+id/d10798"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d107.equals(`98`)}"
+                            android:onClick="@{()->familymembers.setD107(`98`)}"
+                            android:text="@string/d10798"
+                            /> </RadioGroup> </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- d108  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVd108"
+                    style="@style/cardView"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" ><LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/Q_d108"  />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d108" />
+
+                    </LinearLayout>
+                        <RadioGroup
+                            android:id="@+id/d108"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"><RadioButton
+                            android:id="@+id/d10801"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d108.equals(`1`)}"
+                            android:onClick="@{()->familymembers.setD108(`1`)}"
+                            android:text="@string/d10801"
+                            /> <RadioButton
+                            android:id="@+id/d10802"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d108.equals(`2`)}"
+                            android:onClick="@{()->familymembers.setD108(`2`)}"
+                            android:text="@string/d10802"
+                            /> <RadioButton
+                            android:id="@+id/d10898"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="@{familymembers.d108.equals(`98`)}"
+                            android:onClick="@{()->familymembers.setD108(`98`)}"
+                            android:text="@string/d10898"
+                            /> </RadioGroup> </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+               
+                
+                <!--EndButton LinearLayout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    android:padding="24dp">
+
+                    <Button
+                        android:id="@+id/btn_End"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:onClick="@{() -> callback.btnEnd()}"
+                        android:text="Cancel"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_Continue"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/capsule"
+                        android:backgroundTint="@color/colorAccent"
+                        android:backgroundTintMode="src_atop"
+                        android:onClick="@{() -> callback.btnContinue()}"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>
