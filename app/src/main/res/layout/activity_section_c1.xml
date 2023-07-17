@@ -33,6 +33,11 @@
             app:theme="@style/ActionBarTheme"
             app:title="@string/app_name" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/rose_angina_color" />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -136,6 +141,15 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:tag="0">
+
+                            <ImageView
+                                android:id="@+id/chestImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="250dp"
+                                android:maxHeight="539dp"
+                                android:padding="8dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/rose_angina_chest_image" />
 
                             <CheckBox
                                 android:id="@+id/c10201"

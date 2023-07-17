@@ -33,6 +33,11 @@
             app:theme="@style/ActionBarTheme"
             app:title="@string/app_name" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/ipaq_color" />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -309,7 +314,7 @@
                                 android:text="@string/e10402" />
 
                             <RadioButton
-                                android:id="@+id/e10499"
+                                android:id="@+id/e10498"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.e104.equals(`98`)}"
@@ -388,7 +393,8 @@
                                 android:id="@+id/e105x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                android:digits="0123456789"
+                                android:inputType="number"
                                 android:tag="e10599"
                                 android:text="@={familymembers.e105d}"
                                 android:visibility="@{familymembers.e105.equals(`1`) ? View.VISIBLE : View.GONE}" />
@@ -450,7 +456,7 @@
                                 android:text="@string/e10602" />
 
                             <RadioButton
-                                android:id="@+id/e10699"
+                                android:id="@+id/e10698"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.e106.equals(`98`)}"
@@ -545,6 +551,12 @@
                             app:maxValue="60"
                             app:minValue="1"
                             app:type="range" />
+
+                        <TextView
+                            android:id="@+id/totalMet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@{String.valueOf(familymembers.totalMet)}" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

@@ -100,12 +100,18 @@ public class FamilyMembersAdapter extends RecyclerView.Adapter<FamilyMembersAdap
 
         //  fMaritalStatus.setText(marStatus);
 
-        String secStatusString = "RAPID: \t" + members.getScoreRapid() +
-                "\nPain: \t" + (members.getScoreRose() == 1 ? "Agina-" : (members.getScoreRose() == 2 ? "Exertion-" : "No Pain")) +
-                                (members.getPainGrade() == 2 ? "II" : members.getPainGrade() == 1 ? "I": "" ) +
-                "\nQVSFS: \t" + (members.getScoreQVSFS() >0?"+ve": members.getScoreQVSFS() ==0?"-ve":"unk") +
-                "\nIPAQ: \t" + members.getScoreIPAQ()+
-                "\nWHO-5: \t" + members.getScoreWHO5();
+        String secStatusString =
+                /*B1*/
+                "RAPID: \t" + members.getScoreRapid() +
+                        /*C1*/
+                        "\nPain: \t" + (members.getScoreRose() == 1 ? "Agina-" : (members.getScoreRose() == 2 ? "Exertion-" : "No Pain")) +
+                        (members.getPainGrade() == 2 ? "II" : members.getPainGrade() == 1 ? "I" : "") +
+                        /*D1*/
+                        "\nQVSFS: \t" + (members.getScoreQVSFS() > 0 ? "+ve" : members.getScoreQVSFS() == 0 ? "-ve" : "unk") +
+                        /*E1*/
+                        "\nIPAQ: \t" + members.getScoreIPAQ() +
+                        /*H1*/
+                        "\nWHO-5: \t" + members.getScoreWHO5();
 
  /*       switch (members.getH309())
         {

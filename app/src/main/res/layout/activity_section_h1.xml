@@ -33,6 +33,11 @@
             app:theme="@style/ActionBarTheme"
             app:title="@string/app_name" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/mental_health_color" />
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">

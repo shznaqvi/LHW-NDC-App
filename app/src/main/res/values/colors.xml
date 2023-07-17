@@ -47,6 +47,14 @@
     <color name="adolMaleBg">#B2DFDB</color>
     <color name="adolFemaleBg">#FBC02D</color>
 
+    <color name="rose_angina_color">#3367D6</color>
+    <color name="stroke_color">#FF5C5C</color>
+    <color name="gats_color">#FFC850</color>
+    <color name="ffq_color">#28C96C</color>
+    <color name="ipaq_color">#6E83E8</color>
+    <color name="mental_health_color">#FF69B4</color>
+    <color name="rapid_color">#00B5AD</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

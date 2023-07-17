@@ -18,20 +18,20 @@ import edu.aku.hassannaqvi.wellnessscale.R;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
 import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
 import edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper;
-import edu.aku.hassannaqvi.wellnessscale.databinding.ActivitySectionE1Binding;
+import edu.aku.hassannaqvi.wellnessscale.databinding.ActivitySectionG1Binding;
 
-public class SectionE1Activity extends AppCompatActivity {
+public class SectionG1Activity extends AppCompatActivity {
 
 
     private static final String TAG = "SectionSS_2Activity";
-    ActivitySectionE1Binding bi;
+    ActivitySectionG1Binding bi;
     private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(MainApp.langRTL ? MainApp.selectedLanguage == 1 ? R.style.AppThemeUrdu:R.style.AppThemeSindhi  : R.style.AppThemeEnglish1);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e1);
+        setTheme(MainApp.langRTL ? MainApp.selectedLanguage == 1 ? R.style.AppThemeUrdu : R.style.AppThemeSindhi : R.style.AppThemeEnglish1);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_g1);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
         bi.setFamilymembers(familyMembers);
@@ -40,11 +40,11 @@ public class SectionE1Activity extends AppCompatActivity {
 
     private boolean updateDB() {
         if (MainApp.superuser) return true;
-        familyMembers.updateIPAQScore();
+        //familyMembers.updateIPAQScore();
         db = MainApp.appInfo.getDbHelper();
         long updcount = 0;
         try {
-            updcount = db.updatesFamilyMembersColumn(TableContracts.FamilyMembersTable.COLUMN_SE1, familyMembers.sE1toString());
+            updcount = db.updatesFamilyMembersColumn(TableContracts.FamilyMembersTable.COLUMN_SG1, familyMembers.sG1toString());
         } catch (JSONException e) {
             e.printStackTrace();
             Log.d(TAG, R.string.upd_db + e.getMessage());
@@ -62,7 +62,7 @@ public class SectionE1Activity extends AppCompatActivity {
         if (updateDB()) {
             setResult(RESULT_OK);
             Intent i;
-            i = new Intent(this, SectionF1Activity.class).putExtra("complete", true).setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+            i = new Intent(this, SectionH1Activity.class).putExtra("complete", true).setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
             startActivity(i);
             finish();
         } else {

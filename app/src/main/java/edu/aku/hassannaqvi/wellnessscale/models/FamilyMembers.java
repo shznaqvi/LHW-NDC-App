@@ -80,6 +80,84 @@ public class FamilyMembers extends BaseObservable {
     public String e106x = _EMPTY_;
     public String e107 = _EMPTY_;
     public String e107x = _EMPTY_;
+
+    // F1: Eating Out
+    public String f101 = _EMPTY_;
+    public String f102 = _EMPTY_;
+    public String f103 = _EMPTY_;
+    public String f104 = _EMPTY_;
+    public String f105 = _EMPTY_;
+    public String f106 = _EMPTY_;
+    public String f107 = _EMPTY_;
+    public String f108 = _EMPTY_;
+
+    // F1: Food Frequency
+    public String f109 = _EMPTY_;
+    public String f110 = _EMPTY_;
+    public String f111 = _EMPTY_;
+    public String f112 = _EMPTY_;
+    public String f113 = _EMPTY_;
+    public String f114 = _EMPTY_;
+
+    // F1: Beverage Frequency
+    public String f115 = _EMPTY_;
+    public String f116 = _EMPTY_;
+    public String f117 = _EMPTY_;
+
+    // F1: Beverage Frequency - Additional Questions
+    public String f118 = _EMPTY_;
+    public String f119 = _EMPTY_;
+
+    public String g101 = _EMPTY_;
+    public String g108 = _EMPTY_;
+    public String g102 = _EMPTY_;
+    public String g103 = _EMPTY_;
+    public String g104 = _EMPTY_;
+    public String g104a = _EMPTY_;
+    public String g105 = _EMPTY_;
+    public String g105a = _EMPTY_;
+    public String g10601d = _EMPTY_;
+    public String g10601w = _EMPTY_;
+    public String g10602d = _EMPTY_;
+    public String g10602w = _EMPTY_;
+    public String g10603w = _EMPTY_;
+    public String g10603d = _EMPTY_;
+    public String g10604d = _EMPTY_;
+    public String g10604w = _EMPTY_;
+    public String g10605d = _EMPTY_;
+    public String g10605w = _EMPTY_;
+    public String g10606d = _EMPTY_;
+    public String g10606w = _EMPTY_;
+    public String g10607d = _EMPTY_;
+    public String g10607w = _EMPTY_;
+    public String g107 = _EMPTY_;
+    public String g10801w = _EMPTY_;
+    public String g10802w = _EMPTY_;
+    public String g10803w = _EMPTY_;
+    public String g10804w = _EMPTY_;
+    public String g10805w = _EMPTY_;
+    public String g10806w = _EMPTY_;
+    public String g10807w = _EMPTY_;
+    public String g109 = _EMPTY_;
+    public String g110 = _EMPTY_;
+    public String g111 = _EMPTY_;
+    public String g11201d = _EMPTY_;
+    public String g11201w = _EMPTY_;
+    public String g11202d = _EMPTY_;
+    public String g11202w = _EMPTY_;
+    public String g11203w = _EMPTY_;
+    public String g11203d = _EMPTY_;
+    public String g11204d = _EMPTY_;
+    public String g11204w = _EMPTY_;
+    public String g11205d = _EMPTY_;
+    public String g11205w = _EMPTY_;
+    public String g11301w = _EMPTY_;
+    public String g11302w = _EMPTY_;
+    public String g11303w = _EMPTY_;
+    public String g11304w = _EMPTY_;
+    public String g11305w = _EMPTY_;
+    public String g11305 = _EMPTY_;
+
     public String h101 = _EMPTY_;
     public String h102 = _EMPTY_;
     public String h103 = _EMPTY_;
@@ -118,6 +196,7 @@ public class FamilyMembers extends BaseObservable {
     private String scoreIPAQ; // 0 - 8
     private int painGrade;
     private String scoreWHO5 = _EMPTY_;
+    private double totalMet;
     // private String indexed;
 
 
@@ -573,6 +652,16 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
+    public double getTotalMet() {
+        return totalMet;
+    }
+
+    public void setTotalMet(double tm) {
+        this.totalMet = tm;
+        notifyChange(BR.totalMet);
+    }
+
+    @Bindable
     public String getC10205() {
         return c10205;
     }
@@ -913,6 +1002,685 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.e107x);
     }
 
+    @Bindable
+    public String getF101() {
+        return f101;
+    }
+
+    public void setF101(String f101) {
+        this.f101 = f101;
+        notifyChange(BR.f101);
+    }
+
+    @Bindable
+    public String getF102() {
+        return f102;
+    }
+
+    public void setF102(String f102) {
+        this.f102 = f102;
+        notifyChange(BR.f102);
+    }
+
+    @Bindable
+    public String getF103() {
+        return f103;
+    }
+
+    public void setF103(String f103) {
+        this.f103 = f103;
+        notifyChange(BR.f103);
+    }
+
+    @Bindable
+    public String getF104() {
+        return f104;
+    }
+
+    public void setF104(String f104) {
+        this.f104 = f104;
+        notifyChange(BR.f104);
+    }
+
+    @Bindable
+    public String getF105() {
+        return f105;
+    }
+
+    public void setF105(String f105) {
+        this.f105 = f105;
+        notifyChange(BR.f105);
+    }
+
+    @Bindable
+    public String getF106() {
+        return f106;
+    }
+
+    public void setF106(String f106) {
+        this.f106 = f106;
+        notifyChange(BR.f106);
+    }
+
+    @Bindable
+    public String getF107() {
+        return f107;
+    }
+
+    public void setF107(String f107) {
+        this.f107 = f107;
+        notifyChange(BR.f107);
+    }
+
+    @Bindable
+    public String getF108() {
+        return f108;
+    }
+
+    public void setF108(String f108) {
+        this.f108 = f108;
+        notifyChange(BR.f108);
+    }
+
+    @Bindable
+    public String getF109() {
+        return f109;
+    }
+
+    public void setF109(String f109) {
+        this.f109 = f109;
+        notifyChange(BR.f109);
+    }
+
+    @Bindable
+    public String getF110() {
+        return f110;
+    }
+
+    public void setF110(String f110) {
+        this.f110 = f110;
+        notifyChange(BR.f110);
+    }
+
+    @Bindable
+    public String getF111() {
+        return f111;
+    }
+
+    public void setF111(String f111) {
+        this.f111 = f111;
+        notifyChange(BR.f111);
+    }
+
+    @Bindable
+    public String getF112() {
+        return f112;
+    }
+
+    public void setF112(String f112) {
+        this.f112 = f112;
+        notifyChange(BR.f112);
+    }
+
+    @Bindable
+    public String getF113() {
+        return f113;
+    }
+
+    public void setF113(String f113) {
+        this.f113 = f113;
+        notifyChange(BR.f113);
+    }
+
+    @Bindable
+    public String getF114() {
+        return f114;
+    }
+
+    public void setF114(String f114) {
+        this.f114 = f114;
+        notifyChange(BR.f114);
+    }
+
+    @Bindable
+    public String getF115() {
+        return f115;
+    }
+
+    public void setF115(String f115) {
+        this.f115 = f115;
+        notifyChange(BR.f115);
+    }
+
+    @Bindable
+    public String getF116() {
+        return f116;
+    }
+
+    public void setF116(String f116) {
+        this.f116 = f116;
+        notifyChange(BR.f116);
+    }
+
+    @Bindable
+    public String getF117() {
+        return f117;
+    }
+
+    public void setF117(String f117) {
+        this.f117 = f117;
+        notifyChange(BR.f117);
+    }
+
+    @Bindable
+    public String getF118() {
+        return f118;
+    }
+
+    public void setF118(String f118) {
+        this.f118 = f118;
+        notifyChange(BR.f118);
+    }
+
+    @Bindable
+    public String getF119() {
+        return f119;
+    }
+
+    public void setF119(String f119) {
+        this.f119 = f119;
+        notifyChange(BR.f119);
+    }
+
+    @Bindable
+    public String getG108() {
+        return g108;
+    }
+
+    public void setG108(String g108) {
+        this.g108 = g108;
+        notifyChange(BR.g108);
+    }
+
+    @Bindable
+    public String getG101() {
+        return g101;
+    }
+
+    public void setG101(String g101) {
+        this.g101 = g101;
+        notifyChange(BR.g101);
+    }
+
+    @Bindable
+    public String getG102() {
+        return g102;
+    }
+
+    public void setG102(String g102) {
+        this.g102 = g102;
+        notifyChange(BR.g102);
+    }
+
+    @Bindable
+    public String getG103() {
+        return g103;
+    }
+
+    public void setG103(String g103) {
+        this.g103 = g103;
+        notifyChange(BR.g103);
+    }
+
+    @Bindable
+    public String getG104() {
+        return g104;
+    }
+
+    public void setG104(String g104) {
+        this.g104 = g104;
+        notifyChange(BR.g104);
+    }
+
+    @Bindable
+    public String getG104a() {
+        return g104a;
+    }
+
+    public void setG104a(String g104a) {
+        this.g104a = g104a;
+        notifyChange(BR.g104a);
+    }
+
+    @Bindable
+    public String getG105() {
+        return g105;
+    }
+
+    public void setG105(String g105) {
+        this.g105 = g105;
+        notifyChange(BR.g105);
+    }
+
+    @Bindable
+    public String getG105a() {
+        return g105a;
+    }
+
+    public void setG105a(String g105a) {
+        this.g105a = g105a;
+        notifyChange(BR.g105a);
+    }
+
+    @Bindable
+    public String getG10601d() {
+        return g10601d;
+    }
+
+    public void setG10601d(String g10601d) {
+        this.g10601d = g10601d;
+        notifyChange(BR.g10601d);
+    }
+
+    @Bindable
+    public String getG10601w() {
+        return g10601w;
+    }
+
+    public void setG10601w(String g10601w) {
+        this.g10601w = g10601w;
+        notifyChange(BR.g10601w);
+    }
+
+    @Bindable
+    public String getG10602d() {
+        return g10602d;
+    }
+
+    public void setG10602d(String g10602d) {
+        this.g10602d = g10602d;
+        notifyChange(BR.g10602d);
+    }
+
+    @Bindable
+    public String getG10602w() {
+        return g10602w;
+    }
+
+    public void setG10602w(String g10602w) {
+        this.g10602w = g10602w;
+        notifyChange(BR.g10602w);
+    }
+
+    @Bindable
+    public String getG10603w() {
+        return g10603w;
+    }
+
+    public void setG10603w(String g10603w) {
+        this.g10603w = g10603w;
+        notifyChange(BR.g10603w);
+    }
+
+    @Bindable
+    public String getG10603d() {
+        return g10603d;
+    }
+
+    public void setG10603d(String g10603d) {
+        this.g10603d = g10603d;
+        notifyChange(BR.g10603d);
+    }
+
+    @Bindable
+    public String getG10604d() {
+        return g10604d;
+    }
+
+    public void setG10604d(String g10604d) {
+        this.g10604d = g10604d;
+        notifyChange(BR.g10604d);
+    }
+
+    @Bindable
+    public String getG10604w() {
+        return g10604w;
+    }
+
+    public void setG10604w(String g10604w) {
+        this.g10604w = g10604w;
+        notifyChange(BR.g10604w);
+    }
+
+    @Bindable
+    public String getG10605d() {
+        return g10605d;
+    }
+
+    public void setG10605d(String g10605d) {
+        this.g10605d = g10605d;
+        notifyChange(BR.g10605d);
+    }
+
+    @Bindable
+    public String getG10605w() {
+        return g10605w;
+    }
+
+    public void setG10605w(String g10605w) {
+        this.g10605w = g10605w;
+        notifyChange(BR.g10605w);
+    }
+
+    @Bindable
+    public String getG10606d() {
+        return g10606d;
+    }
+
+    public void setG10606d(String g10606d) {
+        this.g10606d = g10606d;
+        notifyChange(BR.g10606d);
+    }
+
+    @Bindable
+    public String getG10606w() {
+        return g10606w;
+    }
+
+    public void setG10606w(String g10606w) {
+        this.g10606w = g10606w;
+        notifyChange(BR.g10606w);
+    }
+
+    @Bindable
+    public String getG10607d() {
+        return g10607d;
+    }
+
+    public void setG10607d(String g10607d) {
+        this.g10607d = g10607d;
+        notifyChange(BR.g10607d);
+    }
+
+    @Bindable
+    public String getG10607w() {
+        return g10607w;
+    }
+
+    public void setG10607w(String g10607w) {
+        this.g10607w = g10607w;
+        notifyChange(BR.g10607w);
+    }
+
+    @Bindable
+    public String getG107() {
+        return g107;
+    }
+
+    public void setG107(String g107) {
+        this.g107 = g107;
+        notifyChange(BR.g107);
+    }
+
+    @Bindable
+    public String getG10801w() {
+        return g10801w;
+    }
+
+    public void setG10801w(String value) {
+        g10801w = value;
+        notifyChange(BR.g10801w);
+    }
+
+    @Bindable
+    public String getG10802w() {
+        return g10802w;
+    }
+
+    public void setG10802w(String value) {
+        g10802w = value;
+        notifyChange(BR.g10802w);
+    }
+
+    @Bindable
+    public String getG10803w() {
+        return g10803w;
+    }
+
+    public void setG10803w(String value) {
+        g10803w = value;
+        notifyChange(BR.g10803w);
+    }
+
+    @Bindable
+    public String getG10804w() {
+        return g10804w;
+    }
+
+    public void setG10804w(String value) {
+        g10804w = value;
+        notifyChange(BR.g10804w);
+    }
+
+    @Bindable
+    public String getG10805w() {
+        return g10805w;
+    }
+
+    public void setG10805w(String value) {
+        g10805w = value;
+        notifyChange(BR.g10805w);
+    }
+
+    @Bindable
+    public String getG10806w() {
+        return g10806w;
+    }
+
+    public void setG10806w(String value) {
+        g10806w = value;
+        notifyChange(BR.g10806w);
+    }
+
+    @Bindable
+    public String getG10807w() {
+        return g10807w;
+    }
+
+    public void setG10807w(String value) {
+        g10807w = value;
+        notifyChange(BR.g10807w);
+    }
+
+    @Bindable
+    public String getG109() {
+        return g109;
+    }
+
+    public void setG109(String value) {
+        g109 = value;
+        notifyChange(BR.g109);
+    }
+
+    @Bindable
+    public String getG110() {
+        return g110;
+    }
+
+    public void setG110(String value) {
+        g110 = value;
+        notifyChange(BR.g110);
+    }
+
+    @Bindable
+    public String getG111() {
+        return g111;
+    }
+
+    public void setG111(String value) {
+        g111 = value;
+        notifyChange(BR.g111);
+    }
+
+    @Bindable
+    public String getG11201d() {
+        return g11201d;
+    }
+
+    public void setG11201d(String value) {
+        g11201d = value;
+        notifyChange(BR.g11201d);
+    }
+
+    @Bindable
+    public String getG11201w() {
+        return g11201w;
+    }
+
+    public void setG11201w(String value) {
+        g11201w = value;
+        notifyChange(BR.g11201w);
+    }
+
+    @Bindable
+    public String getG11202d() {
+        return g11202d;
+    }
+
+    public void setG11202d(String value) {
+        g11202d = value;
+        notifyChange(BR.g11202d);
+    }
+
+    @Bindable
+    public String getG11202w() {
+        return g11202w;
+    }
+
+    public void setG11202w(String value) {
+        g11202w = value;
+        notifyChange(BR.g11202w);
+    }
+
+    @Bindable
+    public String getG11203w() {
+        return g11203w;
+    }
+
+    public void setG11203w(String value) {
+        g11203w = value;
+        notifyChange(BR.g11203w);
+    }
+
+    @Bindable
+    public String getG11203d() {
+        return g11203d;
+    }
+
+    public void setG11203d(String value) {
+        g11203d = value;
+        notifyChange(BR.g11203d);
+    }
+
+    @Bindable
+    public String getG11204d() {
+        return g11204d;
+    }
+
+    public void setG11204d(String value) {
+        g11204d = value;
+        notifyChange(BR.g11204d);
+    }
+
+    @Bindable
+    public String getG11204w() {
+        return g11204w;
+    }
+
+    public void setG11204w(String value) {
+        g11204w = value;
+        notifyChange(BR.g11204w);
+    }
+
+    @Bindable
+    public String getG11205d() {
+        return g11205d;
+    }
+
+    public void setG11205d(String value) {
+        g11205d = value;
+        notifyChange(BR.g11205d);
+    }
+
+    @Bindable
+    public String getG11205w() {
+        return g11205w;
+    }
+
+    public void setG11205w(String value) {
+        g11205w = value;
+        notifyChange(BR.g11205w);
+    }
+
+    @Bindable
+    public String getG11301w() {
+        return g11301w;
+    }
+
+    public void setG11301w(String value) {
+        g11301w = value;
+        notifyChange(BR.g11301w);
+    }
+
+    @Bindable
+    public String getG11302w() {
+        return g11302w;
+    }
+
+    public void setG11302w(String value) {
+        g11302w = value;
+        notifyChange(BR.g11302w);
+    }
+
+    @Bindable
+    public String getG11303w() {
+        return g11303w;
+    }
+
+    public void setG11303w(String value) {
+        g11303w = value;
+        notifyChange(BR.g11303w);
+    }
+
+    @Bindable
+    public String getG11304w() {
+        return g11304w;
+    }
+
+    public void setG11304w(String value) {
+        g11304w = value;
+        notifyChange(BR.g11304w);
+    }
+
+    @Bindable
+    public String getG11305w() {
+        return g11305w;
+    }
+
+    public void setG11305w(String value) {
+        g11305w = value;
+        notifyChange(BR.g11305w);
+    }
+
+    @Bindable
+    public String getG11305() {
+        return g11305;
+    }
+
+    public void setG11305(String value) {
+        g11305 = value;
+        notifyChange(BR.g11305);
+    }
 
     @Bindable
     public String getH101() {
@@ -1117,64 +1885,84 @@ public class FamilyMembers extends BaseObservable {
     }
 
     public void sF1Hydrate(String string) throws JSONException {
-        Log.d(TAG, "sE1Hydrate: " + string);
+        Log.d(TAG, "sF1Hydrate: " + string);
         if (string != null) {
-            JSONObject json = null;
-            json = new JSONObject(string);
-/*
-
-            this.e101 = json.getString("e101");
-            this.e101d = json.getString("e101x");
-
-            this.e102h = json.getString("e102x");
-
-            this.e103 = json.getString("e103");
-            this.e103d = json.getString("e103x");
-
-            this.e104h = json.getString("e104x");
-
-            this.e105 = json.getString("e105");
-            this.e105d = json.getString("e105x");
-            this.e105d = json.getString("e105x");
-            this.e106 = json.getString("e106");
-            this.e107 = json.getString("e107");
-            this.e107h = json.getString("e107x");
-            this.e107 = json.getString("e107");
-            this.e107h = json.getString("e107x");
-            this.e107 = json.getString("e107");
-            //this.e1071 = json.getString("e1071");
-            updateRoseScore();*/
+            JSONObject json = new JSONObject(string);
+            this.f101 = json.getString("f101");
+            this.f102 = json.getString("f102");
+            this.f103 = json.getString("f103");
+            this.f104 = json.getString("f104");
+            this.f105 = json.getString("f105");
+            this.f106 = json.getString("f106");
+            this.f107 = json.getString("f107");
+            this.f108 = json.getString("f108");
+            this.f109 = json.getString("f109");
+            this.f110 = json.getString("f110");
+            this.f111 = json.getString("f111");
+            this.f112 = json.getString("f112");
+            this.f113 = json.getString("f113");
+            this.f114 = json.getString("f114");
+            this.f115 = json.getString("f115");
+            this.f116 = json.getString("f116");
+            this.f117 = json.getString("f117");
+            this.f118 = json.getString("f118");
+            this.f119 = json.getString("f119");
         }
     }
+
 
     public void sG1Hydrate(String string) throws JSONException {
         Log.d(TAG, "sE1Hydrate: " + string);
         if (string != null) {
             JSONObject json = null;
             json = new JSONObject(string);
-/*
-
-            this.e101 = json.getString("e101");
-            this.e101d = json.getString("e101x");
-
-            this.e102h = json.getString("e102x");
-
-            this.e103 = json.getString("e103");
-            this.e103d = json.getString("e103x");
-
-            this.e104h = json.getString("e104x");
-
-            this.e105 = json.getString("e105");
-            this.e105d = json.getString("e105x");
-            this.e105d = json.getString("e105x");
-            this.e106 = json.getString("e106");
-            this.e107 = json.getString("e107");
-            this.e107h = json.getString("e107x");
-            this.e107 = json.getString("e107");
-            this.e107h = json.getString("e107x");
-            this.e107 = json.getString("e107");
-            //this.e1071 = json.getString("e1071");
-            updateRoseScore();*/
+            this.g101 = json.getString("g101");
+            this.g102 = json.getString("g102");
+            this.g103 = json.getString("g103");
+            this.g104 = json.getString("g104");
+            this.g104a = json.getString("g104a");
+            this.g105 = json.getString("g105");
+            this.g10601d = json.getString("g10601d");
+            this.g10601w = json.getString("g10601w");
+            this.g10602d = json.getString("g10602d");
+            this.g10602w = json.getString("g10602w");
+            this.g10603d = json.getString("g10603d");
+            this.g10603w = json.getString("g10603w");
+            this.g10604d = json.getString("g10604d");
+            this.g10604w = json.getString("g10604w");
+            this.g10605d = json.getString("g10605d");
+            this.g10605w = json.getString("g10605w");
+            this.g10606d = json.getString("g10606d");
+            this.g10606w = json.getString("g10606w");
+            this.g10607d = json.getString("g10607d");
+            this.g10607w = json.getString("g10607w");
+            this.g107 = json.getString("g107");
+            this.g10801w = json.getString("g10801w");
+            this.g10802w = json.getString("g10802w");
+            this.g10803w = json.getString("g10803w");
+            this.g10804w = json.getString("g10804w");
+            this.g10805w = json.getString("g10805w");
+            this.g10806w = json.getString("g10806w");
+            this.g10807w = json.getString("g10807w");
+            this.g109 = json.getString("g109");
+            this.g110 = json.getString("g10");
+            this.g111 = json.getString("g11");
+            this.g11201d = json.getString("g11201d");
+            this.g11201w = json.getString("g11201w");
+            this.g11202d = json.getString("g11202d");
+            this.g11202w = json.getString("g11202w");
+            this.g11203d = json.getString("g11203d");
+            this.g11203w = json.getString("g11203w");
+            this.g11204d = json.getString("g11204d");
+            this.g11204w = json.getString("g11204w");
+            this.g11205d = json.getString("g11205d");
+            this.g11205w = json.getString("g11205w");
+            this.g11301w = json.getString("g11301w");
+            this.g11302w = json.getString("g11302w");
+            this.g11303w = json.getString("g11303w");
+            this.g11304w = json.getString("g11304w");
+            this.g11305w = json.getString("g11305w");
+            updateRoseScore();
         }
     }
 
@@ -1287,73 +2075,81 @@ public class FamilyMembers extends BaseObservable {
     }
 
     public String sF1toString() throws JSONException {
-        Log.d(TAG, "sC1toString: ");
+        Log.d(TAG, "sF1toString: ");
         JSONObject json = new JSONObject();
-       /* json.put("e101", e101)
-                .put("e101x", e101x)
-                .put("e10199x", e10199x)
-                .put("e10201", e10201)
-                .put("e102x", e102x)
-                .put("e10202", e10202)
-                .put("e10202x", e10202x)
-                .put("e10298", e10298)
-                .put("e1021", e1021)
-                .put("e103", e103)
-                .put("e103x", e103x)
-                .put("e10399x", e10399x)
-                .put("e10401", e10401)
-                .put("e104x", e104x)
-                .put("e10402", e10402)
-                .put("e10402x", e10402x)
-                .put("e10498", e10498)
-                .put("e1041", e1041)
-                .put("e105", e105)
-                .put("e105x", e105x)
-                .put("e105x", e105x)
-                .put("e106", e106)
-                .put("e107", e107)
-                .put("e107x", e107x)
-                .put("e107", e107)
-                .put("e107x", e107x)
-                .put("e107", e107);
-        //  .put("e1071", e1071)*/
+        json.put("f101", f101)
+                .put("f102", f102)
+                .put("f103", f103)
+                .put("f104", f104)
+                .put("f105", f105)
+                .put("f106", f106)
+                .put("f107", f107)
+                .put("f108", f108)
+                .put("f109", f109)
+                .put("f110", f110)
+                .put("f111", f111)
+                .put("f112", f112)
+                .put("f113", f113)
+                .put("f114", f114)
+                .put("f115", f115)
+                .put("f116", f116)
+                .put("f117", f117)
+                .put("f118", f118)
+                .put("f119", f119);
 
-
-        //updateRoseScore();
         return json.toString();
     }
+
 
     public String sG1toString() throws JSONException {
         Log.d(TAG, "sC1toString: ");
         JSONObject json = new JSONObject();
-       /* json.put("e101", e101)
-                .put("e101x", e101x)
-                .put("e10199x", e10199x)
-                .put("e10201", e10201)
-                .put("e102x", e102x)
-                .put("e10202", e10202)
-                .put("e10202x", e10202x)
-                .put("e10298", e10298)
-                .put("e1021", e1021)
-                .put("e103", e103)
-                .put("e103x", e103x)
-                .put("e10399x", e10399x)
-                .put("e10401", e10401)
-                .put("e104x", e104x)
-                .put("e10402", e10402)
-                .put("e10402x", e10402x)
-                .put("e10498", e10498)
-                .put("e1041", e1041)
-                .put("e105", e105)
-                .put("e105x", e105x)
-                .put("e105x", e105x)
-                .put("e106", e106)
-                .put("e107", e107)
-                .put("e107x", e107x)
-                .put("e107", e107)
-                .put("e107x", e107x)
-                .put("e107", e107);*/
-        //  .put("e1071", e1071)
+        json.put("g101", g101)
+                .put("g102", g102)
+                .put("g103", g103)
+                .put("g104", g104)
+                .put("g104a", g104a)
+                .put("g105", g105)
+                .put("g10601d", g10601d)
+                .put("g10601w", g10601w)
+                .put("g10602d", g10602d)
+                .put("g10602w", g10602w)
+                .put("g10603d", g10603d)
+                .put("g10603w", g10603w)
+                .put("g10604d", g10604d)
+                .put("g10604w", g10604w)
+                .put("g10605d", g10605d)
+                .put("g10605w", g10605w)
+                .put("g10606d", g10606d)
+                .put("g10606w", g10606w)
+                .put("g10607d", g10607d)
+                .put("g10607w", g10607w)
+                .put("g107", g107)
+                .put("g10801w", g10801w)
+                .put("g10802w", g10802w)
+                .put("g10803w", g10803w)
+                .put("g10804w", g10804w)
+                .put("g10805w", g10805w)
+                .put("g10806w", g10806w)
+                .put("g10807w", g10807w)
+                .put("g109", g109)
+                .put("g10", g110)
+                .put("g11", g111)
+                .put("g11201d", g11201d)
+                .put("g11201w", g11201w)
+                .put("g11202d", g11202d)
+                .put("g11202w", g11202w)
+                .put("g11203d", g11203d)
+                .put("g11203w", g11203w)
+                .put("g11204d", g11204d)
+                .put("g11204w", g11204w)
+                .put("g11205d", g11205d)
+                .put("g11205w", g11205w)
+                .put("g11301w", g11301w)
+                .put("g11302w", g11302w)
+                .put("g11303w", g11303w)
+                .put("g11304w", g11304w)
+                .put("g11305w", g11305w);
 
 
         //updateRoseScore();
@@ -1556,32 +2352,55 @@ public class FamilyMembers extends BaseObservable {
     }
 
     public void updateIPAQScore() {
-
+        // https://paulogentil.com/pdf/Interational%20Physical%20Activity%20Questionnaire%20-%20Validity%20against%20Fitness.pdf
         double MET_Vigorous = 8.0;
         double MET_Moderate = 4.0;
         double MET_Walking = 3.3;
-        double E101 = Integer.parseInt(getE101());
+        double E101 = 0;
         double E102x = 0;
-        double E103 = Integer.parseInt(getE103());
+        double E103 = 0;
         double E104x = 0;
-        double E105 = Integer.parseInt(getE105());
+        double E105 = 0;
         double E106x = 0;
+
+        if (this.e101.equals("99")) {
+            E101 = 0;
+
+        } else {
+            E101 = Integer.parseInt(getE101d());
+
+        }
+
+        if (this.e103.equals("99")) {
+            E103 = 0;
+
+        } else {
+            E103 = Integer.parseInt(getE103d());
+
+        }
+        if (this.e105.equals("99")) {
+            E105 = 0;
+
+        } else {
+            E105 = Integer.parseInt(getE105d());
+
+        }
 
         /*Setting 0 minues if Dont know*/
         if (this.e101.equals("99") || this.e102.equals("98")) {
-            E101 = 0;
+            //E101 = 0;
             E102x = 0;
         } else {
             E102x = Integer.parseInt(getE102x());
         }
         if (this.e103.equals("99") || this.e104.equals("98")) {
-            E103 = 0;
+            // E103 = 0;
             E104x = 0;
         } else {
             E104x = Integer.parseInt(getE104x());
         }
         if (this.e105.equals("99") || this.e106.equals("98")) {
-            E105 = 0;
+            // E105 = 0;
             E106x = 0;
         } else {
             E106x = Integer.parseInt(getE106x());
@@ -1603,13 +2422,18 @@ public class FamilyMembers extends BaseObservable {
         double TotalDays = E101 + E103 + E105; //+ Sitting;
 
         double score = TotalMET / (7.0 * 24.0);
+        setTotalMet(TotalMET);
 
         // HIGH
-        if ((E101 >= 3 && TotalMET >= 1500) || (E105 >= 7 && TotalMET >= 3000)) {
+        if ((E101 >= 3 && TotalMET >= 1500) || ((E101 + E103 + E105) >= 7 && TotalMET >= 3000)) {
             scoreIPAQ = "HIGH";
         }
         // MODREATE
-        else if ((E105 >= 7 && E106x >= 30) || (E101 >= 3) || (E103 >= 5) || (TotalDays >= 5 && TotalMET >= 600)) {
+        else if ((E101 >= 3)
+                || (E103 >= 5)
+                || E106x > 30
+                || ((E101 + E103 + E105) >= 5 && TotalMET >= 600)) {
+            // else if ((E105 >= 7 && E106x >= 30) || (E101 >= 3) || (E103 >= 5) || (TotalDays >= 5 && TotalMET >= 600)) {
             scoreIPAQ = "MODREATE";
         }
         // LOW

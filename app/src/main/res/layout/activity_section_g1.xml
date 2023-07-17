@@ -1,0 +1,2202 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.wellnessscale.ui.sections.SectionG1Activity" />
+
+        <variable
+            name="familymembers"
+            type="edu.aku.hassannaqvi.wellnessscale.models.FamilyMembers" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg_effect"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:subtitle="@string/gtitle"
+            app:theme="@style/ActionBarTheme"
+            app:title="@string/app_name" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/gats_color" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/GrpName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- secft1     -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVsecGt1"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryLightOverlay"
+                            android:text="@string/sectgt1"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g101  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg101"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g101" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g101" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/g101"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/g10101"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g101.equals(`1`)}"
+                                android:onClick="@{()->familymembers.setG101(`1`)}"
+                                android:text="@string/g10101" />
+
+                            <RadioButton
+                                android:id="@+id/g10102"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g101.equals(`2`)}"
+                                android:onClick="@{()->familymembers.setG101(`2`)}"
+                                android:text="@string/g10102" />
+
+                            <RadioButton
+                                android:id="@+id/g10103"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g101.equals(`3`)}"
+                                android:onClick="@{()->familymembers.setG101(`3`)}"
+                                android:text="@string/g10103" />
+
+                            <RadioButton
+                                android:id="@+id/g10198"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g101.equals(`98`)}"
+                                android:onClick="@{()->familymembers.setG101(`98`)}"
+                                android:text="@string/g10198" />
+
+                            <RadioButton
+                                android:id="@+id/g10199"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g101.equals(`99`)}"
+                                android:onClick="@{()->familymembers.setG101(`99`)}"
+                                android:text="@string/g10199" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g102  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg102"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g102" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g102" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/g102"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/g10201"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g102.equals(`1`)}"
+                                android:onClick="@{()->familymembers.setG102(`1`)}"
+                                android:text="@string/g10201" />
+
+                            <RadioButton
+                                android:id="@+id/g10202"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g102.equals(`2`)}"
+                                android:onClick="@{()->familymembers.setG102(`2`)}"
+                                android:text="@string/g10202" />
+
+                            <RadioButton
+                                android:id="@+id/g10298"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g102.equals(`3`)}"
+                                android:onClick="@{()->familymembers.setG102(`3`)}"
+                                android:text="@string/g10298" />
+
+                            <RadioButton
+                                android:id="@+id/g10299"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g102.equals(`99`)}"
+                                android:onClick="@{()->familymembers.setG102(`99`)}"
+                                android:text="@string/g10299" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g103  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg103"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g103" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g103" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/g103"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/g10301"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g103.equals(`1`)}"
+                                android:onClick="@{()->familymembers.setG103(`1`)}"
+                                android:text="@string/g10301" />
+
+                            <RadioButton
+                                android:id="@+id/g10302"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g103.equals(`2`)}"
+                                android:onClick="@{()->familymembers.setG103(`2`)}"
+                                android:text="@string/g10302" />
+
+                            <RadioButton
+                                android:id="@+id/g10303"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g103.equals(`3`)}"
+                                android:onClick="@{()->familymembers.setG103(`3`)}"
+                                android:text="@string/g10303" />
+
+                            <RadioButton
+                                android:id="@+id/g10398"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g103.equals(`98`)}"
+                                android:onClick="@{()->familymembers.setG103(`98`)}"
+                                android:text="@string/g10398" />
+
+                            <RadioButton
+                                android:id="@+id/g10399"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g103.equals(`99`)}"
+                                android:onClick="@{()->familymembers.setG103(`99`)}"
+                                android:text="@string/g10399" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g104  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg104"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g104" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g104" />
+
+                        </LinearLayout>
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/g104"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/g104"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:text="@={familymembers.g104}"
+                            app:maxValue="50"
+                            app:minValue="3"
+                            app:type="range" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g104a  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg104a"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g104a" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g104a" />
+
+                        </LinearLayout>
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/g104a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/g104a"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:text="@={familymembers.g104a}"
+                            app:maxValue="50"
+                            app:minValue="0"
+                            app:type="range" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g105  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg105"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g105" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g105" />
+
+                        </LinearLayout>
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/g105"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/g105"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:text="@={familymembers.g105}"
+                            app:maxValue="50"
+                            app:minValue="1"
+                            app:type="range" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g105a  Input-Numeric   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg105a"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g105a" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g105a" />
+
+                        </LinearLayout>
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/g105a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/g105a"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:text="@={familymembers.g105a}"
+                            app:maxValue="99"
+                            app:minValue="3"
+                            app:type="range" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- secgt2     -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVsecgt2"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            style="@style/quesNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/secgt2"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- g106t3     -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg106"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g106" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g106" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10601"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10601d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10601d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10601d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060101"
+                                android:text="@={familymembers.g10601d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g10601d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10601w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10601w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10601w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060201"
+                                android:text="@={familymembers.g10601w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10602"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10602d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10602d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10602d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060201"
+                                android:text="@={familymembers.g10602d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g10602d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10602w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10602w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10602w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060201"
+                                android:text="@={familymembers.g10602w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10603"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10603d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10603w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10603w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g106c01"
+                                android:text="@={familymembers.g10603w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g10603d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10603w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g106cw"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10603w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g106c01"
+                                android:text="@={familymembers.g10603w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10604"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10604d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10604d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10604d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060401"
+                                android:text="@={familymembers.g10604d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g10604d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10604w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10604w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10604w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060401"
+                                android:text="@={familymembers.g10604w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10605"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10605d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10605d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10605d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060501"
+                                android:text="@={familymembers.g10605d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g10605d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10605w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10605w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10605w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060501"
+                                android:text="@={familymembers.g10605w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10606"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10606d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10606d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10606d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060601"
+                                android:text="@={familymembers.g10606d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g10606d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10606w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10606w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10606w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060601"
+                                android:text="@={familymembers.g10606w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10607"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10607d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10607d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10607d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060701"
+                                android:text="@={familymembers.g10607d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g10607d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10607w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10607w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10607w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1060701"
+                                android:text="@={familymembers.g10607w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- g107  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg107"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g107" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g107" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/g107"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/g10701"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g107.equals(`1`)}"
+                                android:onClick="@{()->familymembers.setG107(`1`)}"
+                                android:text="@string/g10701" />
+
+                            <RadioButton
+                                android:id="@+id/g10702"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g107.equals(`2`)}"
+                                android:onClick="@{()->familymembers.setG107(`2`)}"
+                                android:text="@string/g10702" />
+
+                            <RadioButton
+                                android:id="@+id/g10703"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g107.equals(`3`)}"
+                                android:onClick="@{()->familymembers.setG107(`3`)}"
+                                android:text="@string/g10703" />
+
+                            <RadioButton
+                                android:id="@+id/g10704"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g107.equals(`4`)}"
+                                android:onClick="@{()->familymembers.setG107(`4`)}"
+                                android:text="@string/g10704" />
+
+                            <RadioButton
+                                android:id="@+id/g10799"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g107.equals(`99`)}"
+                                android:onClick="@{()->familymembers.setG107(`99`)}"
+                                android:text="@string/g10799" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- secgt4     -->
+                <!-- secft1     -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVsecGt4"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryLightOverlay"
+                            android:text="@string/secgt4"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <!-- g108     -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg108"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g108" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g108" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10801"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10801w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10801w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10801w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1080201"
+                                android:text="@={familymembers.g10801w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10802"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10802w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10802w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10802w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1080201"
+                                android:text="@={familymembers.g10802w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10803"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10803w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g108cw"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10803w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g108c01"
+                                android:text="@={familymembers.g10803w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10804"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10804w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10804w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10804w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1080401"
+                                android:text="@={familymembers.g10804w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10805"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10805w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10805w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10805w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1080501"
+                                android:text="@={familymembers.g10805w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10806"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10806w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10806w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10806w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1080601"
+                                android:text="@={familymembers.g10806w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g10807"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10807w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g10807w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g10807w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1080701"
+                                android:text="@={familymembers.g10807w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- secgt5     -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVsecGt5"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryLightOverlay"
+                            android:text="@string/secgt5"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g109  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg109"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g109" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g109" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/g109"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/g10901"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g109.equals(`1`)}"
+                                android:onClick="@{()->familymembers.setG109(`1`)}"
+                                android:text="@string/g10901" />
+
+                            <RadioButton
+                                android:id="@+id/g10902"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g109.equals(`2`)}"
+                                android:onClick="@{()->familymembers.setG109(`2`)}"
+                                android:text="@string/g10902" />
+
+                            <RadioButton
+                                android:id="@+id/g10903"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g109.equals(`3`)}"
+                                android:onClick="@{()->familymembers.setG109(`3`)}"
+                                android:text="@string/g10903" />
+
+                            <RadioButton
+                                android:id="@+id/g10998"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g109.equals(`98`)}"
+                                android:onClick="@{()->familymembers.setG109(`98`)}"
+                                android:text="@string/g10998" />
+
+                            <RadioButton
+                                android:id="@+id/g10999"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g109.equals(`99`)}"
+                                android:onClick="@{()->familymembers.setG109(`99`)}"
+                                android:text="@string/g10999" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g10  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg10"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g110" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g10" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/g10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/g1001"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g110.equals(`1`)}"
+                                android:onClick="@{()->familymembers.setG110(`1`)}"
+                                android:text="@string/g1001" />
+
+                            <RadioButton
+                                android:id="@+id/g1002"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g110.equals(`2`)}"
+                                android:onClick="@{()->familymembers.setG110(`2`)}"
+                                android:text="@string/g1002" />
+
+                            <RadioButton
+                                android:id="@+id/g1098"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g110.equals(`98`)}"
+                                android:onClick="@{()->familymembers.setG110(`98`)}"
+                                android:text="@string/g1098" />
+
+                            <RadioButton
+                                android:id="@+id/g1099"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g110.equals(`99`)}"
+                                android:onClick="@{()->familymembers.setG110(`99`)}"
+                                android:text="@string/g1099" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- g11  Radio   -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg11"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g111" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/g11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/g1101"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g111.equals(`1`)}"
+                                android:onClick="@{()->familymembers.setG111(`1`)}"
+                                android:text="@string/g1101" />
+
+                            <RadioButton
+                                android:id="@+id/g1102"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g111.equals(`2`)}"
+                                android:onClick="@{()->familymembers.setG111(`2`)}"
+                                android:text="@string/g1102" />
+
+                            <RadioButton
+                                android:id="@+id/g1103"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g111.equals(`3`)}"
+                                android:onClick="@{()->familymembers.setG111(`3`)}"
+                                android:text="@string/g1103" />
+
+                            <RadioButton
+                                android:id="@+id/g1198"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g111.equals(`98`)}"
+                                android:onClick="@{()->familymembers.setG111(`98`)}"
+                                android:text="@string/g1198" />
+
+                            <RadioButton
+                                android:id="@+id/g1199"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.g111.equals(`99`)}"
+                                android:onClick="@{()->familymembers.setG111(`99`)}"
+                                android:text="@string/g1199" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- g12t7     -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg112"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g112" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g112" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11201"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11201d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11201d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11201d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1120101"
+                                android:text="@={familymembers.g11201d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g11201d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11201w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11201w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11201w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1120201"
+                                android:text="@={familymembers.g11201w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11202"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11202d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11202d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11202d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1120201"
+                                android:text="@={familymembers.g11202d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g11202d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11202w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11202w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11202w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1120201"
+                                android:text="@={familymembers.g11202w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11203"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11203d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11203w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11203w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g112c01"
+                                android:text="@={familymembers.g11203w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g11203d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11203w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g112cw"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11203w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g112c01"
+                                android:text="@={familymembers.g11203w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11204"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11204d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11204d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11204d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1120401"
+                                android:text="@={familymembers.g11204d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g11204d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11204w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11204w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11204w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1120401"
+                                android:text="@={familymembers.g11204w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11205"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11205d" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11205d"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11205d"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1120501"
+                                android:text="@={familymembers.g11205d}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal"
+                            android:visibility="@{familymembers.g11205d.equals(`888`) ? View.VISIBLE : View.GONE}">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11205w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11205w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11205w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1120501"
+                                android:text="@={familymembers.g11205w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- g113     -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVg113"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_g113" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/g113" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11301"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11301w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11301w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11301w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1130201"
+                                android:text="@={familymembers.g11301w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11302"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11302w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11302w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11302w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1130201"
+                                android:text="@={familymembers.g11302w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11303"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11303w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g113cw"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11303w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g113c01"
+                                android:text="@={familymembers.g11303w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11304"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11304w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11304w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11304w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1130401"
+                                android:text="@={familymembers.g11304w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11305"
+                            android:textColor="@color/white" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/g11305w" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/g11305w"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:hint="@string/g11305w"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="g1130501"
+                                android:text="@={familymembers.g11305w}"
+                                app:maxValue="60"
+                                app:minValue="1"
+                                app:type="range" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorAccentLightOverlay"
+                            android:text="@string/g11306"
+                            android:textColor="@color/white" />
+
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/g11306w"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/g11306w"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            android:tag="g1130601"
+                            android:text="@={familymembers.g11305}"
+                            app:maxValue="60"
+                            app:minValue="1"
+                            app:type="range" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--EndButton LinearLayout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    android:padding="24dp">
+
+                    <Button
+                        android:id="@+id/btn_End"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:onClick="@{() -> callback.btnEnd()}"
+                        android:text="Cancel"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_Continue"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/capsule"
+                        android:backgroundTint="@color/colorAccent"
+                        android:backgroundTintMode="src_atop"
+                        android:onClick="@{() -> callback.btnContinue()}"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

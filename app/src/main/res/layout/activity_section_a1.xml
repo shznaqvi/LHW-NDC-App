@@ -173,9 +173,10 @@
                         android:id="@+id/a103"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                        android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
+
                         android:hint="@string/a103"
-                        android:inputType="textCapWords"
+                        android:inputType="textCapWords|textPersonName"
                         android:text="@={familymembers.a103}" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
