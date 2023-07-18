@@ -61,7 +61,7 @@
     <string name="cancel" translatable="false">Cancel</string>
     <string name="complete" translatable="false">complete</string>
     <string name="updatingError" translatable="false">Error in updating db!!</string>
-    <string name="updateDbError1" translatable="false">"Sorry. You can't go further."</string>
+    <string name="updateDbError1" translatable="false">"Sorry. You can\'t go further."</string>
     <string name="updateDbError2" translatable="false">"Please contact IT Team (Failed to update DB)"</string>
     <string name="bckbtn" translatable="false">You Cant go back</string>
     <string name="processing" translatable="false">Processing</string>
@@ -70,7 +70,7 @@
     <string name="cntbtn" translatable="false">Are you sure, you want to continue - interview</string>
     <string name="failedUpdateDb" translatable="false">SORRY! Failed to update DB</string>
     <string name="invalidDate" translatable="false">Invalid date!</string>
-    <string name="ageCalc" translatable="false">"Both Month and Year don't be zero!!"</string>
+    <string name="ageCalc" translatable="false">"Both Month and Year don\'t be zero!!"</string>
     <string name="actiondatabase" translatable="false">Database Manager</string>
     <string name="actiondatasync" translatable="false">Sync Data</string>
     <string name="dkn"> Don’t Know </string>
@@ -216,91 +216,60 @@
     <string name="checkHHpresent"> The name of head of the household corresponds to the line listing data.</string>
     <string name="newHHheadname"> Name of new head of the household </string>
     <string name="atitle">Section A: Patient Demographics</string>
-
-    <string name="hh18t">Asalum-o-Alaikum, my name is %1$s. \n\nWe are from National Ministry of Health Services, Regulation and Coordination, Government of Pakistan. We are conducting a survey about the situation of the children health in Pakistan. \n\nI would like to talk to you about (child’s name)’s vaccination history. This interview will take about 30 minutes. All the information we obtain will remain strictly confidential and anonymous. \n\nIf you wish not to answer a question or wish to stop the interview, please let me know.</string>
-
     <string name="a101">LHW name</string>
-
     <string name="a102">Khandaan number</string>
-
-
-    <string name="a103">Patient Name</string>
-
-    <string name="a104">Age</string>
-
-    <string name="a105">Gender</string>
-
-    <string name="a10501">Male</string>
-
-    <string name="a10502">Female</string>
-
-    <string name="a106">Ethnicity</string>
-
-    <string name="a10601">Urdu</string>
-
-    <string name="a10602">Sindhi</string>
-
-    <string name="a10603">Punjabi</string>
-
-    <string name="a10604">Baluchi</string>
-
-    <string name="a10605">Pashtu</string>
-
-    <string name="a10606">Kashmiri</string>
-
-    <string name="a10696">Other (Please Specify)</string>
-
-    <string name="a107">Address</string>
-
-    <string name="a108">Education status</string>
     <string name="consent">Has the written consent been signed?</string>
-
+    <string name="a103">Patient Name</string>
+    <string name="a104">Age</string>
+    <string name="a105">Gender</string>
+    <string name="a10501">Male</string>
+    <string name="a10502">Female</string>
+    <string name="a10596">Other</string>
+    <string name="a106">Ethnicity</string>
+    <string name="a10601">Urdu</string>
+    <string name="a10602">Sindhi</string>
+    <string name="a10603">Punjabi</string>
+    <string name="a10604">Baluchi</string>
+    <string name="a10605">Pashtu</string>
+    <string name="a10606">Kashmiri</string>
+    <string name="a10696">Other (Please Specify)</string>
+    <string name="a107">Address</string>
+    <string name="a108">Education status</string>
     <string name="a10801">No formal education</string>
-
     <string name="a10802">Primary education</string>
-
     <string name="a10803">Secondary education</string>
-
     <string name="a10804">Higher secondary</string>
-
     <string name="a10805">Graduation or Higher</string>
-
     <string name="a109">Employed</string>
-
     <string name="a10901">Yes</string>
-
     <string name="a10902">No</string>
-
     <string name="btitle">RAPID Section</string>
     <string name="b101">Waist Circumference</string>
     <string name="b102">Positive family history of diabetes</string>
-    <string name="bscore">Scoring Criteria:</string>
-    <string name="btitle1">Ages between 40–50 years were marked 1 whereas, ages greater than 50 years were marked 3 points. </string>
-    <string name="btitle2">Waist circumference greater than, or equal to the cutoff point (80 cm for females and 90 cm for males) was marked as 2 points</string>
-    <string name="btitle3">Positive family history of diabetes was marked as 1 point. </string>
-    <string name="btitle4">Note: Subjects with a score greater than or equal to 4 are considered at risk of diabetes. </string>
+    <string name="b10201">Yes</string>
+    <string name="b10202">No</string>
     <string name="ctitle">Rose Angina Section</string>
     <string name="c101">Do you ever have any pain or discomfort in your chest?</string>
     <string name="c10101">Yes</string>
     <string name="c10102">No</string>
-    <string name="c102">Where do you get this pain or discomfort (Please mark X on the appropriate places</string>
-    <string name="c10201">1 Right side of Chest</string>
-    <string name="c10202">2 Right side of Chest</string>
-    <string name="c10203">3 Right side of Chest</string>
-    <string name="c10204">4 Centre of Chest</string>
-    <string name="c10205">5 Centre of Chest</string>
-    <string name="c10206">6 Centre of Chest</string>
-    <string name="c10207">7 Left side of Chest</string>
-    <string name="c10208">8 Left side of Chest</string>
-    <string name="c10209">9 Left side of Chest</string>
+    <string name="c102">Where do you get this pain or discomfort (Please mark X on the appropriate places)</string>
+    <string name="c10201">Quadrant 1</string>
+    <string name="c10202">Quadrant 2</string>
+    <string name="c10203">Quadrant 3</string>
+    <string name="c10204">Quadrant 4</string>
+    <string name="c10205">Quadrant 5</string>
+    <string name="c10206">Quadrant 6</string>
+    <string name="c10207">Quadrant 7</string>
+    <string name="c10208">Quadrant 8</string>
+    <string name="c10209">Quadrant 9</string>
     <string name="c103">When you walk at an ordinary pace on the level does this produce the pain</string>
     <string name="c10301">Yes</string>
     <string name="c10302">No</string>
-    <string name="c103097">Unable</string>
+    <string name="c103097">Not applicable</string>
     <string name="c104">When you walk uphill or hurry does this produce the pain</string>
     <string name="c10401">Yes</string>
     <string name="c10402">No</string>
-    <string name="c10497">Unable</string>
+    <string name="c10497">Not applicable</string>
     <string name="c105">When you get any pain or discomfort in your chest on walking, what do you do?</string>
     <string name="c10501">Stop</string>
     <string name="c10502">Slow down</string>
@@ -312,6 +281,18 @@
     <string name="c107">How long does it take to go away?</string>
     <string name="c10701">10 minutes or less</string>
     <string name="c10702">More than 10 Minutes</string>
+    <string name="title">Hypertension</string>
+    <string name="c108">Have you ever been told by a doctor or other health professional that (you/he/she) had hypertension also called high blood pressure? (If high blood pressure only during pregnancy, code no)</string>
+    <string name="c10801">Yes</string>
+    <string name="c10802">No</string>
+    <string name="c10199">Refused</string>
+    <string name="c10198">Don\'t know</string>
+    <string name="c109">Because of high blood pressure/hypertension have you/ has she ever been told to take prescribed medicine?</string>
+    <string name="c10901">Yes</string>
+    <string name="c10902">No</string>
+    <string name="c10999">Refused</string>
+    <string name="c10998">Don\'t know</string>
+
     <string name="dtitle">Verifying Stroke Free Status Section (QVSF)</string>
     <string name="d101">Were you ever told by a physician that you had a stroke?</string>
     <string name="d10101">Yes</string>
@@ -345,8 +326,6 @@
     <string name="d10801">Yes</string>
     <string name="d10802">No</string>
     <string name="d10898">Unknown</string>
-    <string name="dscore">Scoring Criteria:</string>
-    <string name="dstitle">QVSFS scores range from 0 (no questions positive) to 8 (all 8 questions positive). Subjects were considered QVSFS negative (stroke/TIA free) if their sum score was 0. If any of the 8 items werepositive (sum score 1 to 8), the QVSFS was considered positive (not stroke/TIA free.) Any question that was answered “unknown” was scored as a negative response. The alternative approach, scoring all “unknown” responses as positive, would have changed the QVSFS outcome in 6 subjects.</string>
     <string name="etitle">International Physical Activity Section (IPAQ)</string>
     <string name="e101">During the last 7 days, on how many days did you do vigorous physical activities like heavy lifting, digging, aerobics, or fast bicycling?</string>
     <string name="e10101">Days per week</string>
@@ -378,330 +357,319 @@
     <string name="e10798">Don’t Know/Not Sure</string>
     <string name="e107x">Time spent per day</string>
 
-    <string name="ftitle">Refined Food Frequency Questionnaire (RFFQ)</string>
-    <!-- F1 Subcategory: Eating Out -->
-    <string name="f1sub_eating_out">Eating Out</string>
-
-    <!-- F101 -->
-    <string name="f101">How often do you eat dairy products? (Milk, cheese, etc.)</string>
+    <string name="ftitle">Food Frequency Questionnaire</string>
+    <string name="f1title">Eating out</string>
+    <string name="f101">How often do you eat out for breakfast?</string>
     <string name="f10101">Daily</string>
     <string name="f10102">Four to five times</string>
     <string name="f10103">Two to three times a week</string>
     <string name="f10104">Once a week</string>
     <string name="f10105">Rarely</string>
-
-    <!-- F102 -->
-    <string name="f102">How often do you eat fruits? (Fresh or canned)</string>
+    <string name="f102">How often do you eat out for lunch?</string>
     <string name="f10201">Daily</string>
     <string name="f10202">Four to five times</string>
     <string name="f10203">Two to three times a week</string>
     <string name="f10204">Once a week</string>
     <string name="f10205">Rarely</string>
-
-    <!-- F103 -->
-    <string name="f103">How often do you eat vegetables or salad?</string>
+    <string name="f103">How often do you eat out for dinner?</string>
     <string name="f10301">Daily</string>
     <string name="f10302">Four to five times</string>
     <string name="f10303">Two to three times a week</string>
     <string name="f10304">Once a week</string>
     <string name="f10305">Rarely</string>
-
-    <!-- F104 -->
-    <string name="f104">How often do you eat desserts/sweets? (cake, candies, cookies, etc.)</string>
+    <string name="f104">How often do you eat at buffets?</string>
     <string name="f10401">Daily</string>
     <string name="f10402">Four to five times</string>
     <string name="f10403">Two to three times a week</string>
     <string name="f10404">Once a week</string>
     <string name="f10405">Rarely</string>
-
-    <!-- F105 -->
-    <string name="f105">How often do you add table salt to your food?</string>
+    <string name="f105">How often do you eat at fast food chains?</string>
     <string name="f10501">Daily</string>
     <string name="f10502">Four to five times</string>
     <string name="f10503">Two to three times a week</string>
     <string name="f10504">Once a week</string>
     <string name="f10505">Rarely</string>
-
-    <!-- F106 -->
-    <string name="f106">How often do you cook your food with ghee?</string>
+    <string name="f106">How often do you eat at a sit-down restaurant?</string>
     <string name="f10601">Daily</string>
     <string name="f10602">Four to five times</string>
     <string name="f10603">Two to three times a week</string>
     <string name="f10604">Once a week</string>
     <string name="f10605">Rarely</string>
-    <!-- F107 -->
-    <string name="f107">How often do you eat out for breakfast?</string>
-    <string name="f10701">Daily</string>
-    <string name="f10702">Four to five times</string>
-    <string name="f10703">Two to three times a week</string>
-    <string name="f10704">Once a week</string>
-    <string name="f10705">Rarely</string>
-
-    <!-- F108 -->
-    <string name="f108">How often do you eat out for lunch?</string>
-    <string name="f10801">Daily</string>
-    <string name="f10802">Four to five times</string>
-    <string name="f10803">Two to three times a week</string>
-    <string name="f10804">Once a week</string>
-    <string name="f10805">Rarely</string>
-
-    <!-- F109 -->
-    <string name="f109">How often do you eat out for dinner?</string>
+    <string name="f107">Please name the fast-food chain you visit most frequently?</string>
+    <string name="f108">Please name the sit-down restaurant you visit most frequently?</string>
+    <string name="f2title">Food Frequency</string>
+    <string name="f109">How often do you eat dairy products? (milk, cheese, etc.)</string>
     <string name="f10901">Daily</string>
     <string name="f10902">Four to five times</string>
     <string name="f10903">Two to three times a week</string>
     <string name="f10904">Once a week</string>
     <string name="f10905">Rarely</string>
-
-    <!-- F110 -->
-    <string name="f110">How often do you eat at buffets?</string>
+    <string name="f110">How often do you eat fruits? (fresh or canned)</string>
     <string name="f11001">Daily</string>
     <string name="f11002">Four to five times</string>
     <string name="f11003">Two to three times a week</string>
     <string name="f11004">Once a week</string>
     <string name="f11005">Rarely</string>
-
-    <!-- F111 -->
-    <string name="f111">How often do you eat at fast food chains?</string>
+    <string name="f111">How often do you eat vegetables or salad?</string>
     <string name="f11101">Daily</string>
     <string name="f11102">Four to five times</string>
     <string name="f11103">Two to three times a week</string>
     <string name="f11104">Once a week</string>
     <string name="f11105">Rarely</string>
-
-    <!-- F112 -->
-    <string name="f112">How often do you eat at a sit-down restaurant?</string>
+    <string name="f112">How often do you eat dessert/sweets? (Cake, Candies, Cookies, etc)</string>
     <string name="f11201">Daily</string>
     <string name="f11202">Four to five times</string>
     <string name="f11203">Two to three times a week</string>
     <string name="f11204">Once a week</string>
     <string name="f11205">Rarely</string>
-
-    <!-- F113 -->
-    <string name="f113">Please name the fast-food chain you visit most frequently?</string>
-
-    <!-- F114 -->
-    <string name="f114">Please name the sit-down restaurant you visit most frequently?</string>
-
-    <!-- F115 -->
-    <string name="f115">How often do you eat dairy products? (Milk, cheese, etc.)</string>
-    <string name="f11501">Daily</string>
-    <string name="f11502">Four to five times</string>
-    <string name="f11503">Two to three times a week</string>
-    <string name="f11504">Once a week</string>
-    <string name="f11505">Rarely</string>
-
-    <!-- F116 -->
-    <string name="f116">How often do you eat fruits? (Fresh or canned)</string>
-    <string name="f11601">Daily</string>
-    <string name="f11602">Four to five times</string>
-    <string name="f11603">Two to three times a week</string>
-    <string name="f11604">Once a week</string>
-    <string name="f11605">Rarely</string>
-
-    <!-- F117 -->
-    <string name="f117">How often do you eat vegetables or salad?</string>
-    <string name="f11701">Daily</string>
-    <string name="f11702">Four to five times</string>
-    <string name="f11703">Two to three times a week</string>
-    <string name="f11704">Once a week</string>
-    <string name="f11705">Rarely</string>
-
-    <!-- F118 -->
-    <string name="f118">How often do you eat desserts/sweets? (Cake, candies, cookies, etc.)</string>
-    <string name="f11801">Daily</string>
-    <string name="f11802">Four to five times</string>
-    <string name="f11803">Two to three times a week</string>
-    <string name="f11804">Once a week</string>
-    <string name="f11805">Rarely</string>
-
-    <!-- F119 -->
-    <string name="f119">How often do you add table salt to your food?</string>
-    <string name="f11901">Daily</string>
-    <string name="f11902">Four to five times</string>
-    <string name="f11903">Two to three times a week</string>
-    <string name="f11904">Once a week</string>
-    <string name="f11905">Rarely</string>
+    <string name="f113">How often do you add table salt to your food?</string>
+    <string name="f11301">Daily</string>
+    <string name="f11302">Four to five times</string>
+    <string name="f11303">Two to three times a week</string>
+    <string name="f11304">Once a week</string>
+    <string name="f11305">Rarely</string>
+    <string name="f114">How often do you cook your food with Ghee?</string>
+    <string name="f11401">Daily</string>
+    <string name="f11402">Four to five times</string>
+    <string name="f11403">Two to three times a week</string>
+    <string name="f11404">Once a week</string>
+    <string name="f11405">Rarely</string>
+    <string name="f3title">Beverage Frequency</string>
+    <string name="f115">How many carbonated beverages do you drink per day?</string>
+    <string name="f11501">4 or more</string>
+    <string name="f11502">3</string>
+    <string name="f11503">2</string>
+    <string name="f11504">1</string>
+    <string name="f11505">none</string>
+    <string name="f116">How many caffeinated beverages do you drink per day?</string>
+    <string name="f11601">4 or more</string>
+    <string name="f11602">3</string>
+    <string name="f11603">2</string>
+    <string name="f11604">1</string>
+    <string name="f11605">none</string>
+    <string name="f117">How many alcoholic beverages do you drink per day?</string>
+    <string name="f11701">4 or more</string>
+    <string name="f11702">3</string>
+    <string name="f11703">2</string>
+    <string name="f11704">1</string>
+    <string name="f11705">none</string>
+    <string name="f118">Do you drink beer?</string>
+    <string name="f11801">yes</string>
+    <string name="f11802">no</string>
+    <string name="f119">Do you drink hard liquor or mixed drinks?</string>
+    <string name="f11901">yes</string>
+    <string name="f11902">no</string>
 
 
-    <!-- G1: Global Adult Tobacco Survey (GATS) -->
-    <string name="gtitle">G1: Global Adult Tobacco Survey (GATS)</string>
+    <string name="gtitle">Global Adult Tobacco Survey (GATS)</string>
 
-    <string name="section_g">Global Adult Tobacco Survey (GATS)</string>
-    <string name="sectgt1">Tobacco Smoking</string>
-    <string name="g101">Do you currently smoke tobacco on a daily basis, less than daily, or not at all?</string>
+    <string name="g101">Do you currently smoke tobacco on a daily basis</string>
     <string name="g10101">Daily</string>
-    <string name="g10102"> Less than daily</string>
-    <string name="g10103"> Not at all</string>
-    <string name="g10198"> Don’t know</string>
-    <string name="g10199"> Refused</string>
+    <string name="g10102">Less than daily</string>
+    <string name="g10103">Not at all</string>
+    <string name="g10198">Don\'t know</string>
+    <string name="g10199">Refused</string>
+
     <string name="g102">Have you smoked tobacco daily in the past?</string>
     <string name="g10201">Yes</string>
     <string name="g10202">No</string>
-    <string name="g10298">Don’t know</string>
+    <string name="g10298">Don\'t know</string>
     <string name="g10299">Refused</string>
+
     <string name="g103">In the past, have you smoked tobacco on a daily basis, less than daily or not at all?</string>
     <string name="g10301">Daily</string>
     <string name="g10302">Less than daily</string>
     <string name="g10303">Not at all</string>
-    <string name="g10398">Don’t know</string>
+    <string name="g10398">Don\'t know</string>
     <string name="g10399">Refused</string>
-    <string name="g104">How old were you when you first tried smoking tobacco, even once?</string>
-    <string name="g104a">How many years ago did you first try smoking tobacco, even once?</string>
-    <string name="g105">How old were you when you first starting smoking tobacco daily?</string>
+
+    <string name="g104">How old were you when you first tried smoking tobacco even once?</string>
+    <string name="g104a">How many years ago did you first try smoking tobacco even once?</string>
+
+    <string name="g105">How old were you when you first started smoking tobacco daily?</string>
     <string name="g105a">How many years ago did you first start smoking tobacco daily?</string>
-    <string name="secgt2">Current Daily Smoking</string>
-    <string name="g106">On average, how many of the following products do you currently smoke each day? Also, let me know if you smoke the product, but not every day.</string>
+
+    <string name="g1title">Current Daily Smoking</string>
+
+    <string name="g106">On average how many of the following products do you currently smoke each day? Also let me know if you smoke the product, but not every day?</string>
     <string name="g10601">Manufactured Cigarettes?</string>
-    <string name="g10601d">Per day</string>
-    <string name="g106011">[IF B06a=888] On average, how many manufactured cigarettes do you currently smoke each week?</string>
-    <string name="g10601w">Per week</string>
+    <string name="g10601d">per day</string>
+    <string name="g1060188">not daily?</string>
+    <string name="g10601w">per week</string>
     <string name="g10602">Hand rolled cigarettes?</string>
-    <string name="g10602d">Per day</string>
-    <string name="g10602w">Per week</string>
+    <string name="g10602d">per day</string>
+    <string name="g1060288">not daily?</string>
+    <string name="g10602w">per week</string>
     <string name="g10603">Kretek?</string>
-    <string name="g10603d">Per day</string>
-    <string name="g10603w">Per week</string>
+    <string name="g10603d">per day</string>
+    <string name="g1060388">not daily?</string>
+    <string name="g10603w">per week</string>
     <string name="g10604">Pipes full of tobacco?</string>
-    <string name="g10604d">Per day</string>
-    <string name="g10604w">Per week</string>
+    <string name="g10604d">per day</string>
+    <string name="g1060488">not daily?</string>
+    <string name="g10604w">per week</string>
     <string name="g10605">Cigars?</string>
-    <string name="g10605d">Per day</string>
-    <string name="g10605w">Per week</string>
+    <string name="g10605d">per day</string>
+    <string name="g1060588">not daily?</string>
+    <string name="g10605w">per week</string>
     <string name="g10606">Number of hookah/sheesha sessions per day?</string>
-    <string name="g10606d">Per day</string>
-    <string name="g10606w">Per week</string>
-    <string name="g10607">Any other? (G1 Please specify the other type that you currently smoke-----)</string>
-    <string name="g10607d">Per day</string>
-    <string name="g10607w">Per week</string>
+    <string name="g10606d">per day</string>
+    <string name="g1060688">not daily?</string>
+    <string name="g10606w">per week</string>
+    <string name="g10696">Any other? (Please specify the other type that you currently smoke)</string>
+    <string name="g10696d">per day</string>
+    <string name="g1069688">not daily?</string>
+    <string name="g10696w">per week</string>
+
     <string name="g107">How soon after you wake up do you usually have your first smoke? Would you say within 5 minutes, 6 to 30 minutes, 31 to 60 minutes, or more than 60 minutes?</string>
-    <string name="g10701"> Within 5 minutes</string>
-    <string name="g10702"> 6 to 30 minutes</string>
-    <string name="g10703"> 31 to 60 minutes</string>
+    <string name="g10701">Within 5 minutes</string>
+    <string name="g10702">6 to 30 minutes</string>
+    <string name="g10703">31 to 60 minutes</string>
     <string name="g10704">More than 60 minutes</string>
-    <string name="g10799"> Refused</string>
-    <string name="secgt4">Current Less than Daily Smokers</string>
+    <string name="g10799">Refused</string>
+
+    <string name="g2title">Current Less Than Daily Smokers</string>
+
     <string name="g108">How many of the following do you currently smoke during a usual week?</string>
-    <string name="g10801">Manufactured Cigarettes?</string>
-    <string name="g10801d">Per day</string>
-    <string name="g108011">[IF B06a=888] On average, how many manufactured cigarettes do you currently smoke each week?</string>
-    <string name="g10801w">Per week</string>
+    <string name="g10801">Manufactured cigarettes?</string>
+    <string name="g10801w">per week</string>
+    <string name="g1080197">Less than once</string>
     <string name="g10802">Hand rolled cigarettes?</string>
-    <string name="g10802d">Per day</string>
-    <string name="g10802w">Per week</string>
+    <string name="g10802w">per week</string>
+    <string name="g1080297">Less than once</string>
     <string name="g10803">Kretek?</string>
-    <string name="g10803d">Per day</string>
-    <string name="g10803w">Per week</string>
-    <string name="g10804">Pipes full of tobacco?</string>
-    <string name="g10804d">Per day</string>
-    <string name="g10804w">Per week</string>
+    <string name="g10803w">per week</string>
+    <string name="g1080397">Less than once</string>
+    <string name="g10804">Pipe full of tobacco?</string>
+    <string name="g10804w">per week</string>
+    <string name="g1080497">Less than once</string>
     <string name="g10805">Cigars?</string>
-    <string name="g10805d">Per day</string>
-    <string name="g10805w">Per week</string>
-    <string name="g10806">Number of hookah/sheesha sessions per day?</string>
-    <string name="g10806d">Per day</string>
-    <string name="g10806w">Per week</string>
-    <string name="g10807">Any other? (G1 Please specify the other type that you currently smoke-----)</string>
-    <string name="g10807d">Per day</string>
-    <string name="g10807w">Per week</string>
-    <string name="secgt5">Smokeless Tobacco</string>
+    <string name="g10805w">per week</string>
+    <string name="g1080597">Less than once</string>
+    <string name="g10806">Number of hookah/sheesha sessions per week?</string>
+    <string name="g10806w">per week</string>
+    <string name="g1080697">Less than once</string>
+    <string name="g10807">Any others?</string>
+    <string name="g10807w">per week</string>
+    <string name="g1080797">Less than once</string>
+    <string name="g10896">Please specify the other type you currently smoke?</string>
+
+    <string name="g3title">Smokeless Tobacco</string>
+
     <string name="g109">Do you currently use smokeless tobacco on a daily basis, less than daily, or not at all?</string>
     <string name="g10901">Daily</string>
-    <string name="g10902"> Less than Daily</string>
-    <string name="g10903"> Not At All</string>
-    <string name="g10998"> Don’t Know</string>
+    <string name="g10902">Less than daily</string>
+    <string name="g10903">Not at all</string>
+    <string name="g10998">Don\'t know</string>
     <string name="g10999">Refused</string>
-    <string name="g10">Have you used smokeless tobacco daily in the past?</string>
-    <string name="g1001">Yes</string>
-    <string name="g1002">No</string>
-    <string name="g1098">Don’t Know</string>
-    <string name="g1099">Refused</string>
-    <string name="g11">In the past, have you used smokeless tobacco on a daily basis, less than daily, or not at all?</string>
-    <string name="g1101">Daily</string>
-    <string name="g1102"> Less than Daily</string>
-    <string name="g1103">Not At All</string>
-    <string name="g1198"> Don’t Know</string>
-    <string name="g1199">Refused</string>
-    <string name="secgt6">Current Daily Smokeless Tobacco Users</string>
+
+    <string name="g110">Have you used smokeless tobacco daily in the past?</string>
+    <string name="g11001">Daily</string>
+    <string name="g11002">Less than daily</string>
+    <string name="g11003">Not at all</string>
+    <string name="g11098">Don\'t know</string>
+    <string name="g11099">Refused</string>
+
+    <string name="g111">In the past, have you used smokeless tobacco on a daily basis, less than daily, or not at all?</string>
+    <string name="g11101">Daily</string>
+    <string name="g11102">Less than daily</string>
+    <string name="g11103">Not at all</string>
+    <string name="g11198">Don\'t know</string>
+    <string name="g11199">Refused</string>
+
+    <string name="g4title">Current Daily Smokeless Tobacco Users</string>
+
     <string name="g112">On average, how many times a day do you use the following products? Also, let me know if you use the product, but not every day.</string>
     <string name="g11201">Snuff by mouth?</string>
-    <string name="g11201d">Per day</string>
-    <string name="g11201w">Per week</string>
+    <string name="g11201d">per day</string>
+    <string name="g1120188">Not daily?</string>
+    <string name="g11201w">per week</string>
     <string name="g11202">Snuff by nose?</string>
-    <string name="g11202d">Per day</string>
-    <string name="g11202w">Per week</string>
+    <string name="g11202d">per day</string>
+    <string name="g1120288">Not daily?</string>
+    <string name="g11202w">per week</string>
     <string name="g11203">Chewing tobacco?</string>
-    <string name="g11203d">Per day</string>
-    <string name="g11203w">Per week</string>
+    <string name="g11203d">per day</string>
+    <string name="g1120388">Not daily?</string>
+    <string name="g11203w">per week</string>
     <string name="g11204">Betel quid with tobacco?</string>
-    <string name="g11204d">Per day</string>
-    <string name="g11204w">Per week</string>
-    <string name="g11205">Any others? (→ e1. Please specify the other type you currently use</string>
-    <string name="g11205d">Per day</string>
-    <string name="g11205w">Per week</string>
-    <string name="secgt8">Current Less than Daily Smokeless Tobacco Users </string>
+    <string name="g11204d">per day</string>
+    <string name="g1120488">Not daily?</string>
+    <string name="g11204w">per week</string>
+    <string name="g11296">Any others? (Please specify the other type you currently use)</string>
+    <string name="g11296d">per day</string>
+    <string name="g1129688">Not daily?</string>
+    <string name="g11296w">per week</string>
+
+    <string name="g5title">Current Less Than Daily Smokeless Tobacco Users</string>
+
     <string name="g113">How many times a week do you usually use the following?</string>
     <string name="g11301">Snuff, by mouth?</string>
     <string name="g11301w">Times per week</string>
+    <string name="g1130188">Less than once</string>
     <string name="g11302">Snuff, by nose?</string>
     <string name="g11302w">Times per week</string>
+    <string name="g1130288">Less than once</string>
     <string name="g11303">Chewing tobacco?</string>
     <string name="g11303w">Times per week</string>
+    <string name="g1130388">Less than once</string>
     <string name="g11304">Betel Quid with tobacco?</string>
     <string name="g11304w">Times per week</string>
-    <string name="g11305">Any others?</string>
-    <string name="g11305w">Times per week</string>
-    <string name="g11306">Please specify the other type you currently use</string>
-    <string name="g11306w">Times per week</string>
+    <string name="g1130488">Less than once</string>
+    <string name="g11396">Any others?</string>
+    <string name="g11396w">Times per week</string>
+    <string name="g1139688">Less than once</string>
+    <string name="g11396d">Please specify the other type you currently use</string>
 
-    <string name="htitle">Five Well-Being Index Section (WHO-5)</string>
+
+    <string name="htitle">The World Health Organization - Five Well-Being Index Section (WHO-5)</string>
     <string name="h1title">Please put a circle on each of the five statements which is closest to how you have been feeling over the last two weeks. Notice that higher numbers mean better wellbeing.</string>
-    <string name="h101">Please indicate for each of the five statements which is closest to how you have been feeling over the past two weeks.</string>
+    <string name="h101">I have felt cheerful and in good spirits</string>
     <string name="h10199">At no time</string>
     <string name="h10101">Some of the time</string>
     <string name="h10102">Less than half of the time</string>
     <string name="h10103">More than half of the time</string>
     <string name="h10104">Most of the time</string>
     <string name="h10105">All of the time</string>
-    <string name="h102">I have felt cheerful and in good spirits</string>
+    <string name="h102">I have felt calm and relaxed</string>
     <string name="h10299">At no time</string>
     <string name="h10201">Some of the time</string>
     <string name="h10202">Less than half of the time</string>
     <string name="h10203">More than half of the time</string>
     <string name="h10204">Most of the time</string>
     <string name="h10205">All of the time</string>
-    <string name="h103">I have felt calm and relaxed</string>
+    <string name="h103">I have felt active and vigorous</string>
     <string name="h10399">At no time</string>
     <string name="h10301">Some of the time</string>
     <string name="h10302">Less than half of the time</string>
     <string name="h10303">More than half of the time</string>
     <string name="h10304">Most of the time</string>
     <string name="h10305">All of the time</string>
-    <string name="h104">I have felt active and vigorous</string>
+    <string name="h104">I woke up feeling fresh and rested</string>
     <string name="h10499">At no time</string>
     <string name="h10401">Some of the time</string>
     <string name="h10402">Less than half of the time</string>
     <string name="h10403">More than half of the time</string>
     <string name="h10404">Most of the time</string>
     <string name="h10405">All of the time</string>
-    <string name="h105">I woke up feeling fresh and rested</string>
+    <string name="h105">My daily life has been filled with things that interest me</string>
     <string name="h10599">At no time</string>
     <string name="h10501">Some of the time</string>
     <string name="h10502">Less than half of the time</string>
     <string name="h10503">More than half of the time</string>
     <string name="h10504">Most of the time</string>
     <string name="h10505">All of the time</string>
-    <string name="h106">My daily life has been filled with things that interest me</string>
-    <string name="h10699">At no time</string>
-    <string name="h10601">Some of the time</string>
-    <string name="h10602">Less than half of the time</string>
-    <string name="h10603">More than half of the time</string>
-    <string name="h10604">Most of the time</string>
-    <string name="h10605">All of the time</string>
-    <string name="hscore">Scoring Criteria:</string>
-    <string name="hstitle1">Interpretation: Is it recommended to administer the Major Depression (ICD-10) Inventory (Annex 2) if the raw score is below 13 or if the patient has answered 0 or 1 to any of the 5 items. A score below 13 indicates poor wellbeing and is an indication for testing for depression using ICD-10</string>
-    <string name="hstitle2">The World Health Organization- Five Well-Being Index (WHO-5) is a short self-reported measure of current mental well-being. The measure was first introduced in its present form in 1998 by the WHO Regional Office in Europe as part of the DEPCARE project on well-being measures in primary health care. The WHO-5 consists of five statements, which respondents’ rate according to the scale below (in relation to the past two weeks). All the time = 5, Most of the time = 4, More than half of the time = 3, Less than half of the time = 2, Some of the time = 1, At no time = 0. The total raw score, ranging from 0 to 25, is multiplied by 4 to give the final score, with 0 representing the worst imaginable well-being and 100 representing the best imaginable well-being. The WHO-5 is free of charge and does not require permission to use.</string>
-
+    <!--  <string name="h106">My daily life has been filled with things that interest me</string>
+      <string name="h10699">At no time</string>
+      <string name="h10601">Some of the time</string>
+      <string name="h10602">Less than half of the time</string>
+      <string name="h10603">More than half of the time</string>
+      <string name="h10604">Most of the time</string>
+      <string name="h10605">All of the time</string>
+      <string name="hscore">Scoring Criteria:</string>
+      <string name="hstitle1">Interpretation: Is it recommended to administer the Major Depression (ICD-10) Inventory (Annex 2) if the raw score is below 13 or if the patient has answered 0 or 1 to any of the 5 items. A score below 13 indicates poor wellbeing and is an indication for testing for depression using ICD-10</string>
+      <string name="hstitle2">The World Health Organization- Five Well-Being Index (WHO-5) is a short self-reported measure of current mental well-being. The measure was first introduced in its present form in 1998 by the WHO Regional Office in Europe as part of the DEPCARE project on well-being measures in primary health care. The WHO-5 consists of five statements, which respondents’ rate according to the scale below (in relation to the past two weeks). All the time = 5, Most of the time = 4, More than half of the time = 3, Less than half of the time = 2, Some of the time = 1, At no time = 0. The total raw score, ranging from 0 to 25, is multiplied by 4 to give the final score, with 0 representing the worst imaginable well-being and 100 representing the best imaginable well-being. The WHO-5 is free of charge and does not require permission to use.</string>
+  -->
 
     <string name='Q_a101' translatable="false">Q. A01</string>
     <string name='Q_a102' translatable="false">Q. A02</string>
@@ -715,9 +683,9 @@
     <string name='Q_atitle' translatable="false">atitle</string>
     <string name='Q_b101' translatable="false">b101</string>
     <string name='Q_b102' translatable="false">b102</string>
-    <string name='Q_bscore' translatable="false">bscore</string>
-    <string name='Q_btitle' translatable="false">btitle</string>
-    <string name='Q_btitle4' translatable="false">btitle4</string>
+    <!--  <string name='Q_bscore' translatable="false">bscore</string>
+      <string name='Q_btitle' translatable="false">btitle</string>
+      <string name='Q_btitle4' translatable="false">btitle4</string>-->
     <string name='Q_c101' translatable="false">c101</string>
     <string name='Q_c102' translatable="false">c102</string>
     <string name='Q_c103' translatable="false">c103</string>
@@ -770,60 +738,60 @@
     <string name='Q_f118' translatable="false">f118</string>
     <string name='Q_f119' translatable="false">f119</string>
 
-    <string name='Q_g101'>g101</string>
-    <string name='Q_g102'>g102</string>
-    <string name='Q_g103'>g103</string>
-    <string name='Q_g104'>g104</string>
-    <string name='Q_g104a'>g104a</string>
-    <string name='Q_g105'>g105</string>
-    <string name='Q_g105a'>g105a</string>
-    <string name='Q_g10601'>g10601</string>
-    <string name='Q_g106011'>g106011</string>
-    <string name='Q_g10602'>g10602</string>
-    <string name='Q_g106021'>g106021</string>
-    <string name='Q_g106c'>g106c</string>
-    <string name='Q_g106c1'>g106c1</string>
-    <string name='Q_g106d'>g106d</string>
-    <string name='Q_g106d1'>g106d1</string>
-    <string name='Q_g106e'>g106e</string>
-    <string name='Q_g106e1'>g106e1</string>
-    <string name='Q_g106f'>g106f</string>
-    <string name='Q_g106f1'>g106f1</string>
-    <string name='Q_g106g'>g106g</string>
-    <string name='Q_g106g1'>g106g1</string>
-    <string name='Q_g106'>g106</string>
-    <string name='Q_g107'>g107</string>
-    <string name='Q_g108a'>g108a</string>
-    <string name='Q_g108b'>g108b</string>
-    <string name='Q_g108c'>g108c</string>
-    <string name='Q_g108d'>g108d</string>
-    <string name='Q_g108e'>g108e</string>
-    <string name='Q_g108f'>g108f</string>
-    <string name='Q_g108g'>g108g</string>
-    <string name='Q_g108g1'>g108g1</string>
-    <string name='Q_g108'>g108</string>
-    <string name='Q_g109'>g109</string>
-    <string name='Q_g110'>g110</string>
-    <string name='Q_g111'>g111</string>
-    <string name='Q_g112'>g112</string>
-    <string name='Q_g112a'>g112a</string>
-    <string name='Q_g112a1'>g112a1</string>
-    <string name='Q_g112b'>g112b</string>
-    <string name='Q_g112b1'>g112b1</string>
-    <string name='Q_g112c'>g112c</string>
-    <string name='Q_g112c1'>g112c1</string>
-    <string name='Q_g112d'>g112d</string>
-    <string name='Q_g112d1'>g112d1</string>
-    <string name='Q_g112e'>g12e</string>
-    <string name='Q_g112e1'>g12e1</string>
-    <string name='Q_g112t7'>g12t7</string>
-    <string name='Q_g113'>g113a</string>
-    <string name='Q_g113a'>g113a</string>
-    <string name='Q_g113b'>g113b</string>
-    <string name='Q_g113c'>g113c</string>
-    <string name='Q_g113d'>g113d</string>
-    <string name='Q_g113e'>g13e</string>
-    <string name='Q_g113f'>g113f</string>
+    <string name='Q_g101' translatable="false">g101</string>
+    <string name='Q_g102' translatable="false">g102</string>
+    <string name='Q_g103' translatable="false">g103</string>
+    <string name='Q_g104' translatable="false">g104</string>
+    <string name='Q_g104a' translatable="false">g104a</string>
+    <string name='Q_g105' translatable="false">g105</string>
+    <string name='Q_g105a' translatable="false">g105a</string>
+    <string name='Q_g10601' translatable="false">g10601</string>
+    <string name='Q_g106011' translatable="false">g106011</string>
+    <string name='Q_g10602' translatable="false">g10602</string>
+    <string name='Q_g106021' translatable="false">g106021</string>
+    <string name='Q_g106c' translatable="false">g106c</string>
+    <string name='Q_g106c1' translatable="false">g106c1</string>
+    <string name='Q_g106d' translatable="false">g106d</string>
+    <string name='Q_g106d1' translatable="false">g106d1</string>
+    <string name='Q_g106e' translatable="false">g106e</string>
+    <string name='Q_g106e1' translatable="false">g106e1</string>
+    <string name='Q_g106f' translatable="false">g106f</string>
+    <string name='Q_g106f1' translatable="false">g106f1</string>
+    <string name='Q_g106g' translatable="false">g106g</string>
+    <string name='Q_g106g1' translatable="false">g106g1</string>
+    <string name='Q_g106' translatable="false">g106</string>
+    <string name='Q_g107' translatable="false">g107</string>
+    <string name='Q_g108a' translatable="false">g108a</string>
+    <string name='Q_g108b' translatable="false">g108b</string>
+    <string name='Q_g108c' translatable="false">g108c</string>
+    <string name='Q_g108d' translatable="false">g108d</string>
+    <string name='Q_g108e' translatable="false">g108e</string>
+    <string name='Q_g108f' translatable="false">g108f</string>
+    <string name='Q_g108g' translatable="false">g108g</string>
+    <string name='Q_g108g1' translatable="false">g108g1</string>
+    <string name='Q_g108' translatable="false">g108</string>
+    <string name='Q_g109' translatable="false">g109</string>
+    <string name='Q_g110' translatable="false">g110</string>
+    <string name='Q_g111' translatable="false">g111</string>
+    <string name='Q_g112' translatable="false">g112</string>
+    <string name='Q_g112a' translatable="false">g112a</string>
+    <string name='Q_g112a1' translatable="false">g112a1</string>
+    <string name='Q_g112b' translatable="false">g112b</string>
+    <string name='Q_g112b1' translatable="false">g112b1</string>
+    <string name='Q_g112c' translatable="false">g112c</string>
+    <string name='Q_g112c1' translatable="false">g112c1</string>
+    <string name='Q_g112d' translatable="false">g112d</string>
+    <string name='Q_g112d1' translatable="false">g112d1</string>
+    <string name='Q_g112e' translatable="false">g12e</string>
+    <string name='Q_g112e1' translatable="false">g12e1</string>
+    <string name='Q_g112t7' translatable="false">g12t7</string>
+    <string name='Q_g113' translatable="false">g113a</string>
+    <string name='Q_g113a' translatable="false">g113a</string>
+    <string name='Q_g113b' translatable="false">g113b</string>
+    <string name='Q_g113c' translatable="false">g113c</string>
+    <string name='Q_g113d' translatable="false">g113d</string>
+    <string name='Q_g113e' translatable="false">g13e</string>
+    <string name='Q_g113f' translatable="false">g113f</string>
 
 
     <string name='Q_h101' translatable="false">h101</string>

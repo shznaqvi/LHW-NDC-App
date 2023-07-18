@@ -36,15 +36,15 @@ public class ConsentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(MainApp.langRTL ? MainApp.selectedLanguage == 1 ? R.style.AppThemeUrdu:R.style.AppThemeSindhi  : R.style.AppThemeEnglish1);
+        setTheme(MainApp.langRTL ? MainApp.selectedLanguage == 1 ? R.style.AppThemeUrdu : R.style.AppThemeSindhi : R.style.AppThemeEnglish1);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_consent);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
         bi.setForm(form);
         setGPS();
 
-        String consentText = getString(R.string.hh18t, MainApp.user.getFullname());
-        bi.consentTextView.setText(consentText);
+        //  String consentText = getString(R.string.hh18t, MainApp.user.getFullname());
+        //  bi.consentTextView.setText(consentText);
     }
 
 

@@ -117,19 +117,31 @@ public class FamilyMembers extends BaseObservable {
     public String g105 = _EMPTY_;
     public String g105a = _EMPTY_;
     public String g10601d = _EMPTY_;
+    public String g1060188 = _EMPTY_;
     public String g10601w = _EMPTY_;
     public String g10602d = _EMPTY_;
+    public String g1060288 = _EMPTY_;
     public String g10602w = _EMPTY_;
     public String g10603w = _EMPTY_;
     public String g10603d = _EMPTY_;
+    public String g1060388 = _EMPTY_;
+
     public String g10604d = _EMPTY_;
+    public String g1060488 = _EMPTY_;
+
     public String g10604w = _EMPTY_;
     public String g10605d = _EMPTY_;
+    public String g1060588 = _EMPTY_;
+
     public String g10605w = _EMPTY_;
     public String g10606d = _EMPTY_;
+    public String g1060688 = _EMPTY_;
+
     public String g10606w = _EMPTY_;
-    public String g10607d = _EMPTY_;
-    public String g10607w = _EMPTY_;
+    public String g10696d = _EMPTY_;
+    public String g1069688 = _EMPTY_;
+
+    public String g10696w = _EMPTY_;
     public String g107 = _EMPTY_;
     public String g10801w = _EMPTY_;
     public String g10802w = _EMPTY_;
@@ -142,21 +154,26 @@ public class FamilyMembers extends BaseObservable {
     public String g110 = _EMPTY_;
     public String g111 = _EMPTY_;
     public String g11201d = _EMPTY_;
+    public String g1120188 = _EMPTY_;
     public String g11201w = _EMPTY_;
     public String g11202d = _EMPTY_;
+    public String g1120288 = _EMPTY_;
     public String g11202w = _EMPTY_;
     public String g11203w = _EMPTY_;
     public String g11203d = _EMPTY_;
+    public String g1120388 = _EMPTY_;
     public String g11204d = _EMPTY_;
+    public String g1120488 = _EMPTY_;
     public String g11204w = _EMPTY_;
-    public String g11205d = _EMPTY_;
-    public String g11205w = _EMPTY_;
+    public String g11296d = _EMPTY_;
+    public String g1129688 = _EMPTY_;
+    public String g11296w = _EMPTY_;
     public String g11301w = _EMPTY_;
     public String g11302w = _EMPTY_;
     public String g11303w = _EMPTY_;
     public String g11304w = _EMPTY_;
-    public String g11305w = _EMPTY_;
-    public String g11305 = _EMPTY_;
+    public String g11396w = _EMPTY_;
+    public String g11396 = _EMPTY_;
 
     public String h101 = _EMPTY_;
     public String h102 = _EMPTY_;
@@ -1283,6 +1300,18 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
+    public String getG1060188() {
+        return g1060188;
+    }
+
+    public void setG1060188(String g1060188) {
+        this.g1060188 = g1060188;
+        setG10601d(g1060188.equals("88") ? "" : this.g10601d);
+        setG10601w(g1060188.equals("88") ? this.g10601w : "");
+        notifyChange(BR.g1060188);
+    }
+
+    @Bindable
     public String getG10601w() {
         return g10601w;
     }
@@ -1300,6 +1329,18 @@ public class FamilyMembers extends BaseObservable {
     public void setG10602d(String g10602d) {
         this.g10602d = g10602d;
         notifyChange(BR.g10602d);
+    }
+
+    @Bindable
+    public String getG1060288() {
+        return g1060288;
+    }
+
+    public void setG1060288(String g1060288) {
+        this.g1060288 = g1060288;
+        setG10602d(g1060288.equals("88") ? "" : this.g10602d);
+        setG10602w(g1060288.equals("88") ? this.g10602w : "");
+        notifyChange(BR.g1060288);
     }
 
     @Bindable
@@ -1333,6 +1374,18 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
+    public String getG1060388() {
+        return g1060388;
+    }
+
+    public void setG1060388(String g1060388) {
+        this.g1060388 = g1060388;
+        setG10603d(g1060388.equals("88") ? "" : this.g10603d);
+        setG10603w(g1060388.equals("88") ? this.g10603w : "");
+        notifyChange(BR.g1060388);
+    }
+
+    @Bindable
     public String getG10604d() {
         return g10604d;
     }
@@ -1340,6 +1393,19 @@ public class FamilyMembers extends BaseObservable {
     public void setG10604d(String g10604d) {
         this.g10604d = g10604d;
         notifyChange(BR.g10604d);
+    }
+
+    @Bindable
+    public String getG1060488() {
+        return g1060488;
+    }
+
+    public void setG1060488(String g1060488) {
+        this.g1060488 = g1060488;
+        setG10604d(g1060488.equals("88") ? "" : this.g10604d);
+        setG10604w(g1060488.equals("88") ? this.g10604w : "");
+
+        notifyChange(BR.g1060488);
     }
 
     @Bindable
@@ -1363,6 +1429,18 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
+    public String getG1060588() {
+        return g1060588;
+    }
+
+    public void setG1060588(String g1060588) {
+        this.g1060588 = g1060588;
+        setG10605d(g1060588.equals("88") ? "" : this.g10605d);
+        setG10605w(g1060588.equals("88") ? this.g10605w : "");
+        notifyChange(BR.g1060588);
+    }
+
+    @Bindable
     public String getG10605w() {
         return g10605w;
     }
@@ -1383,6 +1461,18 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
+    public String getG1060688() {
+        return g1060688;
+    }
+
+    public void setG1060688(String g1060688) {
+        this.g1060688 = g1060688;
+        setG10606d(g1060688.equals("88") ? "" : this.g10606d);
+        setG10606w(g1060688.equals("88") ? this.g10606w : "");
+        notifyChange(BR.g1060688);
+    }
+
+    @Bindable
     public String getG10606w() {
         return g10606w;
     }
@@ -1393,23 +1483,35 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
-    public String getG10607d() {
-        return g10607d;
+    public String getG10696d() {
+        return g10696d;
     }
 
-    public void setG10607d(String g10607d) {
-        this.g10607d = g10607d;
-        notifyChange(BR.g10607d);
+    public void setG10696d(String g10696d) {
+        this.g10696d = g10696d;
+        notifyChange(BR.g10696d);
     }
 
     @Bindable
-    public String getG10607w() {
-        return g10607w;
+    public String getG1069688() {
+        return g1069688;
     }
 
-    public void setG10607w(String g10607w) {
-        this.g10607w = g10607w;
-        notifyChange(BR.g10607w);
+    public void setG1069688(String g1069688) {
+        this.g1069688 = g1069688;
+        setG10696d(g1069688.equals("88") ? "" : this.g10696d);
+        setG10696w(g1069688.equals("88") ? this.g10696w : "");
+        notifyChange(BR.g1069688);
+    }
+
+    @Bindable
+    public String getG10696w() {
+        return g10696w;
+    }
+
+    public void setG10696w(String g10696w) {
+        this.g10696w = g10696w;
+        notifyChange(BR.g10696w);
     }
 
     @Bindable
@@ -1533,6 +1635,18 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
+    public String getG1120188() {
+        return g1120188;
+    }
+
+    public void setG1120188(String value) {
+        g1120188 = value;
+        setG11201d(g1120188.equals("88") ? "" : this.g11201d);
+        setG11201w(g1120188.equals("88") ? this.g11201w : "");
+        notifyChange(BR.g1120188);
+    }
+
+    @Bindable
     public String getG11201w() {
         return g11201w;
     }
@@ -1550,6 +1664,18 @@ public class FamilyMembers extends BaseObservable {
     public void setG11202d(String value) {
         g11202d = value;
         notifyChange(BR.g11202d);
+    }
+
+    @Bindable
+    public String getG1120288() {
+        return g1120288;
+    }
+
+    public void setG1120288(String value) {
+        g1120288 = value;
+        setG11202d(g1120288.equals("88") ? "" : this.g11202d);
+        setG11202w(g1120288.equals("88") ? this.g11202w : "");
+        notifyChange(BR.g1120288);
     }
 
     @Bindable
@@ -1583,6 +1709,18 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
+    public String getG1120388() {
+        return g1120388;
+    }
+
+    public void setG1120388(String value) {
+        g1120388 = value;
+        setG11203d(g1120388.equals("88") ? "" : this.g11203d);
+        setG11203w(g1120388.equals("88") ? this.g11203w : "");
+        notifyChange(BR.g1120388);
+    }
+
+    @Bindable
     public String getG11204d() {
         return g11204d;
     }
@@ -1590,6 +1728,18 @@ public class FamilyMembers extends BaseObservable {
     public void setG11204d(String value) {
         g11204d = value;
         notifyChange(BR.g11204d);
+    }
+
+    @Bindable
+    public String getG1120488() {
+        return g1120488;
+    }
+
+    public void setG1120488(String value) {
+        g1120488 = value;
+        setG11204d(g1120488.equals("88") ? "" : this.g11204d);
+        setG11204w(g1120488.equals("88") ? this.g11204w : "");
+        notifyChange(BR.g1120488);
     }
 
     @Bindable
@@ -1603,23 +1753,35 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
-    public String getG11205d() {
-        return g11205d;
+    public String getG11296d() {
+        return g11296d;
     }
 
-    public void setG11205d(String value) {
-        g11205d = value;
-        notifyChange(BR.g11205d);
+    public void setG11296d(String value) {
+        g11296d = value;
+        notifyChange(BR.g11296d);
     }
 
     @Bindable
-    public String getG11205w() {
-        return g11205w;
+    public String getG1129688() {
+        return g1129688;
     }
 
-    public void setG11205w(String value) {
-        g11205w = value;
-        notifyChange(BR.g11205w);
+    public void setG1129688(String value) {
+        g1129688 = value;
+        setG11296d(g1129688.equals("88") ? "" : this.g11296d);
+        setG11296w(g1129688.equals("88") ? this.g11296w : "");
+        notifyChange(BR.g1129688);
+    }
+
+    @Bindable
+    public String getG11296w() {
+        return g11296w;
+    }
+
+    public void setG11296w(String value) {
+        g11296w = value;
+        notifyChange(BR.g11296w);
     }
 
     @Bindable
@@ -1663,23 +1825,23 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
-    public String getG11305w() {
-        return g11305w;
+    public String getG11396w() {
+        return g11396w;
     }
 
-    public void setG11305w(String value) {
-        g11305w = value;
-        notifyChange(BR.g11305w);
+    public void setG11396w(String value) {
+        g11396w = value;
+        notifyChange(BR.g11396w);
     }
 
     @Bindable
-    public String getG11305() {
-        return g11305;
+    public String getG11396() {
+        return g11396;
     }
 
-    public void setG11305(String value) {
-        g11305 = value;
-        notifyChange(BR.g11305);
+    public void setG11396(String value) {
+        g11396 = value;
+        notifyChange(BR.g11396);
     }
 
     @Bindable
@@ -1934,8 +2096,8 @@ public class FamilyMembers extends BaseObservable {
             this.g10605w = json.getString("g10605w");
             this.g10606d = json.getString("g10606d");
             this.g10606w = json.getString("g10606w");
-            this.g10607d = json.getString("g10607d");
-            this.g10607w = json.getString("g10607w");
+            this.g10696d = json.getString("g10607d");
+            this.g10696w = json.getString("g10607w");
             this.g107 = json.getString("g107");
             this.g10801w = json.getString("g10801w");
             this.g10802w = json.getString("g10802w");
@@ -1955,13 +2117,13 @@ public class FamilyMembers extends BaseObservable {
             this.g11203w = json.getString("g11203w");
             this.g11204d = json.getString("g11204d");
             this.g11204w = json.getString("g11204w");
-            this.g11205d = json.getString("g11205d");
-            this.g11205w = json.getString("g11205w");
+            this.g11296d = json.getString("g11205d");
+            this.g11296w = json.getString("g11205w");
             this.g11301w = json.getString("g11301w");
             this.g11302w = json.getString("g11302w");
             this.g11303w = json.getString("g11303w");
             this.g11304w = json.getString("g11304w");
-            this.g11305w = json.getString("g11305w");
+            this.g11396w = json.getString("g11305w");
             updateRoseScore();
         }
     }
@@ -2122,8 +2284,8 @@ public class FamilyMembers extends BaseObservable {
                 .put("g10605w", g10605w)
                 .put("g10606d", g10606d)
                 .put("g10606w", g10606w)
-                .put("g10607d", g10607d)
-                .put("g10607w", g10607w)
+                .put("g10607d", g10696d)
+                .put("g10607w", g10696w)
                 .put("g107", g107)
                 .put("g10801w", g10801w)
                 .put("g10802w", g10802w)
@@ -2143,13 +2305,13 @@ public class FamilyMembers extends BaseObservable {
                 .put("g11203w", g11203w)
                 .put("g11204d", g11204d)
                 .put("g11204w", g11204w)
-                .put("g11205d", g11205d)
-                .put("g11205w", g11205w)
+                .put("g11205d", g11296d)
+                .put("g11205w", g11296w)
                 .put("g11301w", g11301w)
                 .put("g11302w", g11302w)
                 .put("g11303w", g11303w)
                 .put("g11304w", g11304w)
-                .put("g11305w", g11305w);
+                .put("g11305w", g11396w);
 
 
         //updateRoseScore();
