@@ -53,7 +53,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVh101"
                     style="@style/cardView"
-                    android:visibility="gone">
+                    >
 
                     <LinearLayout
                         android:layout_width="match_parent"

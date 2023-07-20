@@ -3,10 +3,10 @@ package edu.aku.hassannaqvi.wellnessscale.ui.sections;
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.familyMembers;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseBooleanArray;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,6 +18,7 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.wellnessscale.R;
+import edu.aku.hassannaqvi.wellnessscale.adapters.ImageAdapter;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
 import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
 import edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper;
@@ -36,6 +37,21 @@ public class SectionC1Activity extends AppCompatActivity {
     private int unselectedColor;
     private ImageView[] quadrantViews;
 
+    private final int[] imageIds = {
+            R.drawable.img1, R.drawable.img2, R.drawable.img3, R.drawable.img4,
+            R.drawable.img5, R.drawable.img6, R.drawable.img7, R.drawable.img8,
+            R.drawable.img9, R.drawable.img10, R.drawable.img11, R.drawable.img12,
+            R.drawable.img13, R.drawable.img14, R.drawable.img15
+    };
+    private final String[] imageNames = {
+            "", "", "Image 1", "", "",
+            "Image 2", "Image 3", "Image 4", "Image 5", "Image 6",
+            "Image 2", "Image 7", "Image 8", "Image 9", "Image 6"
+    };
+    private GridView gridView;
+    private ImageAdapter adapter;
+    private boolean[] touchStates;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,37 +62,33 @@ public class SectionC1Activity extends AppCompatActivity {
         bi.setFamilymembers(familyMembers);
         bi.setCallback(this);
 
+        gridView = findViewById(R.id.gridView);
+        adapter = new ImageAdapter(this);
+        gridView.setAdapter(adapter);
 
-        // Initialize the quadrant boolean map
-        quadrantBooleanMap = new SparseBooleanArray();
+        touchStates = new boolean[imageIds.length]; // Initialize touch state array
 
-        // Define colors for selected and unselected quadrants
-        selectedColor = Color.parseColor("#FFC0CB"); // Replace with your desired color code
-        unselectedColor = Color.TRANSPARENT;
-
-        chestImageView = findViewById(R.id.chestImageView);
-      /*  chestImageView.setOnTouchListener(new View.OnTouchListener() {
-
+      /*  gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    int touchX = (int) event.getX();
-                    int touchY = (int) event.getY();
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (position != 0 && position != 1 && position != 3 && position != 4) {
+                    ImageAdapter adapter = (ImageAdapter) parent.getAdapter();
+                    boolean isTouched = adapter.getTouchState(position);
 
-                    Toast.makeText(SectionC1Activity.this, "Chest Touched at: ["+ touchX+", "+touchY+"]", Toast.LENGTH_SHORT).show();
-                    // Check if the touch coordinates fall within a specific quadrant
-                    int quadrantId = getQuadrantId(touchX, touchY);
-                    if (quadrantId != -1) {
-                        // Update the boolean value for the touched quadrant
-                        boolean isSelected = !quadrantBooleanMap.get(quadrantId, false);
-                        quadrantBooleanMap.put(quadrantId, isSelected);
-                        markQuadrant(quadrantId);
-
-                        // Shade or unshade the quadrant based on the selection
-                        //shadeQuadrant(quadrantId, isSelected);
+                    if (isTouched) {
+                        adapter.setTouchState(position, false);
+                        ImageView imageView = (ImageView) view;
+                        imageView.clearColorFilter();
+                        String imageName = adapter.getImageName(position);
+                        Toast.makeText(SectionC1Activity.this, "Removed: " + imageName, Toast.LENGTH_SHORT).show();
+                    } else {
+                        adapter.setTouchState(position, true);
+                        ImageView imageView = (ImageView) view;
+                        imageView.setColorFilter(Color.RED, PorterDuff.Mode.OVERLAY);
+                        String imageName = adapter.getImageName(position);
+                        Toast.makeText(SectionC1Activity.this, "Selected: " + imageName, Toast.LENGTH_SHORT).show();
                     }
                 }
-                return true;
             }
         });*/
     }

@@ -530,24 +530,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVFoodFrequency"
-                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimaryLightOverlay"
-                            android:text="@string/f1sub_food_frequency"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
                 <!-- F107 Radio -->
                 <androidx.cardview.widget.CardView
@@ -582,12 +565,9 @@
                             android:id="@+id/f107EditTextPicker"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={familymembers.f107}"
-                            app:maxValue="60"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM "
+                            android:inputType="textPersonName"
+                            android:text="@={familymembers.f107}" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -624,15 +604,30 @@
                             android:id="@+id/f108EditTextPicker"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:maxLength="2"
                             android:text="@={familymembers.f108}"
-                            app:maxValue="60"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM "
+                            android:inputType="textPersonName" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVFoodFrequency"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryLightOverlay"
+                            android:text="@string/f1sub_food_frequency"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
                 <!-- F109 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf109"
@@ -970,39 +965,56 @@
 
                         </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/f113EditTextPicker"
+                        <RadioGroup
+                            android:id="@+id/f113"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={familymembers.f113}"
-                            app:maxValue="60"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/f11301"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f113.equals(`1`)}"
+                                android:onClick="@{() -> familymembers.setF113(`1`)}"
+                                android:text="@string/f11301" />
+
+                            <RadioButton
+                                android:id="@+id/f11302"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f113.equals(`2`)}"
+                                android:onClick="@{() -> familymembers.setF113(`2`)}"
+                                android:text="@string/f11302" />
+
+                            <RadioButton
+                                android:id="@+id/f11303"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f113.equals(`3`)}"
+                                android:onClick="@{() -> familymembers.setF113(`3`)}"
+                                android:text="@string/f11303" />
+
+                            <RadioButton
+                                android:id="@+id/f11304"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f113.equals(`4`)}"
+                                android:onClick="@{() -> familymembers.setF113(`4`)}"
+                                android:text="@string/f11304" />
+
+                            <RadioButton
+                                android:id="@+id/f11305"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f113.equals(`5`)}"
+                                android:onClick="@{() -> familymembers.setF113(`5`)}"
+                                android:text="@string/f11305" />
+                        </RadioGroup>
 
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVBeverageFrequency"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/colorPrimaryLightOverlay"
-                            android:text="@string/f1sub_beverage_frequency"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
                 <!-- F114 -->
                 <androidx.cardview.widget.CardView
@@ -1033,19 +1045,73 @@
 
                         </LinearLayout>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/f114EditTextPicker"
+                        <RadioGroup
+                            android:id="@+id/f114"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            android:text="@={familymembers.f114}"
-                            app:maxValue="60"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/f11401"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f114.equals(`1`)}"
+                                android:onClick="@{() -> familymembers.setF114(`1`)}"
+                                android:text="@string/f11401" />
+
+                            <RadioButton
+                                android:id="@+id/f11402"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f114.equals(`2`)}"
+                                android:onClick="@{() -> familymembers.setF114(`2`)}"
+                                android:text="@string/f11402" />
+
+                            <RadioButton
+                                android:id="@+id/f11403"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f114.equals(`3`)}"
+                                android:onClick="@{() -> familymembers.setF114(`3`)}"
+                                android:text="@string/f11403" />
+
+                            <RadioButton
+                                android:id="@+id/f11404"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f114.equals(`4`)}"
+                                android:onClick="@{() -> familymembers.setF114(`4`)}"
+                                android:text="@string/f11404" />
+
+                            <RadioButton
+                                android:id="@+id/f11405"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f114.equals(`5`)}"
+                                android:onClick="@{() -> familymembers.setF114(`5`)}"
+                                android:text="@string/f11405" />
+                        </RadioGroup>
 
                     </LinearLayout>
 
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVBeverageFrequency"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorPrimaryLightOverlay"
+                            android:text="@string/f1sub_beverage_frequency"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <!-- F115 Radio -->
                 <androidx.cardview.widget.CardView
@@ -1124,9 +1190,87 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
+
                 <!-- F116 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf116"
+                    style="@style/cardView">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_f116" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/f116" />
+
+                        </LinearLayout>
+
+                        <RadioGroup
+                            android:id="@+id/f116"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/f11601"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f116.equals(`1`)}"
+                                android:onClick="@{() -> familymembers.setF116(`1`)}"
+                                android:text="@string/f11601" />
+
+                            <RadioButton
+                                android:id="@+id/f11602"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f116.equals(`2`)}"
+                                android:onClick="@{() -> familymembers.setF116(`2`)}"
+                                android:text="@string/f11602" />
+
+                            <RadioButton
+                                android:id="@+id/f11603"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f116.equals(`3`)}"
+                                android:onClick="@{() -> familymembers.setF116(`3`)}"
+                                android:text="@string/f11603" />
+
+                            <RadioButton
+                                android:id="@+id/f11604"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f116.equals(`4`)}"
+                                android:onClick="@{() -> familymembers.setF116(`4`)}"
+                                android:text="@string/f11604" />
+
+                            <RadioButton
+                                android:id="@+id/f11605"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:checked="@{familymembers.f116.equals(`5`)}"
+                                android:onClick="@{() -> familymembers.setF116(`5`)}"
+                                android:text="@string/f11605" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                `
+                <!-- F117 Radio -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVf117"
                     style="@style/cardView">
 
                     <LinearLayout

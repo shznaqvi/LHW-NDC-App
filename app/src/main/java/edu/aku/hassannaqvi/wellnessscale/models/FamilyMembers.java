@@ -53,11 +53,19 @@ public class FamilyMembers extends BaseObservable {
     public String c10207 = _EMPTY_;
     public String c10208 = _EMPTY_;
     public String c10209 = _EMPTY_;
+    public String c10210 = _EMPTY_;
+    public String c10211 = _EMPTY_;
+    public String c10212 = _EMPTY_;
+    public String c10213 = _EMPTY_;
+    public String c10214 = _EMPTY_;
+    public String c10215 = _EMPTY_;
     public String c103 = _EMPTY_;
     public String c104 = _EMPTY_;
     public String c105 = _EMPTY_;
     public String c106 = _EMPTY_;
     public String c107 = _EMPTY_;
+    public String c108 = _EMPTY_;
+    public String c109 = _EMPTY_;
     public String d101 = _EMPTY_;
     public String d102 = _EMPTY_;
     public String d103 = _EMPTY_;
@@ -777,6 +785,26 @@ public class FamilyMembers extends BaseObservable {
     public void setC107(String c107) {
         this.c107 = c107;
         notifyChange(BR.c107);
+    }
+
+    @Bindable
+    public String getC108() {
+        return c108;
+    }
+
+    public void setC108(String c108) {
+        this.c108 = c108;
+        notifyChange(BR.c108);
+    }
+
+    @Bindable
+    public String getC109() {
+        return c109;
+    }
+
+    public void setC109(String c109) {
+        this.c109 = c109;
+        notifyChange(BR.c109);
     }
 
     @Bindable

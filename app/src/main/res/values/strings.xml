@@ -285,8 +285,8 @@
     <string name="c108">Have you ever been told by a doctor or other health professional that (you/he/she) had hypertension also called high blood pressure? (If high blood pressure only during pregnancy, code no)</string>
     <string name="c10801">Yes</string>
     <string name="c10802">No</string>
-    <string name="c10199">Refused</string>
-    <string name="c10198">Don\'t know</string>
+    <string name="c10899">Refused</string>
+    <string name="c10898">Don\'t know</string>
     <string name="c109">Because of high blood pressure/hypertension have you/ has she ever been told to take prescribed medicine?</string>
     <string name="c10901">Yes</string>
     <string name="c10902">No</string>
@@ -693,6 +693,8 @@
     <string name='Q_c105' translatable="false">c105</string>
     <string name='Q_c106' translatable="false">c106</string>
     <string name='Q_c107' translatable="false">c107</string>
+    <string name='Q_c108' translatable="false">c108</string>
+    <string name='Q_c109' translatable="false">c109</string>
     <string name='Q_ctitle' translatable="false">ctitle</string>
     <string name='Q_d101' translatable="false">d101</string>
     <string name='Q_d102' translatable="false">d102</string>
