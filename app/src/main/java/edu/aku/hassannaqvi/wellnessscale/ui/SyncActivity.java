@@ -236,7 +236,7 @@ public class SyncActivity extends AppCompatActivity {
             setAdapter(downloadTables);
             BeginDownload();
         } else {
-                throw new IllegalStateException("Unexpected value: " + view.getId());
+            throw new IllegalStateException("Unexpected value: " + view.getId());
         }
     }
 

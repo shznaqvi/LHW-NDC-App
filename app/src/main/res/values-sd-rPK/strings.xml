@@ -2,8 +2,14 @@
 <resources>
 
     <string name="atitle">سيڪشن اي: مريض جو تفصيل</string>
-    <string name="a101">ایل ایچ ڈبلیو جو نالو</string>
-    <string name="a102">خاندان نمبر</string>
+    <string name="a101a">ضلعو</string>
+    <string name="a101b">ایل ایچ ڈبلیو جو نالو</string>
+    <string name="a101c">خاندان نمبر</string>
+    <string name="a102a">انٽرويو جي تاريخ</string>
+    <string name="a102b">انٽرويو جو وقت</string>
+    <string name="a102c">پتو</string>
+
+    <!-- Consent -->
     <string name="consent">ڇا لکيل رضامندي تي دستخط ٿيل آهي؟</string>
     <string name="a103">مريض جو نالو</string>
     <string name="a104">عمر</string>
@@ -11,24 +17,28 @@
     <string name="a10501">مرد</string>
     <string name="a10502">عورت</string>
     <string name="a10596">ٻيا</string>
-    <string name="a106">نسل/قوميت</string>
+    <string name="a106">توهان گهر ۾ ڪيتريون ٻوليون ڳالهائيندا آهيو؟</string>
     <string name="a10601">اردو</string>
     <string name="a10602">سنڌي</string>
     <string name="a10603">پنجابي</string>
     <string name="a10604">بلوچي</string>
     <string name="a10605">پشتو</string>
     <string name="a10606">ڪشميري</string>
+    <string name="a10607">بنگالي</string>
+    <string name="a10608">سرائڪي</string>
+
+
+
     <string name="a10696">ٻيا (مهرباني ڪري وضاحت ڪريو)</string>
-    <string name="a107">پتو</string>
-    <string name="a108">توهان جي تعليم ڇا آهي؟</string>
-    <string name="a10801">ڪڏهن به اسڪول ۾ نه پڙهيو</string>
-    <string name="a10802">پرائمري تعليم</string>
-    <string name="a10803">ثانوي تعليم</string>
-    <string name="a10804">اعليٰ ثانوي</string>
-    <string name="a10805">گريجوئيشن يا مٿي</string>
-    <string name="a109">توهان ڪٿي ڪم ڪندا آهيو؟ يا ڪو ڪاروبار آهي؟</string>
-    <string name="a10901">ها</string>
-    <string name="a10902">نه</string>
+    <string name="a107">توهان جي تعليم ڇا آهي؟</string>
+    <string name="a10701">ڪڏهن به اسڪول ۾ نه پڙهيو</string>
+    <string name="a10702">پرائمري تعليم</string>
+    <string name="a10703">ثانوي تعليم</string>
+    <string name="a10704">اعليٰ ثانوي</string>
+    <string name="a10705">گريجوئيشن يا مٿي</string>
+    <string name="a108">توهان ڪٿي ڪم ڪندا آهيو؟ يا ڪو ڪاروبار آهي؟</string>
+    <string name="a10801">ها</string>
+    <string name="a10802">نه</string>
 
     <!-- Section B -->
     <string name="btitle">ريپڊ سیڪشن</string>
@@ -258,6 +268,8 @@
     <string name="f11902">نه</string>
 
     <string name="gtitle">گلوبل تمباکو سروي وڏن لاءِ</string>
+    <string name="g6title">روزاني تماڪ کان سواءِ تمباکو استعمال ڪندڙن کان موجوده گھٽ</string>
+
     <string name="g101">ڇا توهان هن وقت روزاني جي بنياد تي تمباکو نوشي ڪندا آهيو؟</string>
     <string name="g10101">روزاني</string>
     <string name="g10102">روزاني کان گهٽ</string>
@@ -279,7 +291,7 @@
     <string name="g104a">ڪيترا سال اڳ توهان پهريون دفعا تمباکو نوشي جي ڪوشش ڪئي هئي؟</string>
     <string name="g105">توهان جي عمر ڪيتري هئي جڏهن توهان پهريون دفعا روزانو تمباکو پيئڻ شروع ڪيو؟</string>
     <string name="g105a">ڪيترا سال اڳ توهان روزانو تمباکو نوشي ڪرڻ شروع ڪيو؟</string>
-    <string name="g1title">موجوده روزاني سگريٽ نوشي</string>
+    <string name="g1title">تمباکو نوشي</string>
     <string name="g106">سراسري طور هيٺ ڏنل پراڊڪٽس مان ڪيترا توهان في الحال هر روز پيئندا آهيو؟ مون کي پڻ ٻڌايو ته ڇا توهان پروڊڪٽ کي تماڪ ڇڪيو ٿا، پر هر روز نه؟</string>
     <string name="g10601">ٺاهيل سگريٽ؟</string>
     <string name="g10601d">في ڏينهن</string>
@@ -315,7 +327,7 @@
     <string name="g10703">31 کان 60 منٽ</string>
     <string name="g10704">60 منٽ کان وڌيڪ</string>
     <string name="g10799">انڪار ڪيو</string>
-    <string name="g2title">روزاني سگريٽ نوشي ڪندڙن کان موجوده گھٽ</string>
+    <string name="g2title">موجوده روزاني سگريٽ نوشي</string>
     <string name="g108">توهان هن وقت عام هفتي دوران هيٺين مان ڪيترا تمباکو نوشي پيئندا آهيو؟*</string>
     <string name="g10801">ٺاهيل سگريٽ؟</string>
     <string name="g10801w">في هفتي</string>
@@ -342,67 +354,91 @@
     <!--    <string name="g10896d">في ڏينهن</string>
         <string name="g1089688">روزانه نه؟</string>
         <string name="g10896w">في هفتي</string>-->
-    <string name="g3title">تماڪ کان سواءِ تمباکو</string>
+    <string name="g3title">روزاني سگريٽ نوشي ڪندڙن کان موجوده گھٽ</string>
 
-    <string name="g109">ڇا توهان هن وقت تماڪ کان سواءِ تمباکو روزاني جي بنياد تي استعمال ڪندا آهيو، روزانو کان گهٽ، يا بلڪل نه؟</string>
-    <string name="g10901">روزاني</string>
-    <string name="g10902">روزاني کان گهٽ</string>
-    <string name="g10903">بالڪل نه</string>
-    <string name="g10998">خبر ناهي</string>
-    <string name="g10999">انڪار ڪيو</string>
-    <string name="g110">ڇا توهان ماضي ۾ روزاني تماڪ کان سواءِ تمباکو استعمال ڪيو آهي؟</string>
-    <string name="g11001">روزاني</string>
-    <string name="g11002">روزاني کان گهٽ</string>
-    <string name="g11003">بالڪل نه</string>
-    <string name="g11098">خبر ناهي</string>
-    <string name="g11099">انڪار ڪيو</string>
-    <string name="g111">ماضي ۾، توهان تماڪ کان سواءِ تمباکو روزاني بنياد تي استعمال ڪيو آهي، روزانو کان گهٽ، يا بلڪل نه؟</string>
-    <string name="g11101">روزاني</string>
-    <string name="g11102">روزاني کان گهٽ</string>
-    <string name="g11103">بالڪل نه</string>
-    <string name="g11198">خبر ناهي</string>
-    <string name="g11199">انڪار ڪيو</string>
-    <string name="g4title">موجوده روزاني تماڪ کان سواءِ تمباکو استعمال ڪندڙ وارا</string>
-    <string name="g112">لڳ ڀڳ، توھان روزانو ھيٺين مان ڪيتريون شيون استعمال ڪندا آھيو؟ ۽ هن کي انهن شين جي وضاحت ڪريو جيڪي توهان روزانو استعمال نٿا ڪريو.</string>
-    <string name="g11201">وات ذريعي نسوار؟</string>
-    <string name="g11201d">في ڏينهن</string>
-    <string name="g1120188">روزانه نه؟</string>
-    <string name="g11201w">في هفتي</string>
-    <string name="g11202">نڪ ذريعي نسوار؟</string>
-    <string name="g11202d">في ڏينهن</string>
-    <string name="g1120288">روزانه نه؟</string>
-    <string name="g11202w">في هفتي</string>
-    <string name="g11203">تمباکو چبائڻ؟</string>
-    <string name="g11203d">في ڏينهن</string>
-    <string name="g1120388">روزانه نه؟</string>
-    <string name="g11203w">في هفتي</string>
-    <string name="g11204">تمباکو سان گڏ پان؟</string>
-    <string name="g11204d">في ڏينهن</string>
-    <string name="g1120488">روزانه نه؟</string>
-    <string name="g11204w">في هفتي</string>
-    <string name="g11296">ڪو ٻيو؟ توھان بيان ڪريو ٻيو قسم جيڪو توھان ھن وقت استعمال ڪندا آھيو: ________</string>
-    <string name="g11296d">في ڏينهن</string>
-    <string name="g1129688">روزانه نه؟</string>
-    <string name="g11296w">في هفتي</string>
-    <string name="g5title">روزاني تماڪ کان سواءِ تمباکو استعمال ڪندڙن کان موجوده گھٽ</string>
-    <string name="g113">هفتي ۾ ڪيترا دفعا توهان عام طور تي هيٺيان استعمال ڪندا آهيو؟</string>
-    <string name="g11301">وات ذريعي نسوار؟</string>
-    <string name="g11301w">وقت في هفتي</string>
-    <string name="g1130188">هڪ  کان گهٽ</string>
-    <string name="g11302">نڪ ذريعي نسوار؟</string>
-    <string name="g11302w">وقت في هفتي</string>
-    <string name="g1130288">هڪ  کان گهٽ</string>
-    <string name="g11303">تمباکو چبائڻ؟</string>
-    <string name="g11303w">وقت في هفتي</string>
-    <string name="g1130388">هڪ  کان گهٽ</string>
-    <string name="g11304">تمباکو سان گڏ پان؟</string>
-    <string name="g11304w">وقت في هفتي</string>
-    <string name="g1130488">هڪ  کان گهٽ</string>
-    <string name="g11396">ڪو ٻيو؟</string>
-    <string name="g11396w">وقت في هفتي</string>
-    <string name="g1139688">هڪ  کان گهٽ</string>
-    <string name="g11396d">توھان بيان ڪريو ٻيو قسم جيڪو توھان ھن وقت استعمال ڪندا آھيو: ___</string>
+    <string name="g201">ڇا توهان هن وقت تماڪ کان سواءِ تمباکو روزاني جي بنياد تي استعمال ڪندا آهيو، روزانو کان گهٽ، يا بلڪل نه؟</string>
+    <string name="g20101">روزاني</string>
+    <string name="g20102">روزاني کان گهٽ</string>
+    <string name="g20103">بالڪل نه</string>
+    <string name="g20198">خبر ناهي</string>
+    <string name="g20199">انڪار ڪيو</string>
+    <string name="g202">ڇا توهان ماضي ۾ روزاني تماڪ کان سواءِ تمباکو استعمال ڪيو آهي؟</string>
+    <string name="g20201">روزاني</string>
+    <string name="g20202">روزاني کان گهٽ</string>
+    <string name="g20203">بالڪل نه</string>
+    <string name="g20298">خبر ناهي</string>
+    <string name="g20299">انڪار ڪيو</string>
+    <string name="g203">ماضي ۾، توهان تماڪ کان سواءِ تمباکو روزاني بنياد تي استعمال ڪيو آهي، روزانو کان گهٽ، يا بلڪل نه؟</string>
+    <string name="g20301">روزاني</string>
+    <string name="g20302">روزاني کان گهٽ</string>
+    <string name="g20303">بالڪل نه</string>
+    <string name="g20398">خبر ناهي</string>
+    <string name="g20399">انڪار ڪيو</string>
 
+    <string name="g204">توهان جي عمر ڪيتري هئي جڏهن توهان پهريون دونھن جي بغير تمباکو استعمال ڪيو، هڪ دفعوئي سھي؟</string>
+    <string name="g204a">ڪيترا سال اڳ توهان پهريون دونھن جي بغير تمباکو استعمال ڪيو، هڪ دفعوئي سھي؟</string>
+
+    <!-- GATS Section G205 -->
+    <string name="g205">توهان جي عمر ڪيتري هئي جڏهن توهان پهريون دفعو روزانو دونھن جي بغير تمباکو استعمال ڪرڻ شروع ڪيو؟</string>
+    <string name="g205a">توهان ڪيترا سال اڳ ۾ پهريون دفعو روزانو دونھن جي بغير تمباکو استعمال ڪرڻ شروع ڪيو؟</string>
+
+
+
+    <string name="g4title">تماڪ کان سواءِ تمباکو</string>
+    <string name="g206">لڳ ڀڳ، توھان روزانو ھيٺين مان ڪيتريون شيون استعمال ڪندا آھيو؟ ۽ هن کي انهن شين جي وضاحت ڪريو جيڪي توهان روزانو استعمال نٿا ڪريو.</string>
+    <string name="g20601">وات ذريعي نسوار؟</string>
+    <string name="g20601d">في ڏينهن</string>
+    <string name="g2060188">روزانه نه؟</string>
+    <string name="g20601w">في هفتي</string>
+    <string name="g20602">نڪ ذريعي نسوار؟</string>
+    <string name="g20602d">في ڏينهن</string>
+    <string name="g2060288">روزانه نه؟</string>
+    <string name="g20602w">في هفتي</string>
+    <string name="g20603">تمباکو چبائڻ؟</string>
+    <string name="g20603d">في ڏينهن</string>
+    <string name="g2060388">روزانه نه؟</string>
+    <string name="g20603w">في هفتي</string>
+    <string name="g20604">تمباکو سان گڏ پان؟</string>
+    <string name="g20604d">في ڏينهن</string>
+    <string name="g2060488">روزانه نه؟</string>
+    <string name="g20604w">في هفتي</string>
+    <string name="g20696">ڪو ٻيو؟ توھان بيان ڪريو ٻيو قسم جيڪو توھان ھن وقت استعمال ڪندا آھيو: ________</string>
+    <string name="g20696d">في ڏينهن</string>
+    <string name="g2069688">روزانه نه؟</string>
+    <string name="g20696w">في هفتي</string>
+
+    <string name="g207">توهان جي جاڳڻ کان پوءِ ڪيترو جلدي توهان پهريون دونھن جي بغير تمباکو استعمال ڪندا آهيو؟ ڇا توهان ۵ منٽن اندر چوندا، ۶ کان ۳۰ منٽ، ۳۱ کان ۶۰ منٽ، يا ۶۰ منٽن کان وڌيڪ؟</string>
+    <string name="g20701">5 منٽن اندر</string>
+    <string name="g20702">6 کان 30 منٽ</string>
+    <string name="g20703">31 کان 60 منٽ</string>
+    <string name="g20704">60 منٽ کان وڌيڪ</string>
+    <string name="g20799">انڪار ڪيو</string>
+
+
+    <string name="g5title">موجوده روزاني تماڪ کان سواءِ تمباکو استعمال ڪندڙ وارا</string>
+    <string name="g208">هفتي ۾ ڪيترا دفعا توهان عام طور تي هيٺيان استعمال ڪندا آهيو؟</string>
+    <string name="g20801">وات ذريعي نسوار؟</string>
+    <string name="g20801w">وقت في هفتي</string>
+    <string name="g2080188">هڪ  کان گهٽ</string>
+    <string name="g20802">نڪ ذريعي نسوار؟</string>
+    <string name="g20802w">وقت في هفتي</string>
+    <string name="g2080288">هڪ  کان گهٽ</string>
+    <string name="g20803">تمباکو چبائڻ؟</string>
+    <string name="g20803w">وقت في هفتي</string>
+    <string name="g2080388">هڪ  کان گهٽ</string>
+    <string name="g20804">تمباکو سان گڏ پان؟</string>
+    <string name="g20804w">وقت في هفتي</string>
+    <string name="g2080488">هڪ  کان گهٽ</string>
+    <string name="g20896">ڪو ٻيو؟</string>
+    <string name="g20896w">وقت في هفتي</string>
+    <string name="g2089688">هڪ  کان گهٽ</string>
+    <string name="g20896d">توھان بيان ڪريو ٻيو قسم جيڪو توھان ھن وقت استعمال ڪندا آھيو: ___</string>
+
+
+    <string name="g209">توهان ذڪر ڪيو آهي ته توهان تمباکو نوشي ڪندا آهيو، پر هر روز نه، ۽ اهو ته توهان دونھن جي بغير تمباکو استعمال ڪندا آهيو، پر هر روز نه. تمباکو نوشي ۽ دونھن جي بغير تمباکو جي استعمال بابت سوچيو، ڇا توهان چوندا آهيو ته توهان روزاني بنياد تي تمباکو استعمال ڪندا آهيو يا روزانو کان گهٽ؟</string>
+    <string name="g20901">روزاني</string>
+    <string name="g20902">روزاني کان گهٽ</string>
+    <string name="g20999">انڪار ڪيو</string>
 
     <string name="htitle">ورلڈ ہیلتھ آرگنائزیشن - فائیو ویل بیئنگ انڈیکس سیکشن (WHO-5)</string>
     <string name="h1title">مھرباني ڪري پنجن بيانن مان ھر ھڪ ڪي گول ڪريو جيڪي بهترين بيان ڪن ٿا ته توھان گذريل ٻن هفتن کان ڪيون محسوس ڪريو پيا. ياد رکڻ جي ته اعليٰ نمبرن جو مطلب بهتر صحت آهي.</string>

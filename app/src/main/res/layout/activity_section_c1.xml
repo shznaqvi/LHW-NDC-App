@@ -142,24 +142,28 @@
                             android:orientation="vertical"
                             android:tag="0">
 
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+
 
                                 <GridView
                                     android:id="@+id/gridView"
+                                    android:layoutDirection="ltr"
                                     android:layout_width="match_parent"
                                     android:layout_height="500dp"
                                     android:maxHeight="456dp"
                                     android:numColumns="5"
                                     android:verticalSpacing="0dp" />
-                            </androidx.constraintlayout.widget.ConstraintLayout>
+
                             <!-- <GridView
                                  android:id="@+id/gridView"
                                  android:layout_width="match_parent"
                                  android:layout_height="wrap_content"
                                  android:numColumns="5"
                                  android:verticalSpacing="0dp" />-->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:orientation="vertical">
                             <CheckBox
                                 android:id="@+id/c10201"
                                 android:layout_width="match_parent"
@@ -231,6 +235,7 @@
                                 android:checked="@{familymembers.c10209.equals(`9`)}"
                                 android:onClick="@{()->familymembers.setC10209(familymembers.c10209.equals(`9`)?``:`9`)}"
                                 android:text="@string/c10209" />
+                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

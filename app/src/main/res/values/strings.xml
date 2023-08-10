@@ -18,7 +18,7 @@
     <string name="mainmenu">Main Menu</string>
     <string name="onlyfortesting">ONLY FOR TESTING</string>
     <string name="database">Database</string>
-    <string name="district" translatable="false">DISTRICT</string>
+    <string name="district" >DISTRICT</string>
     <string name="uc" translatable="false">UC</string>
     <string name="btnSave" translatable="false">Save</string>
     <string name="btnEnd" translatable="false">Cancel</string>
@@ -129,8 +129,6 @@
     <string name="options" translatable="false">Options</string>
     <string name="householdidentificationmainheading">Household Identification: </string>
 
-    <string name="hh01">Date of interview:</string>
-    <string name="hh02">Time of interview: </string>
     <string name="hh03">Interviews Code</string>
     <string name="hh03a">Interviewer’s name</string>
     <string name="hh04">Supervisors Code</string>
@@ -216,8 +214,14 @@
     <string name="checkHHpresent"> The name of head of the household corresponds to the line listing data.</string>
     <string name="newHHheadname"> Name of new head of the household </string>
     <string name="atitle">Section A: Patient Demographics</string>
-    <string name="a101">LHW name</string>
-    <string name="a102">Khandaan number</string>
+    <string name="a101a">DISTRICT</string>
+    <string name="a101b">LHW name</string>
+    <string name="a101c">Khandaan number</string>
+    <string name="a102a">Date of interview</string>
+    <string name="a102b">Time of interview</string>
+    <string name="a102c">Address</string>
+
+    <!-- Consent -->
     <string name="consent">Has the written consent been signed?</string>
     <string name="a103">Patient Name</string>
     <string name="a104">Age</string>
@@ -225,24 +229,25 @@
     <string name="a10501">Male</string>
     <string name="a10502">Female</string>
     <string name="a10596">Other</string>
-    <string name="a106">Ethnicity</string>
+    <string name="a106">How many languages do you speak at home?</string>
     <string name="a10601">Urdu</string>
     <string name="a10602">Sindhi</string>
     <string name="a10603">Punjabi</string>
     <string name="a10604">Baluchi</string>
     <string name="a10605">Pashtu</string>
     <string name="a10606">Kashmiri</string>
+    <string name="a10607">Bengali</string>
+    <string name="a10608">Saraiki</string>
     <string name="a10696">Other (Please Specify)</string>
-    <string name="a107">Address</string>
-    <string name="a108">Education status</string>
-    <string name="a10801">No formal education</string>
-    <string name="a10802">Primary education</string>
-    <string name="a10803">Secondary education</string>
-    <string name="a10804">Higher secondary</string>
-    <string name="a10805">Graduation or Higher</string>
-    <string name="a109">Employed</string>
-    <string name="a10901">Yes</string>
-    <string name="a10902">No</string>
+    <string name="a107">Education status</string>
+    <string name="a10701">No formal education</string>
+    <string name="a10702">Primary education</string>
+    <string name="a10703">Secondary education</string>
+    <string name="a10704">Higher secondary</string>
+    <string name="a10705">Graduation or Higher</string>
+    <string name="a108">Employed</string>
+    <string name="a10801">Yes</string>
+    <string name="a10802">No</string>
     <string name="btitle">RAPID Section</string>
     <string name="b101">Waist Circumference</string>
     <string name="b102">Positive family history of diabetes</string>
@@ -462,8 +467,9 @@
 
 
     <string name="gtitle">Global Adult Tobacco Survey (GATS)</string>
+    <string name="g6title">Current Less Than Daily Smokeless Tobacco Users</string>
 
-    <string name="g101">Do you currently smoke tobacco on a daily basis</string>
+    <string name="g101">Do you currently smoke tobacco on a daily basis, less than daily, or not at all?</string>
     <string name="g10101">Daily</string>
     <string name="g10102">Less than daily</string>
     <string name="g10103">Not at all</string>
@@ -489,7 +495,7 @@
     <string name="g105">How old were you when you first started smoking tobacco daily?</string>
     <string name="g105a">How many years ago did you first start smoking tobacco daily?</string>
 
-    <string name="g1title">Current Daily Smoking</string>
+    <string name="g1title">Tobacco Smoking</string>
 
     <string name="g106">On average how many of the following products do you currently smoke each day? Also let me know if you smoke the product, but not every day?</string>
     <string name="g10601">Manufactured Cigarettes?</string>
@@ -528,7 +534,7 @@
     <string name="g10704">More than 60 minutes</string>
     <string name="g10799">Refused</string>
 
-    <string name="g2title">Current Less Than Daily Smokers</string>
+    <string name="g2title">Current Daily Smoking</string>
 
     <string name="g108">How many of the following do you currently smoke during a usual week?</string>
     <string name="g10801">Manufactured cigarettes?</string>
@@ -554,73 +560,90 @@
     <string name="g1080797">Less than once</string>
     <string name="g10896">Please specify the other type you currently smoke?</string>
 
-    <string name="g3title">Smokeless Tobacco</string>
+    <string name="g3title">Current Less Than Daily Smokers</string>
 
-    <string name="g109">Do you currently use smokeless tobacco on a daily basis, less than daily, or not at all?</string>
-    <string name="g10901">Daily</string>
-    <string name="g10902">Less than daily</string>
-    <string name="g10903">Not at all</string>
-    <string name="g10998">Don\'t know</string>
-    <string name="g10999">Refused</string>
+    <string name="g201">Do you currently use smokeless tobacco on a daily basis, less than daily, or not at all?</string>
+    <string name="g20101">Daily</string>
+    <string name="g20102">Less than daily</string>
+    <string name="g20103">Not at all</string>
+    <string name="g20198">Don\'t know</string>
+    <string name="g20199">Refused</string>
 
-    <string name="g110">Have you used smokeless tobacco daily in the past?</string>
-    <string name="g11001">Daily</string>
-    <string name="g11002">Less than daily</string>
-    <string name="g11003">Not at all</string>
-    <string name="g11098">Don\'t know</string>
-    <string name="g11099">Refused</string>
+    <string name="g202">Have you used smokeless tobacco daily in the past?</string>
+    <string name="g20201">Daily</string>
+    <string name="g20202">Less than daily</string>
+    <string name="g20203">Not at all</string>
+    <string name="g20298">Don\'t know</string>
+    <string name="g20299">Refused</string>
 
-    <string name="g111">In the past, have you used smokeless tobacco on a daily basis, less than daily, or not at all?</string>
-    <string name="g11101">Daily</string>
-    <string name="g11102">Less than daily</string>
-    <string name="g11103">Not at all</string>
-    <string name="g11198">Don\'t know</string>
-    <string name="g11199">Refused</string>
+    <string name="g203">In the past, have you used smokeless tobacco on a daily basis, less than daily, or not at all?</string>
+    <string name="g20301">Daily</string>
+    <string name="g20302">Less than daily</string>
+    <string name="g20303">Not at all</string>
+    <string name="g20398">Don\'t know</string>
+    <string name="g20399">Refused</string>
 
-    <string name="g4title">Current Daily Smokeless Tobacco Users</string>
+    <string name="g204">"How old were you when you first tried using smokeless tobacco, even once?\nHow old were you when you first tried smoking tobacco, even once?"</string>
+    <string name="g204a">How many years ago did you first try using smokeless tobacco, even once?</string>
 
-    <string name="g112">On average, how many times a day do you use the following products? Also, let me know if you use the product, but not every day.</string>
-    <string name="g11201">Snuff by mouth?</string>
-    <string name="g11201d">per day</string>
-    <string name="g1120188">Not daily?</string>
-    <string name="g11201w">per week</string>
-    <string name="g11202">Snuff by nose?</string>
-    <string name="g11202d">per day</string>
-    <string name="g1120288">Not daily?</string>
-    <string name="g11202w">per week</string>
-    <string name="g11203">Chewing tobacco?</string>
-    <string name="g11203d">per day</string>
-    <string name="g1120388">Not daily?</string>
-    <string name="g11203w">per week</string>
-    <string name="g11204">Betel quid with tobacco?</string>
-    <string name="g11204d">per day</string>
-    <string name="g1120488">Not daily?</string>
-    <string name="g11204w">per week</string>
-    <string name="g11296">Any others? (Please specify the other type you currently use)</string>
-    <string name="g11296d">per day</string>
-    <string name="g1129688">Not daily?</string>
-    <string name="g11296w">per week</string>
+    <!-- GATS Section G205 -->
+    <string name="g205">How old were you when you first started using smokeless tobacco daily?</string>
+    <string name="g205a">How many years ago did you first start using smokeless tobacco daily?</string>
 
-    <string name="g5title">Current Less Than Daily Smokeless Tobacco Users</string>
+    <string name="g4title">Smokeless Tobacco</string>
 
-    <string name="g113">How many times a week do you usually use the following?</string>
-    <string name="g11301">Snuff, by mouth?</string>
-    <string name="g11301w">Times per week</string>
-    <string name="g1130188">Less than once</string>
-    <string name="g11302">Snuff, by nose?</string>
-    <string name="g11302w">Times per week</string>
-    <string name="g1130288">Less than once</string>
-    <string name="g11303">Chewing tobacco?</string>
-    <string name="g11303w">Times per week</string>
-    <string name="g1130388">Less than once</string>
-    <string name="g11304">Betel Quid with tobacco?</string>
-    <string name="g11304w">Times per week</string>
-    <string name="g1130488">Less than once</string>
-    <string name="g11396">Any others?</string>
-    <string name="g11396w">Times per week</string>
-    <string name="g1139688">Less than once</string>
-    <string name="g11396d">Please specify the other type you currently use</string>
+    <string name="g206">On average, how many times a day do you use the following products? Also, let me know if you use the product, but not every day.</string>
+    <string name="g20601">Snuff by mouth?</string>
+    <string name="g20601d">per day</string>
+    <string name="g2060188">Not daily?</string>
+    <string name="g20601w">per week</string>
+    <string name="g20602">Snuff by nose?</string>
+    <string name="g20602d">per day</string>
+    <string name="g2060288">Not daily?</string>
+    <string name="g20602w">per week</string>
+    <string name="g20603">Chewing tobacco?</string>
+    <string name="g20603d">per day</string>
+    <string name="g2060388">Not daily?</string>
+    <string name="g20603w">per week</string>
+    <string name="g20604">Betel quid with tobacco?</string>
+    <string name="g20604d">per day</string>
+    <string name="g2060488">Not daily?</string>
+    <string name="g20604w">per week</string>
+    <string name="g20696">Any others? (Please specify the other type you currently use)</string>
+    <string name="g20696d">per day</string>
+    <string name="g2069688">Not daily?</string>
+    <string name="g20696w">per week</string>
 
+    <string name="g207">How soon after you wake up do you usually use smokeless tobacco for the first time? Would you say within 5 minutes, 6 to 30 minutes, 31 to 60 minutes, or more than 60 minutes?</string>
+    <string name="g20701">within 5 minutes</string>
+    <string name="g20702">6 to 30 minutes</string>
+    <string name="g20703">31 to 60 minutes</string>
+    <string name="g20704">more than 60 minutes</string>
+    <string name="g20799">Refused</string>
+
+    <string name="g5title">Current Daily Smokeless Tobacco Users</string>
+
+    <string name="g208">How many times a week do you usually use the following?</string>
+    <string name="g20801">Snuff, by mouth?</string>
+    <string name="g20801w">Times per week</string>
+    <string name="g2080188">Less than once</string>
+    <string name="g20802">Snuff, by nose?</string>
+    <string name="g20802w">Times per week</string>
+    <string name="g2080288">Less than once</string>
+    <string name="g20803">Chewing tobacco?</string>
+    <string name="g20803w">Times per week</string>
+    <string name="g2080388">Less than once</string>
+    <string name="g20804">Betel Quid with tobacco?</string>
+    <string name="g20804w">Times per week</string>
+    <string name="g2080488">Less than once</string>
+    <string name="g20896">Any others?</string>
+    <string name="g20896w">Times per week</string>
+    <string name="g2089688">Less than once</string>
+    <string name="g20896d">Please specify the other type you currently use</string>
+    <string name="g209">You mentioned that you smoke tobacco, but not every day, and that you also use smokeless tobacco, but not every day. Thinking about both smoking tobacco and using smokeless tobacco, would you say you use tobacco on a daily basis or less than daily?</string>
+    <string name="g20901">Daily</string>
+    <string name="g20902">Less than daily</string>
+    <string name="g20999">Refused</string>
 
     <string name="htitle">The World Health Organization - Five Well-Being Index Section (WHO-5)</string>
     <string name="h1title">Please put a circle on each of the five statements which is closest to how you have been feeling over the last two weeks. Notice that higher numbers mean better wellbeing.</string>
@@ -671,15 +694,18 @@
       <string name="hstitle2">The World Health Organization- Five Well-Being Index (WHO-5) is a short self-reported measure of current mental well-being. The measure was first introduced in its present form in 1998 by the WHO Regional Office in Europe as part of the DEPCARE project on well-being measures in primary health care. The WHO-5 consists of five statements, which respondents’ rate according to the scale below (in relation to the past two weeks). All the time = 5, Most of the time = 4, More than half of the time = 3, Less than half of the time = 2, Some of the time = 1, At no time = 0. The total raw score, ranging from 0 to 25, is multiplied by 4 to give the final score, with 0 representing the worst imaginable well-being and 100 representing the best imaginable well-being. The WHO-5 is free of charge and does not require permission to use.</string>
   -->
 
-    <string name='Q_a101' translatable="false">Q. A01</string>
-    <string name='Q_a102' translatable="false">Q. A02</string>
+    <string name='Q_a101a' translatable="false">a101a</string>
+    <string name='Q_a101b' translatable="false">a101b</string>
+    <string name='Q_a101c' translatable="false">a101c</string>
+    <string name='Q_a102a' translatable="false">a102a</string>
+    <string name='Q_a102b' translatable="false">a102b</string>
+    <string name='Q_a102c' translatable="false">a102c</string>
     <string name='Q_a103' translatable="false">Q. A03</string>
     <string name='Q_a104' translatable="false">Q. A04</string>
     <string name='Q_a105' translatable="false">Q. A05</string>
     <string name='Q_a106' translatable="false">Q. A06</string>
     <string name='Q_a107' translatable="false">Q. A07</string>
     <string name='Q_a108' translatable="false">Q. A08</string>
-    <string name='Q_a109' translatable="false">Q. A09</string>
     <string name='Q_atitle' translatable="false">atitle</string>
     <string name='Q_b101' translatable="false">b101</string>
     <string name='Q_b102' translatable="false">b102</string>
@@ -772,28 +798,34 @@
     <string name='Q_g108g' translatable="false">g108g</string>
     <string name='Q_g108g1' translatable="false">g108g1</string>
     <string name='Q_g108' translatable="false">g108</string>
-    <string name='Q_g109' translatable="false">g109</string>
-    <string name='Q_g110' translatable="false">g110</string>
-    <string name='Q_g111' translatable="false">g111</string>
-    <string name='Q_g112' translatable="false">g112</string>
-    <string name='Q_g112a' translatable="false">g112a</string>
-    <string name='Q_g112a1' translatable="false">g112a1</string>
-    <string name='Q_g112b' translatable="false">g112b</string>
-    <string name='Q_g112b1' translatable="false">g112b1</string>
-    <string name='Q_g112c' translatable="false">g112c</string>
-    <string name='Q_g112c1' translatable="false">g112c1</string>
-    <string name='Q_g112d' translatable="false">g112d</string>
-    <string name='Q_g112d1' translatable="false">g112d1</string>
-    <string name='Q_g112e' translatable="false">g12e</string>
-    <string name='Q_g112e1' translatable="false">g12e1</string>
-    <string name='Q_g112t7' translatable="false">g12t7</string>
-    <string name='Q_g113' translatable="false">g113a</string>
-    <string name='Q_g113a' translatable="false">g113a</string>
-    <string name='Q_g113b' translatable="false">g113b</string>
-    <string name='Q_g113c' translatable="false">g113c</string>
-    <string name='Q_g113d' translatable="false">g113d</string>
-    <string name='Q_g113e' translatable="false">g13e</string>
-    <string name='Q_g113f' translatable="false">g113f</string>
+    <string name='Q_g201' translatable="false">g201</string>
+    <string name='Q_g202' translatable="false">g202</string>
+    <string name='Q_g203' translatable="false">g203</string>
+    <string name='Q_g204' translatable="false">g204</string>
+    <string name='Q_g204a' translatable="false">g204a</string>
+    <string name='Q_g205' translatable="false">g205</string>
+    <string name='Q_g205a' translatable="false">g205a</string>
+    <string name='Q_g206' translatable="false">g206</string>
+    <string name='Q_g207' translatable="false">g207</string>
+    <string name='Q_g206a' translatable="false">g206a</string>
+    <string name='Q_g206a1' translatable="false">g206a1</string>
+    <string name='Q_g206b' translatable="false">g206b</string>
+    <string name='Q_g206b1' translatable="false">g206b1</string>
+    <string name='Q_g206c' translatable="false">g206c</string>
+    <string name='Q_g206c1' translatable="false">g206c1</string>
+    <string name='Q_g206d' translatable="false">g206d</string>
+    <string name='Q_g206d1' translatable="false">g206d1</string>
+    <string name='Q_g206e' translatable="false">g12e</string>
+    <string name='Q_g206e1' translatable="false">g12e1</string>
+    <string name='Q_g206t7' translatable="false">g12t7</string>
+    <string name='Q_g208' translatable="false">g208a</string>
+    <string name='Q_g209' translatable="false">g209</string>
+    <string name='Q_g208a' translatable="false">g208a</string>
+    <string name='Q_g208b' translatable="false">g208b</string>
+    <string name='Q_g208c' translatable="false">g208c</string>
+    <string name='Q_g208d' translatable="false">g208d</string>
+    <string name='Q_g208e' translatable="false">g13e</string>
+    <string name='Q_g208f' translatable="false">g208f</string>
 
 
     <string name='Q_h101' translatable="false">h101</string>

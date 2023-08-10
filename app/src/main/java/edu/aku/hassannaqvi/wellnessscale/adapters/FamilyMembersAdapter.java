@@ -189,7 +189,7 @@ public class FamilyMembersAdapter extends RecyclerView.Adapter<FamilyMembersAdap
 
         public ViewHolder(View v) {
             super(v);
-            fName = v.findViewById(R.id.chh02);
+            fName = v.findViewById(R.id.ca102c);
             fAge = v.findViewById(R.id.chh05);
             diabetes = v.findViewById(R.id.diabetes);
             waist = v.findViewById(R.id.waist);

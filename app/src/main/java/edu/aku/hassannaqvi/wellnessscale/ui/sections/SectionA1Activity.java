@@ -32,6 +32,7 @@ public class SectionA1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTheme(MainApp.langRTL ? MainApp.selectedLanguage == 1 ? R.style.AppThemeUrdu:R.style.AppThemeSindhi  : R.style.AppThemeEnglish1);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a1);
+
        // MainApp.form = new Form();
         bi.setFamilymembers(familyMembers);
         bi.setCallback(this);
@@ -39,7 +40,7 @@ public class SectionA1Activity extends AppCompatActivity {
         //   if (MainApp.superuser)
    //         bi.btnContinue.setText("Review Next");
         db = MainApp.appInfo.dbHelper;
-   //     form.setA102(String.valueOf(new SimpleDateFormat("HH:mm:ss", Locale.ENGLISH).format(new Date().getTime())));
+   //     form.setA101C(String.valueOf(new SimpleDateFormat("HH:mm:ss", Locale.ENGLISH).format(new Date().getTime())));
 
     }
 //

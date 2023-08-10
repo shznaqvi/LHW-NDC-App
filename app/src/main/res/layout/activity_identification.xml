@@ -51,7 +51,7 @@
                 android:orientation="vertical">
 
 
-                <!-- a101  Input   -->
+                <!-- a101a  Input   -->
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa10d"
@@ -67,7 +67,7 @@
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/Q_a101" />
+                            android:text="@string/Q_a101a" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -80,7 +80,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2"
-                            android:hint="@string/a101"
+                            android:hint="@string/a101a"
                             />
 
                     </LinearLayout>
@@ -88,7 +88,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa101"
+                    android:id="@+id/fldGrpCVa101a"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -101,20 +101,20 @@
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/Q_a101" />
+                            android:text="@string/Q_a101b" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/a101" />
+                            android:text="@string/a101b" />
 
                         <androidx.appcompat.widget.AppCompatSpinner
-                            android:id="@+id/a101"
+                            android:id="@+id/lhw"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="2"
-                            android:hint="@string/a101"
+                            android:hint="@string/a101b"
                             />
 
                     </LinearLayout>
@@ -122,9 +122,9 @@
                 </androidx.cardview.widget.CardView>
 
 
-                <!-- a102  Input   -->
+                <!-- a101c  Input   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa102"
+                    android:id="@+id/fldGrpCVa101c"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -137,16 +137,16 @@
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="@string/Q_a102" />
+                            android:text="@string/Q_a101c" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/a102" />
+                            android:text="@string/a101c" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/a102"
+                            android:id="@+id/a101c"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"

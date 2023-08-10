@@ -113,8 +113,8 @@ public class IdentificationActivity extends AppCompatActivity {
 
         if (!formValidation()) return;
         MainApp.selectedDistrict = distCodes.get(bi.district.getSelectedItemPosition());
-        MainApp.selectedLHW = lhwCodes.get(bi.a101.getSelectedItemPosition());
-        MainApp.selectedHousehold = bi.a102.getText().toString();
+        MainApp.selectedLHW = lhwCodes.get(bi.lhw.getSelectedItemPosition());
+        MainApp.selectedHousehold = bi.a101c.getText().toString();
         try {
             hhExists();
         } catch (JSONException e) {
@@ -237,7 +237,7 @@ public class IdentificationActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                bi.a101.setAdapter(null);
+                bi.lhw.setAdapter(null);
                // bi.a104.setAdapter(null);
                 bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
                 bi.btnContinue.setEnabled(false);
@@ -264,7 +264,7 @@ public class IdentificationActivity extends AppCompatActivity {
                     lhwCodes.add(distCodes.get(position) + "003");
                 }
                 // Apply the adapter to the spinner
-                bi.a101.setAdapter(new ArrayAdapter<>(IdentificationActivity.this, R.layout.custom_spinner, lhwNames));
+                bi.lhw.setAdapter(new ArrayAdapter<>(IdentificationActivity.this, R.layout.custom_spinner, lhwNames));
 
 
             }
@@ -275,7 +275,7 @@ public class IdentificationActivity extends AppCompatActivity {
 
         });
 
-        bi.a101.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        bi.lhw.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 

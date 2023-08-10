@@ -31,6 +31,7 @@ public class FamilyMembers extends BaseObservable {
     private final boolean exist = false;
     private final String lhwuid = _EMPTY_;
     // FIELD VARIABLES
+
     public String a103 = _EMPTY_;
     public String a104 = _EMPTY_;
     public String a105 = _EMPTY_;
@@ -38,7 +39,6 @@ public class FamilyMembers extends BaseObservable {
     public String a10696x = _EMPTY_;
     public String a107 = _EMPTY_;
     public String a108 = _EMPTY_;
-    public String a109 = _EMPTY_;
     public String a110 = _EMPTY_;
     public String b101 = _EMPTY_;
     public String b102 = _EMPTY_;
@@ -121,8 +121,10 @@ public class FamilyMembers extends BaseObservable {
     public String g102 = _EMPTY_;
     public String g103 = _EMPTY_;
     public String g104 = _EMPTY_;
+    public String g10498 = _EMPTY_;
     public String g104a = _EMPTY_;
     public String g105 = _EMPTY_;
+    public String g10598 = _EMPTY_;
     public String g105a = _EMPTY_;
     public String g10601d = _EMPTY_;
     public String g1060188 = _EMPTY_;
@@ -158,30 +160,39 @@ public class FamilyMembers extends BaseObservable {
     public String g10805w = _EMPTY_;
     public String g10806w = _EMPTY_;
     public String g10807w = _EMPTY_;
-    public String g109 = _EMPTY_;
-    public String g110 = _EMPTY_;
-    public String g111 = _EMPTY_;
-    public String g11201d = _EMPTY_;
-    public String g1120188 = _EMPTY_;
-    public String g11201w = _EMPTY_;
-    public String g11202d = _EMPTY_;
-    public String g1120288 = _EMPTY_;
-    public String g11202w = _EMPTY_;
-    public String g11203w = _EMPTY_;
-    public String g11203d = _EMPTY_;
-    public String g1120388 = _EMPTY_;
-    public String g11204d = _EMPTY_;
-    public String g1120488 = _EMPTY_;
-    public String g11204w = _EMPTY_;
-    public String g11296d = _EMPTY_;
-    public String g1129688 = _EMPTY_;
-    public String g11296w = _EMPTY_;
-    public String g11301w = _EMPTY_;
-    public String g11302w = _EMPTY_;
-    public String g11303w = _EMPTY_;
-    public String g11304w = _EMPTY_;
-    public String g11396w = _EMPTY_;
-    public String g11396 = _EMPTY_;
+    public String g201 = _EMPTY_;
+    public String g202 = _EMPTY_;
+    public String g203 = _EMPTY_;
+    public String g204 = _EMPTY_;
+    public String g20498 = _EMPTY_;
+    public String g204a = _EMPTY_;
+    public String g205 = _EMPTY_;
+    public String g20598 = _EMPTY_;
+    public String g205a = _EMPTY_;
+    public String g20601d = _EMPTY_;
+    public String g2060188 = _EMPTY_;
+    public String g20601w = _EMPTY_;
+    public String g20602d = _EMPTY_;
+    public String g2060288 = _EMPTY_;
+    public String g20602w = _EMPTY_;
+    public String g20603w = _EMPTY_;
+    public String g20603d = _EMPTY_;
+    public String g2060388 = _EMPTY_;
+    public String g20604d = _EMPTY_;
+    public String g2060488 = _EMPTY_;
+    public String g20604w = _EMPTY_;
+    public String g20696d = _EMPTY_;
+    public String g2069688 = _EMPTY_;
+    public String g20696w = _EMPTY_;
+    public String g207 = _EMPTY_;
+    public String g20801w = _EMPTY_;
+    public String g20802w = _EMPTY_;
+    public String g20803w = _EMPTY_;
+    public String g20804w = _EMPTY_;
+    public String g20896w = _EMPTY_;
+    public String g20896 = _EMPTY_;
+    public String g209 = _EMPTY_;
+
 
     public String h101 = _EMPTY_;
     public String h102 = _EMPTY_;
@@ -494,6 +505,7 @@ public class FamilyMembers extends BaseObservable {
         this.sH3 = sH3;
     }
 
+
     @Bindable
     public String getA103() {
         return a103;
@@ -554,6 +566,7 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.a107);
     }
 
+
     @Bindable
     public String getA108() {
         return a108;
@@ -562,16 +575,6 @@ public class FamilyMembers extends BaseObservable {
     public void setA108(String a108) {
         this.a108 = a108;
         notifyChange(BR.a108);
-    }
-
-    @Bindable
-    public String getA109() {
-        return a109;
-    }
-
-    public void setA109(String a109) {
-        this.a109 = a109;
-        notifyChange(BR.a109);
     }
 
     @Bindable
@@ -1254,6 +1257,77 @@ public class FamilyMembers extends BaseObservable {
 
     public void setG101(String g101) {
         this.g101 = g101;
+
+        setG102(g101.equals("2") ? g102 : "");
+        setG103(g101.equals("3") ? g103 : "");
+
+          setG1060188(!g101.equals("1")? "":g1060188);
+        setG10601d(!g101.equals("1")? "":g10601d);
+        setG10601w(!g101.equals("1")? "":g10601w);
+        setG1060288(!g101.equals("1")? "":g1060288);
+        setG10602d(!g101.equals("1")? "":g10602d);
+        setG10602w(!g101.equals("1")? "":g10602w);
+        setG1060388(!g101.equals("1")? "":g1060388);
+        setG10603d(!g101.equals("1")? "":g10603d);
+        setG10603w(!g101.equals("1")? "":g10603w);
+        setG1060488(!g101.equals("1")? "":g1060488);
+        setG10604d(!g101.equals("1")? "":g10604d);
+        setG10604w(!g101.equals("1")? "":g10604w);
+        setG1060588(!g101.equals("1")? "":g1060588);
+        setG10605d(!g101.equals("1")? "":g10605d);
+        setG10605w(!g101.equals("1")? "":g10605w);
+        setG1060688(!g101.equals("1")? "":g1060688);
+        setG10606d(!g101.equals("1")? "":g10606d);
+        setG10606w(!g101.equals("1")? "":g10606w);
+        setG1069688(!g101.equals("1")? "":g1069688);
+        setG10696d(!g101.equals("1")? "":g10696d);
+        setG10696w(!g101.equals("1")? "":g10696w);
+        setG107(!g101.equals("1")? "":g107);
+
+
+        //skip for G101 when 98 or 99
+        setG102(g101.equals("98")||g101.equals("99")? "":g102);
+        setG103(g101.equals("98")||g101.equals("99")? "":g103);
+        setG104(g101.equals("98")||g101.equals("99")? "":g104);
+        setG10498(g101.equals("98")||g101.equals("99")? "":g10498);
+        setG104a(g101.equals("98")||g101.equals("99")? "":g104a);
+        setG105(g101.equals("98")||g101.equals("99")? "":g105);
+        setG105a(g101.equals("98")||g101.equals("99")? "":g105a);
+/*        setG1060188(g101.equals("98")||g101.equals("99")? "":g1060188);
+        setG10601d(g101.equals("98")||g101.equals("99")? "":g10601d);
+        setG10601w(g101.equals("98")||g101.equals("99")? "":g10601w);
+        setG1060288(g101.equals("98")||g101.equals("99")? "":g1060288);
+        setG10602d(g101.equals("98")||g101.equals("99")? "":g10602d);
+        setG10602w(g101.equals("98")||g101.equals("99")? "":g10602w);
+        setG1060388(g101.equals("98")||g101.equals("99")? "":g1060388);
+        setG10603d(g101.equals("98")||g101.equals("99")? "":g10603d);
+        setG10603w(g101.equals("98")||g101.equals("99")? "":g10603w);
+        setG1060488(g101.equals("98")||g101.equals("99")? "":g1060488);
+        setG10604d(g101.equals("98")||g101.equals("99")? "":g10604d);
+        setG10604w(g101.equals("98")||g101.equals("99")? "":g10604w);
+        setG1060588(g101.equals("98")||g101.equals("99")? "":g1060588);
+        setG10605d(g101.equals("98")||g101.equals("99")? "":g10605d);
+        setG10605w(g101.equals("98")||g101.equals("99")? "":g10605w);
+        setG1060688(g101.equals("98")||g101.equals("99")? "":g1060688);
+        setG10606d(g101.equals("98")||g101.equals("99")? "":g10606d);
+        setG10606w(g101.equals("98")||g101.equals("99")? "":g10606w);
+        setG1069688(g101.equals("98")||g101.equals("99")? "":g1069688);
+        setG10696d(g101.equals("98")||g101.equals("99")? "":g10696d);
+        setG10696w(g101.equals("98")||g101.equals("99")? "":g10696w);
+        setG107(g101.equals("98")||g101.equals("99")? "":g107);*/
+        setG10801w(g101.equals("98")||g101.equals("99")? "":g10801w);
+        setG10802w(g101.equals("98")||g101.equals("99")? "":g10802w);
+        setG10803w(g101.equals("98")||g101.equals("99")? "":g10803w);
+        setG10804w(g101.equals("98")||g101.equals("99")? "":g10804w);
+        setG10805w(g101.equals("98")||g101.equals("99")? "":g10805w);
+        setG10806w(g101.equals("98")||g101.equals("99")? "":g10806w);
+        setG10807w(g101.equals("98")||g101.equals("99")? "":g10807w);
+        
+        // for G209
+        setG209(g101.equals("2")||g102.equals("2")? g209:"");
+
+
+
         notifyChange(BR.g101);
     }
 
@@ -1264,6 +1338,75 @@ public class FamilyMembers extends BaseObservable {
 
     public void setG102(String g102) {
         this.g102 = g102;
+
+        /// skip for Bcomp1
+      /*  setG1060188(!g102.equals("2")? "":g1060188);
+        setG10601d(!g102.equals("2")? "":g10601d);
+        setG10601w(!g102.equals("2")? "":g10601w);
+        setG1060288(!g102.equals("2")? "":g1060288);
+        setG10602d(!g102.equals("2")? "":g10602d);
+        setG10602w(!g102.equals("2")? "":g10602w);
+        setG1060388(!g102.equals("2")? "":g1060388);
+        setG10603d(!g102.equals("2")? "":g10603d);
+        setG10603w(!g102.equals("2")? "":g10603w);
+        setG1060488(!g102.equals("2")? "":g1060488);
+        setG10604d(!g102.equals("2")? "":g10604d);
+        setG10604w(!g102.equals("2")? "":g10604w);
+        setG1060588(!g102.equals("2")? "":g1060588);
+        setG10605d(!g102.equals("2")? "":g10605d);
+        setG10605w(!g102.equals("2")? "":g10605w);
+        setG1060688(!g102.equals("2")? "":g1060688);
+        setG10606d(!g102.equals("2")? "":g10606d);
+        setG10606w(!g102.equals("2")? "":g10606w);
+        setG1069688(!g102.equals("2")? "":g1069688);
+        setG10696d(!g102.equals("2")? "":g10696d);
+        setG10696w(!g102.equals("2")? "":g10696w);
+        setG107(!g102.equals("2")? "":g107);*/
+
+        /// skip for Bcomp2
+        setG10801w(g102.equals("1") || g102.equals("2") ? g10801w:"");
+        setG10802w(!g102.equals("1")? "":g10802w);
+        setG10803w(!g102.equals("1")? "":g10803w);
+        setG10804w(!g102.equals("1")? "":g10804w);
+        setG10805w(!g102.equals("1")? "":g10805w);
+        setG10806w(!g102.equals("1")? "":g10806w);
+        setG10807w(!g102.equals("1")? "":g10807w);
+        
+        // setG105(g101.equals("1") || g102.equals("1") || g103.equals("1") ? g105 : "");
+
+
+        //skip for G102 when 98 or 99
+        setG103(g102.equals("98")||g102.equals("99")? "":g103);
+        setG104(g102.equals("98")||g102.equals("99")? "":g104);
+        setG10498(g102.equals("98")||g102.equals("99")? "":g10498);
+        setG104a(g102.equals("98")||g102.equals("99")? "":g104a);
+        setG105(g102.equals("98")||g102.equals("99")? "":g105);
+        setG10598(g102.equals("98")||g102.equals("99")? "":g10598);
+        setG105a(g102.equals("98")||g102.equals("99")? "":g105a);
+        /*setG1060188(g102.equals("98")||g102.equals("99")? "":g1060188);
+        setG10601d(g102.equals("98")||g102.equals("99")? "":g10601d);
+        setG10601w(g102.equals("98")||g102.equals("99")? "":g10601w);
+        setG1060288(g102.equals("98")||g102.equals("99")? "":g1060288);
+        setG10602d(g102.equals("98")||g102.equals("99")? "":g10602d);
+        setG10602w(g102.equals("98")||g102.equals("99")? "":g10602w);
+        setG1060388(g102.equals("98")||g102.equals("99")? "":g1060388);
+        setG10603d(g102.equals("98")||g102.equals("99")? "":g10603d);
+        setG10603w(g102.equals("98")||g102.equals("99")? "":g10603w);
+        setG1060488(g102.equals("98")||g102.equals("99")? "":g1060488);
+        setG10604d(g102.equals("98")||g102.equals("99")? "":g10604d);
+        setG10604w(g102.equals("98")||g102.equals("99")? "":g10604w);
+        setG1060588(g102.equals("98")||g102.equals("99")? "":g1060588);
+        setG10605d(g102.equals("98")||g102.equals("99")? "":g10605d);
+        setG10605w(g102.equals("98")||g102.equals("99")? "":g10605w);
+        setG1060688(g102.equals("98")||g102.equals("99")? "":g1060688);
+        setG10606d(g102.equals("98")||g102.equals("99")? "":g10606d);
+        setG10606w(g102.equals("98")||g102.equals("99")? "":g10606w);
+        setG1069688(g102.equals("98")||g102.equals("99")? "":g1069688);
+        setG10696d(g102.equals("98")||g102.equals("99")? "":g10696d);
+        setG10696w(g102.equals("98")||g102.equals("99")? "":g10696w);
+        setG107(g102.equals("98")||g102.equals("99")? "":g107);*/
+
+
         notifyChange(BR.g102);
     }
 
@@ -1274,6 +1417,47 @@ public class FamilyMembers extends BaseObservable {
 
     public void setG103(String g103) {
         this.g103 = g103;
+
+
+        //skip for G103 when 98 or 99
+
+        boolean g103Check = g103.equals("3") || g103.equals("98") || g103.equals("99");
+        setG104(g103Check ? "":g104);
+        setG10498(g103Check ? "":g10498);
+        setG104a(g103Check ? "":g104a);
+        setG105(g103Check ? "":g105);
+        setG10598(g103Check ? "":g10598);
+        setG105a(g103Check ? "":g105a);
+       /* setG1060188(g103Check ? "":g1060188);
+        setG10601d(g103Check ? "":g10601d);
+        setG10601w(g103Check ? "":g10601w);
+        setG1060288(g103Check ? "":g1060288);
+        setG10602d(g103Check ? "":g10602d);
+        setG10602w(g103Check ? "":g10602w);
+        setG1060388(g103Check ? "":g1060388);
+        setG10603d(g103Check ? "":g10603d);
+        setG10603w(g103Check ? "":g10603w);
+        setG1060488(g103Check ? "":g1060488);
+        setG10604d(g103Check ? "":g10604d);
+        setG10604w(g103Check ? "":g10604w);
+        setG1060588(g103Check ? "":g1060588);
+        setG10605d(g103Check ? "":g10605d);
+        setG10605w(g103Check ? "":g10605w);
+        setG1060688(g103Check ? "":g1060688);
+        setG10606d(g103Check ? "":g10606d);
+        setG10606w(g103Check ? "":g10606w);
+        setG1069688(g103Check ? "":g1069688);
+        setG10696d(g103Check ? "":g10696d);
+        setG10696w(g103Check ? "":g10696w);
+        setG107(g103Check ? "":g107);*/
+        setG10801w(g103Check ? "":g10801w);
+        setG10802w(g103Check ? "":g10802w);
+        setG10803w(g103Check ? "":g10803w);
+        setG10804w(g103Check ? "":g10804w);
+        setG10805w(g103Check ? "":g10805w);
+        setG10806w(g103Check ? "":g10806w);
+        setG10807w(g103Check ? "":g10807w);
+
         notifyChange(BR.g103);
     }
 
@@ -1284,7 +1468,22 @@ public class FamilyMembers extends BaseObservable {
 
     public void setG104(String g104) {
         this.g104 = g104;
+        setG105(g101.equals("1") || g102.equals("1") || g103.equals("1") ? g105 : "");
+        setG10598(g101.equals("1") || g102.equals("1") || g103.equals("1") ? g10598 : "");
         notifyChange(BR.g104);
+    }
+ @Bindable
+    public String getG10498() {
+        return g10498;
+    }
+
+    public void setG10498(String g10498) {
+        this.g10498 = g10498;
+
+        setG104(g10498.equals("98") ? "" : this.g104);
+        setG104a(g10498.equals("98") ? this.g104a:"");
+
+        notifyChange(BR.g10498);
     }
 
     @Bindable
@@ -1305,6 +1504,18 @@ public class FamilyMembers extends BaseObservable {
     public void setG105(String g105) {
         this.g105 = g105;
         notifyChange(BR.g105);
+    }
+    @Bindable
+    public String getG10598() {
+        return g10598;
+    }
+
+    public void setG10598(String g10598) {
+        this.g10598 = g10598;
+        setG105(g10598.equals("98") ? "" : this.g105);
+        setG105a(g10598.equals("98") ? this.g105a:"");
+        
+        notifyChange(BR.g10598);
     }
 
     @Bindable
@@ -1623,254 +1834,598 @@ public class FamilyMembers extends BaseObservable {
     }
 
     @Bindable
-    public String getG109() {
-        return g109;
+    public String getG201() {
+        return g201;
     }
 
-    public void setG109(String value) {
-        g109 = value;
-        notifyChange(BR.g109);
-    }
+    public void setG201(String g201) {
+        this.g201 = g201;
 
-    @Bindable
-    public String getG110() {
-        return g110;
-    }
+        setG202(g201.equals("2") ? g202 : "");
+        setG203(g201.equals("3") ? g203 : "");
 
-    public void setG110(String value) {
-        g110 = value;
-        notifyChange(BR.g110);
-    }
+        setG2060188(!g201.equals("1")? "":g2060188);
+        setG20601d(!g201.equals("1")? "":g20601d);
+        setG20601w(!g201.equals("1")? "":g20601w);
+        setG2060288(!g201.equals("1")? "":g2060288);
+        setG20602d(!g201.equals("1")? "":g20602d);
+        setG20602w(!g201.equals("1")? "":g20602w);
+        setG2060388(!g201.equals("1")? "":g2060388);
+        setG20603d(!g201.equals("1")? "":g20603d);
+        setG20603w(!g201.equals("1")? "":g20603w);
+        setG2060488(!g201.equals("1")? "":g2060488);
+        setG20604d(!g201.equals("1")? "":g20604d);
+        setG20604w(!g201.equals("1")? "":g20604w);
+      /*  setG2060588(!g201.equals("1")? "":g2060588);
+        setG20605d(!g201.equals("1")? "":g20605d);
+        setG20605w(!g201.equals("1")? "":g20605w);
+        setG2060688(!g201.equals("1")? "":g2060688);
+        setG20606d(!g201.equals("1")? "":g20606d);
+        setG20606w(!g201.equals("1")? "":g20606w);*/
+        setG2069688(!g201.equals("1")? "":g2069688);
+        setG20696d(!g201.equals("1")? "":g20696d);
+        setG20696w(!g201.equals("1")? "":g20696w);
+        setG207(!g201.equals("1")? "":g207);
 
-    @Bindable
-    public String getG111() {
-        return g111;
-    }
 
-    public void setG111(String value) {
-        g111 = value;
-        notifyChange(BR.g111);
-    }
+        //skip for G201 when 98 or 99
+        setG202(g201.equals("98")||g201.equals("99")? "":g202);
+        setG203(g201.equals("98")||g201.equals("99")? "":g203);
+        setG204(g201.equals("98")||g201.equals("99")? "":g204);
+        setG20498(g201.equals("98")||g201.equals("99")? "":g20498);
+        setG204a(g201.equals("98")||g201.equals("99")? "":g204a);
+        setG205(g201.equals("98")||g201.equals("99")? "":g205);
+        setG205a(g201.equals("98")||g201.equals("99")? "":g205a);
+/*        setG2060188(g201.equals("98")||g201.equals("99")? "":g2060188);
+        setG20601d(g201.equals("98")||g201.equals("99")? "":g20601d);
+        setG20601w(g201.equals("98")||g201.equals("99")? "":g20601w);
+        setG2060288(g201.equals("98")||g201.equals("99")? "":g2060288);
+        setG20602d(g201.equals("98")||g201.equals("99")? "":g20602d);
+        setG20602w(g201.equals("98")||g201.equals("99")? "":g20602w);
+        setG2060388(g201.equals("98")||g201.equals("99")? "":g2060388);
+        setG20603d(g201.equals("98")||g201.equals("99")? "":g20603d);
+        setG20603w(g201.equals("98")||g201.equals("99")? "":g20603w);
+        setG2060488(g201.equals("98")||g201.equals("99")? "":g2060488);
+        setG20604d(g201.equals("98")||g201.equals("99")? "":g20604d);
+        setG20604w(g201.equals("98")||g201.equals("99")? "":g20604w);
+        setG2060588(g201.equals("98")||g201.equals("99")? "":g2060588);
+        setG20605d(g201.equals("98")||g201.equals("99")? "":g20605d);
+        setG20605w(g201.equals("98")||g201.equals("99")? "":g20605w);
+        setG2060688(g201.equals("98")||g201.equals("99")? "":g2060688);
+        setG20606d(g201.equals("98")||g201.equals("99")? "":g20606d);
+        setG20606w(g201.equals("98")||g201.equals("99")? "":g20606w);
+        setG2069688(g201.equals("98")||g201.equals("99")? "":g2069688);
+        setG20696d(g201.equals("98")||g201.equals("99")? "":g20696d);
+        setG20696w(g201.equals("98")||g201.equals("99")? "":g20696w);
+        setG207(g201.equals("98")||g201.equals("99")? "":g207);*/
+        setG20801w(g201.equals("98")||g201.equals("99")? "":g20801w);
+        setG20802w(g201.equals("98")||g201.equals("99")? "":g20802w);
+        setG20803w(g201.equals("98")||g201.equals("99")? "":g20803w);
+        setG20804w(g201.equals("98")||g201.equals("99")? "":g20804w);
+/*        setG20805w(g201.equals("98")||g201.equals("99")? "":g20805w);
+        setG20806w(g201.equals("98")||g201.equals("99")? "":g20806w);
+        setG20807w(g201.equals("98")||g201.equals("99")? "":g20807w);*/
 
-    @Bindable
-    public String getG11201d() {
-        return g11201d;
-    }
+        // for G209
+        setG209(g201.equals("2")||g202.equals("2")? g209:"");
 
-    public void setG11201d(String value) {
-        g11201d = value;
-        notifyChange(BR.g11201d);
-    }
 
-    @Bindable
-    public String getG1120188() {
-        return g1120188;
-    }
 
-    public void setG1120188(String value) {
-        g1120188 = value;
-        setG11201d(g1120188.equals("88") ? "" : this.g11201d);
-        setG11201w(g1120188.equals("88") ? this.g11201w : "");
-        notifyChange(BR.g1120188);
-    }
-
-    @Bindable
-    public String getG11201w() {
-        return g11201w;
-    }
-
-    public void setG11201w(String value) {
-        g11201w = value;
-        notifyChange(BR.g11201w);
-    }
-
-    @Bindable
-    public String getG11202d() {
-        return g11202d;
-    }
-
-    public void setG11202d(String value) {
-        g11202d = value;
-        notifyChange(BR.g11202d);
-    }
-
-    @Bindable
-    public String getG1120288() {
-        return g1120288;
-    }
-
-    public void setG1120288(String value) {
-        g1120288 = value;
-        setG11202d(g1120288.equals("88") ? "" : this.g11202d);
-        setG11202w(g1120288.equals("88") ? this.g11202w : "");
-        notifyChange(BR.g1120288);
+        notifyChange(BR.g201);
     }
 
     @Bindable
-    public String getG11202w() {
-        return g11202w;
+    public String getG202() {
+        return g202;
     }
 
-    public void setG11202w(String value) {
-        g11202w = value;
-        notifyChange(BR.g11202w);
-    }
+    public void setG202(String g202) {
+        this.g202 = g202;
 
-    @Bindable
-    public String getG11203w() {
-        return g11203w;
-    }
+        /// skip for Bcomp1
+      /*  setG2060188(!g202.equals("2")? "":g2060188);
+        setG20601d(!g202.equals("2")? "":g20601d);
+        setG20601w(!g202.equals("2")? "":g20601w);
+        setG2060288(!g202.equals("2")? "":g2060288);
+        setG20602d(!g202.equals("2")? "":g20602d);
+        setG20602w(!g202.equals("2")? "":g20602w);
+        setG2060388(!g202.equals("2")? "":g2060388);
+        setG20603d(!g202.equals("2")? "":g20603d);
+        setG20603w(!g202.equals("2")? "":g20603w);
+        setG2060488(!g202.equals("2")? "":g2060488);
+        setG20604d(!g202.equals("2")? "":g20604d);
+        setG20604w(!g202.equals("2")? "":g20604w);
+        setG2060588(!g202.equals("2")? "":g2060588);
+        setG20605d(!g202.equals("2")? "":g20605d);
+        setG20605w(!g202.equals("2")? "":g20605w);
+        setG2060688(!g202.equals("2")? "":g2060688);
+        setG20606d(!g202.equals("2")? "":g20606d);
+        setG20606w(!g202.equals("2")? "":g20606w);
+        setG2069688(!g202.equals("2")? "":g2069688);
+        setG20696d(!g202.equals("2")? "":g20696d);
+        setG20696w(!g202.equals("2")? "":g20696w);
+        setG207(!g202.equals("2")? "":g207);*/
 
-    public void setG11203w(String value) {
-        g11203w = value;
-        notifyChange(BR.g11203w);
-    }
+        /// skip for Bcomp2
+        setG20801w(g202.equals("1") || g202.equals("2") ? g20801w:"");
+        setG20802w(!g202.equals("1")? "":g20802w);
+        setG20803w(!g202.equals("1")? "":g20803w);
+        setG20804w(!g202.equals("1")? "":g20804w);
+/*        setG20805w(!g202.equals("1")? "":g20805w);
+        setG20806w(!g202.equals("1")? "":g20806w);
+        setG20807w(!g202.equals("1")? "":g20807w);*/
 
-    @Bindable
-    public String getG11203d() {
-        return g11203d;
-    }
+        // setG205(g201.equals("1") || g202.equals("1") || g203.equals("1") ? g205 : "");
 
-    public void setG11203d(String value) {
-        g11203d = value;
-        notifyChange(BR.g11203d);
-    }
 
-    @Bindable
-    public String getG1120388() {
-        return g1120388;
-    }
+        //skip for G202 when 98 or 99
+        setG203(g202.equals("98")||g202.equals("99")? "":g203);
+        setG204(g202.equals("98")||g202.equals("99")? "":g204);
+        setG20498(g202.equals("98")||g202.equals("99")? "":g20498);
+        setG204a(g202.equals("98")||g202.equals("99")? "":g204a);
+        setG205(g202.equals("98")||g202.equals("99")? "":g205);
+        setG20598(g202.equals("98")||g202.equals("99")? "":g20598);
+        setG205a(g202.equals("98")||g202.equals("99")? "":g205a);
+        setG2060188(g202.equals("98")||g202.equals("99")? "":g2060188);
+        setG20601d(g202.equals("98")||g202.equals("99")? "":g20601d);
+        setG20601w(g202.equals("98")||g202.equals("99")? "":g20601w);
+        setG2060288(g202.equals("98")||g202.equals("99")? "":g2060288);
+        setG20602d(g202.equals("98")||g202.equals("99")? "":g20602d);
+        setG20602w(g202.equals("98")||g202.equals("99")? "":g20602w);
+        setG2060388(g202.equals("98")||g202.equals("99")? "":g2060388);
+        setG20603d(g202.equals("98")||g202.equals("99")? "":g20603d);
+        setG20603w(g202.equals("98")||g202.equals("99")? "":g20603w);
+        setG2060488(g202.equals("98")||g202.equals("99")? "":g2060488);
+        setG20604d(g202.equals("98")||g202.equals("99")? "":g20604d);
+        setG20604w(g202.equals("98")||g202.equals("99")? "":g20604w);
+/*        setG2060588(g202.equals("98")||g202.equals("99")? "":g2060588);
+        setG20605d(g202.equals("98")||g202.equals("99")? "":g20605d);
+        setG20605w(g202.equals("98")||g202.equals("99")? "":g20605w);
+        setG2060688(g202.equals("98")||g202.equals("99")? "":g2060688);
+        setG20606d(g202.equals("98")||g202.equals("99")? "":g20606d);
+        setG20606w(g202.equals("98")||g202.equals("99")? "":g20606w);*/
+        setG2069688(g202.equals("98")||g202.equals("99")? "":g2069688);
+        setG20696d(g202.equals("98")||g202.equals("99")? "":g20696d);
+        setG20696w(g202.equals("98")||g202.equals("99")? "":g20696w);
+        setG207(g202.equals("98")||g202.equals("99")? "":g207);
 
-    public void setG1120388(String value) {
-        g1120388 = value;
-        setG11203d(g1120388.equals("88") ? "" : this.g11203d);
-        setG11203w(g1120388.equals("88") ? this.g11203w : "");
-        notifyChange(BR.g1120388);
-    }
 
-    @Bindable
-    public String getG11204d() {
-        return g11204d;
-    }
-
-    public void setG11204d(String value) {
-        g11204d = value;
-        notifyChange(BR.g11204d);
-    }
-
-    @Bindable
-    public String getG1120488() {
-        return g1120488;
-    }
-
-    public void setG1120488(String value) {
-        g1120488 = value;
-        setG11204d(g1120488.equals("88") ? "" : this.g11204d);
-        setG11204w(g1120488.equals("88") ? this.g11204w : "");
-        notifyChange(BR.g1120488);
-    }
-
-    @Bindable
-    public String getG11204w() {
-        return g11204w;
-    }
-
-    public void setG11204w(String value) {
-        g11204w = value;
-        notifyChange(BR.g11204w);
-    }
-
-    @Bindable
-    public String getG11296d() {
-        return g11296d;
-    }
-
-    public void setG11296d(String value) {
-        g11296d = value;
-        notifyChange(BR.g11296d);
+        notifyChange(BR.g202);
     }
 
     @Bindable
-    public String getG1129688() {
-        return g1129688;
+    public String getG203() {
+        return g203;
     }
 
-    public void setG1129688(String value) {
-        g1129688 = value;
-        setG11296d(g1129688.equals("88") ? "" : this.g11296d);
-        setG11296w(g1129688.equals("88") ? this.g11296w : "");
-        notifyChange(BR.g1129688);
-    }
+    public void setG203(String g203) {
+        this.g203 = g203;
 
-    @Bindable
-    public String getG11296w() {
-        return g11296w;
-    }
 
-    public void setG11296w(String value) {
-        g11296w = value;
-        notifyChange(BR.g11296w);
-    }
+        //skip for G203 when 98 or 99
 
-    @Bindable
-    public String getG11301w() {
-        return g11301w;
-    }
+        boolean g203Check = g203.equals("3") || g203.equals("98") || g203.equals("99");
+        setG204(g203Check ? "":g204);
+        setG20498(g203Check ? "":g20498);
+        setG204a(g203Check ? "":g204a);
+        setG205(g203Check ? "":g205);
+        setG20598(g203Check ? "":g20598);
+        setG205a(g203Check ? "":g205a);
+        setG2060188(g203Check ? "":g2060188);
+        setG20601d(g203Check ? "":g20601d);
+        setG20601w(g203Check ? "":g20601w);
+        setG2060288(g203Check ? "":g2060288);
+        setG20602d(g203Check ? "":g20602d);
+        setG20602w(g203Check ? "":g20602w);
+        setG2060388(g203Check ? "":g2060388);
+        setG20603d(g203Check ? "":g20603d);
+        setG20603w(g203Check ? "":g20603w);
+        setG2060488(g203Check ? "":g2060488);
+        setG20604d(g203Check ? "":g20604d);
+        setG20604w(g203Check ? "":g20604w);
+/*        setG2060588(g203Check ? "":g2060588);
+        setG20605d(g203Check ? "":g20605d);
+        setG20605w(g203Check ? "":g20605w);
+        setG2060688(g203Check ? "":g2060688);
+        setG20606d(g203Check ? "":g20606d);
+        setG20606w(g203Check ? "":g20606w);*/
+        setG2069688(g203Check ? "":g2069688);
+        setG20696d(g203Check ? "":g20696d);
+        setG20696w(g203Check ? "":g20696w);
+        setG207(g203Check ? "":g207);
+        setG20801w(g203Check ? "":g20801w);
+        setG20802w(g203Check ? "":g20802w);
+        setG20803w(g203Check ? "":g20803w);
+        setG20804w(g203Check ? "":g20804w);
+ /*       setG20805w(g203Check ? "":g20805w);
+        setG20806w(g203Check ? "":g20806w);
+        setG20807w(g203Check ? "":g20807w);*/
 
-    public void setG11301w(String value) {
-        g11301w = value;
-        notifyChange(BR.g11301w);
-    }
-
-    @Bindable
-    public String getG11302w() {
-        return g11302w;
-    }
-
-    public void setG11302w(String value) {
-        g11302w = value;
-        notifyChange(BR.g11302w);
-    }
-
-    @Bindable
-    public String getG11303w() {
-        return g11303w;
-    }
-
-    public void setG11303w(String value) {
-        g11303w = value;
-        notifyChange(BR.g11303w);
-    }
-
-    @Bindable
-    public String getG11304w() {
-        return g11304w;
-    }
-
-    public void setG11304w(String value) {
-        g11304w = value;
-        notifyChange(BR.g11304w);
+        notifyChange(BR.g203);
     }
 
     @Bindable
-    public String getG11396w() {
-        return g11396w;
+    public String getG204() {
+        return g204;
     }
 
-    public void setG11396w(String value) {
-        g11396w = value;
-        notifyChange(BR.g11396w);
+    public void setG204(String g204) {
+        this.g204 = g204;
+        setG205(g201.equals("1") || g202.equals("1") || g203.equals("1") ? g205 : "");
+        setG20598(g201.equals("1") || g202.equals("1") || g203.equals("1") ? g20598 : "");
+        notifyChange(BR.g204);
+    }
+    @Bindable
+    public String getG20498() {
+        return g20498;
+    }
+
+    public void setG20498(String g20498) {
+        this.g20498 = g20498;
+
+        setG204(g20498.equals("98") ? "" : this.g204);
+        setG204a(g20498.equals("98") ? this.g204a:"");
+
+        notifyChange(BR.g20498);
     }
 
     @Bindable
-    public String getG11396() {
-        return g11396;
+    public String getG204a() {
+        return g204a;
     }
 
-    public void setG11396(String value) {
-        g11396 = value;
-        notifyChange(BR.g11396);
+    public void setG204a(String g204a) {
+        this.g204a = g204a;
+        notifyChange(BR.g204a);
     }
+
+    @Bindable
+    public String getG205() {
+        return g205;
+    }
+
+    public void setG205(String g205) {
+        this.g205 = g205;
+        notifyChange(BR.g205);
+    }
+    @Bindable
+    public String getG20598() {
+        return g20598;
+    }
+
+    public void setG20598(String g20598) {
+        this.g20598 = g20598;
+        setG205(g20598.equals("98") ? "" : this.g205);
+        setG205a(g20598.equals("98") ? this.g205a:"");
+
+        notifyChange(BR.g20598);
+    }
+
+    @Bindable
+    public String getG205a() {
+        return g205a;
+    }
+
+    public void setG205a(String g205a) {
+        this.g205a = g205a;
+        notifyChange(BR.g205a);
+    }
+
+    @Bindable
+    public String getG20601d() {
+        return g20601d;
+    }
+
+    public void setG20601d(String g20601d) {
+        this.g20601d = g20601d;
+        notifyChange(BR.g20601d);
+    }
+
+    @Bindable
+    public String getG2060188() {
+        return g2060188;
+    }
+
+    public void setG2060188(String g2060188) {
+        this.g2060188 = g2060188;
+        setG20601d(g2060188.equals("88") ? "" : this.g20601d);
+        setG20601w(g2060188.equals("88") ? this.g20601w : "");
+        notifyChange(BR.g2060188);
+    }
+
+    @Bindable
+    public String getG20601w() {
+        return g20601w;
+    }
+
+    public void setG20601w(String g20601w) {
+        this.g20601w = g20601w;
+        notifyChange(BR.g20601w);
+    }
+
+    @Bindable
+    public String getG20602d() {
+        return g20602d;
+    }
+
+    public void setG20602d(String g20602d) {
+        this.g20602d = g20602d;
+        notifyChange(BR.g20602d);
+    }
+
+    @Bindable
+    public String getG2060288() {
+        return g2060288;
+    }
+
+    public void setG2060288(String g2060288) {
+        this.g2060288 = g2060288;
+        setG20602d(g2060288.equals("88") ? "" : this.g20602d);
+        setG20602w(g2060288.equals("88") ? this.g20602w : "");
+        notifyChange(BR.g2060288);
+    }
+
+    @Bindable
+    public String getG20602w() {
+        return g20602w;
+    }
+
+    public void setG20602w(String g20602w) {
+        this.g20602w = g20602w;
+        notifyChange(BR.g20602w);
+    }
+
+    @Bindable
+    public String getG20603w() {
+        return g20603w;
+    }
+
+    public void setG20603w(String g20603w) {
+        this.g20603w = g20603w;
+        notifyChange(BR.g20603w);
+    }
+
+    @Bindable
+    public String getG20603d() {
+        return g20603d;
+    }
+
+    public void setG20603d(String g20603d) {
+        this.g20603d = g20603d;
+        notifyChange(BR.g20603d);
+    }
+
+    @Bindable
+    public String getG2060388() {
+        return g2060388;
+    }
+
+    public void setG2060388(String g2060388) {
+        this.g2060388 = g2060388;
+        setG20603d(g2060388.equals("88") ? "" : this.g20603d);
+        setG20603w(g2060388.equals("88") ? this.g20603w : "");
+        notifyChange(BR.g2060388);
+    }
+
+    @Bindable
+    public String getG20604d() {
+        return g20604d;
+    }
+
+    public void setG20604d(String g20604d) {
+        this.g20604d = g20604d;
+        notifyChange(BR.g20604d);
+    }
+
+    @Bindable
+    public String getG2060488() {
+        return g2060488;
+    }
+
+    public void setG2060488(String g2060488) {
+        this.g2060488 = g2060488;
+        setG20604d(g2060488.equals("88") ? "" : this.g20604d);
+        setG20604w(g2060488.equals("88") ? this.g20604w : "");
+
+        notifyChange(BR.g2060488);
+    }
+
+    @Bindable
+    public String getG20604w() {
+        return g20604w;
+    }
+
+    public void setG20604w(String g20604w) {
+        this.g20604w = g20604w;
+        notifyChange(BR.g20604w);
+    }
+/*
+    @Bindable
+    public String getG20605d() {
+        return g20605d;
+    }
+
+    public void setG20605d(String g20605d) {
+        this.g20605d = g20605d;
+        notifyChange(BR.g20605d);
+    }
+
+    @Bindable
+    public String getG2060588() {
+        return g2060588;
+    }
+
+    public void setG2060588(String g2060588) {
+        this.g2060588 = g2060588;
+        setG20605d(g2060588.equals("88") ? "" : this.g20605d);
+        setG20605w(g2060588.equals("88") ? this.g20605w : "");
+        notifyChange(BR.g2060588);
+    }
+
+    @Bindable
+    public String getG20605w() {
+        return g20605w;
+    }
+
+    public void setG20605w(String g20605w) {
+        this.g20605w = g20605w;
+        notifyChange(BR.g20605w);
+    }
+
+    @Bindable
+    public String getG20606d() {
+        return g20606d;
+    }
+
+    public void setG20606d(String g20606d) {
+        this.g20606d = g20606d;
+        notifyChange(BR.g20606d);
+    }
+
+    @Bindable
+    public String getG2060688() {
+        return g2060688;
+    }
+
+    public void setG2060688(String g2060688) {
+        this.g2060688 = g2060688;
+        setG20606d(g2060688.equals("88") ? "" : this.g20606d);
+        setG20606w(g2060688.equals("88") ? this.g20606w : "");
+        notifyChange(BR.g2060688);
+    }
+
+    @Bindable
+    public String getG20606w() {
+        return g20606w;
+    }
+
+    public void setG20606w(String g20606w) {
+        this.g20606w = g20606w;
+        notifyChange(BR.g20606w);
+    }*/
+
+    @Bindable
+    public String getG20696d() {
+        return g20696d;
+    }
+
+    public void setG20696d(String g20696d) {
+        this.g20696d = g20696d;
+        notifyChange(BR.g20696d);
+    }
+
+    @Bindable
+    public String getG2069688() {
+        return g2069688;
+    }
+
+    public void setG2069688(String g2069688) {
+        this.g2069688 = g2069688;
+        setG20696d(g2069688.equals("88") ? "" : this.g20696d);
+        setG20696w(g2069688.equals("88") ? this.g20696w : "");
+        notifyChange(BR.g2069688);
+    }
+
+    @Bindable
+    public String getG20696w() {
+        return g20696w;
+    }
+
+    public void setG20696w(String g20696w) {
+        this.g20696w = g20696w;
+        notifyChange(BR.g20696w);
+    }
+
+    @Bindable
+    public String getG207() {
+        return g207;
+    }
+
+    public void setG207(String g207) {
+        this.g207 = g207;
+        notifyChange(BR.g207);
+    }
+
+    @Bindable
+    public String getG20801w() {
+        return g20801w;
+    }
+
+    public void setG20801w(String value) {
+        g20801w = value;
+        notifyChange(BR.g20801w);
+    }
+
+    @Bindable
+    public String getG20802w() {
+        return g20802w;
+    }
+
+    public void setG20802w(String value) {
+        g20802w = value;
+        notifyChange(BR.g20802w);
+    }
+
+    @Bindable
+    public String getG20803w() {
+        return g20803w;
+    }
+
+    public void setG20803w(String value) {
+        g20803w = value;
+        notifyChange(BR.g20803w);
+    }
+
+    @Bindable
+    public String getG20804w() {
+        return g20804w;
+    }
+
+    public void setG20804w(String value) {
+        g20804w = value;
+        notifyChange(BR.g20804w);
+    }
+
+   /* @Bindable
+    public String getG20805w() {
+        return g20805w;
+    }
+
+    public void setG20805w(String value) {
+        g20805w = value;
+        notifyChange(BR.g20805w);
+    }
+
+    @Bindable
+    public String getG20806w() {
+        return g20806w;
+    }
+
+    public void setG20806w(String value) {
+        g20806w = value;
+        notifyChange(BR.g20806w);
+    }
+
+    @Bindable
+    public String getG20807w() {
+        return g20807w;
+    }
+
+    public void setG20807w(String value) {
+        g20807w = value;
+        notifyChange(BR.g20807w);
+    }*/
+
+    @Bindable
+    public String getG209() {
+        return g209;
+    }
+
+    public void setG209(String g209) {
+        this.g209 = g209;
+        notifyChange(BR.g209);
+    }
+    
 
     @Bindable
     public String getH101() {
@@ -1968,14 +2523,15 @@ public class FamilyMembers extends BaseObservable {
         if (string != null) {
             JSONObject json = null;
             json = new JSONObject(string);
+
             this.a103 = json.getString("a103");
             this.a104 = json.getString("a104");
             this.a105 = json.getString("a105");
             this.a106 = json.getString("a106");
             this.a10696x = json.getString("a10696x");
             this.a107 = json.getString("a107");
+            this.a107 = json.getString("a107");
             this.a108 = json.getString("a108");
-            this.a109 = json.getString("a109");
             this.a110 = json.getString("a110");
 
             //updateMemCategory();
@@ -2018,6 +2574,9 @@ public class FamilyMembers extends BaseObservable {
             this.c105 = json.getString("c105");
             this.c106 = json.getString("c106");
             this.c107 = json.getString("c107");
+            this.c108 = json.has("c108")?json.getString("c108"):"";
+            this.c109 = json.has("c109")?json.getString("c109"):"";
+
 
 
             updateRoseScore();
@@ -2110,8 +2669,10 @@ public class FamilyMembers extends BaseObservable {
             this.g102 = json.getString("g102");
             this.g103 = json.getString("g103");
             this.g104 = json.getString("g104");
+            this.g10498 = json.has("g10498")?json.getString("g10498"):"";
             this.g104a = json.getString("g104a");
             this.g105 = json.getString("g105");
+            this.g10598 = json.has("g10598")?json.getString("g10598"):"";
             this.g10601d = json.getString("g10601d");
             this.g10601w = json.getString("g10601w");
             this.g10602d = json.getString("g10602d");
@@ -2134,24 +2695,31 @@ public class FamilyMembers extends BaseObservable {
             this.g10805w = json.getString("g10805w");
             this.g10806w = json.getString("g10806w");
             this.g10807w = json.getString("g10807w");
-            this.g109 = json.getString("g109");
-            this.g110 = json.getString("g10");
-            this.g111 = json.getString("g11");
-            this.g11201d = json.getString("g11201d");
-            this.g11201w = json.getString("g11201w");
-            this.g11202d = json.getString("g11202d");
-            this.g11202w = json.getString("g11202w");
-            this.g11203d = json.getString("g11203d");
-            this.g11203w = json.getString("g11203w");
-            this.g11204d = json.getString("g11204d");
-            this.g11204w = json.getString("g11204w");
-            this.g11296d = json.getString("g11205d");
-            this.g11296w = json.getString("g11205w");
-            this.g11301w = json.getString("g11301w");
-            this.g11302w = json.getString("g11302w");
-            this.g11303w = json.getString("g11303w");
-            this.g11304w = json.getString("g11304w");
-            this.g11396w = json.getString("g11305w");
+            this.g201 = json.getString("g201");
+            this.g202 = json.getString("g202");
+            this.g203 = json.getString("g203");
+            this.g204 = json.getString("g204");
+            this.g20498 = json.has("g20498")?json.getString("g20498"):"";
+            this.g204a = json.getString("g204a");
+            this.g205 = json.getString("g205");
+            this.g20601d = json.getString("g20601d");
+            this.g20601w = json.getString("g20601w");
+            this.g20602d = json.getString("g20602d");
+            this.g20602w = json.getString("g20602w");
+            this.g20603d = json.getString("g20603d");
+            this.g20603w = json.getString("g20603w");
+            this.g20604d = json.getString("g20604d");
+            this.g20604w = json.getString("g20604w");
+            this.g20696d = json.getString("g20605d");
+            this.g20696w = json.getString("g20605w");
+            this.g207 = json.getString("g207");
+            this.g20801w = json.getString("g20801w");
+            this.g20802w = json.getString("g20802w");
+            this.g20803w = json.getString("g20803w");
+            this.g20804w = json.getString("g20804w");
+            this.g20896w = json.getString("g20805w");
+            this.g209 = json.getString("g209");
+
             updateRoseScore();
         }
     }
@@ -2212,7 +2780,17 @@ public class FamilyMembers extends BaseObservable {
     public String sA1toString() throws JSONException {
         Log.d(TAG, "sA1toString: ");
         JSONObject json = new JSONObject();
-        json.put("a103", a103).put("a104", a104).put("a105", a105).put("a106", a106).put("a10696x", a10696x).put("a107", a107).put("a108", a108).put("a109", a109).put("a110", a110);
+        json
+
+                .put("a103", a103)
+                .put("a104", a104)
+                .put("a105", a105)
+                .put("a106", a106)
+                .put("a10696x", a10696x)
+                .put("a107", a107)
+                .put("a107", a107)
+                .put("a108", a108)
+                .put("a110", a110);
         return json.toString();
     }
 
@@ -2220,7 +2798,8 @@ public class FamilyMembers extends BaseObservable {
     public String sB1toString() throws JSONException {
         Log.d(TAG, "sB1toString: ");
         JSONObject json = new JSONObject();
-        json.put("b101", b101).put("b102", b102);
+        json.put("b101", b101)
+                .put("b102", b102);
 
         updateRapidScore();
         return json.toString();
@@ -2229,7 +2808,23 @@ public class FamilyMembers extends BaseObservable {
     public String sC1toString() throws JSONException {
         Log.d(TAG, "sC1toString: ");
         JSONObject json = new JSONObject();
-        json.put("c101", c101).put("c10201", c10201).put("c10202", c10202).put("c10203", c10203).put("c10204", c10204).put("c10205", c10205).put("c10206", c10206).put("c10207", c10207).put("c10208", c10208).put("c10209", c10209).put("c103", c103).put("c104", c104).put("c105", c105).put("c106", c106).put("c107", c107);
+        json.put("c101", c101)
+                .put("c10201", c10201)
+                .put("c10202", c10202)
+                .put("c10203", c10203)
+                .put("c10204", c10204)
+                .put("c10205", c10205)
+                .put("c10206", c10206)
+                .put("c10207", c10207)
+                .put("c10208", c10208)
+                .put("c10209", c10209)
+                .put("c103", c103)
+                .put("c104", c104)
+                .put("c105", c105)
+                .put("c106", c106)
+                .put("c107", c107)
+                .put("c108", c108)
+                .put("c109", c109);
 
         updateRoseScore();
         return json.toString();
@@ -2238,7 +2833,14 @@ public class FamilyMembers extends BaseObservable {
     public String sD1toString() throws JSONException {
         Log.d(TAG, "sC1toString: ");
         JSONObject json = new JSONObject();
-        json.put("d101", d101).put("d102", d102).put("d103", d103).put("d104", d104).put("d105", d105).put("d106", d106).put("d107", d107).put("d108", d108);
+        json.put("d101", d101)
+                .put("d102", d102)
+                .put("d103", d103)
+                .put("d104", d104)
+                .put("d105", d105)
+                .put("d106", d106)
+                .put("d107", d107)
+                .put("d108", d108);
 
         updateQVSFS();
         return json.toString();
@@ -2248,15 +2850,24 @@ public class FamilyMembers extends BaseObservable {
     public String sE1toString() throws JSONException {
         Log.d(TAG, "sC1toString: ");
         JSONObject json = new JSONObject();
-        json.put("e101", e101).put("e101d", e101d)
+        json.put("e101", e101)
+                .put("e101d", e101d)
 
-                .put("e102", e102).put("e102x", e102x)
+                .put("e102", e102)
+                .put("e102x", e102x)
 
-                .put("e103", e103).put("e103d", e103d)
+                .put("e103", e103)
+                .put("e103d", e103d)
 
-                .put("e104", e104).put("e104x", e104x)
+                .put("e104", e104)
+                .put("e104x", e104x)
 
-                .put("e105", e105).put("e105d", e105d).put("e106", e106).put("e106x", e106x).put("e107", e107).put("e107x", e107x);
+                .put("e105", e105)
+                .put("e105d", e105d)
+                .put("e106", e106)
+                .put("e106x", e106x)
+                .put("e107", e107)
+                .put("e107x", e107x);
         //  .put("e1071", e1071)
 
 
@@ -2298,8 +2909,10 @@ public class FamilyMembers extends BaseObservable {
                 .put("g102", g102)
                 .put("g103", g103)
                 .put("g104", g104)
+                .put("g10498", g10498)
                 .put("g104a", g104a)
                 .put("g105", g105)
+                .put("g10598", g10598)
                 .put("g10601d", g10601d)
                 .put("g10601w", g10601w)
                 .put("g10602d", g10602d)
@@ -2322,24 +2935,33 @@ public class FamilyMembers extends BaseObservable {
                 .put("g10805w", g10805w)
                 .put("g10806w", g10806w)
                 .put("g10807w", g10807w)
-                .put("g109", g109)
-                .put("g10", g110)
-                .put("g11", g111)
-                .put("g11201d", g11201d)
-                .put("g11201w", g11201w)
-                .put("g11202d", g11202d)
-                .put("g11202w", g11202w)
-                .put("g11203d", g11203d)
-                .put("g11203w", g11203w)
-                .put("g11204d", g11204d)
-                .put("g11204w", g11204w)
-                .put("g11205d", g11296d)
-                .put("g11205w", g11296w)
-                .put("g11301w", g11301w)
-                .put("g11302w", g11302w)
-                .put("g11303w", g11303w)
-                .put("g11304w", g11304w)
-                .put("g11305w", g11396w);
+                .put("g201", g201)
+                .put("g202", g202)
+                .put("g203", g203)
+                .put("g204", g204)
+                .put("g20498", g20498)
+                .put("g204a", g204a)
+                .put("g205", g205)
+                .put("g20598", g20598)
+                .put("g20601d", g20601d)
+                .put("g20601w", g20601w)
+                .put("g20602d", g20602d)
+                .put("g20602w", g20602w)
+                .put("g20603d", g20603d)
+                .put("g20603w", g20603w)
+                .put("g20604d", g20604d)
+                .put("g20604w", g20604w)
+                .put("g20605d", g20696d)
+                .put("g20605w", g20696w)
+                .put("g207", g207)
+
+                .put("g20801w", g20801w)
+                .put("g20802w", g20802w)
+                .put("g20803w", g20803w)
+                .put("g20804w", g20804w)
+                .put("g20805w", g20896w)
+                .put("g209", g209)
+        ;
 
 
         //updateRoseScore();
@@ -2349,7 +2971,12 @@ public class FamilyMembers extends BaseObservable {
     public String sH1toString() throws JSONException {
         Log.d(TAG, "sC1toString: ");
         JSONObject json = new JSONObject();
-        json.put("h101", h101).put("h102", h102).put("h103", h103).put("h104", h104).put("h105", h105).put("h106", h106);
+        json.put("h101", h101)
+                .put("h102", h102)
+                .put("h103", h103)
+                .put("h104", h104)
+                .put("h105", h105)
+                .put("h106", h106);
 
 
         calculateWHO5Score();
@@ -2619,10 +3246,7 @@ public class FamilyMembers extends BaseObservable {
             scoreIPAQ = "HIGH";
         }
         // MODREATE
-        else if ((E101 >= 3)
-                || (E103 >= 5)
-                || E106x > 30
-                || ((E101 + E103 + E105) >= 5 && TotalMET >= 600)) {
+        else if ((E101 >= 3) || (E103 >= 5) || E106x > 30 || ((E101 + E103 + E105) >= 5 && TotalMET >= 600)) {
             // else if ((E105 >= 7 && E106x >= 30) || (E101 >= 3) || (E103 >= 5) || (TotalDays >= 5 && TotalMET >= 600)) {
             scoreIPAQ = "MODREATE";
         }

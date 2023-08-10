@@ -29,8 +29,13 @@ public class Form extends BaseObservable implements Observable {
     public String iStatus = _EMPTY_;
     public String iStatus96x = _EMPTY_;
     // FIELD VARIABLES
-    public String a101= _EMPTY_;
-    public String a102= _EMPTY_;
+    public String a101a = _EMPTY_;
+    public String a101b = _EMPTY_;
+    public String a101c = _EMPTY_;
+    public String a102a = _EMPTY_;
+    public String a102b = _EMPTY_;
+    public String a102c = _EMPTY_;
+    
     public String a104= _EMPTY_;
     public String a105= _EMPTY_;
     public String a107= _EMPTY_;
@@ -145,26 +150,66 @@ public class Form extends BaseObservable implements Observable {
         this.sH = sH;
     }
 
-    @Bindable
-    public String getA101() {
-        return a101;
-    }
-
-    public void setA101(String a101) {
-        this.a101 = a101;
-        notifyChange(BR.a101);
-    }
 
     @Bindable
-    public String getA102() {
-        return a102;
+    public String getA101a() {
+        return a101a;
     }
 
-    public void setA102(String a102) {
-        this.a102 = a102;
-        notifyChange(BR.a102);
+    public void setA101a(String a101a) {
+        this.a101a = a101a;
+        notifyChange(BR.a101a);
     }
- @Bindable
+
+    @Bindable
+    public String getA101b() {
+        return a101b;
+    }
+
+    public void setA101b(String a101b) {
+        this.a101b = a101b;
+        notifyChange(BR.a101b);
+    }
+
+    @Bindable
+    public String getA101c() {
+        return a101c;
+    }
+
+    public void setA101c(String a101c) {
+        this.a101c = a101c;
+        notifyChange(BR.a101c);
+    }
+
+    @Bindable
+    public String getA102a() {
+        return a102a;
+    }
+
+    public void setA102a(String a102a) {
+        this.a102a = a102a;
+        notifyChange(BR.a102a);
+    }
+    @Bindable
+    public String getA102b() {
+        return a102b;
+    }
+
+    public void setA102b(String a102b) {
+        this.a102b = a102b;
+        notifyChange(BR.a102b);
+    }
+    @Bindable
+    public String getA102c() {
+        return a102c;
+    }
+
+    public void setA102c(String a102c) {
+        this.a102c = a102c;
+        notifyChange(BR.a102c);
+    }
+
+    @Bindable
     public String getA104() {
         return a104;
     }
@@ -497,33 +542,33 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getA101() {
-        return a101;
+    public String getA101A() {
+        return a101a;
     }
 
-    public void setA101(String a101) {
-        this.a101 = a101;
-        notifyPropertyChanged(BR.a101);
-    }
-
-    @Bindable
-    public String getA102() {
-        return a102;
-    }
-
-    public void setA102(String a102) {
-        this.a102 = a102;
-        notifyPropertyChanged(BR.a102);
+    public void setA101A(String a101a) {
+        this.a101a = a101a;
+        notifyPropertyChanged(BR.a101a);
     }
 
     @Bindable
-    public String getA108() {
-        return a108;
+    public String getA101C() {
+        return a101c;
     }
 
-    public void setA108(String a108) {
-        this.a108 = a108;
-        notifyPropertyChanged(BR.a108);
+    public void setA101C(String a101c) {
+        this.a101c = a101c;
+        notifyPropertyChanged(BR.a101c);
+    }
+
+    @Bindable
+    public String getA107() {
+        return a107;
+    }
+
+    public void setA107(String a107) {
+        this.a107 = a107;
+        notifyPropertyChanged(BR.a107);
     }
 
     @Bindable
@@ -547,13 +592,13 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getA109() {
-        return a109;
+    public String getA108() {
+        return a108;
     }
 
-    public void setA109(String a109) {
-        this.a109 = a109;
-        notifyPropertyChanged(BR.a109);
+    public void setA108(String a108) {
+        this.a108 = a108;
+        notifyPropertyChanged(BR.a108);
     }
 
     @Bindable
@@ -600,23 +645,23 @@ public class Form extends BaseObservable implements Observable {
 *//*
 
     @Bindable
-    public String getHh01() {
-        return hh01;
+    public String getA102a() {
+        return a102a;
     }
 
-    public void setHh01(String hh01) {
-        this.hh01 = hh01;
-        notifyPropertyChanged(BR.hh01);
+    public void setA102a(String a102a) {
+        this.a102a = a102a;
+        notifyPropertyChanged(BR.a102a);
     }
 
     @Bindable
-    public String getHh02() {
-        return hh02;
+    public String getA102c() {
+        return a102c;
     }
 
-    public void setHh02(String hh02) {
-        this.hh02 = hh02;
-        notifyPropertyChanged(BR.hh02);
+    public void setA102c(String a102c) {
+        this.a102c = a102c;
+        notifyPropertyChanged(BR.a102c);
     }
 
     @Bindable
@@ -1786,8 +1831,12 @@ public class Form extends BaseObservable implements Observable {
             json = new JSONObject(string);
 
 
-            this.a101 = json.getString("a101");
-            this.a102 = json.getString("a102");
+            this.a101a = json.getString("a101a");
+            this.a101b = json.getString("a101b");
+            this.a101c = json.getString("a101c"); 
+            this.a102a = json.getString("a102a");
+            this.a102b = json.getString("a102b");
+            this.a102c = json.getString("a102c");
             this.a104 = json.getString("a104");
             this.a105 = json.getString("a105");
             this.a103 = json.getString("a103");
@@ -1806,8 +1855,12 @@ public class Form extends BaseObservable implements Observable {
     public String sAtoString() throws JSONException {
         Log.d(TAG, "sAtoString: ");
         JSONObject json = new JSONObject();
-        json.put("a101", a101)
-                .put("a102", a102)
+        json.put("a101a", a101a)
+                .put("a101b", a101b)
+                .put("a101c", a101c)
+                .put("a102a", a102a)
+                .put("a102b", a102b)
+                .put("a102c", a102c)
                 .put("a104", a104)
                 .put("a105", a105)
                 .put("a103", a103)

@@ -43,9 +43,9 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <!-- hh01  Date   -->
+                <!-- a102a  Date   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVhh01"
+                    android:id="@+id/fldGrpCVa102a"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -63,24 +63,24 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_a101" />
+                                android:text="@string/Q_a102a" />
 
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="@string/hh01" />
+                                android:text="@string/a102a" />
 
                             <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
-                                android:id="@+id/hh01"
+                                android:id="@+id/a102a"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:focusable="false"
                                 android:gravity="center"
                                 android:hint="YYYY-DD-MM"
-                                android:text="@={form.a101}"
+                                android:text="@={form.a102a}"
                                 app:dateFormat="yyyy-MM-dd"
                                 app:maxDate="CR_DATE"
                                 app:theme="@style/DatePickerEditTextDialogTheme" />
@@ -90,9 +90,9 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- hh02  Time   -->
+                <!-- a102c  Time   -->
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVhh02"
+                    android:id="@+id/fldGrpCVa102c"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -110,24 +110,24 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_a102" />
+                                android:text="@string/Q_a102b" />
 
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="center_vertical"
-                                android:text="@string/hh02" />
+                                android:text="@string/a102b" />
 
                             <io.blackbox_vision.datetimepickeredittext.view.TimePickerEditText
-                                android:id="@+id/hh02"
+                                android:id="@+id/a102c"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:focusable="false"
                                 android:gravity="center"
                                 android:hint="HH:mm"
-                                android:text="@={form.a102}"
+                                android:text="@={form.a102b}"
                                 app:is24HourView="true"
                                 app:theme="@style/DatePickerEditTextDialogTheme"
                                 app:timeFormat="HH:mm" />
@@ -321,12 +321,12 @@
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:text="@string/Q_a107" />
+                                android:text="@string/Q_a102c" />
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="@string/a107" />
+                                android:text="@string/a102c" />
 
                         </LinearLayout>
 
@@ -335,8 +335,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                            android:hint="@string/a107"
-                            android:text="@={form.a107}" />
+                            android:hint="@string/a102c"
+                            android:text="@={form.a102c}" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <!--
@@ -656,7 +656,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.a110.equals(`1`)}"
                                 android:onClick="@{()->form.setA110(`1`)}"
-                                android:text="@string/a10901" />
+                                android:text="@string/a10801" />
 
                             <RadioButton
                                 android:id="@+id/a110b"
@@ -664,7 +664,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.a110.equals(`2`)}"
                                 android:onClick="@{()->form.setA110(`2`)}"
-                                android:text="@string/a10902" />
+                                android:text="@string/a10802" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

@@ -145,7 +145,7 @@ public class TableContracts {
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_RANDOMDT = "randDT";
         public static final String COLUMN_LUID = "UID";
-        public static final String COLUMN_EB_CODE = "hh02";
+        public static final String COLUMN_EB_CODE = "a102c";
         public static final String COLUMN_STRUCTURE_NO = "hh03";
         public static final String COLUMN_FAMILY_EXT_CODE = "hh07";
         public static final String COLUMN_HH_NO = "hh";
@@ -213,6 +213,18 @@ public class TableContracts {
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_DISTRICT_NAME = "district_name";
         public static final String COLUMN_DISTRICT_CODE = "district_code";
+
+    }
+
+    public static abstract class VersionTable implements BaseColumns {
+        public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
+        public static final String TABLE_NAME = "versionApp";
+        public static final String COLUMN_ID = "_id";
+        public static final String COLUMN_VERSION_PATH = "elements";
+        public static final String COLUMN_VERSION_CODE = "versionCode";
+        public static final String COLUMN_VERSION_NAME = "versionName";
+        public static final String COLUMN_PATH_NAME = "outputFile";
+        public static final String SERVER_URI = "output-metadata.json";
 
     }
 }

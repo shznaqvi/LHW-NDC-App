@@ -2,8 +2,14 @@
 <resources>
 
     <string name="atitle">سیکشن A: مریض کی  ڈیموگرافکس</string>
-    <string name="a101">ایل ایچ ڈبلیو کا نام</string>
-    <string name="a102">خاندان نمبر</string>
+    <string name="a101a">ضلع</string>
+    <string name="a101b">ایل ایچ ڈبلیو کا نام</string>
+    <string name="a101c">خاندان نمبر</string>
+    <string name="a102a">انٹرویو کی تاریخ</string>
+    <string name="a102b">انٹرویو کا وقت</string>
+    <string name="a102c">پتہ</string>
+
+    <!-- Consent -->
     <string name="consent">کیا تحریری رضامندی پر دستخط کیے گئے ہیں؟</string>
     <string name="a103">مریض کا نام ۔</string>
     <string name="a104">عمر</string>
@@ -11,24 +17,25 @@
     <string name="a10501">مرد</string>
     <string name="a10502">عورت</string>
     <string name="a10596">کوی اور</string>
-    <string name="a106">نسل/قومیت</string>
+    <string name="a106">آپ گھر میں کتنی زبانیں بولتے ہیں؟</string>
     <string name="a10601">اردو</string>
     <string name="a10602">سندھی</string>
     <string name="a10603">پنجابی</string>
     <string name="a10604">بلوچی۔</string>
     <string name="a10605">پشتو</string>
     <string name="a10606">کشمیری</string>
+    <string name="a10607">بنگالی</string>
+    <string name="a10608">سرائیکی</string>
     <string name="a10696">دیگر (براہ کرم وضاحت کریں)</string>
-    <string name="a107">پتہ</string>
-    <string name="a108">آپ کی تعلیم کیا ہے؟</string>
-    <string name="a10801">سکول میں کبھی نہیں پڑھا</string>
-    <string name="a10802">پرائمری تعلیم</string>
-    <string name="a10803">میٹرک تک تعلیم</string>
-    <string name="a10804">انٹرمیڈیٹ کی تعلیم</string>
-    <string name="a10805">گریجویشن یا اس سے زیادہ</string>
-    <string name="a109">اپ کیہں ملازمت کرتے ہھں؟ یا خود کا کوی کاروبار ہے؟</string>
-    <string name="a10901">جی ہاں</string>
-    <string name="a10902">نہیں</string>
+    <string name="a107">آپ کی تعلیم کیا ہے؟</string>
+    <string name="a10701">سکول میں کبھی نہیں پڑھا</string>
+    <string name="a10702">پرائمری تعلیم</string>
+    <string name="a10703">میٹرک تک تعلیم</string>
+    <string name="a10704">انٹرمیڈیٹ کی تعلیم</string>
+    <string name="a10705">گریجویشن یا اس سے زیادہ</string>
+    <string name="a108">اپ کیہں ملازمت کرتے ہھں؟ یا خود کا کوی کاروبار ہے؟</string>
+    <string name="a10801">جی ہاں</string>
+    <string name="a10802">نہیں</string>
     <string name="btitle">ریپڈ سیکشن</string>
     <string name="b101">کمر کا ناپ</string>
     <string name="b102">آپ کے خاندان میں کسی کو شوگر ہے؟</string>
@@ -123,7 +130,7 @@
     <string name="e102x">فی دن گزارا ہوا وقت</string>
     <string name="e103">۳۔ گزشتہ سات دنوں کے دوران آپ نے کس معتدل یا درمیانی جسمانی مشقت واال کام کیا جیسے کہ ہلکی چیزوں کو اٹھانا، ہلکی رفتار سے سائیکل چالنا، ڈبلز ٹینس کھیلنا، اس میں پیدل چلنا شامل نہ کیجئے۔</string>
     <string name="e10301">دن فی ہفتہ</string>
-    <string name="e10399">کوئی زوردار جسمانی سرگرمیاں نہیں۔</string>
+    <string name="e10399">کوئی اعتدال پسند جسمانی سرگرمیاں نہیں۔</string>
     <string name="e104">۴۔ ان دنوں میں آپ روزانہ کتنی دیر درمیانی جسمانی ورزش کا کام کرتے تھے؟</string>
     <string name="e10401">گھنٹے</string>
     <string name="e10402">منٹس</string>
@@ -131,7 +138,7 @@
     <string name="e104x">فی دن گزارا ہوا وقت</string>
     <string name="e105">۵۔ گزشتہ سات دنوں میں سے کتنے دن کم از کم دس منٹ کی چہل قدمی کی؟</string>
     <string name="e10501">دن فی ہفتہ</string>
-    <string name="e10599">کوئی زوردار جسمانی سرگرمیاں نہیں۔</string>
+    <string name="e10599">نہیں چلنا</string>
     <string name="e106">۶۔ ان دنوں میں آپ روزانہ کتنی دیر چہل قدمی کرتے تھے؟</string>
     <string name="e10601">گھنٹے</string>
     <string name="e10602">منٹس</string>
@@ -246,6 +253,8 @@
     <string name="f11902">نہیں</string>
 
     <string name="gtitle">گلوبل تمباکو سروے</string>
+    <string name="g6title">روزانہ دھوئیں کے بغیر تمباکو استعمال کرنے والوں سے کم موجودہ</string>
+
     <string name="g101">کیا آپ روزانہ تمباکو نوشی کرتے ہیں؟</string>
     <string name="g10101">روزانہ</string>
     <string name="g10102">روزانہ سے کم</string>
@@ -267,7 +276,7 @@
     <string name="g104a">آپ نے کتنے سال پہلے تمباکو نوشی کی کوشش کی تھی۔ اگر ایک بار بھی کوشش کی تو واضاحت کریں.</string>
     <string name="g105">جب آپ نے پہلی بار روزانہ سگریٹ شروع کیا تو آپ کی عمر کتنی تھی؟</string>
     <string name="g105a">آپ نے کتنے سال پہلے روزانہ تمباکو نوشی شروع کی تھی؟</string>
-    <string name="g1title">روزانہ سیگریٹ پینے والے</string>
+    <string name="g1title">تمباکو نوشی</string>
     <string name="g106">تقریبن،  روزانہ آپ کس تعداد میں مندرجہ ذیل مصنوعات کا استعمال کرتے ہیں؟ اور اسے پروڈٹز کی بھی واضاحت کرے جو اپ روز استعمال نہیں کرتے.</string>
     <string name="g10601">تیار شدہ  سگریٹ؟</string>
     <string name="g10601d">فی دن</string>
@@ -303,7 +312,7 @@
     <string name="g10703">30 سے 60 منٹ</string>
     <string name="g10704">60 سے ذیادہ منٹ</string>
     <string name="g10799">انکار کر دیا</string>
-    <string name="g2title">روزانہ سے کم سیگریٹ پینے والے</string>
+    <string name="g2title">روزانہ سیگریٹ پینے والے</string>
     <string name="g108">عام طور پر ایک ہفتے میں آپ مندرجہ ذیل کتنی سگریٹ پیتے ہیں؟</string>
     <string name="g10801">تیار سگریٹ؟</string>
     <string name="g10801w">فی ہفتہ</string>
@@ -327,66 +336,90 @@
     <string name="g10807w">فی ہفتہ</string>
     <string name="g1080797">ایک سے کم بار</string>
     <string name="g10896">براہ کرم دوسری قسم کی وضاحت کریں جو آپ سگریٹ پیتے ہیں؟</string>
-    <string name="g3title">دھوئیں کے بغیر تمباکو</string>
-    <string name="g109">کیا آپ بغیر دھوئیں کے تمباکو روزانہ کی بنیاد پر استعمال کرتے ہیں، روزانہ سے کم، یا بالکل نہیں؟</string>
-    <string name="g10901">روزانہ</string>
-    <string name="g10902">روزانہ سے کم</string>
-    <string name="g10903">بالکل نہیں</string>
-    <string name="g10998">نہیں معلوم</string>
-    <string name="g10999">انکار کر دیا</string>
-    <string name="g110">کیا آپ نے ماضی میں روزانہ بغیر دھوئیں کے تمباکو کا استعمال کیا ہے؟</string>
-    <string name="g11001">روزانہ</string>
-    <string name="g11002">روزانہ سے کم</string>
-    <string name="g11003">بالکل نہیں</string>
-    <string name="g11098">نہیں معلوم</string>
-    <string name="g11099">انکار کر دیا</string>
-    <string name="g111">ماضی میں، کیا آپ نے بغیر دھوئیں کے تمباکو روزانہ کی بنیاد پر استعمال کیا ہے، روزانہ سے کم، یا بالکل نہیں؟</string>
-    <string name="g11101">روزانہ</string>
-    <string name="g11102">روزانہ سے کم</string>
-    <string name="g11103">بالکل نہیں</string>
-    <string name="g11198">نہیں معلوم</string>
-    <string name="g11199">انکار کر دیا</string>
-    <string name="g4title">موجودہ روزانہ دھوئیں کے بغیر تمباکو استعمال کرنے والے</string>
-    <string name="g112">تقریبن، روزانہ آپ کس تعداد میں مندرجہ ذیل مصنوعات کا استعمال کرتے ہیں؟ اور اسے پروڈٹز کی بھی واضاحت کرے جو اپ روز استعمال نہیں کرتے.</string>
-    <string name="g11201">منہ سے نسوار؟</string>
-    <string name="g11201d">فی دن</string>
-    <string name="g1120188">روزانہ نہیں</string>
-    <string name="g11201w">فی ہفتہ</string>
-    <string name="g11202">ناک سے نسوار؟</string>
-    <string name="g11202d">فی دن</string>
-    <string name="g1120288">روزانہ نہیں</string>
-    <string name="g11202w">فی ہفتہ</string>
-    <string name="g11203">تمباکو چبانے؟</string>
-    <string name="g11203d">فی دن</string>
-    <string name="g1120388">روزانہ نہیں</string>
-    <string name="g11203w">فی ہفتہ</string>
-    <string name="g11204">تمباکو کے ساتھ پان؟</string>
-    <string name="g11204d">فی دن</string>
-    <string name="g1120488">روزانہ نہیں</string>
-    <string name="g11204w">فی ہفتہ</string>
-    <string name="g11296">براہ کرم دوسری قسم کی وضاحت کریں جسے آپ فی الحال استعمال کر رہے ہیں: ________</string>
-    <string name="g11296d">فی دن</string>
-    <string name="g1129688">روزانہ نہیں</string>
-    <string name="g11296w">فی ہفتہ</string>
-    <string name="g5title">روزانہ دھوئیں کے بغیر تمباکو استعمال کرنے والوں سے کم موجودہ</string>
-    <string name="g113">آپ عام طور پر درج ذیل کو ہفتے میں کتنی بار استعمال کرتے ہیں؟</string>
-    <string name="g11301">نسوار، منہ سے؟</string>
-    <string name="g11301w">اوقات فی ہفتہ</string>
-    <string name="g1130188">ایک سے کم بار</string>
-    <string name="g11302">نسوار، ناک سے؟</string>
-    <string name="g11302w">اوقات فی ہفتہ</string>
-    <string name="g1130288">ایک سے کم بار</string>
-    <string name="g11303">تمباکو چبانے؟</string>
-    <string name="g11303w">اوقات فی ہفتہ</string>
-    <string name="g1130388">ایک سے کم بار</string>
-    <string name="g11304">تمباکو کے ساتھ پان؟</string>
-    <string name="g11304w">اوقات فی ہفتہ</string>
-    <string name="g1130488">ایک سے کم بار</string>
-    <string name="g11396">کوئی اور؟</string>
-    <string name="g11396w">اوقات فی ہفتہ</string>
-    <string name="g1139688">ایک سے کم بار</string>
-    <string name="g11396d">براہ کرم دوسری قسم کی وضاحت کریں جسے آپ فی الحال استعمال کرتے ہیں: ___</string>
+    <string name="g3title">روزانہ سے کم سیگریٹ پینے والے</string>
+    <string name="g201">کیا آپ بغیر دھوئیں کے تمباکو روزانہ کی بنیاد پر استعمال کرتے ہیں، روزانہ سے کم، یا بالکل نہیں؟</string>
+    <string name="g20101">روزانہ</string>
+    <string name="g20102">روزانہ سے کم</string>
+    <string name="g20103">بالکل نہیں</string>
+    <string name="g20198">نہیں معلوم</string>
+    <string name="g20199">انکار کر دیا</string>
+    <string name="g202">کیا آپ نے ماضی میں روزانہ بغیر دھوئیں کے تمباکو کا استعمال کیا ہے؟</string>
+    <string name="g20201">روزانہ</string>
+    <string name="g20202">روزانہ سے کم</string>
+    <string name="g20203">بالکل نہیں</string>
+    <string name="g20298">نہیں معلوم</string>
+    <string name="g20299">انکار کر دیا</string>
+    <string name="g203">ماضی میں، کیا آپ نے بغیر دھوئیں کے تمباکو روزانہ کی بنیاد پر استعمال کیا ہے، روزانہ سے کم، یا بالکل نہیں؟</string>
+    <string name="g20301">روزانہ</string>
+    <string name="g20302">روزانہ سے کم</string>
+    <string name="g20303">بالکل نہیں</string>
+    <string name="g20398">نہیں معلوم</string>
+    <string name="g20399">انکار کر دیا</string>
 
+    <string name="g204">آپ کی عمر کتنی تھی جب آپ نے پہلی بار دھوئیں کے بغیر تمباکو استعمال کیا تھا، ایک بار ہی صحیح؟</string>
+    <string name="g204a">کتنے سال پہلے آپ نے پہلی بار دھوئیں کے بغیر تمباکو استعمال کیا تھا، ایک بار ہی صحیح؟</string>
+
+    <!-- GATS Section G205 -->
+    <string name="g205">آپ کی عمر کتنی تھی جب آپ نے پہلی بار روزانہ بغیر دھوئیں کے تمباکو کا استعمال شروع کیا تھا؟</string>
+    <string name="g205a">آپ نے کتنے سال پہلے پہلی دفعہ روزانہ کی بنیاد پہ دھوئیں کے بغیر تمباکو کا استعمال شروع کیا تھا؟</string>
+
+
+
+    <string name="g4title">دھوئیں کے بغیر تمباکو</string>
+    <string name="g206">تقریبن، روزانہ آپ کس تعداد میں مندرجہ ذیل مصنوعات کا استعمال کرتے ہیں؟ اور اسے پروڈٹز کی بھی واضاحت کرے جو اپ روز استعمال نہیں کرتے.</string>
+    <string name="g20601">منہ سے نسوار؟</string>
+    <string name="g20601d">فی دن</string>
+    <string name="g2060188">روزانہ نہیں</string>
+    <string name="g20601w">فی ہفتہ</string>
+    <string name="g20602">ناک سے نسوار؟</string>
+    <string name="g20602d">فی دن</string>
+    <string name="g2060288">روزانہ نہیں</string>
+    <string name="g20602w">فی ہفتہ</string>
+    <string name="g20603">تمباکو چبانے؟</string>
+    <string name="g20603d">فی دن</string>
+    <string name="g2060388">روزانہ نہیں</string>
+    <string name="g20603w">فی ہفتہ</string>
+    <string name="g20604">تمباکو کے ساتھ پان؟</string>
+    <string name="g20604d">فی دن</string>
+    <string name="g2060488">روزانہ نہیں</string>
+    <string name="g20604w">فی ہفتہ</string>
+    <string name="g20696">براہ کرم دوسری قسم کی وضاحت کریں جسے آپ فی الحال استعمال کر رہے ہیں </string>
+    <string name="g20696d">فی دن</string>
+    <string name="g2069688">روزانہ نہیں</string>
+    <string name="g20696w">فی ہفتہ</string>
+
+
+    <string name="g207">آپ اٹھنے کے کتنی دیر بعد عام طور پر پہلی بار بغیر دھوئیں کے تمباکو کا استعمال کرتے ہیں؟ کیا آپ کہیں گے کہ آپ پانچ منٹ کے اندر، چھ منٹ  سے تقریباً تیس  منٹ  تک، اکتیس منٹ سے تقریباً ساٹھ منٹ تک، یا ساٹھ منٹ سے زیادہ وقت بعد سگریٹ پیتے ہیں؟</string>
+    <string name="g20701">5منٹ کے اندر</string>
+    <string name="g20702">6سے 30 منٹ</string>
+    <string name="g20703">31سے 60 منٹ</string>
+    <string name="g20704">60سے ذیادہ منٹ</string>
+    <string name="g20799">انکار کر دیا</string>
+
+
+    <string name="g5title">موجودہ روزانہ دھوئیں کے بغیر تمباکو استعمال کرنے والے</string>
+    <string name="g208">آپ عام طور پر درج ذیل کو ہفتے میں کتنی بار استعمال کرتے ہیں؟</string>
+    <string name="g20801">نسوار، منہ سے؟</string>
+    <string name="g20801w">اوقات فی ہفتہ</string>
+    <string name="g2080188">ایک سے کم بار</string>
+    <string name="g20802">نسوار، ناک سے؟</string>
+    <string name="g20802w">اوقات فی ہفتہ</string>
+    <string name="g2080288">ایک سے کم بار</string>
+    <string name="g20803">تمباکو چبانے؟</string>
+    <string name="g20803w">اوقات فی ہفتہ</string>
+    <string name="g2080388">ایک سے کم بار</string>
+    <string name="g20804">تمباکو کے ساتھ پان؟</string>
+    <string name="g20804w">اوقات فی ہفتہ</string>
+    <string name="g2080488">ایک سے کم بار</string>
+    <string name="g20896">کوئی اور؟</string>
+    <string name="g20896w">اوقات فی ہفتہ</string>
+    <string name="g2089688">ایک سے کم بار</string>
+    <string name="g20896d">براہ کرم دوسری قسم کی وضاحت کریں جسے آپ فی الحال استعمال کرتے ہیں: ___</string>
+
+    <string name="g209">آپ نے بتایا کہ آپ تمباکو نوشی کرتے ہیں، لیکن ہر روز نہیں اور یہ کہ آپ بغیر دھوئیں والے تمباکو کا استعمال کرتے ہیں، لیکن ہر روز نہیں۔ تمباکو نوشی اور بغیر دھوئیں والے تمباکو کے استعمال دونوں کے بارے میں سوچتے ہوئے، کیا آپ کہیں گے کہ آپ روزانہ کی بنیاد پر تمباکو کا استعمال کرتے ہیں یا روزانہ سے کم؟</string>
+    <string name="g20901">روزانہ</string>
+    <string name="g20902">روزانہ سے کم</string>
+    <string name="g20999">انکار کر دیا</string>
 
     <string name="htitle">ورلڈ ہیلتھ آرگنائزیشن - فائیو ویل بیئنگ انڈیکس سیکشن (WHO-5)</string>
     <string name="h1title">براہ کرم پانچ بیانات میں سے ہر ایک پر دائرہ لگائیں جو اس کے قریب ترین ہو کہ آپ پچھلے دو ہفتوں سے کیسا محسوس کر رہے ہیں۔ یاد رکھیں کہ زیادہ تعداد کا مطلب بہتر صحت ہے۔</string>

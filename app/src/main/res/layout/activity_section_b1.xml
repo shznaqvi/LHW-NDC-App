@@ -123,29 +123,29 @@
                         </LinearLayout>
 
                         <RadioGroup
-                            android:id="@+id/a109"
+                            android:id="@+id/a108"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/a10901"
+                                android:id="@+id/a10801"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{familymembers.b102.equals(`1`)}"
                                 android:onClick="@{()->familymembers.setB102(`1`)}"
-                                android:text="@string/a10901" />
+                                android:text="@string/a10801" />
 
 
                             <RadioButton
-                                android:id="@+id/a10902"
+                                android:id="@+id/a10802"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{familymembers.b102.equals(`2`)}"
                                 android:onClick="@{()->familymembers.setB102(`2`)}"
-                                android:text="@string/a10902" />
+                                android:text="@string/a10802" />
 
 
                         </RadioGroup>

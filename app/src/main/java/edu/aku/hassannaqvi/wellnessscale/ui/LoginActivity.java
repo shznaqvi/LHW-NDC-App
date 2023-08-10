@@ -2,7 +2,7 @@ package edu.aku.hassannaqvi.wellnessscale.ui;
 
 import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.decryptGCM;
 import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.encryptGCM;
-import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.hashSHA256;
+import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.hashSHA384;
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.PROJECT_NAME;
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.sharedPref;
 import static edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper.DATABASE_COPY;
@@ -178,7 +178,7 @@ public class LoginActivity extends AppCompatActivity {
             encrypted = encryptGCM(plainText);
             Log.d(TAG, "onCreate: Encrypted: " + encrypted);
             Log.d(TAG, "onCreate: Decrypted: " + decryptGCM(encrypted));
-            Log.d(TAG, "onCreate: hash: " + hashSHA256());
+            Log.d(TAG, "onCreate: hash: " + hashSHA384());
 
 
         } catch (Exception e) {

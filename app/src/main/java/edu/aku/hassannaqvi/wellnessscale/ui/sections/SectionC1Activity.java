@@ -17,6 +17,8 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
+import java.util.ArrayList;
+
 import edu.aku.hassannaqvi.wellnessscale.R;
 import edu.aku.hassannaqvi.wellnessscale.adapters.ImageAdapter;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
@@ -51,6 +53,7 @@ public class SectionC1Activity extends AppCompatActivity {
     private GridView gridView;
     private ImageAdapter adapter;
     private boolean[] touchStates;
+    private ArrayList<Integer> positionsWithColorFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +66,23 @@ public class SectionC1Activity extends AppCompatActivity {
         bi.setCallback(this);
 
         gridView = findViewById(R.id.gridView);
-        adapter = new ImageAdapter(this);
+        ArrayList<Integer> positionsWithColorFilter = new ArrayList<>();
+
+        if (familyMembers.getC10201().equals("1")) positionsWithColorFilter.add(2);  // Add position 0
+        if (familyMembers.getC10202().equals("2")) positionsWithColorFilter.add(6);  // Add position 0
+        if (familyMembers.getC10203().equals("3")) positionsWithColorFilter.add(7);  // Add position 0
+        if (familyMembers.getC10204().equals("4")) positionsWithColorFilter.add(8);  // Add position 0
+        if (familyMembers.getC10205().equals("5")) positionsWithColorFilter.add(9);  // Add position 0
+        if (familyMembers.getC10205().equals("5")) positionsWithColorFilter.add(14);  // Add position 0
+        if (familyMembers.getC10206().equals("6")) positionsWithColorFilter.add(5);  // Add position 0
+        if (familyMembers.getC10206().equals("6")) positionsWithColorFilter.add(10);  // Add position 0
+        if (familyMembers.getC10207().equals("7")) positionsWithColorFilter.add(11);  // Add position 0
+        if (familyMembers.getC10208().equals("8")) positionsWithColorFilter.add(12);  // Add position 0
+        if (familyMembers.getC10209().equals("9")) positionsWithColorFilter.add(13);  // Add position 0
+
+
+
+        adapter = new ImageAdapter(this, positionsWithColorFilter);
         gridView.setAdapter(adapter);
 
         touchStates = new boolean[imageIds.length]; // Initialize touch state array
