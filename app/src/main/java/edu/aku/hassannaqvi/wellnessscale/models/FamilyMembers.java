@@ -2,6 +2,7 @@ package edu.aku.hassannaqvi.wellnessscale.models;
 
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.PROJECT_NAME;
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp._EMPTY_;
+import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.form;
 
 import android.database.Cursor;
 import android.util.Log;
@@ -258,11 +259,11 @@ public class FamilyMembers extends BaseObservable {
 
     public void populateMeta() {
 
-        setSysDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
+        setSysDate(form.getSysDate());
         setUserName(MainApp.user.getUserName());
         setDeviceId(MainApp.deviceid);
-       /*  //   setUuid(MainApp.form.getUid());  // not applicable in Form table
-        setAppver(MainApp.appInfo.getAppVersion());*/
+        setUuid(MainApp.form.getUid());  // not applicable in Form table
+        setAppver(MainApp.appInfo.getAppVersion());
         setProjectName(PROJECT_NAME);
 
         //  setEntryType(String.valueOf(MainApp.entryType));
@@ -2547,6 +2548,7 @@ public class FamilyMembers extends BaseObservable {
 
             this.b101 = json.getString("b101");
             this.b102 = json.getString("b102");
+            this.scoreRapid = json.has("scoreRapid") ? Integer.parseInt(json.getString("scoreRapid")): 0;
 
             updateRapidScore();
         }
@@ -2570,6 +2572,8 @@ public class FamilyMembers extends BaseObservable {
             this.c10208 = json.getString("c10208");
             this.c10209 = json.getString("c10209");
             this.c103 = json.getString("c103");
+            this.painGrade = json.has("painGrade") ? Integer.parseInt(json.getString("painGrade")): 0;
+            this.scoreRose = json.has("scoreRose") ? Integer.parseInt(json.getString("scoreRose")): 0;
             this.c104 = json.getString("c104");
             this.c105 = json.getString("c105");
             this.c106 = json.getString("c106");
@@ -2597,6 +2601,7 @@ public class FamilyMembers extends BaseObservable {
             this.d106 = json.getString("d106");
             this.d107 = json.getString("d107");
             this.d108 = json.getString("d108");
+            this.scoreQVSFS = json.has("scoreQVSFS") ? Integer.parseInt(json.getString("scoreQVSFS")): 0;
 
 
             updateQVSFS();
@@ -2625,6 +2630,8 @@ public class FamilyMembers extends BaseObservable {
             this.e105 = json.getString("e105");
             this.e105d = json.getString("e105d");
             this.e106 = json.getString("e106");
+            this.totalMet = json.has("totalMet") ? Double.parseDouble(json.getString("totalMet")) : 0;
+            this.scoreIPAQ = json.has("scoreIPAQ") ? json.getString("scoreIPAQ") : "";
             this.e106x = json.getString("e106x");
             this.e107 = json.getString("e107");
             this.e107x = json.getString("e107x");
@@ -2736,6 +2743,8 @@ public class FamilyMembers extends BaseObservable {
             this.h104 = json.getString("h104");
             this.h105 = json.getString("h105");
             this.h106 = json.getString("h106");
+            this.scoreWHO5 = json.has("scoreWHO5") ? json.getString("scoreWHO5") : "";
+            this.endTime = json.has("endTime") ? json.getString("endTime") : "";
             calculateWHO5Score();
         }
     }
@@ -2799,7 +2808,8 @@ public class FamilyMembers extends BaseObservable {
         Log.d(TAG, "sB1toString: ");
         JSONObject json = new JSONObject();
         json.put("b101", b101)
-                .put("b102", b102);
+                .put("b102", b102)
+                .put("scoreRapid", scoreRapid);
 
         updateRapidScore();
         return json.toString();
@@ -2819,6 +2829,8 @@ public class FamilyMembers extends BaseObservable {
                 .put("c10208", c10208)
                 .put("c10209", c10209)
                 .put("c103", c103)
+                .put("painGrade", painGrade)
+                .put("scoreRose", scoreRose)
                 .put("c104", c104)
                 .put("c105", c105)
                 .put("c106", c106)
@@ -2840,6 +2852,7 @@ public class FamilyMembers extends BaseObservable {
                 .put("d105", d105)
                 .put("d106", d106)
                 .put("d107", d107)
+                .put("scoreQVSFS", scoreQVSFS)
                 .put("d108", d108);
 
         updateQVSFS();
@@ -2865,6 +2878,8 @@ public class FamilyMembers extends BaseObservable {
                 .put("e105", e105)
                 .put("e105d", e105d)
                 .put("e106", e106)
+                .put("totalMet", totalMet)
+                .put("scoreIPAQ", scoreIPAQ)
                 .put("e106x", e106x)
                 .put("e107", e107)
                 .put("e107x", e107x);
@@ -2976,7 +2991,9 @@ public class FamilyMembers extends BaseObservable {
                 .put("h103", h103)
                 .put("h104", h104)
                 .put("h105", h105)
-                .put("h106", h106);
+                .put("h106", h106)
+                .put("endTime", endTime)
+                .put("scoreWHO5", scoreWHO5);
 
 
         calculateWHO5Score();
@@ -3116,10 +3133,12 @@ public class FamilyMembers extends BaseObservable {
     public String updateRapidScore() {
 
         int score = 0;
-        int age = Integer.parseInt(this.getA104());
-        int gender = Integer.parseInt(this.getA105());
-        int waist = Integer.parseInt(this.getB101());
-        int familyHistory = Integer.parseInt(this.getB102());
+        int H101 = Integer.parseInt(getH101().equals("") ? "0" : getH101());
+
+        int age = Integer.parseInt(getA104().equals("") ? "0" : this.getA104());
+        int gender = Integer.parseInt(getA105().equals("") ? "0" : this.getA105());
+        int waist = Integer.parseInt(getB101().equals("") ? "0" : this.getB101());
+        int familyHistory = Integer.parseInt(getB102().equals("") ? "0" : this.getB102());
 
         score = age >= 40 && age <= 50 ? 1 : age > 50 ? 3 : 0;
         score += ((gender == 1 && waist >= 90) || (gender == 2 && waist >= 80)) ? 2 : 0;
@@ -3180,7 +3199,7 @@ public class FamilyMembers extends BaseObservable {
         double E105 = 0;
         double E106x = 0;
 
-        if (this.e101.equals("99")) {
+        if (this.e101.equals("99") ||this.e101.equals("")) {
             E101 = 0;
 
         } else {
@@ -3188,14 +3207,14 @@ public class FamilyMembers extends BaseObservable {
 
         }
 
-        if (this.e103.equals("99")) {
+        if (this.e103.equals("99") || this.e103.equals("")) {
             E103 = 0;
 
         } else {
             E103 = Integer.parseInt(getE103d());
 
         }
-        if (this.e105.equals("99")) {
+        if (this.e105.equals("99") || this.e105.equals("")) {
             E105 = 0;
 
         } else {
@@ -3204,19 +3223,19 @@ public class FamilyMembers extends BaseObservable {
         }
 
         /*Setting 0 minues if Dont know*/
-        if (this.e101.equals("99") || this.e102.equals("98")) {
+        if (this.e101.equals("99") || this.e102.equals("98")|| this.e102.equals("")) {
             //E101 = 0;
             E102x = 0;
         } else {
             E102x = Integer.parseInt(getE102x());
         }
-        if (this.e103.equals("99") || this.e104.equals("98")) {
+        if (this.e103.equals("99") || this.e104.equals("98")|| this.e104.equals("")) {
             // E103 = 0;
             E104x = 0;
         } else {
             E104x = Integer.parseInt(getE104x());
         }
-        if (this.e105.equals("99") || this.e106.equals("98")) {
+        if (this.e105.equals("99") || this.e106.equals("98")|| this.e106.equals("")) {
             // E105 = 0;
             E106x = 0;
         } else {
@@ -3235,18 +3254,18 @@ public class FamilyMembers extends BaseObservable {
         double Moderate = E103 * (E104x) * MET_Moderate;
         double Walking = E105 * (E106x) * MET_Walking;
         //double Sitting = (E107 + E108) * 0.5;
-        double TotalMET = Vigorous + Moderate + Walking; //+ Sitting;
+        totalMet = Vigorous + Moderate + Walking; //+ Sitting;
         double TotalDays = E101 + E103 + E105; //+ Sitting;
 
-        double score = TotalMET / (7.0 * 24.0);
-        setTotalMet(TotalMET);
+        double score = totalMet / (7.0 * 24.0);
+        setTotalMet(totalMet);
 
         // HIGH
-        if ((E101 >= 3 && TotalMET >= 1500) || ((E101 + E103 + E105) >= 7 && TotalMET >= 3000)) {
+        if ((E101 >= 3 && totalMet >= 1500) || ((E101 + E103 + E105) >= 7 && totalMet >= 3000)) {
             scoreIPAQ = "HIGH";
         }
         // MODREATE
-        else if ((E101 >= 3) || (E103 >= 5) || E106x > 30 || ((E101 + E103 + E105) >= 5 && TotalMET >= 600)) {
+        else if ((E101 >= 3) || (E103 >= 5) || E106x > 30 || ((E101 + E103 + E105) >= 5 && totalMet >= 600)) {
             // else if ((E105 >= 7 && E106x >= 30) || (E101 >= 3) || (E103 >= 5) || (TotalDays >= 5 && TotalMET >= 600)) {
             scoreIPAQ = "MODREATE";
         }
@@ -3265,7 +3284,6 @@ public class FamilyMembers extends BaseObservable {
     }
 
     public void calculateWHO5Score() {
-
         int H101 = Integer.parseInt(getH101().equals("") ? "0" : getH101());
         int H102 = Integer.parseInt(getH102().equals("") ? "0" : getH102());
         int H103 = Integer.parseInt(getH103().equals("") ? "0" : getH103());

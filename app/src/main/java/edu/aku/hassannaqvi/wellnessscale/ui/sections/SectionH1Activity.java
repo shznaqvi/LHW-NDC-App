@@ -14,6 +14,10 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import edu.aku.hassannaqvi.wellnessscale.R;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
 import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
@@ -41,6 +45,7 @@ public class SectionH1Activity extends AppCompatActivity {
     private boolean updateDB() {
         if (MainApp.superuser) return true;
         familyMembers.calculateWHO5Score();
+        familyMembers.setEndTime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
         db = MainApp.appInfo.getDbHelper();
         long updcount = 0;
         try {
@@ -59,6 +64,7 @@ public class SectionH1Activity extends AppCompatActivity {
 
     public void btnContinue() {
         if (!formValidation()) return;
+
         if (updateDB()) {
             Intent returnIntent = new Intent();
             //  returnIntent.putExtra("requestCode", requestCode);

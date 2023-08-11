@@ -183,7 +183,7 @@ public class DataDownWorkerALL extends Worker {
         try {
             CertificateFactory cf = CertificateFactory.getInstance("X.509");
             AssetManager assetManager = mContext.getAssets();
-            caInput = assetManager.open("vcoe1_aku_edu.cer");
+            caInput = assetManager.open("star_aku_edu.crt");
 
 
             ca = cf.generateCertificate(caInput);

@@ -126,7 +126,7 @@
                             android:id="@+id/rv_upload_list"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:padding="12dp"
+                            android:padding="8dp"
                             android:visibility="visible"
                             tools:itemCount="9"
                             tools:listitem="@layout/sync_list_adapter">
@@ -346,7 +346,7 @@
 
                     <Button
                         android:id="@+id/btnUploadPhotos"
-
+android:visibility="gone"
                         style="@style/button"
 
                         android:layout_width="match_parent"
@@ -374,6 +374,7 @@
                     android:includeFontPadding="false"
                     android:paddingTop="0dp"
                     android:paddingBottom="0dp"
+                    android:visibility="gone"
                     android:text="Also upload unlocked forms"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold" />

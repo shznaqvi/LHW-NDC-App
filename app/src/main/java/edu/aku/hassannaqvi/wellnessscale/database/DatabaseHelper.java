@@ -511,7 +511,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allForms;
     }
 
-    public JSONArray getUnsyncedFamilyMembers() throws JSONException, ParseException {
+    public JSONArray getUnsyncedFamilyMembers() throws JSONException {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         android.database.Cursor c = null;
         String[] columns = null;

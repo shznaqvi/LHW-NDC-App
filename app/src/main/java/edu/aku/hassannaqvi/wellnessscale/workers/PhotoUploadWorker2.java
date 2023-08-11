@@ -146,7 +146,7 @@ public class PhotoUploadWorker2 extends Worker {
         notification.setProgress(maxProgress, curProgress, false);
 
 
-        notificationManager.notify(photoid, notification.build());
+        //notificationManager.notify(photoid, notification.build());
 
     }
 
@@ -281,7 +281,7 @@ public class PhotoUploadWorker2 extends Worker {
             try {
                 CertificateFactory cf = CertificateFactory.getInstance("X.509");
                 AssetManager assetManager = mContext.getAssets();
-                caInput = assetManager.open("vcoe1_aku_edu.cer");
+                caInput = assetManager.open("star_aku_edu.crt");
 
 
                 ca = cf.generateCertificate(caInput);

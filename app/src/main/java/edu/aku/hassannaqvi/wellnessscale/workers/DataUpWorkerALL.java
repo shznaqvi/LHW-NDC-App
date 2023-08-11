@@ -179,7 +179,7 @@ public class DataUpWorkerALL extends Worker {
         int curProgress = 0;
         notification.setProgress(length, curProgress, false);
 
-        notificationManager.notify(1, notification.build());
+        //notificationManager.notify(1, notification.build());
     }
 
    /* private boolean certIsValid(Certificate[] certs, Certificate ca) {
@@ -233,7 +233,7 @@ public class DataUpWorkerALL extends Worker {
         try {
             CertificateFactory cf = CertificateFactory.getInstance("X.509");
             AssetManager assetManager = mContext.getAssets();
-            caInput = assetManager.open("vcoe1_aku_edu.cer");
+            caInput = assetManager.open("star_aku_edu.crt");
 
 
             ca = cf.generateCertificate(caInput);

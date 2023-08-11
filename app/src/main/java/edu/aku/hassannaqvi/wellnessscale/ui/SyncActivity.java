@@ -52,6 +52,7 @@ import java.util.concurrent.TimeUnit;
 
 import edu.aku.hassannaqvi.wellnessscale.R;
 import edu.aku.hassannaqvi.wellnessscale.adapters.SyncListAdapter;
+import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.ChildTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.ClusterTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.EntryLogTable;
@@ -161,6 +162,16 @@ public class SyncActivity extends AppCompatActivity {
                 Toast.makeText(this, "JSONException(Forms): " + e.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
+            // Familymembers
+            uploadTables.add(new SyncModel(TableContracts.FamilyMembersTable.TABLE_NAME));
+            try {
+                MainApp.uploadData.add(db.getUnsyncedFamilyMembers());
+            } catch (JSONException e) {
+                e.printStackTrace();
+                Log.d(TAG, "ProcessStart: JSONException(Familymembers): " + e.getMessage());
+                Toast.makeText(this, "JSONException(Familymembers): " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+
             // Entry Log
             uploadTables.add(new SyncModel(EntryLogTable.TABLE_NAME));
             try {
@@ -183,10 +194,10 @@ public class SyncActivity extends AppCompatActivity {
                     Toast.makeText(this, "JSONException(Forms): " + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
 
-                // Child - unlocked
+          /*       // Child - unlocked
                 uploadTables.add(new SyncModel(ChildTable.TABLE_NAME, true));
                 // Uncomment the following lines if required
-        /*
+
         try {
             MainApp.uploadData.add(db.getUnlockedUnsyncedChild());
         } catch (JSONException e) {
