@@ -51,14 +51,14 @@ public class SectionC1Activity extends AppCompatActivity {
             "Image 2", "Image 7", "Image 8", "Image 9", "Image 6"
     };
     private GridView gridView;
-    private ImageAdapter adapter;
+    public ImageAdapter c201ImageAdapter;
     private boolean[] touchStates;
     private ArrayList<Integer> positionsWithColorFilter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(MainApp.langRTL ? MainApp.selectedLanguage == 1 ? R.style.AppThemeUrdu : R.style.AppThemeSindhi : R.style.AppThemeEnglish1);
+        setTheme(MainApp.langRTL ? (MainApp.selectedLanguage == 1 ? R.style.AppThemeUrdu : R.style.AppThemeSindhi) : R.style.AppThemeEnglish1);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c1);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
@@ -82,8 +82,8 @@ public class SectionC1Activity extends AppCompatActivity {
 
 
 
-        adapter = new ImageAdapter(this, positionsWithColorFilter);
-        gridView.setAdapter(adapter);
+        c201ImageAdapter = new ImageAdapter(this, positionsWithColorFilter);
+        gridView.setAdapter(c201ImageAdapter);
 
         touchStates = new boolean[imageIds.length]; // Initialize touch state array
 

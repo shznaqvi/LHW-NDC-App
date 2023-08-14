@@ -52,7 +52,6 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:textSize">16sp</item>
 
-        <item name="fontFamily">@font/jameel_noori_nastaleeq</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -60,7 +59,7 @@
         <item name="spinnerStyle">@style/spinner</item>
         <item name="android:actionBarStyle">@style/ToolbarTheme</item>
         <item name="android:toolbarStyle">@style/CustomToolbarTheme</item>
-        <item name="android:textViewStyle">@style/labels</item>
+        <item name="android:textViewStyle">@style/labels_ur</item>
         <item name="android:editTextStyle">@style/textInput</item>
         <item name="radioButtonStyle">@style/radiobutton</item>
         <item name="checkboxStyle">@style/checkbox</item>
@@ -80,7 +79,6 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:textSize">16sp</item>
 
-        <item name="fontFamily">@font/lateef</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -144,12 +142,34 @@
     </style>
 
     <style name="labels_sd" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="fontFamily">@font/lateef</item>
+
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:textSize">20dp</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
-        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:elevation">24dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:shadowColor">#7f000000</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="labels_ur" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="fontFamily">@font/jameel_noori_nastaleeq</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:elevation">24dp</item>
         <item name="android:paddingStart">15dp</item>
@@ -193,7 +213,9 @@
         <item name="android:layout_marginBottom">4dp</item>
         <item name="android:elevation">1dp</item>
         <item name="android:background">@drawable/options_separator</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/grayDark</item>
+        <item name="android:textSize">24sp</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingStart">24dp</item>
         <item name="android:paddingEnd">6dp</item>
@@ -264,6 +286,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#ff0000</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:spinnerItemStyle">@style/spinnerItemStyle</item>
         <item name="android:spinnerDropDownItemStyle">@style/spinnerDropDownItemStyle</item>
         <item name="android:background">@null</item>

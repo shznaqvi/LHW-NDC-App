@@ -161,6 +161,9 @@ public class FamilyMembers extends BaseObservable {
     public String g10805w = _EMPTY_;
     public String g10806w = _EMPTY_;
     public String g10807w = _EMPTY_;
+    public String g10896 = _EMPTY_;
+    public String g10896x = _EMPTY_;
+    public String g10896w = _EMPTY_;
     public String g201 = _EMPTY_;
     public String g202 = _EMPTY_;
     public String g203 = _EMPTY_;
@@ -544,6 +547,7 @@ public class FamilyMembers extends BaseObservable {
 
     public void setA106(String a106) {
         this.a106 = a106;
+        setA10696x(!a106.equals("96")? "": a10696x);
         notifyChange(BR.a106);
     }
 
@@ -630,15 +634,6 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.c101);
     }
 
-    @Bindable
-    public String getC102() {
-        return c102;
-    }
-
-    public void setC102(String c102) {
-        this.c102 = c102;
-        notifyChange(BR.c102);
-    }
 
     @Bindable
     public String getC10201() {
@@ -1058,6 +1053,11 @@ public class FamilyMembers extends BaseObservable {
 
     public void setF101(String f101) {
         this.f101 = f101;
+        setF104(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f104);
+        setF105(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f105);
+        setF106(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f106);
+        setF107(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f107);
+        setF108(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f108);
         notifyChange(BR.f101);
     }
 
@@ -1068,6 +1068,11 @@ public class FamilyMembers extends BaseObservable {
 
     public void setF102(String f102) {
         this.f102 = f102;
+        setF104(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f104);
+        setF105(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f105);
+        setF106(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f106);
+        setF107(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f107);
+        setF108(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f108);
         notifyChange(BR.f102);
     }
 
@@ -1078,6 +1083,11 @@ public class FamilyMembers extends BaseObservable {
 
     public void setF103(String f103) {
         this.f103 = f103;
+        setF104(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f104);
+        setF105(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f105);
+        setF106(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f106);
+        setF107(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f107);
+        setF108(f101.equals("5")&&f102.equals("5")&&f103.equals("5")? "" : f108);
         notifyChange(BR.f103);
     }
 
@@ -1218,6 +1228,8 @@ public class FamilyMembers extends BaseObservable {
 
     public void setF117(String f117) {
         this.f117 = f117;
+        setF118(f117.equals("5")?"":f118);
+        setF119(f117.equals("5")?"":f119);
         notifyChange(BR.f117);
     }
 
@@ -1323,6 +1335,7 @@ public class FamilyMembers extends BaseObservable {
         setG10805w(g101.equals("98")||g101.equals("99")? "":g10805w);
         setG10806w(g101.equals("98")||g101.equals("99")? "":g10806w);
         setG10807w(g101.equals("98")||g101.equals("99")? "":g10807w);
+        setG10896(g101.equals("98")||g101.equals("99")? "":g10896);
         
         // for G209
         setG209(g101.equals("2")||g102.equals("2")? g209:"");
@@ -1372,6 +1385,7 @@ public class FamilyMembers extends BaseObservable {
         setG10805w(!g102.equals("1")? "":g10805w);
         setG10806w(!g102.equals("1")? "":g10806w);
         setG10807w(!g102.equals("1")? "":g10807w);
+        setG10896(!g102.equals("1")? "":g10896);
         
         // setG105(g101.equals("1") || g102.equals("1") || g103.equals("1") ? g105 : "");
 
@@ -1384,6 +1398,7 @@ public class FamilyMembers extends BaseObservable {
         setG105(g102.equals("98")||g102.equals("99")? "":g105);
         setG10598(g102.equals("98")||g102.equals("99")? "":g10598);
         setG105a(g102.equals("98")||g102.equals("99")? "":g105a);
+        setG10896(g102.equals("98")||g102.equals("99")? "":g10896);
         /*setG1060188(g102.equals("98")||g102.equals("99")? "":g1060188);
         setG10601d(g102.equals("98")||g102.equals("99")? "":g10601d);
         setG10601w(g102.equals("98")||g102.equals("99")? "":g10601w);
@@ -1458,6 +1473,8 @@ public class FamilyMembers extends BaseObservable {
         setG10805w(g103Check ? "":g10805w);
         setG10806w(g103Check ? "":g10806w);
         setG10807w(g103Check ? "":g10807w);
+        setG10896(g103Check ? "":g10896);
+
 
         notifyChange(BR.g103);
     }
@@ -1832,6 +1849,35 @@ public class FamilyMembers extends BaseObservable {
     public void setG10807w(String value) {
         g10807w = value;
         notifyChange(BR.g10807w);
+    }
+    @Bindable
+    public String getG10896() {
+        return g10896;
+    }
+
+    public void setG10896(String value) {
+        g10896 = value;
+        setG10896x(value.equals("98")? g10896x:"");
+        setG10896w(value.equals("98")? g10896w:"");
+        notifyChange(BR.g10896);
+    }
+    @Bindable
+    public String getG10896w() {
+        return g10896w;
+    }
+
+    public void setG10896w(String value) {
+        g10896w = value;
+        notifyChange(BR.g10896w);
+    }
+    @Bindable
+    public String getG10896x() {
+        return g10896x;
+    }
+
+    public void setG10896x(String value) {
+        g10896x = value;
+        notifyChange(BR.g10896x);
     }
 
     @Bindable
@@ -2692,8 +2738,15 @@ public class FamilyMembers extends BaseObservable {
             this.g10605w = json.getString("g10605w");
             this.g10606d = json.getString("g10606d");
             this.g10606w = json.getString("g10606w");
-            this.g10696d = json.getString("g10607d");
-            this.g10696w = json.getString("g10607w");
+            this.g10696d = json.getString("g10696d");
+            this.g10696w = json.getString("g10696w");
+            this.g1060188 = json.getString("g1060188");
+            this.g1060288 = json.getString("g1060288");
+            this.g1060388 = json.getString("g1060388");
+            this.g1060488 = json.getString("g1060488");
+            this.g1060588 = json.getString("g1060588");
+            this.g1060688 = json.getString("g1060688");
+            this.g1069688 = json.getString("g1069688");
             this.g107 = json.getString("g107");
             this.g10801w = json.getString("g10801w");
             this.g10802w = json.getString("g10802w");
@@ -2702,6 +2755,9 @@ public class FamilyMembers extends BaseObservable {
             this.g10805w = json.getString("g10805w");
             this.g10806w = json.getString("g10806w");
             this.g10807w = json.getString("g10807w");
+            this.g10896 = json.getString("g10896");
+            this.g10896x = json.getString("g10896x");
+            this.g10896w = json.getString("g10896w");
             this.g201 = json.getString("g201");
             this.g202 = json.getString("g202");
             this.g203 = json.getString("g203");
@@ -2717,8 +2773,13 @@ public class FamilyMembers extends BaseObservable {
             this.g20603w = json.getString("g20603w");
             this.g20604d = json.getString("g20604d");
             this.g20604w = json.getString("g20604w");
-            this.g20696d = json.getString("g20605d");
-            this.g20696w = json.getString("g20605w");
+            this.g20696d = json.getString("g20696d");
+            this.g20696w = json.getString("g20696w");
+            this.g2060188 = json.getString("g2060188");
+            this.g2069688 = json.getString("g2069688");
+            this.g2060288 = json.getString("g2060288");
+            this.g2060388 = json.getString("g2060388");
+            this.g2060488 = json.getString("g2060488");
             this.g207 = json.getString("g207");
             this.g20801w = json.getString("g20801w");
             this.g20802w = json.getString("g20802w");
@@ -2940,8 +3001,15 @@ public class FamilyMembers extends BaseObservable {
                 .put("g10605w", g10605w)
                 .put("g10606d", g10606d)
                 .put("g10606w", g10606w)
-                .put("g10607d", g10696d)
-                .put("g10607w", g10696w)
+                .put("g10696d", g10696d)
+                .put("g10696w", g10696w)
+                .put("g1060188", g1060188)
+                .put("g1060288", g1060288)
+                .put("g1060388", g1060388)
+                .put("g1060488", g1060488)
+                .put("g1060588", g1060588)
+                .put("g1060688", g1060688)
+                .put("g1069688", g1069688)
                 .put("g107", g107)
                 .put("g10801w", g10801w)
                 .put("g10802w", g10802w)
@@ -2950,6 +3018,9 @@ public class FamilyMembers extends BaseObservable {
                 .put("g10805w", g10805w)
                 .put("g10806w", g10806w)
                 .put("g10807w", g10807w)
+                .put("g10896", g10896)
+                .put("g10896x", g10896x)
+                .put("g10896w", g10896w)
                 .put("g201", g201)
                 .put("g202", g202)
                 .put("g203", g203)
@@ -2959,6 +3030,11 @@ public class FamilyMembers extends BaseObservable {
                 .put("g205", g205)
                 .put("g20598", g20598)
                 .put("g20601d", g20601d)
+                .put("g2060188", g2060188)
+                .put("g2060288", g2060288)
+                .put("g2060388", g2060388)
+                .put("g2060488", g2060488)
+                .put("g2069688", g2069688)
                 .put("g20601w", g20601w)
                 .put("g20602d", g20602d)
                 .put("g20602w", g20602w)
@@ -2966,8 +3042,8 @@ public class FamilyMembers extends BaseObservable {
                 .put("g20603w", g20603w)
                 .put("g20604d", g20604d)
                 .put("g20604w", g20604w)
-                .put("g20605d", g20696d)
-                .put("g20605w", g20696w)
+                .put("g20696d", g20696d)
+                .put("g20696w", g20696w)
                 .put("g207", g207)
 
                 .put("g20801w", g20801w)

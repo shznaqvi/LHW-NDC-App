@@ -87,8 +87,8 @@
                             android:inputType="number"
                             android:maxLength="3"
                             android:text="@={familymembers.b101}"
-                            app:maxValue="300"
-                            app:minValue="1"
+                            app:maxValue="120"
+                            app:minValue="20"
                             app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

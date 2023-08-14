@@ -106,7 +106,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g101.equals(`1`)}"
-                                        android:onClick="@{()->familymembers.setG101(`1`)+ g102.clearCheck() + g103.clearCheck()}"
+                                        android:onClick="@{()->familymembers.setG101(`1`)+ g102.clearCheck() + g103.clearCheck()+ g209.clearCheck()}"
                                         android:text="@string/g10101" />
 
                                     <RadioButton
@@ -122,7 +122,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g101.equals(`3`)}"
-                                        android:onClick="@{()->familymembers.setG101(`3`)+ g102.clearCheck()}"
+                                        android:onClick="@{()->familymembers.setG101(`3`)+ g102.clearCheck()+ g209.clearCheck()}"
                                         android:text="@string/g10103" />
 
                                     <RadioButton
@@ -130,7 +130,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g101.equals(`98`)}"
-                                        android:onClick="@{()->familymembers.setG101(`98`)+ g102.clearCheck()+ g103.clearCheck()+  g107.clearCheck()}"
+                                        android:onClick="@{()->familymembers.setG101(`98`)+ g102.clearCheck()+ g103.clearCheck()+  g107.clearCheck()+ g209.clearCheck()}"
                                         android:text="@string/g10198" />
 
                                     <RadioButton
@@ -138,7 +138,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g101.equals(`99`)}"
-                                        android:onClick="@{()->familymembers.setG101(`99`)+ g102.clearCheck()+ g103.clearCheck()+  g107.clearCheck()}"
+                                        android:onClick="@{()->familymembers.setG101(`99`)+ g102.clearCheck()+ g103.clearCheck()+  g107.clearCheck()+ g209.clearCheck()}"
                                         android:text="@string/g10199" />
                                 </RadioGroup>
                             </LinearLayout>
@@ -506,7 +506,6 @@
 
                         <!-- secgt2     -->
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/fldGrpCVsecgt2"
                             style="@style/cardView"
                             android:visibility='@{familymembers.g101.equals("1")? View.VISIBLE : View.GONE}'>
 
@@ -1149,9 +1148,8 @@
                         <!-- secgt4     -->
                         <!-- secft1     -->
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/fldGrpCVsecGt4"
-                            android:visibility='@{familymembers.g102.equals(`1`) || familymembers.g102.equals(`2`)? View.VISIBLE : View.GONE}'
-                        style="@style/cardView">
+                            style="@style/cardView"
+                            android:visibility='@{familymembers.g102.equals(`1`) || familymembers.g102.equals(`2`)? View.VISIBLE : View.GONE}'>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -1409,19 +1407,64 @@
 
                                 </LinearLayout>
 
-                                <TextView
+                                <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@color/colorAccentLightOverlay"
-                                    android:text="@string/g10807"
-                                    android:textColor="@color/white" />
+                                    android:background="@drawable/bottom"
+                                    android:orientation="horizontal">
 
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@color/colorAccentLightOverlay"
+                                        android:text="@string/g10807"
+                                        android:textColor="@color/white" />
+
+                                    <CheckBox
+                                        android:id="@+id/g10896"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:checked="@{familymembers.g10896.equals(`96`)}"
+                                        android:onClick="@{()->familymembers.setG10896(familymembers.g10896.equals(`96`)?``:`96`)}"
+                                        android:tag="-1"
+
+                                        android:text="Yes/No" />
+                                </LinearLayout>
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/bottom"
-                                    android:orientation="horizontal">
+                                    android:orientation="vertical"
+                                    android:visibility='@{familymembers.g10896.equals(`96`) ? View.VISIBLE : View.GONE}'>
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/g10896x" />
+
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        android:id="@+id/g10896x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="qwertyuioplkjhgfdsazxcvbnm QWERTYUIOPLKJHGFDSAZXCVBNM"
+                                        android:hint="@string/g10896x"
+                                        android:inputType="text"
+                                        android:maxLength="50"
+                                        android:tag="g10896x"
+                                        android:text="@={familymembers.g10896x}"
+
+                                      />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bottom"
+                                    android:orientation="horizontal"
+                                    android:visibility='@{familymembers.g10896.equals(`96`) ? View.VISIBLE : View.GONE}'>
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -1429,15 +1472,15 @@
                                         android:text="@string/g10807w" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
-                                        android:id="@+id/g10807w"
+                                        android:id="@+id/g10896w"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:hint="@string/g10807w"
                                         android:inputType="number"
                                         android:maxLength="2"
-                                        android:tag="g1080701"
-                                        android:text="@={familymembers.g10807w}"
+                                        android:tag="g1089601"
+                                        android:text="@={familymembers.g10896w}"
                                         app:maxValue="60"
                                         app:minValue="0"
                                         app:type="range" />
@@ -1504,7 +1547,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g201.equals(`1`)}"
-                                        android:onClick="@{()->familymembers.setG201(`1`)}"
+                                        android:onClick="@{()->familymembers.setG201(`1`)+ g202.clearCheck() + g203.clearCheck()+ g209.clearCheck()}"
                                         android:text="@string/g20101" />
 
                                     <RadioButton
@@ -1512,7 +1555,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g201.equals(`2`)}"
-                                        android:onClick="@{()->familymembers.setG201(`2`)}"
+                                        android:onClick="@{()->familymembers.setG201(`2`) + g203.clearCheck()+ g207.clearCheck()}"
                                         android:text="@string/g20102" />
 
                                     <RadioButton
@@ -1520,7 +1563,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g201.equals(`3`)}"
-                                        android:onClick="@{()->familymembers.setG201(`3`)}"
+                                        android:onClick="@{()->familymembers.setG201(`3`)+ g202.clearCheck()+ g209.clearCheck()}"
                                         android:text="@string/g20103" />
 
                                     <RadioButton
@@ -1528,7 +1571,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g201.equals(`98`)}"
-                                        android:onClick="@{()->familymembers.setG201(`98`)}"
+                                        android:onClick="@{()->familymembers.setG201(`98`)+ g202.clearCheck()+ g203.clearCheck()+  g207.clearCheck()+ g209.clearCheck()}"
                                         android:text="@string/g20198" />
 
                                     <RadioButton
@@ -1536,17 +1579,17 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g201.equals(`99`)}"
-                                        android:onClick="@{()->familymembers.setG201(`99`)}"
+                                        android:onClick="@{()->familymembers.setG201(`99`)+ g202.clearCheck()+ g203.clearCheck()+  g207.clearCheck()+ g209.clearCheck()}"
                                         android:text="@string/g20199" />
                                 </RadioGroup>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
-                        <!-- g10  Radio   -->
+                        <!-- g202  Radio   -->
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/fldGrpCVg10"
-                            android:visibility='@{familymembers.g201.equals(`2`) ? View.VISIBLE : View.GONE}'
-                        style="@style/cardView">
+                            android:id="@+id/fldGrpCVg202"
+                            style="@style/cardView"
+                            android:visibility='@{familymembers.g201.equals(`2`) ? View.VISIBLE : View.GONE}'>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -1573,7 +1616,7 @@
                                 </LinearLayout>
 
                                 <RadioGroup
-                                    android:id="@+id/g10"
+                                    android:id="@+id/g202"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content">
 
@@ -1582,7 +1625,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g202.equals(`1`)}"
-                                        android:onClick="@{()->familymembers.setG202(`1`)}"
+                                        android:onClick="@{()->familymembers.setG202(`1`)+  g207.clearCheck()}"
                                         android:text="@string/g20201" />
 
                                     <RadioButton
@@ -1594,30 +1637,29 @@
                                         android:text="@string/g20202" />
 
                                     <RadioButton
-                                        android:id="@+id/g2018"
+                                        android:id="@+id/g20298"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g202.equals(`98`)}"
-                                        android:onClick="@{()->familymembers.setG202(`98`)}"
+                                        android:onClick="@{()->familymembers.setG202(`98`)+ g203.clearCheck()+  g207.clearCheck()}"
                                         android:text="@string/g20298" />
 
                                     <RadioButton
-                                        android:id="@+id/g2019"
+                                        android:id="@+id/g20299"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g202.equals(`99`)}"
-                                        android:onClick="@{()->familymembers.setG202(`99`)}"
+                                        android:onClick="@{()->familymembers.setG202(`99`)+ g203.clearCheck()+  g207.clearCheck()}"
                                         android:text="@string/g20299" />
                                 </RadioGroup>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
-                        <!-- g11  Radio   -->
+                        <!-- g203  Radio   -->
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/fldGrpCVg11"
-                            android:visibility='@{familymembers.g201.equals(`3`)? View.VISIBLE : View.GONE}'
-
-                        style="@style/cardView">
+                            android:id="@+id/fldGrpCVg203"
+                            style="@style/cardView"
+                            android:visibility='@{familymembers.g201.equals(`3`)? View.VISIBLE : View.GONE}'>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -1669,15 +1711,15 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g203.equals(`3`)}"
-                                        android:onClick="@{()->familymembers.setG203(`3`)}"
+                                        android:onClick="@{()->familymembers.setG203(`3`)+  g207.clearCheck()}"
                                         android:text="@string/g20303" />
 
                                     <RadioButton
-                                        android:id="@+id/g1198"
+                                        android:id="@+id/g20398"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g203.equals(`98`)}"
-                                        android:onClick="@{()->familymembers.setG203(`98`)}"
+                                        android:onClick="@{()->familymembers.setG203(`98`)+  g207.clearCheck()}"
                                         android:text="@string/g20398" />
 
                                     <RadioButton
@@ -1685,13 +1727,11 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:checked="@{familymembers.g203.equals(`99`)}"
-                                        android:onClick="@{()->familymembers.setG203(`99`)}"
+                                        android:onClick="@{()->familymembers.setG203(`99`)+  g207.clearCheck()}"
                                         android:text="@string/g20399" />
                                 </RadioGroup>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
-
-
 
                         <!-- g204  Input-Numeric   -->
                         <androidx.cardview.widget.CardView
@@ -1904,35 +1944,33 @@
                                     app:type="range" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
-                        
-                        
-                        <!-- secgt5     -->
+
+                        <!-- secgt2     -->
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/fldGrpCVsecGt5"
-                            style="@style/cardView">
+                            style="@style/cardView"
+                            android:visibility='@{familymembers.g201.equals("1")? View.VISIBLE : View.GONE}'>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical">
 
+
                                 <TextView
                                     style="@style/quesNum"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@color/colorPrimaryLightOverlay"
-                                    android:text="@string/g5title"
+                                    android:text="@string/g2title"
                                     android:textColor="@color/white" />
+
 
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
-
-                        <!-- g12t7     -->
+                        <!-- g206t3     -->
                         <androidx.cardview.widget.CardView
                             android:id="@+id/fldGrpCVg206"
-                            android:visibility='@{!familymembers.g201.equals(`98`) &amp;&amp; !familymembers.g201.equals(`99`) &amp;&amp; !familymembers.g202.equals(`98`) &amp;&amp; !familymembers.g202.equals(`99`) &amp;&amp; !familymembers.g203.equals(`3`)  &amp;&amp; !familymembers.g203.equals(`98`) &amp;&amp; !familymembers.g203.equals(`99`)? View.VISIBLE : View.GONE}'
-
-                        style="@style/cardView">
+                            style="@style/cardView"
+                            android:visibility='@{familymembers.g201.equals("1")? View.VISIBLE : View.GONE}'>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -2002,6 +2040,7 @@
                                         android:tag="-1"
                                         android:text="@string/g2060188" />
 
+
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -2060,7 +2099,7 @@
                                         android:hint="@string/g20602d"
                                         android:inputType="number"
                                         android:maxLength="2"
-                                        android:tag="g2060201"
+                                        android:tag="g20602d"
                                         android:text="@={familymembers.g20602d}"
                                         app:maxValue="60"
                                         app:minValue="0"
@@ -2106,7 +2145,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:background="@color/colorAccentLightOverlay"
                                     android:text="@string/g20603"
                                     android:textColor="@color/white" />
@@ -2132,7 +2171,7 @@
                                         android:hint="@string/g20603d"
                                         android:inputType="number"
                                         android:maxLength="2"
-                                        android:tag="g206c01"
+                                        android:tag="g20603d"
                                         android:text="@={familymembers.g20603d}"
                                         app:maxValue="60"
                                         app:minValue="0"
@@ -2248,6 +2287,8 @@
 
                                 </LinearLayout>
 
+
+
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
@@ -2277,6 +2318,7 @@
                                         android:inputType="number"
                                         android:maxLength="2"
                                         android:tag="g2069601"
+
                                         android:text="@={familymembers.g20696d}"
                                         app:maxValue="60"
                                         app:minValue="0"
@@ -2312,15 +2354,13 @@
                                         android:hint="@string/g20696w"
                                         android:inputType="number"
                                         android:maxLength="2"
-                                        android:tag="g2060501"
+                                        android:tag="g2069601"
                                         android:text="@={familymembers.g20696w}"
                                         app:maxValue="60"
                                         app:minValue="0"
                                         app:type="range" />
 
                                 </LinearLayout>
-
-
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
 
@@ -2402,11 +2442,12 @@
                                 </RadioGroup>
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
-                        
 
-                        <!-- secgt56    -->
+                        <!-- secgt4     -->
+                        <!-- secft1     -->
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/fldGrpCVsecGt6"
+                            android:id="@+id/fldGrpCVsecGt4"
+                            android:visibility='@{familymembers.g202.equals(`1`) || familymembers.g202.equals(`2`)? View.VISIBLE : View.GONE}'
                             style="@style/cardView">
 
                             <LinearLayout
@@ -2419,7 +2460,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@color/colorPrimaryLightOverlay"
-                                    android:text="@string/g6title"
+                                    android:text="@string/g3title"
                                     android:textColor="@color/white" />
 
                             </LinearLayout>
@@ -2427,9 +2468,8 @@
                         <!-- g208     -->
                         <androidx.cardview.widget.CardView
                             android:id="@+id/fldGrpCVg208"
-                            android:visibility='@{familymembers.g201.equals(`1`) || familymembers.g202.equals(`1`) || familymembers.g203.equals(`1`) ? View.VISIBLE : View.GONE}'
-
-                        style="@style/cardView">
+                            style="@style/cardView"
+                            android:visibility='@{familymembers.g202.equals(`1`) || familymembers.g202.equals(`2`)? View.VISIBLE : View.GONE}'>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -2596,31 +2636,52 @@
 
                                 </LinearLayout>
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@color/colorAccentLightOverlay"
-                                    android:text="@string/g20896"
-                                    android:textColor="@color/white" />
-
-
+                              <!--
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:background="@drawable/bottom"
+                                    android:visibility='@{familymembers.g20896.equals(`98`) ? View.VISIBLE : View.GONE}'
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="@string/g20896x" />
+
+                                    <com.edittextpicker.aliazaz.EditTextPicker
+                                        android:id="@+id/g20896x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/g20896x"
+                                        android:inputType="text"
+                                        android:digits="qwertyuioplkjhgfdsazxcvbnm QWERTYUIOPLKJHGFDSAZXCVBNM"
+                                        android:maxLength="50"
+                                        android:tag="g20896x"
+                                        android:text="@={familymembers.g20896x}"
+                                        app:maxValue="60"
+                                        app:minValue="0"
+                                        app:type="range" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/bottom"
+                                    android:visibility='@{familymembers.g20896.equals(`98`) ? View.VISIBLE : View.GONE}'
                                     android:orientation="horizontal">
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="match_parent"
-                                        android:text="@string/g20896w" />
+                                        android:text="@string/g20807w" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/g20896w"
                                         android:layout_width="0dp"
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
-                                        android:hint="@string/g20896w"
+                                        android:hint="@string/g20807w"
                                         android:inputType="number"
                                         android:maxLength="2"
                                         android:tag="g2089601"
@@ -2629,12 +2690,9 @@
                                         app:minValue="0"
                                         app:type="range" />
 
-                                </LinearLayout>
-
-
+                                </LinearLayout>-->
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
-
                         <!-- g209  Radio   -->
                         <androidx.cardview.widget.CardView
                             android:id="@+id/fldGrpCVg209"

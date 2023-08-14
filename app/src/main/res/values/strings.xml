@@ -558,7 +558,9 @@
     <string name="g10807">Any others?</string>
     <string name="g10807w">per week</string>
     <string name="g1080797">Less than once</string>
-    <string name="g10896">Please specify the other type you currently smoke?</string>
+    <string name="g10896">Any others?</string>
+    <string name="g10896x">Please specify the other type you currently smoke?</string>
+    <string name="g10896w">per week</string>
 
     <string name="g3title">Current Less Than Daily Smokers</string>
 
@@ -583,7 +585,7 @@
     <string name="g20398">Don\'t know</string>
     <string name="g20399">Refused</string>
 
-    <string name="g204">"How old were you when you first tried using smokeless tobacco, even once?\nHow old were you when you first tried smoking tobacco, even once?"</string>
+    <string name="g204">"How old were you when you first tried using smokeless tobacco, even once?"</string>
     <string name="g204a">How many years ago did you first try using smokeless tobacco, even once?</string>
 
     <!-- GATS Section G205 -->
@@ -818,13 +820,13 @@
     <string name='Q_g206e' translatable="false">g12e</string>
     <string name='Q_g206e1' translatable="false">g12e1</string>
     <string name='Q_g206t7' translatable="false">g12t7</string>
-    <string name='Q_g208' translatable="false">g208a</string>
+    <string name='Q_g208' translatable="false">g208</string>
     <string name='Q_g209' translatable="false">g209</string>
     <string name='Q_g208a' translatable="false">g208a</string>
     <string name='Q_g208b' translatable="false">g208b</string>
     <string name='Q_g208c' translatable="false">g208c</string>
     <string name='Q_g208d' translatable="false">g208d</string>
-    <string name='Q_g208e' translatable="false">g13e</string>
+    <string name='Q_g208e' translatable="false">qg208e</string>
     <string name='Q_g208f' translatable="false">g208f</string>
 
 
@@ -842,5 +844,6 @@
     <string name="open_lhw_form">OPEN LHW REGISTRATION FORM</string>
     <string name="f1sub_food_frequency">Food Frequency</string>
     <string name="f1sub_beverage_frequency">Beverage Frequency</string>
+    <string name="lang">English</string>
 
 </resources>

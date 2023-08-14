@@ -20,10 +20,12 @@ import org.json.JSONException;
 import java.util.ArrayList;
 
 import edu.aku.hassannaqvi.wellnessscale.R;
+import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
 import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
 import edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper;
 import edu.aku.hassannaqvi.wellnessscale.databinding.ActivityIdentificationBinding;
 import edu.aku.hassannaqvi.wellnessscale.models.Form;
+import edu.aku.hassannaqvi.wellnessscale.ui.lists.FamilyMembersListActivity;
 import edu.aku.hassannaqvi.wellnessscale.ui.sections.ConsentActivity;
 
 
@@ -124,6 +126,9 @@ public class IdentificationActivity extends AppCompatActivity {
         }
         if (MainApp.form.getSynced().equals("1") && !MainApp.superuser) { // Do not allow synced form to be edited
             Toast.makeText(this, "This form has been locked.", Toast.LENGTH_SHORT).show();
+        } else if (MainApp.form.getA110().equals("1")) {
+            finish();
+            startActivity(new Intent(this, FamilyMembersListActivity.class));
         } else {
             finish();
             startActivity(new Intent(this, ConsentActivity.class));

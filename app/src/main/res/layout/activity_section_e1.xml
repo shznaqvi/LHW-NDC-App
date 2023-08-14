@@ -386,7 +386,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.e105.equals(`99`)}"
-                                android:onClick="@{()->familymembers.setE105(`99`)}"
+                                android:onClick="@{()->familymembers.setE105(`99`) + e106.clearCheck()}"
                                 android:text="@string/e10599" />
 
                             <EditText

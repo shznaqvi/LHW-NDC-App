@@ -131,6 +131,15 @@ public class ImageAdapter extends BaseAdapter {
 
         return imageView;
     }
+    public void clearImageColorFilters() {
+        for (int i = 0; i < getCount(); i++) {
+            View view = getView(i, null, null);
+            ImageView imageView = view.findViewById(R.id.imageView);
+            touchStates[i] = false;
+            imageView.clearColorFilter();
+            notifyDataSetChanged();
 
+        }
+    }
 
 }

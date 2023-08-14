@@ -52,47 +52,48 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
 
-        int childCount = 0;
-        childCount = db.getChildrenByUUID(fc.get(position).getUid());
-        int photoChild = 0;
+        int memberCount = 0;
+        memberCount = db.getMembersByUUID(fc.get(position).getUid());
+       /* int photoChild = 0;
         photoChild = db.getChildrenPhotoCheck(fc.get(position).getUid());
         int cardChild = 0;
-        cardChild = db.getChildrenCardCheck(fc.get(position).getUid());
+        cardChild = db.getChildrenCardCheck(fc.get(position).getUid());*/
 
 
-        String iStatus = "Status  Unknown";
+        String tStatus = "Status  Unknown";
+        boolean synced = fc.get(position).getSynced().equals("1");
         int iColor = 0;
         switch (fc.get(position).getiStatus()) {
             case "1":
-                iStatus = "Complete";
+                tStatus = "Complete";
                 iColor = Color.GREEN;
                 break;
             case "2":
-                iStatus = "No Respondent";
+                tStatus = "No Respondent";
                 iColor = Color.RED;
                 break;
             case "3":
-                iStatus = "Memebers Absent";
+                tStatus = "Memebers Absent";
                 iColor = Color.RED;
                 break;
             case "4":
-                iStatus = "Refused";
+                tStatus = "Refused";
                 iColor = Color.RED;
                 break;
             case "5":
-                iStatus = "Empty";
+                tStatus = "Empty";
                 iColor = Color.RED;
                 break;
             case "6":
-                iStatus = "Not Found";
+                tStatus = "Not Found";
                 iColor = Color.RED;
                 break;
             case "96":
-                iStatus = "Other Reason";
+                tStatus = "Other Reason";
                 iColor = Color.RED;
                 break;
             default:
-                iStatus = "Open Form";
+                tStatus = "Open Form";
                 iColor = Color.RED;
                 break;
 
@@ -100,8 +101,9 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
 
         holder.hhno.setText(fc.get(position).getKno() + " \t\t(" + fc.get(position).getSysDate() + ")");
         holder.cluster.setText(fc.get(position).getDistrictCode());
-        holder.iStatus.setText(iStatus);
-        holder.sysdate.setText("  Child Count: " + childCount + " \t\t\t Card Seen: " + cardChild + " \t\t\t Photo Child: " + photoChild);
+        holder.iStatus.setText(tStatus);
+        holder.syncStatus.setText(synced ? "Data Synced" : "Sync Pending");
+        holder.sysdate.setText("  Member Count: " + memberCount );
         holder.iStatus.setTextColor(iColor);
 
 
@@ -123,6 +125,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         public TextView cluster;
         public TextView hhno;
         public TextView iStatus;
+        public TextView syncStatus;
         // each data item is just a string in this case
 
         public ViewHolder(View v) {
@@ -132,6 +135,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
             cluster = v.findViewById(R.id.ebCode);
             hhno = v.findViewById(R.id.hhid);
             iStatus = v.findViewById(R.id.iStatus);
+            syncStatus = v.findViewById(R.id.syncStatus);
 
         }
 

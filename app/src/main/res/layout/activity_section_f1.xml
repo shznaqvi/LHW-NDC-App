@@ -107,7 +107,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f101.equals(`1`)}"
-                                android:onClick="@{(view) -> familymembers.setF101(`1`)}"
+                                android:onClick="@{(view) -> familymembers.setF101(`1`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10101" />
 
                             <RadioButton
@@ -115,7 +115,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f101.equals(`2`)}"
-                                android:onClick="@{(view) -> familymembers.setF101(`2`)}"
+                                android:onClick="@{(view) -> familymembers.setF101(`2`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10102" />
 
                             <RadioButton
@@ -123,7 +123,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f101.equals(`3`)}"
-                                android:onClick="@{(view) -> familymembers.setF101(`3`)}"
+                                android:onClick="@{(view) -> familymembers.setF101(`3`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10103" />
 
                             <RadioButton
@@ -131,7 +131,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f101.equals(`4`)}"
-                                android:onClick="@{(view) -> familymembers.setF101(`4`)}"
+                                android:onClick="@{(view) -> familymembers.setF101(`4`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10104" />
 
                             <RadioButton
@@ -184,7 +184,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f102.equals(`1`)}"
-                                android:onClick="@{(view) -> familymembers.setF102(`1`)}"
+                                android:onClick="@{(view) -> familymembers.setF102(`1`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10201" />
 
                             <RadioButton
@@ -192,7 +192,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f102.equals(`2`)}"
-                                android:onClick="@{(view) -> familymembers.setF102(`2`)}"
+                                android:onClick="@{(view) -> familymembers.setF102(`2`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10202" />
 
                             <RadioButton
@@ -200,7 +200,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f102.equals(`3`)}"
-                                android:onClick="@{(view) -> familymembers.setF102(`3`)}"
+                                android:onClick="@{(view) -> familymembers.setF102(`3`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10203" />
 
                             <RadioButton
@@ -208,7 +208,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f102.equals(`4`)}"
-                                android:onClick="@{(view) -> familymembers.setF102(`4`)}"
+                                android:onClick="@{(view) -> familymembers.setF102(`4`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10204" />
 
                             <RadioButton
@@ -261,7 +261,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f103.equals(`1`)}"
-                                android:onClick="@{(view) -> familymembers.setF103(`1`)}"
+                                android:onClick="@{(view) -> familymembers.setF103(`1`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10301" />
 
                             <RadioButton
@@ -269,7 +269,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f103.equals(`2`)}"
-                                android:onClick="@{(view) -> familymembers.setF103(`2`)}"
+                                android:onClick="@{(view) -> familymembers.setF103(`2`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10302" />
 
                             <RadioButton
@@ -277,7 +277,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f103.equals(`3`)}"
-                                android:onClick="@{(view) -> familymembers.setF103(`3`)}"
+                                android:onClick="@{(view) -> familymembers.setF103(`3`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10303" />
 
                             <RadioButton
@@ -285,7 +285,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f103.equals(`4`)}"
-                                android:onClick="@{(view) -> familymembers.setF103(`4`)}"
+                                android:onClick="@{(view) -> familymembers.setF103(`4`)+ f104.clearCheck() + f105.clearCheck()+f106.clearCheck()}"
                                 android:text="@string/f10304" />
 
                             <RadioButton
@@ -302,6 +302,7 @@
                 <!-- F104 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf104"
+                    android:visibility='@{familymembers.f101.equals(`5`)&amp;&amp;familymembers.f102.equals(`5`)&amp;&amp;familymembers.f103.equals(`5`)? View.GONE : View.VISIBLE}'
                     style="@style/cardView">
 
                     <LinearLayout
@@ -379,6 +380,7 @@
                 <!-- F105 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf105"
+                    android:visibility='@{familymembers.f101.equals(`5`)&amp;&amp;familymembers.f102.equals(`5`)&amp;&amp;familymembers.f103.equals(`5`)? View.GONE : View.VISIBLE}'
                     style="@style/cardView">
 
                     <LinearLayout
@@ -456,6 +458,7 @@
                 <!-- F106 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf106"
+                    android:visibility='@{familymembers.f101.equals(`5`)&amp;&amp;familymembers.f102.equals(`5`)&amp;&amp;familymembers.f103.equals(`5`)? View.GONE : View.VISIBLE}'
                     style="@style/cardView">
 
                     <LinearLayout
@@ -535,6 +538,8 @@
                 <!-- F107 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf107"
+                    android:visibility='@{familymembers.f101.equals(`5`)&amp;&amp;familymembers.f102.equals(`5`)&amp;&amp;familymembers.f103.equals(`5`)? View.GONE : View.VISIBLE}'
+
                     style="@style/cardView">
 
                     <LinearLayout
@@ -574,6 +579,7 @@
                 <!-- F108 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf108"
+                    android:visibility='@{familymembers.f101.equals(`5`)&amp;&amp;familymembers.f102.equals(`5`)&amp;&amp;familymembers.f103.equals(`5`)? View.GONE : View.VISIBLE}'
                     style="@style/cardView">
 
                     <LinearLayout
@@ -1348,6 +1354,7 @@
                 <!-- F118 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf118"
+                    android:visibility='@{familymembers.f117.equals(`5`)? View.GONE : View.VISIBLE}'
                     style="@style/cardView">
 
                     <LinearLayout
@@ -1377,11 +1384,13 @@
                         <RadioGroup
                             android:id="@+id/f118"
                             android:layout_width="match_parent"
+                            android:orientation="horizontal"
                             android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/f11801"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f118.equals(`1`)}"
                                 android:onClick="@{() -> familymembers.setF118(`1`)}"
@@ -1389,7 +1398,8 @@
 
                             <RadioButton
                                 android:id="@+id/f11802"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f118.equals(`2`)}"
                                 android:onClick="@{() -> familymembers.setF118(`2`)}"
@@ -1403,6 +1413,8 @@
                 <!-- F119 Radio -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVf119"
+                    android:visibility='@{familymembers.f117.equals(`5`)? View.GONE : View.VISIBLE}'
+
                     style="@style/cardView">
 
                     <LinearLayout
@@ -1432,11 +1444,13 @@
                         <RadioGroup
                             android:id="@+id/f119"
                             android:layout_width="match_parent"
+                            android:orientation="horizontal"
                             android:layout_height="wrap_content">
 
                             <RadioButton
                                 android:id="@+id/f11901"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f119.equals(`1`)}"
                                 android:onClick="@{() -> familymembers.setF119(`1`)}"
@@ -1444,7 +1458,8 @@
 
                             <RadioButton
                                 android:id="@+id/f11902"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.f119.equals(`2`)}"
                                 android:onClick="@{() -> familymembers.setF119(`2`)}"

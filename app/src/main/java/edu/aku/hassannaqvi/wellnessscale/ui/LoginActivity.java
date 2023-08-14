@@ -590,6 +590,7 @@ public class LoginActivity extends AppCompatActivity {
                 MainApp.editor
                         .putString("lang", "1")
                         .apply();
+                MainApp.selectedLanguage =1;
                 MainApp.langRTL = true;
 
                 break;
@@ -601,6 +602,8 @@ public class LoginActivity extends AppCompatActivity {
                         .putString("lang", "2")
                         .apply();
                 MainApp.langRTL = true;
+                MainApp.selectedLanguage =2;
+
 
                 break;
 
@@ -611,6 +614,8 @@ public class LoginActivity extends AppCompatActivity {
                         .putString("lang", "0")
                         .apply();
                 MainApp.langRTL = false;
+                MainApp.selectedLanguage =0;
+
 
         }
 

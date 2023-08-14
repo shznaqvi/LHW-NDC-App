@@ -23,7 +23,6 @@ import org.json.JSONObject;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -933,8 +932,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public int getChildrenByUUID(String UUID) {
-        String countQuery = "SELECT  * FROM " + ChildTable.TABLE_NAME + " WHERE " + ChildTable.COLUMN_UUID + " = '" + UUID + "' AND " + ChildTable.COLUMN_CSTATUS + " = '1'";
+    public int getMembersByUUID(String UUID) {
+        String countQuery = "SELECT  * FROM " + FamilyMembersTable.TABLE_NAME + " WHERE " + FamilyMembersTable.COLUMN_UUID + " = '" + UUID + "' ";
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
         Cursor cursor = db.rawQuery(countQuery, null);
         int count = cursor.getCount();

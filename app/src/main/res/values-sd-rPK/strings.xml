@@ -30,13 +30,13 @@
 
 
     <string name="a10696">ٻيا (مهرباني ڪري وضاحت ڪريو)</string>
-    <string name="a107">توهان جي تعليم ڇا آهي؟</string>
+    <string name="a107">توهان ڪيتري تعليم حاصل ڪئي آهي؟</string>
     <string name="a10701">ڪڏهن به اسڪول ۾ نه پڙهيو</string>
     <string name="a10702">پرائمري تعليم</string>
     <string name="a10703">ثانوي تعليم</string>
     <string name="a10704">اعليٰ ثانوي</string>
     <string name="a10705">گريجوئيشن يا مٿي</string>
-    <string name="a108">توهان ڪٿي ڪم ڪندا آهيو؟ يا ڪو ڪاروبار آهي؟</string>
+    <string name="a108">نوڪري/ ملازمت </string>
     <string name="a10801">ها</string>
     <string name="a10802">نه</string>
 
@@ -63,20 +63,20 @@
     <string name="c10207">حصو7</string>
     <string name="c10208">حصو8</string>
     <string name="c10209">حصو9</string>
-    <string name="c103">ڇا توهان سور يا تڪليف محسوس ڪندا آهيو جڏهن توهان هلڪي رستي تي معمولي رفتار سا هلندا آهيو؟</string>
+    <string name="c103">جڏهن توهان زمين تي هلندا آهيو، ڇا توهان کي سور محسوس ٿيندو آهي؟</string>
     <string name="c10301">ها</string>
     <string name="c10302">نه</string>
     <string name="c103097">لاڳو نٿو ٿئي.</string>
-    <string name="c104">جڏهن توهان مٿي چڙهندا آهيو يا تيز ڊوڙندا آهيو، ڇا توهان درد محسوس ڪندا آهيو؟</string>
+    <string name="c104">ڇا توهان کي مٿي  وڃڻ يا تيز هلڻ وقت سور ٿيندو آهي؟</string>
     <string name="c10401">ها</string>
     <string name="c10402">نه</string>
     <string name="c10497">لاڳو نٿو ٿئي.</string>
-    <string name="c105">توهان ڇا ڪندا آهيو جڏهن توهان کي ھلڻ دوران  سينه ۾ درد يا تڪليف محسوس ٿندي آھي؟</string>
-    <string name="c10501">بيھي رھان ٿو/​​​​ ٿي</string>
+    <string name="c105">هلڻ دوران سور يا تڪليف ٿئي ٿي، ته توهان ڇا ڪندا آهيو؟</string>
+    <string name="c10501">بيھي رھان ٿو/ ٿي</string>
     <string name="c10502">آؤن آھستي ھلڻ شروع ڪندو آھيان /ڪندي آھيان</string>
     <string name="c10503">آؤن اھئي رفتار رکندو آھيان/ رکندي آھيان</string>
     <string name="c10597">لاڳو نٿو ٿئي.</string>
-    <string name="c106">ڇا توهان جي سينه ۾ درد يا تڪليف دور ٿي ويندي آهي جيڪڏهن توهان بيٺل ھوندا آھيو؟</string>
+    <string name="c106">ڇا توهان جو سور بيھڻ تي ختم ٿي وڃي ٿو؟ </string>
     <string name="c10601">ها</string>
     <string name="c10602">نه</string>
     <string name="c107">سينه درد يا تڪليف ختم ٿيڻ ۾ ڪيترو وقت لڳندو آهي؟</string>
@@ -84,14 +84,13 @@
     <string name="c10702">10 منٽ کان وڌيڪ</string>
 
     <!-- Title -->
-    <string name="title">ھئپرٽينشن</string>
-    <string name="c108">ڇا توهان کي ڪڏهن ڪنهن ڊاڪٽر يا ڪنهن ٻئي صحت جي ماهر طرفان چيو ويو آهي ته (توهان/هن/هوءَ) کي هاءِ بلڊ پريشر آهي؟ (اگر بلڊ پريشر وڌيل آھي حمل جي دوران ته ڪوڊ نه. )
-    </string>
+    <string name="title">هاءِ بلڊ پريشر</string>
+    <string name="c108">ڇا توهان کي ڪڏهن ڪنهن ڊاڪٽر چيو ويو آهي ته توهان کي هاءِ بلڊ پريشر آهي؟ (اگر بلڊ پريشر  وڌيل آھي حمل جي دوران ته ڪوڊ نه. )</string>
     <string name="c10801">ها</string>
     <string name="c10802">نه</string>
     <string name="c10898">خبر ناهي</string>
     <string name="c10899">انڪار ڪيو</string>
-    <string name="c109">هاءِ بلڊ پريشر/​ھئپرٽينشن جي ڪري توهان​ /ڇا هن کي ڪڏهن ٻڌايو آهي ته مقرر ڪيل دوا وٺي؟</string>
+    <string name="c109">ڇا توهان کي  هاءِ بلڊ پريشر لاءِ ڪنهن ڊاڪٽر  دوا ڏنيي آهي؟</string>
     <string name="c10901">ها</string>
     <string name="c10902">نه</string>
     <string name="c10999">انڪار ڪيو</string>
@@ -477,5 +476,6 @@
     <string name="h10503">اڌ کان وڌيڪ وقت</string>
     <string name="h10504">اڪثر اوقات</string>
     <string name="h10505">سمورو وقت</string>
+    <string name="lang">سنڌي</string>
 
 </resources>

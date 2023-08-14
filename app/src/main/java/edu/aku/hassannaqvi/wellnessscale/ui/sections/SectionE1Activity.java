@@ -5,11 +5,14 @@ import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.familyMembers;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.google.android.material.internal.MaterialCheckable;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -36,6 +39,72 @@ public class SectionE1Activity extends AppCompatActivity {
         db = MainApp.appInfo.dbHelper;
         bi.setFamilymembers(familyMembers);
         bi.setCallback(this);
+
+
+
+        bi.e102.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.e10201:
+                        bi.e10201x.setMaxvalue(Float.parseFloat("24"));
+                        // Option 1 is selected
+                        break;
+                    case R.id.e10202:
+                        // Option 2 is selected
+                        bi.e10201x.setMaxvalue(Float.parseFloat("59"));
+                        break;
+                }
+            }
+        });
+
+        bi.e104.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.e10401:
+                        bi.e10401x.setMaxvalue(Float.parseFloat("24"));
+                        // Option 1 is selected
+                        break;
+                    case R.id.e10402:
+                        // Option 2 is selected
+                        bi.e10401x.setMaxvalue(Float.parseFloat("59"));
+                        break;
+                }
+            }
+        });
+
+        bi.e106.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.e10601:
+                        bi.e10601x.setMaxvalue(Float.parseFloat("24"));
+                        // Option 1 is selected
+                        break;
+                    case R.id.e10602:
+                        // Option 2 is selected
+                        bi.e10601x.setMaxvalue(Float.parseFloat("59"));
+                        break;
+                }
+            }
+        });
+
+        bi.e107.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.e10701:
+                        bi.e10701x.setMaxvalue(Float.parseFloat("24"));
+                        // Option 1 is selected
+                        break;
+                    case R.id.e10702:
+                        // Option 2 is selected
+                        bi.e10701x.setMaxvalue(Float.parseFloat("59"));
+                        break;
+                }
+            }
+        });
     }
 
     private boolean updateDB() {

@@ -99,7 +99,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{familymembers.c101.equals(`2`)}"
-                                android:onClick="@{()->familymembers.setC101(`2`)}"
+                                android:onClick="@{()->familymembers.setC101(`2`) + callback.c201ImageAdapter.clearImageColorFilters() }"
                                 android:text="@string/c10102" />
                         </RadioGroup>
                     </LinearLayout>
@@ -296,7 +296,7 @@
                             <RadioButton
                                 android:id="@+id/c103097"
                                 android:layout_width="0dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:checked="@{familymembers.c103.equals(`97`)}"
                                 android:onClick="@{()->familymembers.setC103(`97`)}"
@@ -361,7 +361,7 @@
                             <RadioButton
                                 android:id="@+id/c10497"
                                 android:layout_width="0dp"
-                                android:layout_height="wrap_content"
+                                android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:checked="@{familymembers.c104.equals(`97`)}"
                                 android:onClick="@{()->familymembers.setC104(`97`)}"
@@ -489,7 +489,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:checked="@{familymembers.c106.equals(`2`)}"
-                                android:onClick="@{()->familymembers.setC106(`2`)}"
+                                android:onClick="@{()->familymembers.setC106(`2`) + c107.clearCheck()}"
                                 android:text="@string/c10602" />
                         </RadioGroup>
                     </LinearLayout>

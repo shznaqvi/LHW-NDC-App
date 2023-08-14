@@ -219,7 +219,7 @@
                         android:maxLength="2"
                         android:text="@={familymembers.a104}"
                         app:maxValue="99"
-                        app:minValue="1"
+                        app:minValue="18"
                         app:type="range" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -256,11 +256,13 @@
                     <RadioGroup
                         android:id="@+id/a105"
                         android:layout_width="match_parent"
+                        android:orientation="horizontal"
                         android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/a10501"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:checked="@{familymembers.a105.equals(`1`)}"
                             android:onClick="@{()->familymembers.setA105(`1`)}"
@@ -268,7 +270,8 @@
 
                         <RadioButton
                             android:id="@+id/a10502"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:checked="@{familymembers.a105.equals(`2`)}"
                             android:onClick="@{()->familymembers.setA105(`2`)}"
@@ -276,7 +279,8 @@
 
                         <RadioButton
                             android:id="@+id/a10503"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:checked="@{familymembers.a105.equals(`3`)}"
                             android:onClick="@{()->familymembers.setA105(`3`)}"
