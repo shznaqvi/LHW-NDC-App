@@ -126,7 +126,7 @@ public class FamilyMembersAdapter extends RecyclerView.Adapter<FamilyMembersAdap
         secStatus.setText(secStatusString);
 
 
-        cloaked.setVisibility(members.getMemCate().equals("") ? View.VISIBLE : View.GONE);
+       // cloaked.setVisibility(members.getMemCate().equals("") ? View.VISIBLE : View.GONE);
         mainIcon.setImageResource((members.getA105().equals("1") ? R.drawable.ic_boy : R.drawable.ic_girl));
         mainIcon.setBackgroundColor(members.getA105().equals("1") ? mContext.getResources().getColor(android.R.color.holo_blue_dark) : mContext.getResources().getColor(R.color.girl_pink));
 

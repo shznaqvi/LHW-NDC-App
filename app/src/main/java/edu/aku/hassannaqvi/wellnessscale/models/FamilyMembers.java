@@ -40,11 +40,10 @@ public class FamilyMembers extends BaseObservable {
     public String a10696x = _EMPTY_;
     public String a107 = _EMPTY_;
     public String a108 = _EMPTY_;
-    public String a110 = _EMPTY_;
+    //public String a110 = _EMPTY_;
     public String b101 = _EMPTY_;
     public String b102 = _EMPTY_;
     public String c101 = _EMPTY_;
-    public String c102 = _EMPTY_;
     public String c10201 = _EMPTY_;
     public String c10202 = _EMPTY_;
     public String c10203 = _EMPTY_;
@@ -54,12 +53,7 @@ public class FamilyMembers extends BaseObservable {
     public String c10207 = _EMPTY_;
     public String c10208 = _EMPTY_;
     public String c10209 = _EMPTY_;
-    public String c10210 = _EMPTY_;
-    public String c10211 = _EMPTY_;
-    public String c10212 = _EMPTY_;
-    public String c10213 = _EMPTY_;
-    public String c10214 = _EMPTY_;
-    public String c10215 = _EMPTY_;
+
     public String c103 = _EMPTY_;
     public String c104 = _EMPTY_;
     public String c105 = _EMPTY_;
@@ -118,7 +112,7 @@ public class FamilyMembers extends BaseObservable {
     public String f119 = _EMPTY_;
 
     public String g101 = _EMPTY_;
-    public String g108 = _EMPTY_;
+    // public String g108 = _EMPTY_;
     public String g102 = _EMPTY_;
     public String g103 = _EMPTY_;
     public String g104 = _EMPTY_;
@@ -160,7 +154,7 @@ public class FamilyMembers extends BaseObservable {
     public String g10804w = _EMPTY_;
     public String g10805w = _EMPTY_;
     public String g10806w = _EMPTY_;
-    public String g10807w = _EMPTY_;
+   // public String g10807w = _EMPTY_;
     public String g10896 = _EMPTY_;
     public String g10896x = _EMPTY_;
     public String g10896w = _EMPTY_;
@@ -194,7 +188,7 @@ public class FamilyMembers extends BaseObservable {
     public String g20803w = _EMPTY_;
     public String g20804w = _EMPTY_;
     public String g20896w = _EMPTY_;
-    public String g20896 = _EMPTY_;
+    //public String g20896 = _EMPTY_;
     public String g209 = _EMPTY_;
 
 
@@ -203,7 +197,7 @@ public class FamilyMembers extends BaseObservable {
     public String h103 = _EMPTY_;
     public String h104 = _EMPTY_;
     public String h105 = _EMPTY_;
-    public String h106 = _EMPTY_;
+    // public String h106 = _EMPTY_;
     private transient PropertyChangeRegistry propertyChangeRegistry = new PropertyChangeRegistry();
     // APP VARIABLES
     private String projectName = MainApp.PROJECT_NAME;
@@ -220,17 +214,17 @@ public class FamilyMembers extends BaseObservable {
     private String deviceTag = _EMPTY_;
     private String appver = _EMPTY_;
     private String endTime = _EMPTY_;
-    private String iStatus = _EMPTY_;
-    private String iStatus96x = _EMPTY_;
+   /* private String iStatus = _EMPTY_;
+    private String iStatus96x = _EMPTY_;*/
     private String synced = _EMPTY_;
     private String syncDate = _EMPTY_;
     private String sno = _EMPTY_;
     // SECTION VARIABLES
-    private String sH3 = _EMPTY_;
-    private String memCate = _EMPTY_;
+    //private String sH3 = _EMPTY_;
+   // private String memCate = _EMPTY_;
     private int scoreRapid = 0;
-    private boolean expanded;
-    private boolean mwra;
+    //private boolean expanded;
+   // private boolean mwra;
     private int scoreRose; // 1: Angina; 2: Exertion
     private int scoreQVSFS; // 0 - 8
     private String scoreIPAQ; // 0 - 8
@@ -267,6 +261,7 @@ public class FamilyMembers extends BaseObservable {
         setDeviceId(MainApp.deviceid);
         setUuid(MainApp.form.getUid());  // not applicable in Form table
         setAppver(MainApp.appInfo.getAppVersion());
+        setSno(String.valueOf(MainApp.memberCount+1));
         setProjectName(PROJECT_NAME);
 
         //  setEntryType(String.valueOf(MainApp.entryType));
@@ -338,7 +333,7 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.kNo);
     }
 
-    @Bindable
+/*    @Bindable
     public boolean isExpanded() {
         return expanded;
     }
@@ -346,7 +341,7 @@ public class FamilyMembers extends BaseObservable {
     public void setExpanded(boolean expanded) {
         this.expanded = expanded;
         notifyChange(BR.expanded);
-    }
+    }*/
 
     public String getDistCode() {
         return distCode;
@@ -356,7 +351,7 @@ public class FamilyMembers extends BaseObservable {
         this.distCode = distCode;
     }
 
-    @Bindable
+   /* @Bindable
     public boolean isMwra() {
         return mwra;
     }
@@ -374,7 +369,7 @@ public class FamilyMembers extends BaseObservable {
     public void setMemCate(String memCate) {
         this.memCate = memCate;
         // notifyChange(BR.memCate);
-    }
+    }*/
 
     public int getScoreRapid() {
         return scoreRapid;
@@ -469,7 +464,7 @@ public class FamilyMembers extends BaseObservable {
         this.endTime = endTime;
     }
 
-    public String getiStatus() {
+   /* public String getiStatus() {
         return iStatus;
     }
 
@@ -483,7 +478,7 @@ public class FamilyMembers extends BaseObservable {
 
     public void setiStatus96x(String iStatus96x) {
         this.iStatus96x = iStatus96x;
-    }
+    }*/
 
     public String getSynced() {
         return synced;
@@ -501,13 +496,13 @@ public class FamilyMembers extends BaseObservable {
         this.syncDate = syncDate;
     }
 
-    public String getsH3() {
+/*    public String getsH3() {
         return sH3;
     }
 
     public void setsH3(String sH3) {
         this.sH3 = sH3;
-    }
+    }*/
 
 
     @Bindable
@@ -582,7 +577,7 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.a108);
     }
 
-    @Bindable
+/*    @Bindable
     public String getA110() {
         return a110;
     }
@@ -590,7 +585,7 @@ public class FamilyMembers extends BaseObservable {
     public void setA110(String a110) {
         this.a110 = a110;
         notifyChange(BR.a110);
-    }
+    }*/
 
     @Bindable
     public String getB101() {
@@ -1253,7 +1248,7 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.f119);
     }
 
-    @Bindable
+/*    @Bindable
     public String getG108() {
         return g108;
     }
@@ -1261,7 +1256,7 @@ public class FamilyMembers extends BaseObservable {
     public void setG108(String g108) {
         this.g108 = g108;
         notifyChange(BR.g108);
-    }
+    }*/
 
     @Bindable
     public String getG101() {
@@ -1334,7 +1329,7 @@ public class FamilyMembers extends BaseObservable {
         setG10804w(g101.equals("98")||g101.equals("99")? "":g10804w);
         setG10805w(g101.equals("98")||g101.equals("99")? "":g10805w);
         setG10806w(g101.equals("98")||g101.equals("99")? "":g10806w);
-        setG10807w(g101.equals("98")||g101.equals("99")? "":g10807w);
+        //setG10807w(g101.equals("98")||g101.equals("99")? "":g10807w);
         setG10896(g101.equals("98")||g101.equals("99")? "":g10896);
         
         // for G209
@@ -1384,7 +1379,7 @@ public class FamilyMembers extends BaseObservable {
         setG10804w(!g102.equals("1")? "":g10804w);
         setG10805w(!g102.equals("1")? "":g10805w);
         setG10806w(!g102.equals("1")? "":g10806w);
-        setG10807w(!g102.equals("1")? "":g10807w);
+        //setG10807w(!g102.equals("1")? "":g10807w);
         setG10896(!g102.equals("1")? "":g10896);
         
         // setG105(g101.equals("1") || g102.equals("1") || g103.equals("1") ? g105 : "");
@@ -1472,7 +1467,7 @@ public class FamilyMembers extends BaseObservable {
         setG10804w(g103Check ? "":g10804w);
         setG10805w(g103Check ? "":g10805w);
         setG10806w(g103Check ? "":g10806w);
-        setG10807w(g103Check ? "":g10807w);
+        //setG10807w(g103Check ? "":g10807w);
         setG10896(g103Check ? "":g10896);
 
 
@@ -1841,7 +1836,7 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.g10806w);
     }
 
-    @Bindable
+   /* @Bindable
     public String getG10807w() {
         return g10807w;
     }
@@ -1849,7 +1844,7 @@ public class FamilyMembers extends BaseObservable {
     public void setG10807w(String value) {
         g10807w = value;
         notifyChange(BR.g10807w);
-    }
+    }*/
     @Bindable
     public String getG10896() {
         return g10896;
@@ -2524,7 +2519,7 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.h105);
     }
 
-    @Bindable
+/*    @Bindable
     public String getH106() {
         return h106;
     }
@@ -2532,7 +2527,7 @@ public class FamilyMembers extends BaseObservable {
     public void setH106(String h106) {
         this.h106 = h106;
         notifyChange(BR.h106);
-    }
+    }*/
 
 
     public FamilyMembers Hydrate(Cursor cursor) throws JSONException {
@@ -2548,7 +2543,7 @@ public class FamilyMembers extends BaseObservable {
         this.deviceId = cursor.getString(cursor.getColumnIndexOrThrow(FamilyMembersTable.COLUMN_DEVICEID));
         this.deviceTag = cursor.getString(cursor.getColumnIndexOrThrow(FamilyMembersTable.COLUMN_DEVICETAGID));
         this.appver = cursor.getString(cursor.getColumnIndexOrThrow(FamilyMembersTable.COLUMN_APPVERSION));
-        this.iStatus = cursor.getString(cursor.getColumnIndexOrThrow(FamilyMembersTable.COLUMN_ISTATUS));
+       // this.iStatus = cursor.getString(cursor.getColumnIndexOrThrow(FamilyMembersTable.COLUMN_ISTATUS));
         this.synced = cursor.getString(cursor.getColumnIndexOrThrow(FamilyMembersTable.COLUMN_SYNCED));
         this.syncDate = cursor.getString(cursor.getColumnIndexOrThrow(TableContracts.FamilyMembersTable.COLUMN_SYNCED_DATE));
 
@@ -2579,7 +2574,7 @@ public class FamilyMembers extends BaseObservable {
             this.a107 = json.getString("a107");
             this.a107 = json.getString("a107");
             this.a108 = json.getString("a108");
-            this.a110 = json.getString("a110");
+          //  this.a110 = json.getString("a110");
 
             //updateMemCategory();
         }
@@ -2725,6 +2720,7 @@ public class FamilyMembers extends BaseObservable {
             this.g10498 = json.has("g10498")?json.getString("g10498"):"";
             this.g104a = json.getString("g104a");
             this.g105 = json.getString("g105");
+            this.g105a = json.getString("g105a");
             this.g10598 = json.has("g10598")?json.getString("g10598"):"";
             this.g10601d = json.getString("g10601d");
             this.g10601w = json.getString("g10601w");
@@ -2754,7 +2750,7 @@ public class FamilyMembers extends BaseObservable {
             this.g10804w = json.getString("g10804w");
             this.g10805w = json.getString("g10805w");
             this.g10806w = json.getString("g10806w");
-            this.g10807w = json.getString("g10807w");
+        //    this.g10807w = json.getString("g10807w");
             this.g10896 = json.getString("g10896");
             this.g10896x = json.getString("g10896x");
             this.g10896w = json.getString("g10896w");
@@ -2765,6 +2761,8 @@ public class FamilyMembers extends BaseObservable {
             this.g20498 = json.has("g20498")?json.getString("g20498"):"";
             this.g204a = json.getString("g204a");
             this.g205 = json.getString("g205");
+            this.g20598 = json.getString("g20598");
+            this.g205a = json.has("g205a")?json.getString("g205a"):"";
             this.g20601d = json.getString("g20601d");
             this.g20601w = json.getString("g20601w");
             this.g20602d = json.getString("g20602d");
@@ -2803,7 +2801,7 @@ public class FamilyMembers extends BaseObservable {
             this.h103 = json.getString("h103");
             this.h104 = json.getString("h104");
             this.h105 = json.getString("h105");
-            this.h106 = json.getString("h106");
+            // this.h106 = json.getString("h106");
             this.scoreWHO5 = json.has("scoreWHO5") ? json.getString("scoreWHO5") : "";
             this.endTime = json.has("endTime") ? json.getString("endTime") : "";
             calculateWHO5Score();
@@ -2824,7 +2822,7 @@ public class FamilyMembers extends BaseObservable {
             json.put(TableContracts.FamilyMembersTable.COLUMN_SYSDATE, this.sysDate);
             json.put(TableContracts.FamilyMembersTable.COLUMN_DEVICEID, this.deviceId);
             json.put(TableContracts.FamilyMembersTable.COLUMN_DEVICETAGID, this.deviceTag);
-            json.put(TableContracts.FamilyMembersTable.COLUMN_ISTATUS, this.iStatus);
+        //    json.put(TableContracts.FamilyMembersTable.COLUMN_ISTATUS, this.iStatus);
             json.put(FamilyMembersTable.COLUMN_DISTRICT, this.distCode);
             json.put(FamilyMembersTable.COLUMN_SNO, this.sno);
             json.put(FamilyMembersTable.COLUMN_APPVERSION, this.appver);
@@ -2859,8 +2857,8 @@ public class FamilyMembers extends BaseObservable {
                 .put("a10696x", a10696x)
                 .put("a107", a107)
                 .put("a107", a107)
-                .put("a108", a108)
-                .put("a110", a110);
+                .put("a108", a108);
+        //        .put("a110", a110);
         return json.toString();
     }
 
@@ -3017,7 +3015,7 @@ public class FamilyMembers extends BaseObservable {
                 .put("g10804w", g10804w)
                 .put("g10805w", g10805w)
                 .put("g10806w", g10806w)
-                .put("g10807w", g10807w)
+               // .put("g10807w", g10807w)
                 .put("g10896", g10896)
                 .put("g10896x", g10896x)
                 .put("g10896w", g10896w)
@@ -3029,6 +3027,7 @@ public class FamilyMembers extends BaseObservable {
                 .put("g204a", g204a)
                 .put("g205", g205)
                 .put("g20598", g20598)
+                .put("g205a", g205a)
                 .put("g20601d", g20601d)
                 .put("g2060188", g2060188)
                 .put("g2060288", g2060288)
@@ -3067,7 +3066,7 @@ public class FamilyMembers extends BaseObservable {
                 .put("h103", h103)
                 .put("h104", h104)
                 .put("h105", h105)
-                .put("h106", h106)
+                //.put("h106", h106)
                 .put("endTime", endTime)
                 .put("scoreWHO5", scoreWHO5);
 

@@ -65,7 +65,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         int iColor = 0;
         switch (fc.get(position).getiStatus()) {
             case "1":
-                tStatus = "Complete";
+                tStatus = "  Complete  ";
                 iColor = Color.GREEN;
                 break;
             case "2":
@@ -77,15 +77,15 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
                 iColor = Color.RED;
                 break;
             case "4":
-                tStatus = "Refused";
+                tStatus = "  Refused  ";
                 iColor = Color.RED;
                 break;
             case "5":
-                tStatus = "Empty";
+                tStatus = "   Empty   ";
                 iColor = Color.RED;
                 break;
             case "6":
-                tStatus = "Not Found";
+                tStatus = " Not Found  ";
                 iColor = Color.RED;
                 break;
             case "96":
@@ -93,7 +93,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
                 iColor = Color.RED;
                 break;
             default:
-                tStatus = "Open Form";
+                tStatus = " Open Form  ";
                 iColor = Color.RED;
                 break;
 
@@ -105,6 +105,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         holder.syncStatus.setText(synced ? "Data Synced" : "Sync Pending");
         holder.sysdate.setText("  Member Count: " + memberCount );
         holder.iStatus.setTextColor(iColor);
+        holder.syncStatus.setTextColor(synced ? Color.GRAY : Color.RED);
 
 
     }

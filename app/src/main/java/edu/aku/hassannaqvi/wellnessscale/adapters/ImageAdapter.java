@@ -125,7 +125,7 @@ public class ImageAdapter extends BaseAdapter {
                 // Handle the click event for the selected image
                 // You can retrieve the position or image ID to identify the clicked image
                 // For example, you can display a Toast message with the clicked image information
-                Toast.makeText(context, "Clicked image: " + imageIds[position], Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(context, "Clicked image: " + imageIds[position], Toast.LENGTH_SHORT).show();
             }
         });}
 

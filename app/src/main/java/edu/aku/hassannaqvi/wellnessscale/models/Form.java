@@ -35,23 +35,25 @@ public class Form extends BaseObservable implements Observable {
     public String a102a = _EMPTY_;
     public String a102b = _EMPTY_;
     public String a102c = _EMPTY_;
-    
+    public String a102d = _EMPTY_;
+    public String a102e = _EMPTY_;
+
+/*    public String a103 = _EMPTY_;
     public String a104= _EMPTY_;
     public String a105= _EMPTY_;
-    public String a107= _EMPTY_;
-    public String a103 = _EMPTY_;
+    public String a107= _EMPTY_;*/
     public String a110= _EMPTY_;
 
     transient PropertyChangeRegistry propertyChangeRegistry = new PropertyChangeRegistry();
     // FORM SECTIONS
-    String sA = _EMPTY_;
+   /* String sA = _EMPTY_;
     String sB = _EMPTY_;
     String sC = _EMPTY_;
     String sD = _EMPTY_;
     String sE = _EMPTY_;
     String sF = _EMPTY_;
     String sG = _EMPTY_;
-    String sH = _EMPTY_;
+    String sH = _EMPTY_;*/
     // APP VARIABLES
     String projectName = PROJECT_NAME;
     // APP VARIABLES
@@ -62,7 +64,7 @@ public class Form extends BaseObservable implements Observable {
     String districtCode = _EMPTY_;
     String lhwCode = _EMPTY_;
     String kno = _EMPTY_;
-    String sno = _EMPTY_;
+    //String sno = _EMPTY_;
     String deviceId = _EMPTY_;
     String deviceTag = _EMPTY_;
     String appver = _EMPTY_;
@@ -86,7 +88,7 @@ public class Form extends BaseObservable implements Observable {
 
     }
 
-    public String getsA() {
+    /*public String getsA() {
         return sA;
     }
 
@@ -148,7 +150,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setsH(String sH) {
         this.sH = sH;
-    }
+    }*/
 
 
     @Bindable
@@ -207,9 +209,25 @@ public class Form extends BaseObservable implements Observable {
     public void setA102c(String a102c) {
         this.a102c = a102c;
         notifyChange(BR.a102c);
+    }  @Bindable
+    public String getA102d() {
+        return a102d;
     }
 
-    @Bindable
+    public void setA102d(String a102d) {
+        this.a102d = a102d;
+        notifyChange(BR.a102d);
+    }  @Bindable
+    public String getA102e() {
+        return a102e;
+    }
+
+    public void setA102e(String a102e) {
+        this.a102e = a102e;
+        notifyChange(BR.a102e);
+    }
+
+/*    @Bindable
     public String getA104() {
         return a104;
     }
@@ -234,7 +252,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setA103(String a103) {
         this.a103 = a103;
-        notifyChange(BR.a106);
+        notifyChange(BR.a103);
     }
     
     @Bindable
@@ -244,8 +262,8 @@ public class Form extends BaseObservable implements Observable {
 
     public void setA107(String a107) {
         this.a107 = a107;
-        notifyChange(BR.a106);
-    }
+        notifyChange(BR.a107);
+    }*/
  @Bindable
     public String getA110() {
         return a110;
@@ -285,8 +303,8 @@ public class Form extends BaseObservable implements Observable {
         setSysDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
        setUserName(MainApp.user.getUserName());
        setDeviceId(MainApp.deviceid);
-       /*  //   setUuid(MainApp.form.getUid());  // not applicable in Form table
-        setAppver(MainApp.appInfo.getAppVersion());*/
+       /*  //   setUuid(MainApp.form.getUid());  // not applicable in Form table*/
+        setAppver(MainApp.appInfo.getAppVersion());
         setProjectName(PROJECT_NAME);
 
         setEntryType(String.valueOf(MainApp.entryType));
@@ -322,7 +340,6 @@ public class Form extends BaseObservable implements Observable {
     public void setUid(String uid) {
         this.uid = uid;
     }
-
     @Bindable
     public String getDistrictCode() {
         return districtCode;
@@ -330,6 +347,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setDistrictCode(String districtCode) {
         this.districtCode = districtCode;
+        setA101a(districtCode);
         notifyPropertyChanged(BR.districtCode);
     }
 
@@ -340,6 +358,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setLhwCode(String lhwCode) {
         this.lhwCode = lhwCode;
+        setA101b(lhwCode);
         notifyPropertyChanged(BR.lhwCode);
     }
 
@@ -353,7 +372,7 @@ public class Form extends BaseObservable implements Observable {
         notifyPropertyChanged(BR.hhid);
     }
 
-    @Bindable
+ /*   @Bindable
     public String getSno() {
         return sno;
     }
@@ -362,7 +381,7 @@ public class Form extends BaseObservable implements Observable {
         this.sno = sno;
         notifyPropertyChanged(BR.sno);
     }
-
+*/
     public String getUserName() {
         return userName;
     }
@@ -1802,7 +1821,7 @@ public class Form extends BaseObservable implements Observable {
         this.districtCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE));
         this.lhwCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_LHW_CODE));
         this.kno = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_KNO));
-        this.sno = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SNO));
+        //this.sno = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SNO));
         this.userName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_USERNAME));
         this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE));
         this.deviceId = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DEVICEID));
@@ -1837,10 +1856,12 @@ public class Form extends BaseObservable implements Observable {
             this.a102a = json.getString("a102a");
             this.a102b = json.getString("a102b");
             this.a102c = json.getString("a102c");
-            this.a104 = json.getString("a104");
+            this.a102d = json.has("a102d") ? json.getString("a102d"): "";
+            this.a102e = json.has("a102e") ? json.getString("a102e") : "";
+       /*     this.a104 = json.getString("a104");
             this.a105 = json.getString("a105");
             this.a103 = json.getString("a103");
-            this.a107 = json.getString("a107");
+            this.a107 = json.getString("a107");*/
             this.a110 = json.getString("a110");
 
 
@@ -1861,10 +1882,12 @@ public class Form extends BaseObservable implements Observable {
                 .put("a102a", a102a)
                 .put("a102b", a102b)
                 .put("a102c", a102c)
-                .put("a104", a104)
+                .put("a102e", a102d)
+                .put("a102e", a102e)
+            /*    .put("a104", a104)
                 .put("a105", a105)
                 .put("a103", a103)
-                .put("a107", a107)
+                .put("a107", a107)*/
                 .put("a110", a110);
 
         return json.toString();
@@ -1879,7 +1902,7 @@ public class Form extends BaseObservable implements Observable {
         json.put(FormsTable.COLUMN_DISTRICT_CODE, this.districtCode);
         json.put(FormsTable.COLUMN_LHW_CODE, this.lhwCode);
         json.put(FormsTable.COLUMN_KNO, this.kno);
-        json.put(FormsTable.COLUMN_SNO, this.sno);
+        //json.put(FormsTable.COLUMN_SNO, this.sno);
         json.put(FormsTable.COLUMN_USERNAME, this.userName);
         json.put(FormsTable.COLUMN_SYSDATE, this.sysDate);
         json.put(FormsTable.COLUMN_DEVICEID, this.deviceId);

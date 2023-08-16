@@ -33,7 +33,7 @@ public class TableContracts {
         public static final String COLUMN_SYNCED = "synced";
         public static final String COLUMN_SYNCED_DATE = "synced_date";
         public static final String COLUMN_APPVERSION = "appversion";
-        public static final String COLUMN_ISTATUS = "istatus";
+       // public static final String COLUMN_ISTATUS = "istatus";
     }
     public static abstract class FormsTable implements BaseColumns {
         public static final String TABLE_NAME = "Forms";
@@ -44,7 +44,7 @@ public class TableContracts {
         public static final String COLUMN_DISTRICT_CODE = "distCode";
         public static final String COLUMN_LHW_CODE = "lhwCode";
         public static final String COLUMN_KNO = "kno";
-        public static final String COLUMN_SNO = "sno";
+      //  public static final String COLUMN_SNO = "sno";
         public static final String COLUMN_USERNAME = "username";
         public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_GPSLAT = "xlt";

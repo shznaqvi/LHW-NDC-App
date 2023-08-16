@@ -108,7 +108,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_DISTRICT_CODE, form.getDistrictCode());
         values.put(FormsTable.COLUMN_LHW_CODE, form.getLhwCode());
         values.put(FormsTable.COLUMN_KNO, form.getKno());
-        values.put(FormsTable.COLUMN_SNO, form.getSno());
+       // values.put(FormsTable.COLUMN_SNO, form.getSno());
         values.put(FormsTable.COLUMN_USERNAME, form.getUserName());
         values.put(FormsTable.COLUMN_SYSDATE, form.getSysDate());
         values.put(FormsTable.COLUMN_GPSLAT, form.getGpsLat());
@@ -161,7 +161,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         values.put(FamilyMembersTable.COLUMN_SA1, familyMembers.sA1toString());
 
-        values.put(FamilyMembersTable.COLUMN_ISTATUS, familyMembers.getiStatus());
+       // values.put(FamilyMembersTable.COLUMN_ISTATUS, familyMembers.getiStatus());
         values.put(FamilyMembersTable.COLUMN_DEVICETAGID, familyMembers.getDeviceTag());
         values.put(FamilyMembersTable.COLUMN_DEVICEID, familyMembers.getDeviceId());
         values.put(FamilyMembersTable.COLUMN_APPVERSION, familyMembers.getAppver());
@@ -813,7 +813,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 fc.setDistrictCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE)));
                 fc.setLhwCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_LHW_CODE)));
                 fc.setKno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_KNO)));
-                fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
+             //   fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
                 fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
                 fc.setSynced(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED)));
                 allFC.add(fc);
@@ -903,7 +903,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 fc.setDistrictCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE)));
                 fc.setLhwCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_LHW_CODE)));
                 fc.setKno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_KNO)));
-                fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
+               // fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
                 fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
                 fc.setSynced(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED)));
                 allFC.add(fc);

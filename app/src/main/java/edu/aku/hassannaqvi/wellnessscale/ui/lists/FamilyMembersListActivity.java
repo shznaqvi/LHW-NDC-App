@@ -52,9 +52,9 @@ public class FamilyMembersListActivity extends AppCompatActivity {
                    if (!MainApp.familyMembers.getUid().equals(_EMPTY_)) {
 
                         familyList.add(MainApp.familyMembers);
-                        if (!MainApp.familyMembers.getMemCate().equals("")) {
+                      /*  if (!MainApp.familyMembers.getMemCate().equals("")) {
                             switch (MainApp.familyMembers.getMemCate()) {
-                              /*  case "1":
+                              *//*  case "1":
                                     MainApp.mwraList.add(MainApp.familyMembers);
                                     MainApp.mwraCount++;
                                     break;
@@ -65,10 +65,10 @@ public class FamilyMembersListActivity extends AppCompatActivity {
                                 case "3":
                                     MainApp.maleList.add(MainApp.familyMembers);
                                     MainApp.maleCount++;
-                                    break;*/
+                                    break;*//*
                             }
 
-                        }
+                        }*/
                         MainApp.memberCount++;
                         familyMembersAdapter.notifyItemInserted(familyList.size() - 1);
 

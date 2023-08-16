@@ -220,6 +220,8 @@
     <string name="a102a">Date of interview</string>
     <string name="a102b">Time of interview</string>
     <string name="a102c">Address</string>
+    <string name="a102d">Area</string>
+    <string name="a102e">City</string>
 
     <!-- Consent -->
     <string name="consent">Has the written consent been signed?</string>
@@ -702,6 +704,8 @@
     <string name='Q_a102a' translatable="false">a102a</string>
     <string name='Q_a102b' translatable="false">a102b</string>
     <string name='Q_a102c' translatable="false">a102c</string>
+    <string name='Q_a102d' translatable="false">a102d</string>
+    <string name='Q_a102e' translatable="false">a102e</string>
     <string name='Q_a103' translatable="false">Q. A03</string>
     <string name='Q_a104' translatable="false">Q. A04</string>
     <string name='Q_a105' translatable="false">Q. A05</string>
