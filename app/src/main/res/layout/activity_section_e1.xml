@@ -96,7 +96,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.e101.equals(`99`)}"
-                                android:onClick="@{()->familymembers.setE101(`99`)}"
+                                android:onClick="@{()->familymembers.setE101(`99`) + e102.clearCheck()}"
                                 android:text="@string/e10199" />
                         </RadioGroup>
 
@@ -240,7 +240,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:checked="@{familymembers.e103.equals(`99`)}"
-                                android:onClick="@{()->familymembers.setE103(`99`)}"
+                                android:onClick="@{()->familymembers.setE103(`99`) + e104.clearCheck()}"
                                 android:text="@string/e10399" />
 
                             <EditText
@@ -389,15 +389,19 @@
                                 android:onClick="@{()->familymembers.setE105(`99`) + e106.clearCheck()}"
                                 android:text="@string/e10599" />
 
-                            <EditText
-                                android:id="@+id/e105x"
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/e105d"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:digits="0123456789"
+                                android:hint="@string/e10501"
                                 android:inputType="number"
-                                android:tag="e10599"
+                                android:maxLength="1"
+                                android:tag="e105d"
                                 android:text="@={familymembers.e105d}"
-                                android:visibility="@{familymembers.e105.equals(`1`) ? View.VISIBLE : View.GONE}" />
+                                android:visibility="@{familymembers.e105.equals(`1`) ? View.VISIBLE : View.GONE}"
+                                app:maxValue="7"
+                                app:minValue="1"
+                                app:type="range" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

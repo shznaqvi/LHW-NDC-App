@@ -5,6 +5,8 @@ import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.encryptGCM;
 import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.hashSHA384;
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.PROJECT_NAME;
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.sharedPref;
+import static edu.aku.hassannaqvi.wellnessscale.core.UserAuth.checkPassword;
+import static edu.aku.hassannaqvi.wellnessscale.core.UserAuth.generatePassword;
 import static edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper.DATABASE_COPY;
 import static edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper.DATABASE_NAME;
 
@@ -95,39 +97,39 @@ public class LoginActivity extends AppCompatActivity {
     private int countryCode;
     private ArrayList<String> countryNameList;
     private ArrayList<String> countryCodeList;
-   /* private int PhotoSerial = 0;
-    private String photolist;
-    ActivityResultLauncher<Intent> takePhotoLauncher = registerForActivityResult(
-            new ActivityResultContracts.StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-                @Override
-                public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == Activity.RESULT_OK) {
-                        // There are no request codes
-                        //Intent data = result.getData();
-                        Intent data = result.getData();
+    /* private int PhotoSerial = 0;
+     private String photolist;
+     ActivityResultLauncher<Intent> takePhotoLauncher = registerForActivityResult(
+             new ActivityResultContracts.StartActivityForResult(),
+             new ActivityResultCallback<ActivityResult>() {
+                 @Override
+                 public void onActivityResult(ActivityResult result) {
+                     if (result.getResultCode() == Activity.RESULT_OK) {
+                         // There are no request codes
+                         //Intent data = result.getData();
+                         Intent data = result.getData();
 
-                        Toast.makeText(LoginActivity.this, "Photo Taken", Toast.LENGTH_SHORT).show();
+                         Toast.makeText(LoginActivity.this, "Photo Taken", Toast.LENGTH_SHORT).show();
 
-                        String fileName = data.getStringExtra("FileName");
-                        //   photolist = photolist + fileName + ";";
-                        PhotoSerial++;
+                         String fileName = data.getStringExtra("FileName");
+                         //   photolist = photolist + fileName + ";";
+                         PhotoSerial++;
 
-                        bi.b117.setText(bi.b117.getText().toString() + PhotoSerial + " - " + fileName + ";\r\n");
-                    } else {
-                        Toast.makeText(LoginActivity.this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
+                         bi.b117.setText(bi.b117.getText().toString() + PhotoSerial + " - " + fileName + ";\r\n");
+                     } else {
+                         Toast.makeText(LoginActivity.this, "Photo Cancelled", Toast.LENGTH_SHORT).show();
 
-                        //TODO: Implement functionality below when photo was not taken
-                        // ...
-                        bi.b117.setText("Photo not taken.");
-                    }
+                         //TODO: Implement functionality below when photo was not taken
+                         // ...
+                         bi.b117.setText("Photo not taken.");
+                     }
 
-                    if (result.getResultCode() == Activity.RESULT_CANCELED) {
-                        Toast.makeText(LoginActivity.this, "No family member added.", Toast.LENGTH_SHORT).show();
-                    }
+                     if (result.getResultCode() == Activity.RESULT_CANCELED) {
+                         Toast.makeText(LoginActivity.this, "No family member added.", Toast.LENGTH_SHORT).show();
+                     }
 
-                }
-            });*/
+                 }
+             });*/
     private int clicks;
 
     @Override
@@ -145,23 +147,25 @@ public class LoginActivity extends AppCompatActivity {
                         Manifest.permission.READ_PHONE_STATE,
                         Manifest.permission.CAMERA,
                         Manifest.permission.ACCESS_FINE_LOCATION,
+                        Manifest.permission.POST_NOTIFICATIONS,
                         Manifest.permission.ACCESS_COARSE_LOCATION
                 ).withListener(new MultiplePermissionsListener() {
-            @Override
-            public void onPermissionsChecked(MultiplePermissionsReport report) {
-                if (report.areAllPermissionsGranted()) {
-                    MainApp.permissionCheck = true;
-                }
-            }
+                    @Override
+                    public void onPermissionsChecked(MultiplePermissionsReport report) {
+                        if (report.areAllPermissionsGranted()) {
+                            MainApp.permissionCheck = true;
+                        }
+                    }
 
-            @Override
-            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
-                token.continuePermissionRequest();
-            }
-        }).check();
+                    @Override
+                    public void onPermissionRationaleShouldBeShown(List<PermissionRequest> permissions, PermissionToken token) {
+                        token.continuePermissionRequest();
+                    }
+                }).check();
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_login);
         setSupportActionBar(bi.toolbar);
+
 
         db = MainApp.appInfo.getDbHelper();
 
@@ -264,6 +268,32 @@ public class LoginActivity extends AppCompatActivity {
                     // A null listener allows the button to dismiss the dialog and take no further action.
                     .setIcon(R.drawable.ic_alert_24)
                     .show();
+        }
+
+/*        try {
+            Log.d(TAG, "onResume(Password): " + generatePassword("Password", null));
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        } catch (InvalidKeySpecException e) {
+            throw new RuntimeException(e);
+        }*/
+
+        try {
+
+            String password = "password2"; // New password to check
+            String oldPassword = "ni1uSHv83fen67umTfPqSU4L"; // Old stored password hash
+
+            if (checkPassword(password, oldPassword)) {
+               Toast.makeText(this, "True", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "False", Toast.LENGTH_SHORT).show();
+//
+            }
+
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException(e);
+        } catch (InvalidKeySpecException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -409,8 +439,9 @@ public class LoginActivity extends AppCompatActivity {
                 ) {
 
                     MainApp.user.setUserName(username);
+
                     MainApp.admin = username.contains("@") || username.contains("test1234");
-                    MainApp.superuser = MainApp.user.getDesignation().equals("Supervisor");
+                    MainApp.superuser = MainApp.user.getDesignation().contains("Supervisor");
                     Intent iLogin = null;
                     if (MainApp.admin) {
                         recordEntry("Successful Login (Admin)");
@@ -483,7 +514,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void resetPassword(View view) {
         finish();
-      //  startActivity(new Intent(this, WebViewActivity.class));
+        //  startActivity(new Intent(this, WebViewActivity.class));
     }
 
     @Override
@@ -590,7 +621,7 @@ public class LoginActivity extends AppCompatActivity {
                 MainApp.editor
                         .putString("lang", "1")
                         .apply();
-                MainApp.selectedLanguage =1;
+                MainApp.selectedLanguage = 1;
                 MainApp.langRTL = true;
 
                 break;
@@ -602,7 +633,7 @@ public class LoginActivity extends AppCompatActivity {
                         .putString("lang", "2")
                         .apply();
                 MainApp.langRTL = true;
-                MainApp.selectedLanguage =2;
+                MainApp.selectedLanguage = 2;
 
 
                 break;
@@ -614,7 +645,7 @@ public class LoginActivity extends AppCompatActivity {
                         .putString("lang", "0")
                         .apply();
                 MainApp.langRTL = false;
-                MainApp.selectedLanguage =0;
+                MainApp.selectedLanguage = 0;
 
 
         }
@@ -655,7 +686,7 @@ public class LoginActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.UR) {
             MainApp.selectedLanguage = 1;
             MainApp.langRTL = true;
-         } else if (item.getItemId() == R.id.SD) {
+        } else if (item.getItemId() == R.id.SD) {
             MainApp.selectedLanguage = 2;
             MainApp.langRTL = true;
         } else {
@@ -699,12 +730,12 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             clicks = 0;
             Toast.makeText(this, "TEAM CREDITS: " +
-                            "\r\nHassan Naqvi, " +
-                            "Ali Azaz, " +
-                            "Gul Sanober, " +
-                            "Ramsha Ahmed, " +
-                            "Javed Khan",
-                    Toast.LENGTH_LONG)
+                                    "\r\nHassan Naqvi, " +
+                                    "Ali Azaz, " +
+                                    "Gul Sanober, " +
+                                    "Ramsha Ahmed, " +
+                                    "Javed Khan",
+                            Toast.LENGTH_LONG)
                     .show();
         }
 
@@ -716,9 +747,6 @@ public class LoginActivity extends AppCompatActivity {
         gestureDetector.onTouchEvent(event);
         return super.dispatchTouchEvent(event);
     }
-
-
-
 
 
 }

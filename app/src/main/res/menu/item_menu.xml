@@ -12,27 +12,30 @@
                 android:id="@+id/action_database"
                 android:title="@string/actiondatabase" />
             <item
+                android:id="@+id/action_checkWorker"
+                android:title="@string/actionCheckWorker" />
+            <item
                 android:id="@+id/onSync"
                 android:title="Sync Data"
                 app:showAsAction="collapseActionView" />
             <item
                 android:id="@+id/changePassword"
                 android:title="Change Password" />
-            <item
+   <!--         <item
                 android:id="@+id/checkPendingForms"
                 android:title="Pending Forms"
-                app:showAsAction="collapseActionView" />
+                app:showAsAction="collapseActionView" />-->
             <item
                 android:id="@+id/formsReportDate"
                 android:title="Forms Report by Date"
                 android:titleCondensed="List of all forms by date"
                 app:showAsAction="collapseActionView" />
-            <item
+     <!--       <item
                 android:id="@+id/formsReportCluster"
                 android:title="Forms Report by Cluster"
                 android:titleCondensed="List of all forms by date"
                 app:showAsAction="collapseActionView" />
-
+-->
         </menu>
     </item>
 </menu>

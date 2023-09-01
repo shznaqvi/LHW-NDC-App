@@ -5,7 +5,11 @@ import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.familyMembers;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -165,5 +169,14 @@ public class SectionE1Activity extends AppCompatActivity {
 
     }
 
+    public static void blinkEditText(View view) {
+        if (view instanceof EditText) {
+            EditText editText = (EditText) view;
 
+            // Apply the blink animation
+            Animation blinkAnimation = AnimationUtils.loadAnimation(view.getContext(), R.anim.blink_anim);
+            editText.setBackgroundResource(R.drawable.edittext_blink);
+            editText.startAnimation(blinkAnimation);
+        }
+    }
 }

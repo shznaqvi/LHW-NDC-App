@@ -31,6 +31,12 @@ public class FamilyMembers extends BaseObservable {
     private final LocalDate localDate = null;
     private final boolean exist = false;
     private final String lhwuid = _EMPTY_;
+
+    public enum RiskOutcome {
+        VERY_HIGH,
+        HIGH_MEDIUM,
+        LOW
+    }
     // FIELD VARIABLES
 
     public String a103 = _EMPTY_;
@@ -40,7 +46,7 @@ public class FamilyMembers extends BaseObservable {
     public String a10696x = _EMPTY_;
     public String a107 = _EMPTY_;
     public String a108 = _EMPTY_;
-    //public String a110 = _EMPTY_;
+    public String a110 = _EMPTY_;
     public String b101 = _EMPTY_;
     public String b102 = _EMPTY_;
     public String c101 = _EMPTY_;
@@ -231,16 +237,22 @@ public class FamilyMembers extends BaseObservable {
     private int painGrade;
     private String scoreWHO5 = _EMPTY_;
     private double totalMet;
+    private boolean strokeResult = false;
+    private boolean anginaResult = false;
+    private boolean mentalResult = false;
+    private boolean diabetesResult = false;
+    private boolean hypertensionResult = false;
+    private String riskOutcome;
     // private String indexed;
 
 
     public FamilyMembers() {
 
-        setSysDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
+/*        setSysDate(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH).format(new Date().getTime()));
         setUserName(MainApp.user.getUserName());
         setDeviceId(MainApp.deviceid);
         setAppver(MainApp.appInfo.getAppVersion());
-        setAppver(MainApp.appInfo.getAppVersion());
+        setAppver(MainApp.appInfo.getAppVersion());*/
         //setDistCode(MainApp.hhForm.getDistrict());
 
 
@@ -577,15 +589,18 @@ public class FamilyMembers extends BaseObservable {
         notifyChange(BR.a108);
     }
 
-/*    @Bindable
+    @Bindable
     public String getA110() {
         return a110;
     }
 
     public void setA110(String a110) {
         this.a110 = a110;
+        setA106(a110.equals("2")? "": a106);
+        setA107(a110.equals("2")? "": a107);
+        setA108(a110.equals("2")? "": a108);
         notifyChange(BR.a110);
-    }*/
+    }
 
     @Bindable
     public String getB101() {
@@ -788,6 +803,7 @@ public class FamilyMembers extends BaseObservable {
 
     public void setC108(String c108) {
         this.c108 = c108;
+        hypertensionResult = c108.equals("1");
         notifyChange(BR.c108);
     }
 
@@ -2574,7 +2590,7 @@ public class FamilyMembers extends BaseObservable {
             this.a107 = json.getString("a107");
             this.a107 = json.getString("a107");
             this.a108 = json.getString("a108");
-          //  this.a110 = json.getString("a110");
+            this.a110 = json.has("a110")?json.getString("a110"):"";
 
             //updateMemCategory();
         }
@@ -2720,7 +2736,7 @@ public class FamilyMembers extends BaseObservable {
             this.g10498 = json.has("g10498")?json.getString("g10498"):"";
             this.g104a = json.getString("g104a");
             this.g105 = json.getString("g105");
-            this.g105a = json.getString("g105a");
+            this.g105a = json.has("g105a")? json.getString("g105a"):"";
             this.g10598 = json.has("g10598")?json.getString("g10598"):"";
             this.g10601d = json.getString("g10601d");
             this.g10601w = json.getString("g10601w");
@@ -2857,8 +2873,8 @@ public class FamilyMembers extends BaseObservable {
                 .put("a10696x", a10696x)
                 .put("a107", a107)
                 .put("a107", a107)
-                .put("a108", a108);
-        //        .put("a110", a110);
+                .put("a108", a108)
+              .put("a110", a110);
         return json.toString();
     }
 
@@ -2987,6 +3003,7 @@ public class FamilyMembers extends BaseObservable {
                 .put("g104a", g104a)
                 .put("g105", g105)
                 .put("g10598", g10598)
+                .put("g105a", g105a)
                 .put("g10601d", g10601d)
                 .put("g10601w", g10601w)
                 .put("g10602d", g10602d)
@@ -3220,6 +3237,7 @@ public class FamilyMembers extends BaseObservable {
         score += (familyHistory == 1) ? 1 : 0;
 
         scoreRapid = score;
+        diabetesResult = score >= 4;
         return score >= 4 ? " YES " : " NO ";
     }
 
@@ -3239,6 +3257,7 @@ public class FamilyMembers extends BaseObservable {
 
             painGrade = this.getC103().equals("1") ? 2 : (this.getC103().equals("2") && this.getC104().equals("1")) ? 1 : 0;
             scoreRose = angina == 1 ? 1 : 2;
+            anginaResult = angina == 1;
             //return score>=4?" YES ":" NO ";
         } else {
             painGrade = 3;
@@ -3259,6 +3278,7 @@ public class FamilyMembers extends BaseObservable {
 
 
         scoreQVSFS = D1 + D2 + D3 + D4 + D5 + D6 + D7 + D8;
+        strokeResult = scoreQVSFS > 0;
         //return score>=4?" YES ":" NO ";
     }
 
@@ -3359,15 +3379,42 @@ public class FamilyMembers extends BaseObservable {
     }
 
     public void calculateWHO5Score() {
-        int H101 = Integer.parseInt(getH101().equals("") ? "0" : getH101());
-        int H102 = Integer.parseInt(getH102().equals("") ? "0" : getH102());
-        int H103 = Integer.parseInt(getH103().equals("") ? "0" : getH103());
-        int H104 = Integer.parseInt(getH104().equals("") ? "0" : getH104());
-        int H105 = Integer.parseInt(getH105().equals("") ? "0" : getH105());
+        int[] hValues = new int[5];
+        String[] hCodes = { getH101(), getH102(), getH103(), getH104(), getH105() };
+
+        for (int i = 0; i < 5; i++) {
+            hValues[i] = Integer.parseInt(hCodes[i].isEmpty() ? "0" : hCodes[i]);
+        }
 
         // Calculate WHO-5 score
-        int who5Score = H101 + H102 + H103 + H104 + H105;
+        int who5Score = 0;
+        for (int value : hValues) {
+            who5Score += value;
+        }
+        who5Score *= 4;
 
+        mentalResult = who5Score < 13;
+        for (int value : hValues) {
+            if (value == 0 || value == 1) {
+                mentalResult = true;
+                break;
+            }
+        }
         scoreWHO5 = String.valueOf(who5Score);
+        riskOutcome = calculateRiskOutcome();
     }
+
+
+    public String calculateRiskOutcome() {
+        if (strokeResult || anginaResult) {
+            return "VERY HIGH RISK";
+        } else if (hypertensionResult || diabetesResult || mentalResult) {
+            return "HIGH MEDIUM RISK";
+        } else {
+            return "LOW RISK";
+        }
+    }
+
+
+
 }

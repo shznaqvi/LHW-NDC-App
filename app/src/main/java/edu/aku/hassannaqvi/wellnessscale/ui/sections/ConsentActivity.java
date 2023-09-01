@@ -33,6 +33,7 @@ public class ConsentActivity extends AppCompatActivity {
     ActivityConsentBinding bi;
     private DatabaseHelper db;
 
+    // THIS IS NO MORE THE CONSENT ACTIVITY
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,16 +99,17 @@ public class ConsentActivity extends AppCompatActivity {
         if (updateDB()) {
             finish();
 
-          //  startActivity(new Intent(this, FamilyMembersListActivity.class));
+           startActivity(new Intent(this, FamilyMembersListActivity.class));
 
-            if (form.getA110().equals("1")) {
+           // THIS IS NOT A CONSENT ACTIVITY
+          /*  if (form.getA110().equals("1")) {
                 startActivity(new Intent(this, FamilyMembersListActivity.class));
             } else {
                 Intent endingActivityIntent = new Intent(this, EndingActivity.class);
                 endingActivityIntent.putExtra("complete", false);
                 endingActivityIntent.putExtra("checkToEnable", 4);
                 startActivity(endingActivityIntent);
-            }
+            }*/
         } else
             Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
     }

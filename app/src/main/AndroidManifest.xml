@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
@@ -12,8 +11,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- TakePhoto Permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -32,7 +33,12 @@
         android:theme="@style/Theme.main"
         android:usesCleartextTraffic="false"
         tools:replace="android:allowBackup">
-
+        <activity
+            android:name=".ui.CheckWorkerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.sections.RiskFactorActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.sections.SectionA1Activity"
             android:exported="false"
@@ -157,6 +163,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:windowSoftInputMode="adjustResize|stateHidden" />
+
         <meta-data
             android:name="YEK_REVRES"
             android:value="L]MZL7]%cX8;P8F8V@ca#!0nSurvIv0r-t*L$`1`|@DR)TFe+?@mX;(,7+g,Jl" />
@@ -164,4 +171,5 @@
             android:name="YEK_TRATS"
             android:value="" />
     </application>
+
 </manifest>

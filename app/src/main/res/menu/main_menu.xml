@@ -18,6 +18,11 @@
                 android:visible="false"
                 tools:visible="true" />
             <item
+                android:id="@+id/action_checkWorker"
+                android:title="@string/actionCheckWorker"
+                android:visible="false"
+                tools:visible="true" />
+            <item
                 android:id="@+id/action_data_sync"
                 android:title="@string/actiondatasync" />
 

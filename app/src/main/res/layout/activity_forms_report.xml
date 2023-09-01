@@ -36,9 +36,9 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/ToolbarTheme"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:subtitle="Please enter a ebCode to search forms"
+            app:subtitle="Please enter a date to search forms"
             app:subtitleTextAppearance="@style/Toolbar.SubtitleText"
-            app:title="Forms By Cluster"
+            app:title="Forms By Date"
             app:titleTextAppearance="@style/Toolbar.TitleText" />
 
         <androidx.cardview.widget.CardView

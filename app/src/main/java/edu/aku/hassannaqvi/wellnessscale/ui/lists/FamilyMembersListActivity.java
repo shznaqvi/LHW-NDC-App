@@ -52,9 +52,11 @@ public class FamilyMembersListActivity extends AppCompatActivity {
                    if (!MainApp.familyMembers.getUid().equals(_EMPTY_)) {
 
                         familyList.add(MainApp.familyMembers);
-                      /*  if (!MainApp.familyMembers.getMemCate().equals("")) {
-                            switch (MainApp.familyMembers.getMemCate()) {
-                              *//*  case "1":
+             /*           if (!MainApp.familyMembers.getScoreWHO5().equals("")) {
+                          //  MainApp.mwraList.add(MainApp.familyMembers);
+                            MainApp.incompCount++;
+                     *//*       switch (MainApp.familyMembers.getMemCate()) {
+                                case "1":
                                     MainApp.mwraList.add(MainApp.familyMembers);
                                     MainApp.mwraCount++;
                                     break;
@@ -65,9 +67,11 @@ public class FamilyMembersListActivity extends AppCompatActivity {
                                 case "3":
                                     MainApp.maleList.add(MainApp.familyMembers);
                                     MainApp.maleCount++;
-                                    break;*//*
-                            }
+                                    break;
+                            }*//*
 
+                        } else{
+                            MainApp.incompCount++;
                         }*/
                         MainApp.memberCount++;
                         familyMembersAdapter.notifyItemInserted(familyList.size() - 1);
@@ -161,6 +165,8 @@ public class FamilyMembersListActivity extends AppCompatActivity {
         bi.btnContinue.setEnabled(familyList.size() > 0);
 
         bi.totalMember.setText("Total: " + familyList.size());
+        bi.compForms.setText("Completed: " + MainApp.memberCountComplete);
+        bi.incompForms.setText("Incomplete: " + MainApp.memberCountInomplete);
 //        bi.totalMwra.setText("MWRA: " + mwraList.size());
 //        bi.totalAdol.setText("Adol: " + MainApp.adolList.size());
 //        bi.totalMale.setText("AdultMale: " + MainApp.maleList.size());
@@ -168,8 +174,19 @@ public class FamilyMembersListActivity extends AppCompatActivity {
 
     private void checkCompleteFm() {
 
-        int compCount = familyList.size();
-        MainApp.memberCountComplete = compCount;
+        MainApp.memberCount = familyList.size();
+        MainApp.memberCountComplete = 0;
+        MainApp.memberCountInomplete = 0;
+
+        for (FamilyMembers fm : MainApp.familyList) {
+            if (fm.getScoreWHO5().equals("") && fm.getA110().equals("1") ) {
+                MainApp.memberCountInomplete++;
+            } else {
+                MainApp.memberCountComplete++;
+            }
+        }
+
+
     }
 
     public void addMember() {
@@ -193,10 +210,15 @@ public class FamilyMembersListActivity extends AppCompatActivity {
             //    finish();
             startActivity(new Intent(this, SectionMActivity.class).putExtra("complete", true));
         } else {*/
-
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
-       // }
-        finish();
+if(MainApp.memberCountInomplete>0) {
+    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+    // }
+    finish();
+} else {
+    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+    // }
+    finish();
+}
 
 
     }

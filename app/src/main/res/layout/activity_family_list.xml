@@ -16,6 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
+        android:layoutDirection="ltr"
+        android:textDirection="ltr"
         android:background="@drawable/app_bg_effect"
         android:orientation="vertical">
 
@@ -68,12 +70,31 @@
                         android:drawablePadding="8dp"
                         android:gravity="center_vertical|center_horizontal"
                         android:padding="8dp"
+                        android:fontFamily="@font/open_sans_condensed_light"
+                        android:textColor="@color/white"
+                        android:background="@color/colorAccentLightOverlay"
                         android:text="TEXT"
+                        android:textSize="11dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
 
 
                     <TextView
-                        android:id="@+id/totalMwra"
+                        android:id="@+id/compForms"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="8dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:padding="8dp"
+                        android:textSize="11dp"
+                        android:fontFamily="@font/open_sans_condensed_light"
+                        android:textColor="@color/white"
+                        android:background="@color/colorAccentLightOverlay"
+                        android:text="TEXT"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
+
+                    <TextView
+                        android:id="@+id/incompForms"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -81,17 +102,10 @@
                         android:gravity="center_vertical|center_horizontal"
                         android:padding="8dp"
                         android:text="TEXT"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
-
-                    <TextView
-                        android:id="@+id/totalAdol"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:drawablePadding="8dp"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:padding="8dp"
-                        android:text="TEXT"
+                        android:fontFamily="@font/open_sans_condensed_light"
+                        android:textColor="@color/white"
+                        android:background="@color/colorAccentLightOverlay"
+                        android:textSize="11dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
 
                     <TextView
@@ -102,6 +116,7 @@
                         android:drawablePadding="8dp"
                         android:gravity="center_vertical|center_horizontal"
                         android:padding="8dp"
+                        android:visibility="gone"
                         android:text="TEXT"
                         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle" />
                 </LinearLayout>

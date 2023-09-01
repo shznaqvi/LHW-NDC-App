@@ -49,8 +49,11 @@ public class IdentificationActivity extends AppCompatActivity {
         bi.btnContinue.setText(R.string.open_hh_form);
         if (MainApp.superuser)
             bi.btnContinue.setText("Review Form");
+        bi.distName.setText(db.getDistrictName(MainApp.user.getDist_id()));
+        bi.lhwName.setText(MainApp.user.getFullname());
+
         MainApp.form = new Form();
-        populateSpinner();
+        //populateSpinner();
 /*
 
         bi.hh12.addTextChangedListener(new TextWatcher() {
@@ -114,8 +117,8 @@ public class IdentificationActivity extends AppCompatActivity {
     public void btnContinue(View view) {
 
         if (!formValidation()) return;
-        MainApp.selectedDistrict = distCodes.get(bi.district.getSelectedItemPosition());
-        MainApp.selectedLHW = lhwCodes.get(bi.lhw.getSelectedItemPosition());
+/*        MainApp.selectedDistrict = distCodes.get(bi.district.getSelectedItemPosition());
+        MainApp.selectedLHW = lhwCodes.get(bi.lhw.getSelectedItemPosition());*/
         MainApp.selectedHousehold = bi.a101c.getText().toString();
         try {
             hhExists();
@@ -214,7 +217,7 @@ public class IdentificationActivity extends AppCompatActivity {
 
     }*/
 
-    private void populateSpinner() {
+   /* private void populateSpinner() {
 
        // Collection<Districts> districts = db.getAllDistricts();
         distNames = new ArrayList<>();
@@ -223,10 +226,10 @@ public class IdentificationActivity extends AppCompatActivity {
         distNames.add("...");
         distCodes.add("...");
 
-      /*  for (Districts d : districts) {
+      *//*  for (Districts d : districts) {
             distNames.add(d.getDistrictName());
             distCodes.add(d.getDistrictCode());
-        }*/
+        }*//*
         distNames.add("Karachi");
         distNames.add("Hyderabad");
         distCodes.add("1");
@@ -300,5 +303,5 @@ public class IdentificationActivity extends AppCompatActivity {
             }
 
         });
-    }
+    }*/
 }

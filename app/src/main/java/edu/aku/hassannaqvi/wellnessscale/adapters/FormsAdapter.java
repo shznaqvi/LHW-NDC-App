@@ -1,21 +1,30 @@
 package edu.aku.hassannaqvi.wellnessscale.adapters;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import edu.aku.hassannaqvi.wellnessscale.R;
+import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
 import edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper;
 import edu.aku.hassannaqvi.wellnessscale.models.Form;
+import edu.aku.hassannaqvi.wellnessscale.ui.lists.FamilyMembersListActivity;
+import edu.aku.hassannaqvi.wellnessscale.ui.sections.ConsentActivity;
 
 /**
  * Created by hassan.naqvi on 8/1/2016.
@@ -25,6 +34,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
     Context c;
     DatabaseHelper db;
     private List<Form> fc = new ArrayList<>();
+
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public FormsAdapter(List<Form> fc, Context c) {
@@ -46,11 +56,55 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         return vh;
     }
 
+    // Define the interface
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+
+
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
         // - get element from your dataset at this position
-        // - replace the contents of the view with that element
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MainApp.form = new Form();
+
+                try {
+                    MainApp.form = db.getFormBYUID(fc.get(holder.getAdapterPosition()).getUid());
+                } catch (JSONException e) {
+                    Toast.makeText(c, "JSONException(Forms): "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                    //throw new RuntimeException(e);
+                }
+
+                // Start a new activity when an item is clicked
+                Context context = holder.itemView.getContext();
+               /* Intent intent = new Intent(context, SecondActivity.class);
+                intent.putExtra("clicked_item", dataList.get(position)); // Pass data if needed
+                context.startActivity(intent);*/
+
+                if (MainApp.form.getSynced().equals("1") && !MainApp.superuser) { // Do not allow synced form to be edited
+                    Toast.makeText(c, "This form has been locked.", Toast.LENGTH_SHORT).show();
+                } else if (MainApp.form.getA110().equals("1")) {
+                    //  finish();
+                    context.startActivity(new Intent(context, FamilyMembersListActivity.class));
+                } else {
+                    //   finish();
+                    context.startActivity(new Intent(context, ConsentActivity.class));
+                }
+            }
+        });
+//        holder.itemView.setOnClickListener(view -> {
+//            if (itemClickListener != null) {
+//                itemClickListener.onItemClick(position);
+//
+//
+//
+//            }
+//        });
 
         int memberCount = 0;
         memberCount = db.getMembersByUUID(fc.get(position).getUid());
@@ -109,6 +163,8 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
 
 
     }
+
+
 
 
     // Return the size of your dataset (invoked by the layout manager)

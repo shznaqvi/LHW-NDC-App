@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.wellnessscale.database;
 
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.IBAHC;
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.PROJECT_NAME;
+import static edu.aku.hassannaqvi.wellnessscale.core.MainApp._EMPTY_;
 import static edu.aku.hassannaqvi.wellnessscale.core.UserAuth.checkPassword;
 import static edu.aku.hassannaqvi.wellnessscale.database.CreateTable.SQL_CREATE_FAMILY_MEMBERS;
 
@@ -27,12 +28,14 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.ChildTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.EntryLogTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.FamilyMembersTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.FormsTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.UsersTable;
 import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
+import edu.aku.hassannaqvi.wellnessscale.models.Districts;
 import edu.aku.hassannaqvi.wellnessscale.models.EntryLog;
 import edu.aku.hassannaqvi.wellnessscale.models.FamilyMembers;
 import edu.aku.hassannaqvi.wellnessscale.models.Form;
@@ -55,7 +58,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = PROJECT_NAME + ".db";
     public static final String DATABASE_COPY = PROJECT_NAME + "_copy.db";
     public static final String DATABASE_PASSWORD = IBAHC;
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 4;
     private final String TAG = "DatabaseHelper";
 
     public DatabaseHelper(Context context) {
@@ -66,13 +69,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(CreateTable.SQL_CREATE_USERS);
-        db.execSQL(CreateTable.SQL_CREATE_CLUSTERS);
-        db.execSQL(CreateTable.SQL_CREATE_RANDOM_HH);
+        db.execSQL(CreateTable.SQL_CREATE_DISTRICTS);
+        //db.execSQL(CreateTable.SQL_CREATE_CLUSTERS);
+        //db.execSQL(CreateTable.SQL_CREATE_RANDOM_HH);
         db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
 
         db.execSQL(CreateTable.SQL_CREATE_FORMS);
         db.execSQL(CreateTable.SQL_CREATE_ENTRYLOGS);
-        db.execSQL(CreateTable.SQL_CREATE_CHILD);
+        //db.execSQL(CreateTable.SQL_CREATE_CHILD);
 
     }
 
@@ -80,19 +84,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         switch (oldVersion) {
             case 1:
-                db.execSQL(CreateTable.SQL_ALTER_FORMS_GPS_LAT);
-                db.execSQL(CreateTable.SQL_ALTER_FORMS_GPS_LNG);
-                db.execSQL(CreateTable.SQL_ALTER_FORMS_GPS_DATE);
-                db.execSQL(CreateTable.SQL_ALTER_FORMS_GPS_ACC);
 
-                db.execSQL(CreateTable.SQL_ALTER_CHILD_GPS_LAT);
-                db.execSQL(CreateTable.SQL_ALTER_CHILD_GPS_LNG);
-                db.execSQL(CreateTable.SQL_ALTER_CHILD_GPS_DATE);
-                db.execSQL(CreateTable.SQL_ALTER_CHILD_GPS_ACC);
                 // DO NOT BREAK AFTER EACH VERSION
                 //break;
             case 2:
-
+                db.execSQL(CreateTable.SQL_CREATE_DISTRICTS);
+            case 3:
+               // db.execSQL(CreateTable.SQL_ALTER_DISTRICT_CODE);
+               // db.execSQL(CreateTable.SQL_ALTER_DISTRICT_NAME);
             default:
 
         }
@@ -306,6 +305,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (checkPassword(password, loggedInUser.getPassword())) {
             MainApp.user = loggedInUser;
             MainApp.selectedDistrict = loggedInUser.getDist_id();
+            MainApp.selectedLHW = String.valueOf(loggedInUser.getUserID());
             return countCheck;
         } else {
             return false;
@@ -430,6 +430,29 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return (int) count;
     }
 
+    public int syncdistrict(JSONArray distList) throws JSONException {
+        SQLiteDatabase db = this.getWritableDatabase(DATABASE_PASSWORD);
+        db.delete(TableContracts.TableDistricts.TABLE_NAME, null, null);
+        int insertCount = 0;
+        for (int i = 0; i < distList.length(); i++) {
+
+            JSONObject jsonObjectDist = distList.getJSONObject(i);
+
+            Districts districts = new Districts();
+            districts.sync(jsonObjectDist);
+            ContentValues values = new ContentValues();
+
+            values.put(TableContracts.TableDistricts.COLUMN_DISTRICT_NAME, districts.getDistrictName());
+            values.put(TableContracts.TableDistricts.COLUMN_DISTRICT_CODE, districts.getDistrictCode());
+
+            long rowID = db.insertOrThrow(TableContracts.TableDistricts.TABLE_NAME, null, values);
+            if (rowID != -1) insertCount++;
+        }
+
+
+        return insertCount;
+    }
+
     public int syncAppUser(JSONArray userList) throws JSONException {
         SQLiteDatabase db = this.getWritableDatabase(DATABASE_PASSWORD);
         db.delete(UsersTable.TABLE_NAME, null, null);
@@ -551,11 +574,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             List<LHWHouseholds> lhwhhs = getKhandanNoByLHW(lhwHousehold.getA104c());
             LHWForm lhwForm = new LHWForm().Hydrate(c);
            */ //long days  = daysBetweenTwoDates(hhForm.getSysDate(), lhwForm.getSysDate());
+
+            // * * * UPLOAD ONLY THOSE FAMLILYMEMBERS WHOSE FORM HAS BEEN COMPLETED * * *
             if (checkHHFormStatus(familyMember.getUuid()))
                 allFamilyMembers.put(familyMember.toJSONObject());
 
 
         }
+        c.close();
 
         Log.d(TAG, "getUnsyncedFamilyMembers: " + allFamilyMembers.toString().length());
         Log.d(TAG, "getUnsyncedFamilyMembers: " + allFamilyMembers);
@@ -569,9 +595,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String whereClause;
         whereClause = FormsTable.COLUMN_UID + "=? AND " +
-                FormsTable.COLUMN_ISTATUS + " =? ";
+                FormsTable.COLUMN_ISTATUS + " !=? ";
 
-        String[] whereArgs = {uid, "1"};
+        String[] whereArgs = {uid, _EMPTY_ };
 
         String groupBy = null;
         String having = null;
@@ -632,7 +658,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //update SyncedTables
     public void updateSyncedForms(String id) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
-
+        Log.d(TAG, "updateSyncedForms: "+ id);
 // New value for one column
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_SYNCED, true);
@@ -651,6 +677,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void updateSyncedFamilyMember(String id) {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        Log.d(TAG, "updateSyncedForms: "+ id);
 
 // New value for one column
         ContentValues values = new ContentValues();
@@ -1165,6 +1192,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return form;
 
     }
+    
+  
 
     public List<FamilyMembers> getMemberBYUID(String uid) throws JSONException {
         SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
@@ -1203,5 +1232,76 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return membersByUID;
     }
 
+    public Form getFormBYUID(String uid) throws JSONException {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        android.database.Cursor c = null;
+        String[] columns = null;
+
+        String whereClause;
+        whereClause = FormsTable.COLUMN_UID + "=?";
+
+        String[] whereArgs = {uid};
+
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = FormsTable.COLUMN_ID + " ASC";
+
+        Form formByUID = new Form();
+        c = db.query(
+                FormsTable.TABLE_NAME,  // The table to query
+                columns,                   // The columns to return
+                whereClause,               // The columns for the WHERE clause
+                whereArgs,                 // The values for the WHERE clause
+                groupBy,                   // don't group the rows
+                having,                    // don't filter by row groups
+                orderBy                    // The sort order
+        );
+        while (c.moveToNext()) {
+            formByUID = new Form().Hydrate(c);
+
+        }
+        if (c != null) {
+            c.close();
+        }
+
+        return formByUID;
+    }
+
+
+    public String getDistrictName(String dist_id) {
+        SQLiteDatabase db = this.getReadableDatabase(DATABASE_PASSWORD);
+        android.database.Cursor c = null;
+        String[] columns = null;
+
+        String whereClause;
+        whereClause = TableContracts.TableDistricts.COLUMN_DISTRICT_CODE + "=?";
+
+        String[] whereArgs = {dist_id};
+
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = TableContracts.TableDistricts.COLUMN_ID + " ASC";
+
+        Districts districts = new Districts();
+        c = db.query(
+                TableContracts.TableDistricts.TABLE_NAME,  // The table to query
+                columns,                   // The columns to return
+                whereClause,               // The columns for the WHERE clause
+                whereArgs,                 // The values for the WHERE clause
+                groupBy,                   // don't group the rows
+                having,                    // don't filter by row groups
+                orderBy                    // The sort order
+        );
+        while (c.moveToNext()) {
+            districts = new Districts().hydrate(c);
+
+        }
+        if (c != null) {
+            c.close();
+        }
+
+        return districts.getDistrictName();    }
 
 }

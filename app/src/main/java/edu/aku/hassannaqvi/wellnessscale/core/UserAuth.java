@@ -38,7 +38,7 @@ public class UserAuth {
         SecretKeyFactory skf = SecretKeyFactory.getInstance(PBKDF2_NAME);
 
 
-        byte[] hash = skf.generateSecret(spec).getEncoded();
+            byte[] hash = skf.generateSecret(spec).getEncoded();
         byte[] salt_hash = new byte[salt.length + hash.length];
         System.arraycopy(salt, 0, salt_hash, 0, salt.length);
         System.arraycopy(hash, 0, salt_hash, salt.length, hash.length);
@@ -52,7 +52,8 @@ public class UserAuth {
 
 //        byte[] salt = Base64.decode(oldPassword.substring(0, 24), Base64.NO_WRAP);
         byte[] salt = Arrays.copyOfRange(Base64.decode(oldPassword, Base64.NO_WRAP), 0, SALT_BYTE_SIZE);
-        Log.d(TAG, "oldStorngPasswordHash: " + oldPassword);
+        Log.d(TAG, "checkPassword(oldStorngPasswordHash) :" + oldPassword);
+        Log.d(TAG, "checkPassword(salt) :" + Base64.encodeToString(salt, Base64.NO_WRAP));
 
         String genPass = generatePassword(password, salt);
 
@@ -65,6 +66,5 @@ public class UserAuth {
         random.nextBytes(salt);
         return salt;
     }
-
 
 }

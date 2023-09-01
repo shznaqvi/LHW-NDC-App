@@ -1960,7 +1960,7 @@
                                     style="@style/quesNum"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:text="@string/g2title"
+                                    android:text="@string/g5title"
                                     android:textColor="@color/white" />
 
 

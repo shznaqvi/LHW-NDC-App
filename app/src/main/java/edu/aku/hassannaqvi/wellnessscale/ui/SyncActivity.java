@@ -53,11 +53,8 @@ import java.util.concurrent.TimeUnit;
 import edu.aku.hassannaqvi.wellnessscale.R;
 import edu.aku.hassannaqvi.wellnessscale.adapters.SyncListAdapter;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
-import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.ChildTable;
-import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.ClusterTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.EntryLogTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.FormsTable;
-import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.RandomHHTable;
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.UsersTable;
 import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
 import edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper;
@@ -227,22 +224,23 @@ public class SyncActivity extends AppCompatActivity {
             String select = " * ";
             String filter = " colflag is null ";
 
-            if (sync_flag) {
+          /*  if (sync_flag) {
                 select = " * ";
-                filter = " enabled = '1' ";
+                filter = " enabled = '1' ";*/
 
+                downloadTables.add(new SyncModel(TableContracts.TableDistricts.TABLE_NAME));
                 downloadTables.add(new SyncModel(UsersTable.TABLE_NAME));
                 downloadTables.add(new SyncModel("versionApp"));
-            } else {
+        /*    } else {
 
                 select = " * ";
                 filter = " (colflag != '1' or colflag is null) AND dist_id = '" + MainApp.user.getDist_id() + "' ";
-                downloadTables.add(new SyncModel(ClusterTable.TABLE_NAME, select, filter));
-                downloadTables.add(new SyncModel(RandomHHTable.TABLE_NAME, select, filter));
+               // downloadTables.add(new SyncModel(ClusterTable.TABLE_NAME, select, filter));
+              //  downloadTables.add(new SyncModel(RandomHHTable.TABLE_NAME, select, filter));
                 select = " * ";
                 filter = " deviceid = '" + MainApp.deviceid + "_x' ";
-                downloadTables.add(new SyncModel("Unlocked", select, filter));
-            }
+              //  downloadTables.add(new SyncModel("Unlocked", select, filter));
+            }*/
             MainApp.downloadData = new String[downloadTables.size()];
             setAdapter(downloadTables);
             BeginDownload();
@@ -260,7 +258,7 @@ public class SyncActivity extends AppCompatActivity {
 
         for (int i = 0; i < downloadTables.size(); i++) {
             Data.Builder data = new Data.Builder()
-                    .putString("table", downloadTables.get(i).gettableName())
+                    .putString("table", downloadTables.get(i).getTableName())
                     .putInt("position", i)
                     .putString("select", downloadTables.get(i).getSelect() != null ? downloadTables.get(i).getSelect() : " * ")
                     .putString("filter", downloadTables.get(i).getFilter() != null ? downloadTables.get(i).getFilter() : " 1=1 ");
@@ -290,7 +288,7 @@ public class SyncActivity extends AppCompatActivity {
                 Log.d(TAG, "workInfo(error): " + workInfo.getOutputData().getString("error"));
                 Log.d(TAG, "workInfo(position): " + workInfo.getOutputData().getInt("position", 0));*/
 
-                String tableName = downloadTables.get(position).gettableName();
+                String tableName = downloadTables.get(position).getTableName();
 
                 if (workInfo.getState() != null &&
                         workInfo.getState() == WorkInfo.State.SUCCEEDED) {
@@ -330,7 +328,7 @@ public class SyncActivity extends AppCompatActivity {
                             if (method != null) {
                                 try {
                                     JSONObject jsonObject;
-                                    if (!downloadTables.get(position).gettableName().equals("versionApp")) {
+                                    if (!downloadTables.get(position).getTableName().equals("versionApp")) {
                                         jsonArray = new JSONArray(result);
                                         Log.d(TAG, "onChanged: " + jsonArray.getString(0));
 
@@ -526,7 +524,7 @@ public class SyncActivity extends AppCompatActivity {
 
         for (int i = 0; i < uploadTables.size(); i++) {
             Data data = new Data.Builder()
-                    .putString("table", uploadTables.get(i).gettableName())
+                    .putString("table", uploadTables.get(i).getTableName())
                     .putInt("position", i)
                     //    .putString("data", uploadData.get(i).toString())
 
@@ -565,7 +563,7 @@ public class SyncActivity extends AppCompatActivity {
                 Log.d(TAG, "workInfo(error): " + workInfo.getOutputData().getString("error"));
                 Log.d(TAG, "workInfo(position): " + workInfo.getOutputData().getInt("position", 0));
 
-                String tableName = uploadTables.get(position).gettableName();
+                String tableName = uploadTables.get(position).getTableName();
                 String result = MainApp.downloadData[position];
                 startTime = System.currentTimeMillis();
                 String time = workInfo.getOutputData().getString("time");

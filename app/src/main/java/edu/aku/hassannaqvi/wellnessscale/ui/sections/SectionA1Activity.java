@@ -43,6 +43,7 @@ public class SectionA1Activity extends AppCompatActivity {
    //     form.setA101C(String.valueOf(new SimpleDateFormat("HH:mm:ss", Locale.ENGLISH).format(new Date().getTime())));
 
     }
+    
 //
 //
 //    public void ageSkip(CharSequence s, int i, int i1, int i2) {
@@ -76,7 +77,7 @@ public class SectionA1Activity extends AppCompatActivity {
         }
         familyMembers.setId(String.valueOf(rowId));
         if (rowId > 0) {
-            familyMembers.setUid(familyMembers.getDeviceId() + MainApp.form.getId());
+            familyMembers.setUid(familyMembers.getDeviceId() + familyMembers.getId());
             db.updatesFamilyMembersColumn(TableContracts.FamilyMembersTable.COLUMN_UID, familyMembers.getUid());
             return true;
         } else {
@@ -109,11 +110,23 @@ public class SectionA1Activity extends AppCompatActivity {
        if (!insertNewRecord()) return;
         // saveDraft();
         if (updateDB()) {
-            setResult(RESULT_OK);
+          /*  setResult(RESULT_OK);
             Intent i;
             i = new Intent(this, SectionB1Activity.class).putExtra("complete", true).setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
             startActivity(i);
-            finish();
+            finish();*/
+
+            if (familyMembers.getA110().equals("1")) {
+                Intent i;
+                i = new Intent(this, SectionB1Activity.class).putExtra("complete", true).setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+                startActivity(i);
+                finish();
+            } else {
+                Intent returnIntent = new Intent();
+                //  returnIntent.putExtra("requestCode", requestCode);
+                setResult(RESULT_OK, returnIntent);
+                finish();
+            }
         } else {
             Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
         }

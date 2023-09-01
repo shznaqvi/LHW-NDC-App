@@ -7,6 +7,11 @@
     <data>
 
         <import type="android.view.View" />
+            <variable
+                name="progress"
+                type="int" />
+
+
 
     </data>
 
@@ -15,6 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true"
+        android:textDirection="ltr"
+        android:layoutDirection="ltr"
         android:background="@drawable/app_bg_effect"
         android:orientation="vertical">
 
@@ -69,6 +76,14 @@
             android:textStyle="bold"
             android:visibility="invisible"
             tools:visibility="visible" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:progress="@{progress}"
+            android:visibility="visible" />
 
         <ImageView
             android:layout_width="180dp"

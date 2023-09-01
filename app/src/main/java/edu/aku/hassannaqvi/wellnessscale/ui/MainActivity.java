@@ -1,10 +1,13 @@
 package edu.aku.hassannaqvi.wellnessscale.ui;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.editor;
 import static edu.aku.hassannaqvi.wellnessscale.core.MainApp.sharedPref;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -23,15 +26,14 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.wellnessscale.R;
+import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
 import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
 import edu.aku.hassannaqvi.wellnessscale.database.AndroidManager;
 import edu.aku.hassannaqvi.wellnessscale.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.wellnessscale.models.Form;
-import edu.aku.hassannaqvi.wellnessscale.ui.lists.FormsReportCluster;
+import edu.aku.hassannaqvi.wellnessscale.models.SyncModel;
 import edu.aku.hassannaqvi.wellnessscale.ui.lists.FormsReportDate;
-import edu.aku.hassannaqvi.wellnessscale.ui.lists.FormsReportPending;
 import edu.aku.hassannaqvi.wellnessscale.ui.sections.SectionA1Activity;
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,12 +41,14 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     ActivityMainBinding bi;
     SharedPreferences sp;
+    private long downloadId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(bi.getRoot());
+        // Retrieve downloadId from SharedPreferences
 
         // bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setSupportActionBar(bi.toolbar);
@@ -75,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 bi.newApp.setText("Your current password is expiring in " + daysLeft + " day(s) on " + pwExpiry + ". Please change your password to avoid account lockout. (Internet Required.)");
                 // bi.message.setText("Your password will expire on " + pwExpiry + ". There are only " + daysLeft + " Days left.");
                 bi.newApp.setVisibility(View.VISIBLE);
+
             } else {
                 bi.newApp.setVisibility(View.INVISIBLE);
             }
@@ -88,13 +93,84 @@ public class MainActivity extends AppCompatActivity {
         int latestVersionCode = Integer.parseInt(sharedPref.getString("versionCode", "0"));
 
         if (MainApp.appInfo.getVersionCode() < latestVersionCode) {
+            downloadId = sharedPref.getLong("downloadId", -1);
+            Log.d(TAG, "onCreate(downloadId): "+downloadId);
+         /*   if(downloadId == -1){
+            OneTimeWorkRequest downloadWorkRequest = new OneTimeWorkRequest.Builder(AppDownloadWorker.class)
+                    .build();
+
+            WorkManager.getInstance(this).enqueue(downloadWorkRequest);
+
+            }*/
             bi.newApp.setVisibility(View.VISIBLE);
+            bi.progressBar.setVisibility(View.VISIBLE);
+
+            // Start updating progress
+            updateProgress();
             bi.newApp.setText("NOTICE: There is a newer version of this app available on server (" + latestVersionName + latestVersionCode + "). \nPlease download update the app now.");
         } else {
             bi.newApp.setVisibility(View.INVISIBLE);
+            bi.progressBar.setVisibility(View.INVISIBLE);
 
         }
     }
+
+    private void updateProgress() {
+        if(downloadId == -1) return;
+        DownloadManager downloadManager = (DownloadManager) getSystemService(this.DOWNLOAD_SERVICE);
+
+        DownloadManager.Query query = new DownloadManager.Query();
+        query.setFilterById(downloadId);
+
+        Cursor cursor = downloadManager.query(query);
+
+        if (cursor != null && cursor.moveToFirst()) {
+
+                int statusColumnIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
+                if (statusColumnIndex != -1) {
+                    int status = cursor.getInt(statusColumnIndex);
+                    if (status == DownloadManager.STATUS_RUNNING || status == DownloadManager.STATUS_PENDING) { } else{
+                        editor.remove("downloadId");
+                        editor.apply();
+                    }
+
+                    if (status == DownloadManager.STATUS_SUCCESSFUL) {
+                        // Download is successful
+                        Toast.makeText(this, "Download finished successfully", Toast.LENGTH_SHORT).show();
+                        // Handle other success-related tasks
+                    } else if (status == DownloadManager.STATUS_FAILED) {
+                        // Download has failed
+                        Toast.makeText(this, "Download finished with failure", Toast.LENGTH_SHORT).show();
+                        // Handle other failure-related tasks
+                    } else if (status == DownloadManager.STATUS_RUNNING) {
+                        // Download is still running
+                        Toast.makeText(this, "Download is still in progress", Toast.LENGTH_SHORT).show();
+                        // You can show a message or take any relevant action
+                    } else if (status == DownloadManager.STATUS_PENDING) {
+                        // Download is pending
+                        Toast.makeText(this, "Download is pending", Toast.LENGTH_SHORT).show();
+                        // You can show a message or take any relevant action
+                    }
+                }
+
+
+            int columnIndex = cursor.getColumnIndex(DownloadManager.COLUMN_BYTES_DOWNLOADED_SO_FAR);
+            int downloadedBytes = cursor.getInt(columnIndex);
+
+            columnIndex = cursor.getColumnIndex(DownloadManager.COLUMN_TOTAL_SIZE_BYTES);
+            int totalBytes = cursor.getInt(columnIndex);
+
+            cursor.close();
+
+            if (totalBytes > 0) {
+                int progress = (downloadedBytes * 100) / totalBytes;
+                bi.setProgress(progress); // Update progress using DataBinding
+            }
+        }
+        // Schedule next update
+        bi.getRoot().postDelayed(downloadId!=-1?this::updateProgress: null, 1000); // Update every 1 second
+    }
+
 
     public void sectionPress(View view) {
 
@@ -123,6 +199,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent = null;
@@ -131,21 +209,25 @@ public class MainActivity extends AppCompatActivity {
         if (itemId == R.id.action_database) {
             intent = new Intent(MainActivity.this, AndroidManager.class);
             startActivity(intent);
-        } else if (itemId == R.id.onSync) {
+        }  else if (itemId == R.id.action_checkWorker) {
+        intent = new Intent(MainActivity.this, CheckWorkerActivity.class);
+        startActivity(intent);
+    }
+    else if (itemId == R.id.onSync) {
             intent = new Intent(MainActivity.this, SyncActivity.class);
             startActivity(intent);
-        } else if (itemId == R.id.checkPendingForms) {
+    /*    } else if (itemId == R.id.checkPendingForms) {
             intent = new Intent(MainActivity.this, FormsReportPending.class);
-            startActivity(intent);
+            startActivity(intent);*/
         } else if (itemId == R.id.formsReportDate) {
             intent = new Intent(MainActivity.this, FormsReportDate.class);
             startActivity(intent);
         } else if (itemId == R.id.changePassword) {
             intent = new Intent(MainActivity.this, ChangePasswordActivity.class);
             startActivity(intent);
-        } else if (itemId == R.id.formsReportCluster) {
+    /*    } else if (itemId == R.id.formsReportCluster) {
             intent = new Intent(MainActivity.this, FormsReportCluster.class);
-            startActivity(intent);
+            startActivity(intent);*/
         }
 
 
@@ -156,8 +238,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.item_menu, menu);
         MenuItem action_database = menu.findItem(R.id.action_database);
+        MenuItem action_checkworker = menu.findItem(R.id.action_checkWorker);
 
         action_database.setVisible(MainApp.admin);
+        action_checkworker.setVisible(MainApp.admin);
         return true;
 
     }

@@ -64,11 +64,11 @@ public class SectionH1Activity extends AppCompatActivity {
 
     public void btnContinue() {
         if (!formValidation()) return;
-
         if (updateDB()) {
-            Intent returnIntent = new Intent();
-            //  returnIntent.putExtra("requestCode", requestCode);
-            setResult(RESULT_OK, returnIntent);
+            setResult(RESULT_OK);
+            Intent i;
+            i = new Intent(this, RiskFactorActivity.class).putExtra("complete", true).setFlags(Intent.FLAG_ACTIVITY_FORWARD_RESULT);
+            startActivity(i);
             finish();
         } else {
             Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();

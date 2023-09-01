@@ -70,7 +70,7 @@ public class TableContracts {
         public static final String COLUMN_ISTATUS = "iStatus";
     }
 
-    public static abstract class EntryLogTable implements BaseColumns {
+        public static abstract class EntryLogTable implements BaseColumns {
         public static final String TABLE_NAME = "EntryLog";
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String COLUMN_PROJECT_NAME = "projectName";
@@ -211,8 +211,8 @@ public class TableContracts {
         public static final String COLUMN_NAME_NULLABLE = "NULLHACK";
         public static final String TABLE_NAME = "district";
         public static final String COLUMN_ID = "_id";
-        public static final String COLUMN_DISTRICT_NAME = "district_name";
-        public static final String COLUMN_DISTRICT_CODE = "district_code";
+        public static final String COLUMN_DISTRICT_NAME = "districtName";
+        public static final String COLUMN_DISTRICT_CODE = "districtCode";
 
     }
 

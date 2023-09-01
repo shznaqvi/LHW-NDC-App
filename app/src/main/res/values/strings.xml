@@ -18,11 +18,13 @@
     <string name="mainmenu">Main Menu</string>
     <string name="onlyfortesting">ONLY FOR TESTING</string>
     <string name="database">Database</string>
-    <string name="district" >DISTRICT</string>
+    <string name="district">DISTRICT</string>
     <string name="uc" translatable="false">UC</string>
     <string name="btnSave" translatable="false">Save</string>
     <string name="btnEnd" translatable="false">Cancel</string>
     <string name="signin" translatable="false">SIGN IN</string>
+    <string name="signin_msg" translatable="false">Enter your usename and password to access the app.</string>
+
     <string name="username" translatable="false">Username</string>
     <string name="password" translatable="false">Password</string>
     <string name="newPassword" translatable="false">New Password</string>
@@ -72,6 +74,7 @@
     <string name="invalidDate" translatable="false">Invalid date!</string>
     <string name="ageCalc" translatable="false">"Both Month and Year don\'t be zero!!"</string>
     <string name="actiondatabase" translatable="false">Database Manager</string>
+    <string name="actionCheckWorker" translatable="false">Check Worker Status</string>
     <string name="actiondatasync" translatable="false">Sync Data</string>
     <string name="dkn"> Don’t Know </string>
     <string name="none"> No one </string>

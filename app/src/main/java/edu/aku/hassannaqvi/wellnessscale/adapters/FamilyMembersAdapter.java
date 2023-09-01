@@ -100,19 +100,19 @@ public class FamilyMembersAdapter extends RecyclerView.Adapter<FamilyMembersAdap
 
         //  fMaritalStatus.setText(marStatus);
 
-        String secStatusString =
-                /*B1*/
+       /* String secStatusString =
+                *//*B1*//*
                 "RAPID: \t" + members.getScoreRapid() +
-                        /*C1*/
+                        *//*C1*//*
                         "\nPain: \t" + (members.getScoreRose() == 1 ? "Agina-" : (members.getScoreRose() == 2 ? "Exertion-" : "No Pain")) +
                         (members.getPainGrade() == 2 ? "II" : members.getPainGrade() == 1 ? "I" : "") +
-                        /*D1*/
+                        *//*D1*//*
                         "\nQVSFS: \t" + (members.getScoreQVSFS() > 0 ? "+ve" : members.getScoreQVSFS() == 0 ? "-ve" : "unk") +
-                        /*E1*/
+                        *//*E1*//*
                         "\nIPAQ: \t" + members.getScoreIPAQ() +
-                        /*H1*/
+                        *//*H1*//*
                         "\nWHO-5: \t" + members.getScoreWHO5();
-
+*/
  /*       switch (members.getH309())
         {
             case "1":
@@ -123,13 +123,17 @@ public class FamilyMembersAdapter extends RecyclerView.Adapter<FamilyMembersAdap
 
         }*/
 
-        secStatus.setText(secStatusString);
+        String risk = members.calculateRiskOutcome();
 
-
-       // cloaked.setVisibility(members.getMemCate().equals("") ? View.VISIBLE : View.GONE);
+        // cloaked.setVisibility(members.getMemCate().equals("") ? View.VISIBLE : View.GONE);
         mainIcon.setImageResource((members.getA105().equals("1") ? R.drawable.ic_boy : R.drawable.ic_girl));
         mainIcon.setBackgroundColor(members.getA105().equals("1") ? mContext.getResources().getColor(android.R.color.holo_blue_dark) : mContext.getResources().getColor(R.color.girl_pink));
-
+        if(members.getA110().equals("1")) {
+            secStatus.setText(risk.replace(" ", "\n"));
+            secStatus.setBackgroundColor(risk.equals("VERY HIGH RISK") ? mContext.getResources().getColor(R.color.very_high) : risk.equals("HIGH MEDIUM RISK") ? mContext.getResources().getColor(R.color.high_medium) : mContext.getResources().getColor(R.color.low));
+        } else{
+            secStatus.setText("Consent not given");
+        }
 //              Integer.parseInt(members.getH306()) > 19 && members.getH303().equals("2") ? mContext.getResources().getColor(android.R.color.holo_red_dark)
 //                      : (members.getH303().equals("1") ? mContext.getResources().getColor(R.color.boy_blue) : mContext.getResources().getColor(R.color.girl_pink)));
         viewHolder.itemView.setOnClickListener(v -> {
@@ -138,7 +142,6 @@ public class FamilyMembersAdapter extends RecyclerView.Adapter<FamilyMembersAdap
             MainApp.familyMembers = MainApp.familyList.get(viewHolder.getAdapterPosition());
             Intent intent = new Intent(mContext, SectionA1Activity.class);
 
-            intent.putExtra("position", viewHolder.getAdapterPosition());
 
             MainApp.selectedMember = viewHolder.getAdapterPosition();
 

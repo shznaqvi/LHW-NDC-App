@@ -7,6 +7,7 @@ import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.EntryLogTable
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.FamilyMembersTable
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.FormsTable
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.RandomHHTable
+import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.TableDistricts
 import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts.UsersTable
 
 
@@ -156,6 +157,15 @@ object CreateTable {
             + " );"
             )
 
+    const val SQL_CREATE_DISTRICTS = ("CREATE TABLE "
+            + TableDistricts.TABLE_NAME + "("
+            + TableDistricts.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + TableDistricts.COLUMN_DISTRICT_NAME + " TEXT,"
+            + TableDistricts.COLUMN_DISTRICT_CODE + " TEXT"
+
+            + " );"
+            )
+
     const val SQL_CREATE_RANDOM_HH = ("CREATE TABLE " + RandomHHTable.TABLE_NAME + "("
             + RandomHHTable.COLUMN_ID + " TEXT,"
             + RandomHHTable.COLUMN_EB_CODE + " TEXT,"
@@ -196,5 +206,9 @@ object CreateTable {
         ("ALTER TABLE " + ChildTable.TABLE_NAME + " ADD " + ChildTable.COLUMN_GPSDATE + " TEXT; ")
     const val SQL_ALTER_CHILD_GPS_ACC =
         ("ALTER TABLE " + ChildTable.TABLE_NAME + " ADD " + ChildTable.COLUMN_GPSACC + " TEXT; ")
+    const val SQL_ALTER_DISTRICT_CODE =
+        ("ALTER TABLE " + TableDistricts.TABLE_NAME + " RENAME COLUMN district_code to "+ TableDistricts.COLUMN_DISTRICT_CODE +" ; ")
+    const val SQL_ALTER_DISTRICT_NAME =
+        ("ALTER TABLE " + TableDistricts.TABLE_NAME + " RENAME COLUMN district_name to "+ TableDistricts.COLUMN_DISTRICT_NAME +" ; ")
 
 }

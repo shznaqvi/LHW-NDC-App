@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.wellnessscale.core;
 
+import static java.security.AccessController.getContext;
 import static edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper.DATABASE_NAME;
 import static edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper.DATABASE_PASSWORD;
 
@@ -19,8 +20,12 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.splashscreen.SplashScreen;
+import androidx.core.splashscreen.SplashScreenViewProvider;
 
 import com.scottyab.rootbeer.RootBeer;
 
@@ -35,6 +40,7 @@ import edu.aku.hassannaqvi.wellnessscale.R;
 import edu.aku.hassannaqvi.wellnessscale.models.FamilyMembers;
 import edu.aku.hassannaqvi.wellnessscale.models.Form;
 import edu.aku.hassannaqvi.wellnessscale.models.Users;
+import edu.aku.hassannaqvi.wellnessscale.ui.PeriodicWorkerHelper;
 
 
 public class MainApp extends Application {
@@ -51,8 +57,8 @@ public class MainApp extends Application {
     public static final String _SERVER_URL = "syncgcm.php";
     public static final String _USER_URL = "resetpassword.php";
     public static final String _SERVER_GET_URL = "getDatagcm.php";
-    public static final String _UPDATE_URL = MainApp._IP + "/wellnessscale/app/survey";
-    public static final String _APP_FOLDER = "../app/survey";
+    public static final String _UPDATE_URL = MainApp._IP + "/wellnessscale/app/";
+    public static final String _APP_FOLDER = "../app";
     public static final String _EMPTY_ = "";
     private static final String TAG = "MainApp";
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
@@ -73,6 +79,7 @@ public class MainApp extends Application {
     public static Users user;
     public static Boolean admin = false;
     public static List<JSONArray> uploadData;
+    public static List<JSONArray> uploadDataPeriodic;
     public static SharedPreferences.Editor editor;
     public static SharedPreferences sharedPref;
     public static String deviceid;
@@ -103,6 +110,8 @@ public class MainApp extends Application {
     public static boolean householdChecked = false;
     public static long preAgeInMonths;
     public static NoMenuEditText noMenuEditText;
+    public static int incompCount;
+    public static int memberCountInomplete;
     protected static LocationManager locationManager;
 
     public static void hideSystemUI(View decorView) {
@@ -193,7 +202,22 @@ public class MainApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        // Create a SplashScreenViewProvider with the logo image
+     /*   SplashScreenViewProvider splashScreenViewProvider = new SplashScreenViewProvider(this) {
+            public View createSplashScreenView(Bundle savedInstanceState) {
+                ImageView logoImageView = new ImageView(getApplicationContext());
+                logoImageView.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.wellness_health_care)); // Replace with your logo image
+                logoImageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+                return logoImageView;
+            }
+        };
 
+        // Initialize the splash screen with the SplashScreenViewProvider
+        SplashScreen splashScreen = SplashScreen.installSplashScreen(this, splashScreenViewProvider);
+
+        // Set the splash screen animation duration (optional)
+        splashScreen.setKeepVisibleCondition(duration -> duration < 3000); // Display for up to 3 seconds
+    }*/
         RootBeer rootBeer = new RootBeer(this);
         if (rootBeer.isRooted()) {
             android.os.Process.killProcess(android.os.Process.myPid());
@@ -231,6 +255,13 @@ public class MainApp extends Application {
         );
 
         initSecure();
+
+        // Create an instance of PeriodicWorkerHelper
+        PeriodicWorkerHelper periodicWorkerHelper = new PeriodicWorkerHelper(getApplicationContext());
+
+        // Call the ProcessStart() method to start the worker
+        Log.d(TAG, "onCreate (periodicWorkerHelper): Starting...");
+        periodicWorkerHelper.ProcessStart();
 
     }
 

@@ -65,7 +65,7 @@ public class SyncModel {
         this.tableTitle = tableTitle;
     }
 
-    public String gettableName() {
+    public String getTableName() {
         return tableName;
     }
 

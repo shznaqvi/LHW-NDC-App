@@ -1,21 +1,26 @@
 package edu.aku.hassannaqvi.wellnessscale.workers;
 
 
+import static androidx.core.content.res.ResourcesCompat.getColor;
 import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.buildSslSocketFactory;
 import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.certIsValid;
+import static edu.aku.hassannaqvi.wellnessscale.core.CipherSecure.decryptGCM;
 
+import android.Manifest;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.work.Data;
-import androidx.work.PeriodicWorkRequest;
-import androidx.work.WorkManager;
 import androidx.work.Worker;
 import androidx.work.WorkerParameters;
 
@@ -25,11 +30,13 @@ import org.json.JSONObject;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.CharArrayWriter;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
@@ -47,22 +54,33 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
 import edu.aku.hassannaqvi.wellnessscale.R;
+import edu.aku.hassannaqvi.wellnessscale.contracts.TableContracts;
 import edu.aku.hassannaqvi.wellnessscale.core.CipherSecure;
 import edu.aku.hassannaqvi.wellnessscale.core.MainApp;
+import edu.aku.hassannaqvi.wellnessscale.database.DatabaseHelper;
+import edu.aku.hassannaqvi.wellnessscale.models.SyncModel;
 
 
-public class DataUpWorkerALL extends Worker {
+public class DataUpPeriodicWorkerALL extends Worker {
 
-    private static final String TAG = "DataWorkerEN()";
+    private static final String TAG = "DataUpPeriodicWorkerALL";
+    public static final String NOTIFICATION_CHANNEL = "DataUpPeriodicWorkerALL";
+    /**
+     * The update hosts notification identifier.
+     */
+    private static final int NOTIFICATION_ID = 10;
+
 
     // to be initialised by workParams
     private final Context mContext;
     private final String uploadTable;
-    private final JSONArray uploadData;
+    private JSONArray uploadData;
     private final URL serverURL = null;
-    private final String nTitle = MainApp.PROJECT_NAME + ": Data Upload";
+    private String nTitle = MainApp.PROJECT_NAME + ": Data Upload";
+    private String nMessage;
     private final int position;
     private final String uploadWhere;
+    private final DatabaseHelper db;
     HttpsURLConnection urlConnection;
     private ProgressDialog pd;
     private int length;
@@ -70,15 +88,47 @@ public class DataUpWorkerALL extends Worker {
     private long startTime;
     private int responseLength = 0, requestLength = 0;
 
-    public DataUpWorkerALL(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+    public DataUpPeriodicWorkerALL(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
+        db = MainApp.appInfo.getDbHelper();
+
         mContext = context;
         uploadTable = workerParams.getInputData().getString("table");
         position = workerParams.getInputData().getInt("position", -2);
-        uploadData = MainApp.uploadData.get(position);
+        //uploadData = MainApp.uploadData.get(position);
+        //uploadTables.clear();
+        //MainApp.uploadDataPeriodic.clear();
 
+        switch (uploadTable) {
+            // Forms
+            case TableContracts.FormsTable.TABLE_NAME:
+                try {
+                    uploadData = db.getUnsyncedFormHH();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d(TAG, "ProcessStart: JSONException(Forms): " + e.getMessage());
+                }
+                break;
 
-        Log.d(TAG, "Upload Begins uploadData.length(): " + uploadData.length());
+            // Familymembers
+            case TableContracts.FamilyMembersTable.TABLE_NAME:
+                try {
+                    uploadData = db.getUnsyncedFamilyMembers();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d(TAG, "ProcessStart: JSONException(Familymembers): " + e.getMessage());
+                }
+                break;
+            // Entry Log
+            case TableContracts.EntryLogTable.TABLE_NAME:
+                try {
+                    uploadData = db.getUnsyncedEntryLog();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d(TAG, "ProcessStart: JSONException(Forms): " + e.getMessage());
+                }
+        }
+
         Log.d(TAG, "Upload Begins uploadData: " + uploadData);
 
         Log.d(TAG, "DataDownWorkerALL: position " + position);
@@ -164,7 +214,7 @@ public class DataUpWorkerALL extends Worker {
      * If you are confused about it
      * you should check the Android Notification Tutorial
      * */
-    private void displayNotification(String title, String task) {
+/*    private void displayNotification(String title, String task) {
         NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -182,7 +232,7 @@ public class DataUpWorkerALL extends Worker {
         notification.setProgress(length, curProgress, false);
 
         //notificationManager.notify(1, notification.build());
-    }
+    }*/
 
    /* private boolean certIsValid(Certificate[] certs, Certificate ca) {
         for (Certificate cert : certs) {
@@ -341,7 +391,7 @@ public class DataUpWorkerALL extends Worker {
 
                     }
                     displayNotification(nTitle, "Received Data");
-                    longInfo("result-server: " + writeEnc);
+                    longInfo("result-server: " + decryptGCM(String.valueOf(result)));
 
                 } else {
 
@@ -353,6 +403,9 @@ public class DataUpWorkerALL extends Worker {
                             .putString("size", getSize(requestLength) + "/" + getSize(responseLength))
                             .putInt("position", this.position)
                             .build();
+                    nTitle = "Data Upload Failed";
+                    nMessage = "Data Uploaded Successfully Completed\nError: " + urlConnection.getResponseCode();
+                    displayNotification(nTitle, nMessage);
                     return Result.failure(data);
                 }
             } else {
@@ -362,7 +415,9 @@ public class DataUpWorkerALL extends Worker {
                         .putString("size", getSize(requestLength) + "/" + getSize(responseLength))
                         .putInt("position", this.position)
                         .build();
-
+                nTitle = "Data Upload Failed";
+                nMessage = "Data Uploaded Successfully Completed\nError: Invalid Certificate";
+                displayNotification(nTitle, nMessage);
                 return Result.failure(data);
             }
         } catch (java.net.SocketTimeoutException e) {
@@ -374,9 +429,14 @@ public class DataUpWorkerALL extends Worker {
                     .putString("size", getSize(requestLength) + "/" + getSize(responseLength))
                     .putInt("position", this.position)
                     .build();
+            nTitle = "Data Upload Failed";
+            nMessage = "Data Uploaded Successfully Completed\nError: " + e.getMessage();
+            displayNotification(nTitle, nMessage);
             return Result.failure(data);
 
-        } catch (IOException | JSONException | NoSuchPaddingException | NoSuchAlgorithmException | InvalidAlgorithmParameterException | InvalidKeyException | BadPaddingException | IllegalBlockSizeException e) {
+        } catch (IOException | JSONException | NoSuchPaddingException | NoSuchAlgorithmException |
+                 InvalidAlgorithmParameterException | InvalidKeyException | BadPaddingException |
+                 IllegalBlockSizeException e) {
             Log.d(TAG, "doWork (IO Error): " + e.getMessage());
             displayNotification(nTitle, "IO Error: " + e.getMessage());
             data = new Data.Builder()
@@ -385,13 +445,17 @@ public class DataUpWorkerALL extends Worker {
                     .putString("size", getSize(requestLength) + "/" + getSize(responseLength))
                     .putInt("position", this.position)
                     .build();
-
+            nTitle = "Data Upload Failed";
+            nMessage = "Data Uploaded Successfully Completed\nError: " + e.getMessage();
+            displayNotification(nTitle, nMessage);
             return Result.failure(data);
 
         }
         try {
             result = new StringBuilder(CipherSecure.decryptGCM(result.toString()));
-        } catch (NoSuchPaddingException | NoSuchAlgorithmException | BadPaddingException | IllegalBlockSizeException | InvalidAlgorithmParameterException | InvalidKeyException | UnsupportedEncodingException e) {
+        } catch (NoSuchPaddingException | NoSuchAlgorithmException | BadPaddingException |
+                 IllegalBlockSizeException | InvalidAlgorithmParameterException |
+                 InvalidKeyException | UnsupportedEncodingException e) {
             Log.d(TAG, "doWork (Encryption Error): " + e.getMessage());
             displayNotification(nTitle, "Encryption Error: " + e.getMessage());
             data = new Data.Builder()
@@ -400,9 +464,57 @@ public class DataUpWorkerALL extends Worker {
                     .putString("size", getSize(requestLength) + "/" + getSize(responseLength))
                     .putInt("position", this.position)
                     .build();
-
+            nTitle = "Data Upload Failed";
+            nMessage = "Data Uploaded Successfully Completed\nError: " + e.getMessage();
+            displayNotification(nTitle, nMessage);
             return Result.failure(data);
 
+        }
+
+        if (result != null) {
+            if (result.length() > 0) {
+                try {
+                    Log.d(TAG, "onPostExecute: " + result);
+                    JSONArray json = new JSONArray(result.toString());
+
+                    Method method = null;
+                    for (Method method1 : db.getClass().getDeclaredMethods()) {
+
+                        // Log.d(TAG, "onChanged Methods: " + method1.getName());
+                        /**
+                         * MAKE SURE TABLE_NAME = <table> IS SAME AS updateSynced<table> :
+                         *
+                         *      -   public static final String TABLE_NAME = "<table>";  // in Contract
+                         *      -   public JSONArray updateSynced<table>() {              // in DatabaseHelper
+                         *
+                         *      e.g: Forms and updateSyncedForms
+                         *
+                         */
+                        if (method1.getName().equals("updateSynced" + uploadTable)) {
+                            method = method1;
+                            break;
+                        }
+                    }
+                    if (method != null) {
+                        for (int i = 0; i < json.length(); i++) {
+                            JSONObject jsonObject = new JSONObject(json.getString(i));
+                            Log.d(TAG, "onChanged: " + json.getString(i));
+                            if (jsonObject.getString("status").equals("1") && jsonObject.getString("error").equals("0")) {
+                                method.invoke(db, jsonObject.getString("id"));
+                            } else if (jsonObject.getString("status").equals("2") && jsonObject.getString("error").equals("0")) {
+                                method.invoke(db, jsonObject.getString("id"));
+                            } else {
+                                Log.d(TAG, "Error: " + jsonObject.getString("message"));
+                            }
+                        }
+
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+
+                }
+            }
         }
 
         //Do something with the JSON string
@@ -437,6 +549,9 @@ public class DataUpWorkerALL extends Worker {
             /*   }*/
 
             displayNotification(nTitle, "Uploaded successfully");
+            nTitle = "Data Upload Completion";
+            nMessage = "Data Uploaded Successfully Completed\nRecords Synced: " + uploadData.length();
+            displayNotification(nTitle, nMessage);
             return Result.success(data);
 
         } else {
@@ -447,6 +562,9 @@ public class DataUpWorkerALL extends Worker {
                     .putInt("position", this.position)
                     .build();
             displayNotification(nTitle, "Error Received");
+            nTitle = "Data Upload Failed";
+            nMessage = "Data Uploaded Successfully Completed\nError: " + result;
+            displayNotification(nTitle, nMessage);
             return Result.failure(data);
         }
 
@@ -477,4 +595,52 @@ public class DataUpWorkerALL extends Worker {
 
         WorkManager.getInstance(context).enqueue(periodicWorkRequest);
     }*/
+
+    private void showNotification(String title, String content) {
+        Toast.makeText(mContext, "Notifying...: " + title + " : " + content, Toast.LENGTH_LONG).show();
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext, NOTIFICATION_CHANNEL)
+                .setSmallIcon(R.drawable.app_icon)
+                .setContentTitle(title)
+                .setContentText(content)
+                .setSmallIcon(R.drawable.wellness_health_care)
+                .setColorized(true)
+                .setContentTitle(title);
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(mContext);
+
+        if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
+            Toast.makeText(mContext, "Suceed: "+ title+" : "+content, Toast.LENGTH_LONG).show();
+
+    }
+
+    private void displayNotification(String title, String task) {
+        NotificationManager notificationManager = (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("scrlog", "BLF", NotificationManager.IMPORTANCE_DEFAULT);
+            notificationManager.createNotificationChannel(channel);
+        }
+
+        NotificationCompat.Builder notification = new NotificationCompat.Builder(getApplicationContext(), "scrlog")
+                .setContentTitle(title)
+                .setContentText(task)
+                .setSmallIcon(R.mipmap.ic_launcher);
+
+        final int maxProgress = 100;
+        int curProgress = 0;
+        notification.setProgress(length, curProgress, false);
+
+        //notificationManager.notify(1, notification.build());
+    }
 }

@@ -50,8 +50,56 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
+                <RelativeLayout
 
-                <!-- a101a  Input   -->
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+android:layout_margin="8dp"                  >
+
+                    <!-- Bottom TextView (Stretches to max width) -->
+                    <TextView
+                        android:id="@+id/lhwName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/capsule_background"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_alignParentTop="true"
+android:layout_alignParentStart="true"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/open_sans_condensed_light"
+                        android:textDirection="ltr"
+                        android:layoutDirection="ltr"
+                        android:text="Stretched Text"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+
+                        />
+
+                    <!-- Top TextView (Wraps content) -->
+                    <TextView
+                        android:id="@+id/distName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/capsule_background"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:layout_alignParentTop="true"
+                        android:backgroundTint="@color/colorAccent"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/open_sans_condensed_light"
+                        android:textDirection="ltr"
+                        android:layoutDirection="ltr"
+                        android:textStyle="bold"
+                        android:text="Short Text"
+                       />
+
+                </RelativeLayout>
+             <!--   &lt;!&ndash; a101a  Input   &ndash;&gt;
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVa10d"
@@ -120,7 +168,7 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
+-->
 
                 <!-- a101c  Input   -->
                 <androidx.cardview.widget.CardView

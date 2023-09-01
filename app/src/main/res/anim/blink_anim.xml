@@ -1,0 +1,9 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:propertyName="strokeColor"
+        android:valueFrom="@android:color/transparent"
+        android:valueTo="@android:color/holo_blue_light"
+        android:duration="500"
+        android:repeatCount="infinite"
+        android:repeatMode="reverse" />
+</set>

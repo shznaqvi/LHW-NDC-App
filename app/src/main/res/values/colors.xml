@@ -63,4 +63,9 @@
     <color name="girl_pink">#FF80AB</color>
     <color name="boy_blue">#82B1FF</color>
 
+    <!--RISK OUTCOME-->
+    <color name="very_high">#D32F2F</color> <!-- Dark Red -->
+    <color name="high_medium">#FFA726</color> <!-- Orange -->
+    <color name="low">#388E3C</color> <!-- Green -->
+
 </resources>
