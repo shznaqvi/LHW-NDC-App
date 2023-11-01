@@ -161,11 +161,11 @@ public class SectionE1Activity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // Allow BackPress
-        super.onBackPressed();
-        setResult(RESULT_CANCELED);
+        //super.onBackPressed();
+        //setResult(RESULT_CANCELED);
 
         // Dont Allow BackPress
-        // Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Back Press Not Allowed", Toast.LENGTH_SHORT).show();
 
     }
 

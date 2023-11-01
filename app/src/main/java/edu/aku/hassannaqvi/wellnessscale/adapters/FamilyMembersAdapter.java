@@ -130,7 +130,7 @@ public class FamilyMembersAdapter extends RecyclerView.Adapter<FamilyMembersAdap
         mainIcon.setBackgroundColor(members.getA105().equals("1") ? mContext.getResources().getColor(android.R.color.holo_blue_dark) : mContext.getResources().getColor(R.color.girl_pink));
         if(members.getA110().equals("1")) {
             secStatus.setText(risk.replace(" ", "\n"));
-            secStatus.setBackgroundColor(risk.equals("VERY HIGH RISK") ? mContext.getResources().getColor(R.color.very_high) : risk.equals("HIGH MEDIUM RISK") ? mContext.getResources().getColor(R.color.high_medium) : mContext.getResources().getColor(R.color.low));
+            secStatus.setBackgroundColor(risk.equals("HIGH RISK") ? mContext.getResources().getColor(R.color.very_high) : risk.equals("MEDIUM RISK") ? mContext.getResources().getColor(R.color.high_medium) : mContext.getResources().getColor(R.color.low));
         } else{
             secStatus.setText("Consent not given");
         }

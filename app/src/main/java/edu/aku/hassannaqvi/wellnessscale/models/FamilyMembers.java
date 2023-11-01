@@ -237,11 +237,11 @@ public class FamilyMembers extends BaseObservable {
     private int painGrade;
     private String scoreWHO5 = _EMPTY_;
     private double totalMet;
-    private boolean strokeResult = false;
-    private boolean anginaResult = false;
-    private boolean mentalResult = false;
-    private boolean diabetesResult = false;
-    private boolean hypertensionResult = false;
+     public boolean strokeResult = false;
+    public boolean anginaResult = false;
+    public boolean mentalResult = false;
+    public boolean diabetesResult = false;
+    public boolean hypertensionResult = false;
     private String riskOutcome;
     // private String indexed;
 
@@ -2884,6 +2884,7 @@ public class FamilyMembers extends BaseObservable {
         JSONObject json = new JSONObject();
         json.put("b101", b101)
                 .put("b102", b102)
+                .put("diabetesResult", diabetesResult)
                 .put("scoreRapid", scoreRapid);
 
         updateRapidScore();
@@ -2906,11 +2907,13 @@ public class FamilyMembers extends BaseObservable {
                 .put("c103", c103)
                 .put("painGrade", painGrade)
                 .put("scoreRose", scoreRose)
+                .put("anginaResult", anginaResult)
                 .put("c104", c104)
                 .put("c105", c105)
                 .put("c106", c106)
                 .put("c107", c107)
                 .put("c108", c108)
+                .put("hypertensionResult", hypertensionResult)
                 .put("c109", c109);
 
         updateRoseScore();
@@ -2928,6 +2931,7 @@ public class FamilyMembers extends BaseObservable {
                 .put("d106", d106)
                 .put("d107", d107)
                 .put("scoreQVSFS", scoreQVSFS)
+                .put("strokeResult", strokeResult)
                 .put("d108", d108);
 
         updateQVSFS();
@@ -3085,6 +3089,7 @@ public class FamilyMembers extends BaseObservable {
                 .put("h105", h105)
                 //.put("h106", h106)
                 .put("endTime", endTime)
+                .put("mentalResult", mentalResult)
                 .put("scoreWHO5", scoreWHO5);
 
 
@@ -3256,8 +3261,8 @@ public class FamilyMembers extends BaseObservable {
             int angina = this.getC101().equals("1") && (this.getC103().equals("1") || this.getC104().equals("1")) ? 1 : 0; // yes to question 1 and yes to either question 2 or 3 (c103 OR C104 as per box-1, https://jech.bmj.com/content/57/7/538)
 
             painGrade = this.getC103().equals("1") ? 2 : (this.getC103().equals("2") && this.getC104().equals("1")) ? 1 : 0;
-            scoreRose = angina == 1 ? 1 : 2;
-            anginaResult = angina == 1;
+            scoreRose = pain == 1 ? 1 : 2;
+            anginaResult = pain == 1;
             //return score>=4?" YES ":" NO ";
         } else {
             painGrade = 3;
@@ -3283,7 +3288,7 @@ public class FamilyMembers extends BaseObservable {
     }
 
     public void updateIPAQScore() {
-        // https://paulogentil.com/pdf/Interational%20Physical%20Activity%20Questionnaire%20-%20Validity%20against%20Fitness.pdf
+        // https://paulogentil.com/pdf/Interational%20Physical%20Activity%20Questionnaire%20-%20Validity%20againsl --installst%20Fitness.pdf
         double MET_Vigorous = 8.0;
         double MET_Moderate = 4.0;
         double MET_Walking = 3.3;
@@ -3407,9 +3412,9 @@ public class FamilyMembers extends BaseObservable {
 
     public String calculateRiskOutcome() {
         if (strokeResult || anginaResult) {
-            return "VERY HIGH RISK";
+            return "HIGH RISK";
         } else if (hypertensionResult || diabetesResult || mentalResult) {
-            return "HIGH MEDIUM RISK";
+            return "MEDIUM RISK";
         } else {
             return "LOW RISK";
         }

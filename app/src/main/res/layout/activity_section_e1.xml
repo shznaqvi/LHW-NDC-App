@@ -243,20 +243,21 @@
                                 android:onClick="@{()->familymembers.setE103(`99`) + e104.clearCheck()}"
                                 android:text="@string/e10399" />
 
-                            <EditText
-                                android:id="@+id/e10301x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/e10301"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:tag="e10301"
-                                android:text="@={familymembers.e103d}"
-                                android:visibility="@{familymembers.e103.equals(`1`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="7"
-                                app:minValue="1"
-                                app:type="range" />
+
                         </RadioGroup>
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/e103d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/e10301"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:tag="e103d"
+                        android:text="@={familymembers.e103d}"
+                        android:visibility="@{familymembers.e103.equals(`1`) ? View.VISIBLE : View.GONE}"
+                        app:maxValue="7"
+                        app:minValue="1"
+                        app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -389,20 +390,21 @@
                                 android:onClick="@{()->familymembers.setE105(`99`) + e106.clearCheck()}"
                                 android:text="@string/e10599" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/e105d"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/e10501"
-                                android:inputType="number"
-                                android:maxLength="1"
-                                android:tag="e105d"
-                                android:text="@={familymembers.e105d}"
-                                android:visibility="@{familymembers.e105.equals(`1`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="7"
-                                app:minValue="1"
-                                app:type="range" />
+
                         </RadioGroup>
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/e105d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/e10501"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:tag="e105d"
+                        android:text="@={familymembers.e105d}"
+                        android:visibility="@{familymembers.e105.equals(`1`) ? View.VISIBLE : View.GONE}"
+                        app:maxValue="7"
+                        app:minValue="1"
+                        app:type="range" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
